@@ -1,0 +1,12 @@
+[
+    {
+      "title": "Deep Learning for Computer Vision",
+      "description": "Exploring the latest advancements in deep learning techniques for computer vision applications.",
+      "link": "/research/deep-learning-for-computer-vision"
+    },
+    {
+      "title": "Object Detection and Recognition",
+      "description": "Developing robust algorithms for detecting and recognizing objects in images and videos.",
+      "link": "/research/object-detection-and-recognition"
+    }
+  ]

@@ -1,0 +1,67 @@
+[
+    {
+      "year": 2023,
+      "items": [
+        {
+          "title": "Deep Learning for Detecting and Classifying the Growth Stages of Consolida regalis Weeds on Fields",
+          "authors": ["Abeer M. Almalky", "Khaled R. Ahmed"],
+          "journal": "Agronomy, vol. 13, no. 3, Art. no. 3, Mar. 2023",
+          "doi": "10.3390/agronomy13030934",
+          "url": "https://doi.org/10.3390/agronomy13030934",
+          "citationKey": "almalky_deep_2023",
+          "type": "journal",
+          "abstract": "Due to the massive surge in the world population, the agriculture cycle expansion is necessary to accommodate the anticipated demand. However, this expansion is challenged by weed invasion, a detrimental factor for agricultural production and quality. Therefore, an accurate, automatic, low-cost, environment-friendly, and real-time weed detection technique is required to control weeds on fields. Furthermore, automating the weed classification process according to growth stages is crucial for using appropriate weed controlling techniques, which represents a gap of research. The main focus of the undertaken research described in this paper is on providing a feasibility study for the agriculture community using recent deep-learning models to address this gap of research on classification of weed growth stages. For this paper we used a drone to collect a dataset of four weed (Consolida regalis) growth stages. In addition, we developed and trained one-stage and two-stage models YOLOv5, RetinaNet (with Resnet-101-FPN, Resnet-50-FPN backbones) and Faster R-CNN (with Resnet-101-DC5, Resnet-101-FPN, Resnet-50-FPN backbones), respectively. The results show that the generated Yolov5-small model succeeds in detecting weeds and classifying weed growth stages in real time with the highest recall of 0.794. RetinaNet with ResNet-101-FPN backbone shows accurate results in the testing phase (average precision of 87.457). Although Yolov5-large showed the highest precision in classifying almost all weed growth stages, Yolov5-large could not detect all objects in tested images. Overall, RetinaNet with ResNet-101-FPN backbones shows accurate and high precision, whereas Yolov5-small shows the shortest inference time in real time for detecting a weed and classifying its growth stages."
+        },
+        {
+          "title": "DDM: Study of Deer Detection and Movement using Deep Learning Techniques",
+          "authors": ["Md Jawad Siddique", "Khaled R. Ahmed"],
+          "conference": "2023 IEEE 15th International Symposium on Autonomous Decentralized System (ISADS'23), March 15-17, 2023",
+          "doi": "10.1109/ISADS56919.2023.10091943",
+          "url": "https://doi.org/10.1109/ISADS56919.2023.10091943",
+          "type": "conference",
+          "abstract": "Deer Vehicle Collisions (DVCs) is a major concern in road safety that results in loss of human life, properties and wildlife. DVCs mostly occurs during the fourth quarter of the year when deer are more active andless attentive. DVCs are increasing due to the increase in number of vehicles and the absence of intelligent highway safety and alert systems. One of the most challenging issues is to detect deer and its movement on roadways during both day and nighttime to mitigate DVCs. Thus, this paper proposed a deer detection and movement, DDM technique to automate DVCs mitigation system The DDM combines computer vision, artificial intelligent methods with deep learning techniques. DDM includes two main deep learning algorithms 1) one-stage deep learning algorithm based on Yolov5 that generates a detection model (DM) to detect deer and 2) deep learning algorithm developed by python toolkit DeepLabCut to generate movement model (MM) for detecting the movement of the deer. The proposed method can detect deer with 99. 7% precision and usingDeepLabCuttoolkit on the detected deer we can ascertain if the deer is moving or static with an inference speed of θ. 29s."
+        },
+        {
+          "title": "Real Time Deep Learning Algorithm for Counting Weed's Growth Stages",
+          "authors": ["Abeer M. Almalky", "Khaled R. Ahmed"],
+          "conference": "2023 IEEE 15th International Symposium on Autonomous Decentralized System (ISADS'23), March 15-17, 2023",
+          "doi": "10.1109/ISADS56919.2023.10092053",
+          "url": "https://doi.org/10.1109/ISADS56919.2023.10092053",
+          "type": "conference",
+          "abstract": "Since the number of people worldwide is anticipated to reach 9 billion people by 2050, the agriculture production needs to be increased up to 70% to manage the anticipated increasing of human demand. However, weeds are one of the most harmful factors that negatively impact the crops production, quality, and cause economical loses. Accordingly, automating the weed detection, classification, and counting of weeds per their growth stages will help farmers to choose the appropriate weeds’ controlling techniques. In this paper, UAV was used for collecting a dataset, which consists of four weed (Consolida Regalis) growth stages. Additionally, a deep learning model (YOLOv5) was developed and trained for detecting weed, classifying weed’s growth stages, and counting the number of weeds occurrences in each part of the field. The results report that the best precision (82.7%) is generated by the Yolov5-Large model in detecting and classifying the weed’s growth stages. According to the best performance in terms of recall, Yolov5-sma11 model has the best recall of 79.4%. For counting the instances of weeds per the four growth stages in real-time, Yolov5-sma11 model showes counting time of 0.033 millisecond per frame."
+        },
+        {
+          "title": "DSTEELNet: A Real-Time Parallel Dilated CNN with Atrous Spatial Pyramid Pooling for Detecting and Classifying Defects in Surface Steel Strips",
+          "authors": ["Khaled R. Ahmed"],
+          "journal": "Sensors, vol. 23, no. 1, Art. no. 1, Jan. 2023",
+          "doi": "10.3390/s23010544",
+          "url": "https://doi.org/10.3390/s23010544",
+          "type": "journal",
+          "abstract": "Automatic defects inspection and classification demonstrate significant importance in improving quality in the steel industry. This paper proposed and developed DSTEELNet convolution neural network (CNN) architecture to improve detection accuracy and the required time to detect defects in surface steel strips. DSTEELNet includes three parallel stacks of convolution blocks with atrous spatial pyramid pooling. Each convolution block used a different dilation rate that expands the receptive fields, increases the feature resolutions and covers square regions of input 2D image without any holes or missing edges and without increases in computations. This work illustrates the performance of DSTEELNet with a different number of parallel stacks and a different order of dilation rates. The experimental results indicate significant improvements in accuracy and illustrate that the DSTEELNet achieves of 97% mAP in detecting defects in surface steel strips on the augmented dataset GNEU and Severstal datasets and is able to detect defects in a single image in 23ms."
+        },
+        {
+          "title": "An Efficient Deep Learning Technique for Detecting and Classifying the Growth of Weeds on Fields",
+          "authors": ["Abeer M. Almalky", "Khaled R. Ahmed", "Mustafa Guzel", "Bulent Turan"],
+          "conference": "Proceedings of the Future Technologies Conference (FTC) 2022, Volume 2, K. Arai, Ed., in Lecture Notes in Networks and Systems. Cham: Springer International Publishing, 2023, pp. 818–835",
+          "doi": "10.1007/978-3-031-18458-1_56",
+          "url": "https://doi.org/10.1007/978-3-031-18458-1_56",
+          "type": "conference",
+          "abstract": "Automatic defects inspection and classification demonstrate significant importance in improving quality in the steel industry. This paper proposed and developed DSTEELNet convolution neural network (CNN) architecture to improve detection accuracy and the required time to detect defects in surface steel strips. DSTEELNet includes three parallel stacks of convolution blocks with atrous spatial pyramid pooling. Each convolution block used a different dilation rate that expands the receptive fields, increases the feature resolutions and covers square regions of input 2D image without any holes or missing edges and without increases in computations. This work illustrates the performance of DSTEELNet with a different number of parallel stacks and a different order of dilation rates. The experimental results indicate significant improvements in accuracy and illustrate that the DSTEELNet achieves of 97% mAP in detecting defects in surface steel strips on the augmented dataset GNEU and Severstal datasets and is able to detect defects in a single image in 23ms."
+        }
+      ]
+    },
+    {
+      "year": 2022,
+      "items": [
+        {
+          "title": "Potholes Detection Using Deep Learning and Area Estimation Using Image Processing",
+          "authors": ["Subash Kharel", "Khaled R. Ahmed"],
+          "conference": "Intelligent Systems and Applications, in Lecture Notes in Networks and Systems. Cham: Springer International Publishing, 2022, pp. 373–388",
+          "doi": "10.1007/978-3-030-82199-9_24",
+          "url": "https://doi.org/10.1007/978-3-030-82199-9_24",
+          "type": "conference",
+          "abstract": "Automatic defects inspection and classification demonstrate significant importance in improving quality in the steel industry. This paper proposed and developed DSTEELNet convolution neural network (CNN) architecture to improve detection accuracy and the required time to detect defects in surface steel strips. DSTEELNet includes three parallel stacks of convolution blocks with atrous spatial pyramid pooling. Each convolution block used a different dilation rate that expands the receptive fields, increases the feature resolutions and covers square regions of input 2D image without any holes or missing edges and without increases in computations. This work illustrates the performance of DSTEELNet with a different number of parallel stacks and a different order of dilation rates. The experimental results indicate significant improvements in accuracy and illustrate that the DSTEELNet achieves of 97% mAP in detecting defects in surface steel strips on the augmented dataset GNEU and Severstal datasets and is able to detect defects in a single image in 23ms."
+        }
+      ]
+    }
+  ]

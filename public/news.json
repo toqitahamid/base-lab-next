@@ -1,0 +1,32 @@
+[
+  {
+    "date": "October 2023",
+    "title": "New USDA-NIFA Grant Awarded",
+    "description": "Awarded a two-year research federal grant from USDA-NIFA for \"Detecting Subacute Ruminal Acidosis using a real-time Deep Learning Algorithm\"",
+    "badge": "Grant"
+  },
+  {
+    "date": "September 2023",
+    "title": "PhD Student Defense Success",
+    "description": "PhD student Memari Majid successfully defended his dissertation and will graduate in Fall 2023",
+    "badge": "Academic"
+  },
+  {
+    "date": "July 2023",
+    "title": "Illinois Innovation Network Grant",
+    "description": "Granted a one-year seed research grant from ILLINOIS INNOVATION NETWORK.",
+    "badge": "Grant"
+  },
+  {
+    "date": "March 2022",
+    "title": "Outstanding Thesis Award",
+    "description": "Graduate student Subash Kharel received the Outstanding Thesis Award 2021.",
+    "badge": "Award"
+  },
+  {
+    "date": "August 2022",
+    "title": "USDA-NIFA Grant for AI in Livestock",
+    "description": "Secured a two-year research federal grant from USDA-NIFA titled \"Artificial Intelligence for Greener Livestock: Educational and Research.\"",
+    "badge": "Grant"
+  }
+]

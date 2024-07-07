@@ -1,0 +1,14 @@
+[
+    {
+      "name": "John Doe",
+      "role": "Principal Investigator",
+      "email": "john.doe@example.com",
+      "profileImage": "/images/john_doe.jpeg"
+    },
+    {
+      "name": "Jane Smith",
+      "role": "Research Scientist",
+      "email": "jane.smith@example.com",
+      "profileImage": "/images/jane_smith.jpeg"
+    }
+  ]
