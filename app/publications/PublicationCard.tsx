@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from 'react';
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,7 +12,18 @@ import {
 } from "@/components/ui/dialog";
 import fetchBibtexData from '@/components/fetchBibtexData';
 
-const PublicationCard = ({ publication }) => {
+interface Publication {
+  title: string;
+  authors: string[];
+  journal?: string;
+  conference?: string;
+  url: string;
+  abstract: string;
+  citationKey: string;
+  type: 'journal' | 'conference';
+}
+
+const PublicationCard = ({ publication }: { publication: Publication }) => {
   const [citeOpen, setCiteOpen] = useState(false);
   const [abstractOpen, setAbstractOpen] = useState(false);
   const [bibtex, setBibtex] = useState('');
