@@ -1,36 +1,46 @@
 "use client";
 
+import { useEffect, useState } from 'react';
 import Image from "next/image";
-import DataFetcher from "@/components/DataFetcher";
-import { Card, CardHeader, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
-const TeamSection = () => (
-  <section className="w-full max-w-5xl mt-8">
-    <h2 className="text-2xl font-semibold mb-4">Our Team</h2>
-    <DataFetcher url="/team.json">
-      {(data) => (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {data.map((member: any) => (
-            <Card key={member.name}>
-              <CardHeader>
-                <Image src={member.profileImage} alt={member.name} width={100} height={100} className="rounded-full mx-auto" />
-                <h3 className="text-xl font-bold text-center mt-2">{member.name}</h3>
-              </CardHeader>
-              <CardContent>
-                <p className="text-center">{member.role}</p>
-              </CardContent>
-              <CardFooter className="justify-center">
-                <Button asChild variant="outline">
-                  <a href={`mailto:${member.email}`}>Contact</a>
-                </Button>
-              </CardFooter>
-            </Card>
-          ))}
-        </div>
-      )}
-    </DataFetcher>
-  </section>
-);
+const TeamSection = () => {
+  const [teamMembers, setTeamMembers] = useState([]);
+
+  useEffect(() => {
+    fetch('/team.json')
+      .then(response => response.json())
+      .then(data => setTeamMembers(data))
+      .catch(error => console.error('Error fetching team data:', error));
+  }, []);
+
+  return (
+    <section className="w-full mt-12">
+      <h2 className="text-3xl font-bold mb-6">Our Team</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {teamMembers.map((member: any) => (
+          <Card key={member.name} className="overflow-hidden group">
+            <div className="relative h-64 w-full">
+              <Image 
+                src={member.profileImage} 
+                alt={member.name} 
+                layout="fill" 
+                objectFit="cover"
+                className="transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-semibold">{member.name}</h3>
+              <p className="text-muted-foreground">{member.role}</p>
+              <a href={`mailto:${member.email}`} className="text-primary hover:underline mt-2 inline-block">
+                Contact
+              </a>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default TeamSection;

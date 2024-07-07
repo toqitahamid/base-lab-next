@@ -45,8 +45,8 @@ const PublicationCard = ({ publication }) => {
   };
 
   return (
-    <Card className="h-full flex flex-col">
-      <CardContent className="p-6 flex flex-col flex-grow">
+    <Card className="mb-6 hover:shadow-lg transition-shadow duration-300">
+      <CardContent className="p-6">
         <h3 className="text-xl font-semibold mb-2">{publication.title}</h3>
         <p className="text-sm text-gray-600 mb-3">{publication.authors.join(", ")}</p>
         <div className="flex items-center space-x-2 mb-4">
@@ -57,27 +57,21 @@ const PublicationCard = ({ publication }) => {
             {publication.journal || publication.conference}
           </span>
         </div>
-        <div className="mt-auto flex flex-col sm:flex-row items-start sm:items-center justify-between">
-            <Button 
-                variant="outline" 
-                size="sm" 
-                className="mb-2 sm:mb-0 flex items-center text-blue-600 hover:text-blue-800 hover:bg-blue-50 transition-colors"
-                asChild
-            >
-                <a 
-                href={publication.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                >
-                View Publication <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-            </Button>
+        <div className="flex items-center justify-between mb-4">
+          <a 
+            href={publication.url} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-sm text-blue-600 hover:underline flex items-center"
+          >
+            View Publication <ExternalLink className="ml-1 h-4 w-4" />
+          </a>
           <div className="space-x-2">
             <Dialog open={abstractOpen} onOpenChange={setAbstractOpen}>
               <DialogTrigger asChild>
                 <Button variant="outline" size="sm">Abstract</Button>
               </DialogTrigger>
-              <DialogContent className="sm:max-w-[425px]">
+              <DialogContent className="sm:max-w-[600px]">
                 <DialogHeader>
                   <DialogTitle>Abstract</DialogTitle>
                 </DialogHeader>
@@ -90,7 +84,29 @@ const PublicationCard = ({ publication }) => {
               <DialogTrigger asChild>
                 <Button variant="outline" size="sm">Cite</Button>
               </DialogTrigger>
-              {/* ... (keep existing Dialog content for citation) */}
+              <DialogContent className="sm:max-w-[600px]">
+                <DialogHeader>
+                  <DialogTitle>Citation</DialogTitle>
+                </DialogHeader>
+                <div className="relative">
+                  {bibtex !== 'BibTeX not available for this publication.' && (
+                    <Button
+                      onClick={copyToClipboard}
+                      type="button"
+                      size="sm"
+                      className="absolute top-2 right-2 z-10"
+                    >
+                      <span className="sr-only">Copy</span>
+                      {copied ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                    </Button>
+                  )}
+                  <div className="overflow-x-auto">
+                    <pre className="bg-gray-100 p-4 rounded-md text-xs whitespace-pre-wrap break-words">
+                      {bibtex}
+                    </pre>
+                  </div>
+                </div>
+              </DialogContent>
             </Dialog>
           </div>
         </div>
