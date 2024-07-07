@@ -9,3 +9,4 @@ const fetchBibtexData = cache(async () => {
 });
 
 export default fetchBibtexData;
+
