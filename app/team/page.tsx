@@ -62,7 +62,14 @@ export default function TeamPage() {
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8">Our Team</h1>
+      <Card className="mb-8">
+        <CardHeader>
+          <CardTitle className="text-3xl font-bold">Our Team</CardTitle>
+          <CardDescription className="text-lg mt-2">
+            Meet the dedicated researchers and students of BASE Lab
+          </CardDescription>
+        </CardHeader>
+      </Card>
 
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Lab Director</h2>

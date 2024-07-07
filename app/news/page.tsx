@@ -41,7 +41,7 @@ async function getNewsItems(): Promise<Record<string, NewsItem[]>> {
         <main className="container mx-auto px-4 py-8 max-w-4xl">
           <Card>
             <CardHeader>
-              <CardTitle className="text-4xl font-bold">Latest News</CardTitle>
+              <CardTitle className="text-3xl font-bold">Latest News</CardTitle>
               <CardDescription className="text-lg mt-2">
                 Unable to load news at this time. Please check back later.
               </CardDescription>
@@ -55,7 +55,7 @@ async function getNewsItems(): Promise<Record<string, NewsItem[]>> {
       <main className="container mx-auto px-4 py-8 max-w-4xl">
         <Card className="mb-8">
           <CardHeader>
-            <CardTitle className="text-4xl font-bold">Latest News</CardTitle>
+            <CardTitle className="text-3xl font-bold">Latest News</CardTitle>
             <CardDescription className="text-lg mt-2">
               Stay updated with our recent achievements and announcements
             </CardDescription>

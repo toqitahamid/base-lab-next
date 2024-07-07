@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-semibold text-lg mb-4">CV & DL Lab</h3>
+            <h3 className="font-semibold text-lg mb-4">BASE Lab</h3>
             <p className="text-sm">
               Advancing the frontiers of Computer Vision and Deep Learning at Southern Illinois University.
             </p>
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} CV & DL Lab, Southern Illinois University. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} BASE Lab, Southern Illinois University. All rights reserved.</p>
         </div>
       </div>
     </footer>
