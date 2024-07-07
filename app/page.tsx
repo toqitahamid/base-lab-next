@@ -119,9 +119,6 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="text-center text-sm text-muted-foreground">
-        © 2024 Computer Vision and Deep Learning Lab, Southern Illinois University
-      </footer>
     </main>
   );
 }
