@@ -20,6 +20,19 @@ import fetchBibtexData from '@/components/fetchBibtexData';
 import publicationsData from '../../public/publications.json';
 
 
+
+interface Publication {
+  title: string;
+  authors: string[];
+  journal?: string;
+  conference?: string;
+  url: string;
+  citationKey?: string;
+  doi?: string;
+  type?: string;
+  abstract?: string;
+}
+
 const ResearchPage = () => {
   const sponsors = [
     { name: 'USDA', filename: 'usda-logo.png' },
@@ -156,9 +169,11 @@ const ResearchPage = () => {
 };
 
 
-const PublicationCardSimple = ({ publication }) => {
+
+const PublicationCardSimple = ({ publication }: { publication: Publication }) => {
   const [citeOpen, setCiteOpen] = useState(false);
   const [bibtex, setBibtex] = useState('');
+
 
   useEffect(() => {
     const loadBibtex = async () => {

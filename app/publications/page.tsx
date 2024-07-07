@@ -1,6 +1,8 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import PublicationCard from './PublicationCard';
+import dynamic from 'next/dynamic';
 import publicationsData from '../../public/publications.json';
+
+const PublicationCard = dynamic(() => import('./PublicationCard'), { ssr: false });
 
 export default function PublicationsPage() {
   return (
@@ -22,7 +24,7 @@ export default function PublicationsPage() {
           <TabsContent key={yearGroup.year} value={yearGroup.year.toString()}>
             <div className="grid grid-cols-1 gap-6">
               {yearGroup.items.map((publication, index) => (
-                <PublicationCard key={index} publication={publication} />
+                <PublicationCard key={index} publication={{...publication, type: publication.type as "journal" | "conference", citationKey: publication.citationKey || ''}} />
             ))}
             </div>
           </TabsContent>
