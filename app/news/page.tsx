@@ -4,25 +4,33 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import fetchData from '@/components/DataFetcherServer';
 
-async function getNewsItems() {
-    try {
-      const data = await fetchData('/news.json');
-      if (!Array.isArray(data)) {
-        console.error('Fetched data is not an array:', data);
-        return {};
-      }
-      const groupedByYear = data.reduce((acc, item) => {
-        const year = new Date(item.date).getFullYear();
-        if (!acc[year]) acc[year] = [];
-        acc[year].push(item);
-        return acc;
-      }, {});
-      return groupedByYear;
-    } catch (error) {
-      console.error('Error fetching news items:', error);
+
+interface NewsItem {
+  title: string;
+  date: string;
+  description: string;
+  badge: string;
+}
+
+async function getNewsItems(): Promise<Record<string, NewsItem[]>> {
+  try {
+    const data = await fetchData('/news.json');
+    if (!Array.isArray(data)) {
+      console.error('Fetched data is not an array:', data);
       return {};
     }
+    const groupedByYear = data.reduce<Record<string, NewsItem[]>>((acc, item: NewsItem) => {
+      const year = new Date(item.date).getFullYear().toString();
+      if (!acc[year]) acc[year] = [];
+      acc[year].push(item);
+      return acc;
+    }, {});
+    return groupedByYear;
+  } catch (error) {
+    console.error('Error fetching news items:', error);
+    return {};
   }
+}
 
   export default async function NewsPage() {
     const groupedNewsItems = await getNewsItems();
@@ -64,7 +72,7 @@ async function getNewsItems() {
           {years.map((year) => (
             <TabsContent key={year} value={year}>
               <div className="space-y-8">
-                {groupedNewsItems[year].map((item, index) => (
+                {groupedNewsItems[year].map((item: NewsItem, index: number) => (
                   <Card key={index} className="overflow-hidden">
                     <CardHeader className="bg-gray-50">
                       <div className="flex justify-between items-center">
