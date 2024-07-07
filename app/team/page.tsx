@@ -5,7 +5,13 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 
-const TeamMember = ({ name, role, image }) => (
+interface TeamMemberProps {
+  name: string;
+  role: string;
+  image: string;
+}
+
+const TeamMember = ({ name, role, image }: TeamMemberProps) => (
   <Card className="overflow-hidden h-full flex flex-col">
     <div className="flex items-center p-4">
       <div className="relative w-24 h-24 mr-4 flex-shrink-0">
@@ -30,8 +36,8 @@ export default function TeamPage() {
   const phdStudents = [
     { name: "Akhila Kambhatla", role: "PhD Student", image: "/images/team/akhila-kambhatla.jpeg" },
     { name: "Toqi Tahamid Sarker", role: "PhD Student", image: "/images/team/toqi-sarker.jpeg" },
-    { name: "Karimi Chahrogh Laya", role: "PhD Student", image: "/images/team/karimi-laya.jpg" },
     { name: "Taminul Islam", role: "PhD Student", image: "/images/team/taminul-islam.jpg" },
+    { name: "Karimi Chahrogh Laya", role: "PhD Student", image: "/images/team/karimi-laya.jpg" },
   ];
 
   const mastersStudents = [
