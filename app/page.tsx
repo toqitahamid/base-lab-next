@@ -126,7 +126,7 @@ export default function Home() {
         <Card className="p-6">
           <CardTitle className="text-3xl mb-4">Join Our Lab</CardTitle>
           <CardDescription className="mb-6">
-            Interested in pushing the boundaries of AI? We're always looking for talented individuals.
+            Interested in pushing the boundaries of AI? We are always looking for talented individuals.
           </CardDescription>
           <Button asChild>
             <Link href="/join">Learn More</Link>

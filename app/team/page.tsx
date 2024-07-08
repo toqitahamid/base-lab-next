@@ -99,6 +99,7 @@ interface AlumniProps {
   socialLinks?: {
     linkedin?: string;
     website?: string;
+    xcom?: string; 
   };
 }
 

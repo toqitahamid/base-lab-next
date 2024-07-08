@@ -32,7 +32,7 @@ export default function JoinPage() {
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Why Join Us?</h2>
         <p className="text-gray-700 leading-relaxed mb-4">
-          At the Computer Vision and Deep Learning Lab, we're at the forefront of AI research, focusing on innovative applications in agriculture and beyond. By joining our team, you'll have the opportunity to:
+          At the Computer Vision and Deep Learning Lab, we are at the forefront of AI research, focusing on innovative applications in agriculture and beyond. By joining our team, you will have the opportunity to:
         </p>
         <ul className="list-disc list-inside text-gray-700 mb-4">
           <li>Work on cutting-edge research projects</li>
@@ -94,7 +94,7 @@ export default function JoinPage() {
       <Card className="text-center p-6">
         <CardTitle className="text-2xl mb-4">Ready to Take the Next Step?</CardTitle>
         <CardDescription className="mb-6">
-          We're always looking for talented individuals to join our team. If you're passionate about AI and computer vision, we'd love to hear from you!
+          We are always looking for talented individuals to join our team. If you are passionate about AI and computer vision, we would love to hear from you!
         </CardDescription>
         <Button asChild size="lg">
           <Link href="/contact">Contact Us to Apply</Link>
