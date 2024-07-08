@@ -22,8 +22,8 @@ interface Publication {
 
 export default function ResearchPage() {
   const sponsors = [
-    { name: 'USDA', filename: 'usda-logo.png' },
-    { name: 'NIFA', filename: 'nifa-logo.png' },
+    { name: 'USDA', filename: 'usda-log.png' },
+    { name: 'NIFA', filename: 'nifa-logo.jpg' },
     { name: 'Illinois Innovation Network', filename: 'illinois-innovation-network-logo.png' }
   ];
 
@@ -102,6 +102,59 @@ export default function ResearchPage() {
       <Separator className="my-12" />
 
       <section className="mb-12">
+      <h2 className="text-2xl font-semibold mb-6">Lab Equipment</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Card className="overflow-hidden">
+          <div className="relative w-full pt-[75%]"> {/* 4:3 aspect ratio */}
+            <Image
+              src="/images/equipment/flir-gf77.webp"
+              alt="FLIR GF77"
+              fill
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+          <CardHeader>
+            <CardTitle>FLIR GF77</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground mb-2">High-performance thermal imaging camera for gas detection and industrial inspections.</p>
+            <ul className="list-disc list-inside text-sm">
+              <li>Uncooled thermal imaging</li>
+              <li>High-resolution thermal sensor</li>
+              <li>Ability to detect various gases</li>
+              <li>Rugged design for industrial environments</li>
+            </ul>
+          </CardContent>
+        </Card>
+        <Card className="overflow-hidden">
+          <div className="relative w-full pt-[75%]"> {/* 4:3 aspect ratio */}
+            <Image
+              src="/images/equipment/dji-mini-4-pro.webp"
+              alt="DJI Mini 4 Pro"
+              fill
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+          <CardHeader>
+            <CardTitle>DJI Mini 4 Pro</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground mb-2">Compact yet powerful drone for aerial imaging and research applications.</p>
+            <ul className="list-disc list-inside text-sm">
+              <li>4K/60fps video capability</li>
+              <li>1/1.3-inch CMOS sensor</li>
+              <li>Omnidirectional obstacle sensing</li>
+              <li>34-minute flight time</li>
+              <li>Lightweight design (＜249g)</li>
+            </ul>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
+
+      <Separator className="my-12" />
+
+      <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-6">Recent Publications</h2>
         <Tabs defaultValue={publicationsData[0].year.toString()} className="w-full">
           <TabsList className="mb-8 flex justify-start overflow-x-auto">
@@ -135,23 +188,20 @@ export default function ResearchPage() {
       <Separator className="my-12" />
 
       <section>
-        <h2 className="text-2xl font-semibold mb-6">Research Sponsors</h2>
-        <p className="text-gray-700 mb-6">
-          The BASE Lab gratefully acknowledges the support received from our sponsors:
-        </p>
-        <div className="flex flex-wrap justify-center items-center gap-8">
-          {sponsors.map((sponsor, index) => (
-            <div key={index} className="w-24 h-24 relative">
-              <Image
-                src={`/images/${sponsor.filename}`}
-                alt={sponsor.name}
-                fill
-                style={{ objectFit: 'contain' }}
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+      <h2 className="text-2xl font-semibold mb-6">Research Sponsors</h2>
+      <div className="flex flex-wrap justify-center items-center gap-16">
+        {sponsors.map((sponsor, index) => (
+          <div key={index} className="w-56 h-56 relative">
+            <Image
+              src={`/images/${sponsor.filename}`}
+              alt={sponsor.name}
+              fill
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
     </main>
   );
 };

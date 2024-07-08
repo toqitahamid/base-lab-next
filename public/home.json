@@ -1,0 +1,77 @@
+{
+    "hero": {
+      "title": "Computer Vision and Deep Learning Lab",
+      "description": "Advancing AI frontiers through innovative research in agriculture and beyond",
+      "buttons": [
+        {
+          "text": "Our Research",
+          "link": "/research"
+        },
+        {
+          "text": "Meet the Team",
+          "link": "/team"
+        }
+      ]
+    },
+    "carouselItems": [
+      {
+        "title": "AI-Powered Livestock Monitoring",
+        "description": "Developing deep learning models for real-time health assessment of cattle.",
+        "image": "/images/research/livestock-monitoring.jpg",
+        "link": "/research#livestock-monitoring"
+      },
+      {
+        "title": "New Research Grant",
+        "description": "Secured $1.5M grant for AI in Agriculture from USDA-NIFA.",
+        "image": "/images/news/grant-announcement.jpg",
+        "link": "/news#usda-grant"
+      },
+      {
+        "title": "Advanced Object Detection in Agriculture",
+        "description": "Improving crop yield estimation using computer vision techniques.",
+        "image": "/images/research/object-detection.jpg",
+        "link": "/research#object-detection"
+      },
+      {
+        "title": "Conference Presentation at CVPR 2024",
+        "description": "Our team presented groundbreaking research on real-time cattle health monitoring.",
+        "image": "/images/activities/cvpr-poster.jpeg",
+        "link": "/news#cvpr-2024"
+      }
+    ],
+    "researchFocusAreas": [
+      {
+        "title": "Computer Vision",
+        "description": "Advancing visual data interpretation for object detection and recognition."
+      },
+      {
+        "title": "Deep Learning",
+        "description": "Developing neural networks for diverse practical applications."
+      },
+      {
+        "title": "AI for Agriculture",
+        "description": "Applying AI to agricultural challenges like livestock management."
+      }
+    ],
+    "quickStats": [
+      { "label": "Publications", "value": "50+" },
+      { "label": "Research Grants", "value": "$2.5M" },
+      { "label": "Team Members", "value": "15" },
+      { "label": "Industry Partners", "value": "10" }
+    ],
+    "recentPublications": [
+      {
+        "title": "Deep Learning for Precision Agriculture: A Survey",
+        "authors": "Smith, J., Doe, A., et al.",
+        "journal": "IEEE Transactions on AI",
+        "year": 2023
+      },
+      {
+        "title": "Real-time Cattle Health Monitoring using Edge Computing",
+        "authors": "Johnson, M., Brown, L., et al.",
+        "conference": "CVPR 2023",
+        "year": 2023
+      }
+    ],
+    "sponsors": ["usda-logo.png", "nifa-logo.jpg", "illinois-innovation-network-logo.png"]
+  }

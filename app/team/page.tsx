@@ -4,19 +4,31 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Globe, Twitter } from "lucide-react";
+import teamData from '../../public/team.json';
+
+
 
 interface TeamMemberProps {
   name: string;
   role: string;
-  image: string;
+  image?: string;
+  bio: string;
+  researchInterests: string[];
+  socialLinks?: {
+    github?: string;
+    linkedin?: string;
+    website?: string;
+    xcom?: string;  // Added X.com profile
+  };
 }
 
-const TeamMember = ({ name, role, image }: TeamMemberProps) => (
+const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: TeamMemberProps) => (
   <Card className="overflow-hidden h-full flex flex-col">
     <div className="flex items-center p-4">
       <div className="relative w-24 h-24 mr-4 flex-shrink-0">
         <Image
-          src={image || '/images/placeholder.jpg'}
+          src={image || '/images/team/placeholder.png'}
           alt={name}
           fill
           sizes="96px"
@@ -29,36 +41,131 @@ const TeamMember = ({ name, role, image }: TeamMemberProps) => (
         <Badge>{role}</Badge>
       </div>
     </div>
+    <CardContent className="flex-grow flex flex-col justify-between">
+      <div>
+        <p className="text-sm text-muted-foreground mb-2 h-20 overflow-y-auto">{bio}</p>
+        <h4 className="font-semibold mb-1">Research Interests:</h4>
+        <ul className="list-disc list-inside text-sm mb-4">
+          {researchInterests.map((interest, index) => (
+            <li key={index}>{interest}</li>
+          ))}
+        </ul>
+      </div>
+      {socialLinks && (
+        <div className="flex space-x-2 mt-auto">
+          {socialLinks.github && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+          {socialLinks.linkedin && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+          {socialLinks.website && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.website} target="_blank" rel="noopener noreferrer">
+                <Globe className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+          {socialLinks.xcom && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.xcom} target="_blank" rel="noopener noreferrer">
+                <Twitter className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+        </div>
+      )}
+    </CardContent>
+  </Card>
+);
+
+
+interface AlumniProps {
+  name: string;
+  degree: string;
+  graduationYear: number;
+  thesis: string;
+  currentPosition: string;
+  image?: string;
+  awards?: string[];
+  socialLinks?: {
+    linkedin?: string;
+    website?: string;
+  };
+}
+
+const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, image, awards, socialLinks }: AlumniProps) => (
+  <Card className="overflow-hidden h-full flex flex-col">
+    <div className="flex items-center p-4">
+      <div className="relative w-16 h-16 mr-4 flex-shrink-0">
+        <Image
+          src={image || '/images/team/placeholder.png'}
+          alt={name}
+          fill
+          sizes="64px"
+          style={{ objectFit: 'cover' }}
+          className="rounded-full"
+        />
+      </div>
+      <div>
+        <CardTitle className="text-lg">{name}</CardTitle>
+        <Badge>{degree} {graduationYear}</Badge>
+      </div>
+    </div>
+    <CardContent className="flex-grow flex flex-col justify-between">
+      <div>
+        <p className="text-sm text-muted-foreground mb-2 h-16 overflow-y-auto">Thesis: {thesis}</p>
+        <p className="text-sm font-semibold mb-2">Current: {currentPosition}</p>
+        {awards && awards.length > 0 && (
+          <div className="mb-2">
+            <p className="text-sm font-semibold">Awards:</p>
+            <ul className="list-disc list-inside text-sm">
+              {awards.map((award, index) => (
+                <li key={index}>{award}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+      {socialLinks && (
+        <div className="flex space-x-2 mt-auto">
+          {socialLinks.linkedin && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+          {socialLinks.website && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.website} target="_blank" rel="noopener noreferrer">
+                <Globe className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+          {socialLinks.xcom && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.xcom} target="_blank" rel="noopener noreferrer">
+                <Twitter className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+        </div>
+      )}
+    </CardContent>
   </Card>
 );
 
 export default function TeamPage() {
-  const phdStudents = [
-    { name: "Akhila Kambhatla", role: "PhD Student", image: "/images/team/akhila-kambhatla.jpeg" },
-    { name: "Toqi Tahamid Sarker", role: "PhD Student", image: "/images/team/toqi-sarker.jpeg" },
-    { name: "Taminul Islam", role: "PhD Student", image: "/images/team/taminul-islam.jpg" },
-    { name: "Karimi Chahrogh Laya", role: "PhD Student", image: "/images/team/karimi-laya.jpg" },
-  ];
-
-  const mastersStudents = [
-    { name: "Paloju Sathish Kumar", role: "Masters Student", image: "/images/team/sathish-kumar.jpg" },
-    { name: "Nishanth Sagar Panthangi", role: "Masters Student", image: "/images/team/nishanth-panthangi.jpg" },
-    { name: "Aluri Manoj", role: "Masters Student", image: "/images/team/aluri-manoj.jpg" },
-    { name: "Venkata Gnana Prakash Paruchuri", role: "Masters Student", image: "/images/team/venkata-paruchuri.jpg" },
-  ];
-
-  const phdAlumni = [
-    { name: "Yousef Alsenani", role: "PhD Alumni", image: "/images/team/yousef-alsenani.jpg" },
-    { name: "Memari Majid", role: "PhD Alumni", image: "/images/team/memari-majid.jpg" },
-  ];
-
-  const mastersAlumni = [
-    { name: "Akhila Kambhatla", role: "Masters Alumni", image: "/images/team/akhila-kambhatla.jpg" },
-    { name: "Subash Kharel", role: "Masters Alumni", image: "/images/team/subash-kharel.jpg" },
-    { name: "Jawad Siddique", role: "Masters Alumni", image: "/images/team/jawad-siddique.jpg" },
-    { name: "Abeer M Almalky", role: "Masters Alumni", image: "/images/team/abeer-almalky.jpg" },
-    { name: "Sandeep Goshika", role: "Masters Alumni", image: "/images/team/sandeep-goshika.jpg" },
-  ];
+  const { phdStudents, mastersStudents, alumni } = teamData;
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-4xl">
@@ -135,26 +242,11 @@ export default function TeamPage() {
 
       <section className="mt-12">
         <h2 className="text-2xl font-semibold mb-4">Alumni</h2>
-        <Tabs defaultValue="phd-alumni">
-          <TabsList>
-            <TabsTrigger value="phd-alumni">PhD Alumni</TabsTrigger>
-            <TabsTrigger value="masters-alumni">Masters Alumni</TabsTrigger>
-          </TabsList>
-          <TabsContent value="phd-alumni">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {phdAlumni.map((alum) => (
-                <TeamMember key={alum.name} {...alum} />
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="masters-alumni">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {mastersAlumni.map((alum) => (
-                <TeamMember key={alum.name} {...alum} />
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {alumni.map((alum) => (
+            <AlumniMember key={alum.name} {...alum} />
+          ))}
+        </div>
       </section>
     </main>
   );

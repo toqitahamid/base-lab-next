@@ -68,14 +68,20 @@ const PublicationCard = ({ publication, bibtexData }: PublicationCardProps) => {
           </span>
         </div>
         <div className="flex items-center justify-between mb-4">
+        <Button
+          variant="outline"
+          size="sm"
+          className="text-sm"
+          asChild
+        >
           <a 
             href={publication.url} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="text-sm text-blue-600 hover:underline flex items-center"
           >
             View Publication <ExternalLink className="ml-1 h-4 w-4" />
           </a>
+        </Button>
           <div className="space-x-2">
             <Dialog open={abstractOpen} onOpenChange={setAbstractOpen}>
               <DialogTrigger asChild>

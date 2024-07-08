@@ -26,6 +26,7 @@ const NavBar = () => {
             <NavLink href="/publications">Publications</NavLink>
             <NavLink href="/team">Team</NavLink>
             <NavLink href="/news">News</NavLink>
+            <NavLink href="/join">Join</NavLink>
             <Button asChild>
               <Link href="/contact">Contact</Link>
             </Button>
@@ -44,6 +45,7 @@ const NavBar = () => {
             <MobileNavLink href="/publications">Publications</MobileNavLink>
             <MobileNavLink href="/team">Team</MobileNavLink>
             <MobileNavLink href="/news">News</MobileNavLink>
+            <MobileNavLink href="/join">Join</MobileNavLink>
             <MobileNavLink href="/contact">Contact</MobileNavLink>
           </div>
         </div>

@@ -1,14 +1,128 @@
-[
+{
+  "phdStudents": [
     {
-      "name": "John Doe",
-      "role": "Principal Investigator",
-      "email": "john.doe@example.com",
-      "profileImage": "/images/john_doe.jpeg"
+      "name": "Akhila Kambhatla",
+      "role": "PhD Student",
+      "image": "/images/team/akhila-kambhatla.jpeg",
+      "bio": "Akhila is researching real-time automatic handgun detection in drone stream video using deep learning.",
+      "researchInterests": ["Computer Vision", "Deep Learning", "Drone Technology", "Security Applications"],
+      "socialLinks": {
+        "github": "https://github.com/akhila",
+        "linkedin": "https://linkedin.com/in/akhila"
+      }
     },
     {
-      "name": "Jane Smith",
-      "role": "Research Scientist",
-      "email": "jane.smith@example.com",
-      "profileImage": "/images/jane_smith.jpeg"
+      "name": "Toqi Tahamid Sarker",
+      "role": "PhD Student",
+      "image": "/images/team/toqi-sarker.jpeg",
+      "bio": "Toqi is developing deep learning techniques for detecting methane gas in livestock.",
+      "researchInterests": ["Deep Learning", "Environmental Monitoring", "Livestock Management"],
+      "socialLinks": {
+        "github": "https://github.com/toqi",
+        "linkedin": "https://linkedin.com/in/toqi",
+        "xcom": "https://x.com/toqitahamid"
+      }
+    },
+    {
+      "name": "Taminul Islam",
+      "role": "PhD Student",
+      "image": "/images/team/taminul-islam.jpg",
+      "bio": "Taminul is working on artificial intelligence for detecting Acidosis disease in livestock.",
+      "researchInterests": ["Artificial Intelligence", "Livestock Health", "Disease Detection"],
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/taminul"
+      }
+    },
+    {
+      "name": "Laya Karimi Chahrogh",
+      "role": "PhD Student",
+      "image": "/images/team/laya-karimi.jpeg",
+      "bio": "Laya is exploring federated learning techniques for autonomous driving.",
+      "researchInterests": ["Federated Learning", "Autonomous Driving", "Distributed AI"],
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/laya"
+      }
+    }
+  ],
+  "mastersStudents": [
+    {
+      "name": "Nishanth Sagar Panthangi",
+      "role": "Masters Student",
+      "image": "/images/team/nishanth-sagar.jpeg",
+      "bio": "Nishanth is harnessing federated learning for smarter portfolio optimization.",
+      "researchInterests": ["Federated Learning", "Financial Technology", "Portfolio Optimization"],
+      "socialLinks": {
+        "github": "https://github.com/nishanth",
+        "linkedin": "https://linkedin.com/in/nishanth"
+      }
+    }
+  ],
+  "alumni": [
+    {
+      "name": "Manoj Aluri",
+      "image": "/images/team/manoj-aluri.jpeg",
+      "degree": "Masters",
+      "graduationYear": 2024,
+      "thesis": "Porosity prediction and estimation in metal additive manufactured parts using deep learning",
+      "currentPosition": "Researcher in Material Science"
+    },
+    {
+      "name": "Paloju Sathish Kumar",
+      "degree": "Masters",
+      "graduationYear": 2024,
+      "thesis": "Simulating federated learning in autonomous driving environments",
+      "currentPosition": "Researcher in Autonomous Driving"
+    },
+    {
+      "name": "Yousef Alsenani",
+      "degree": "PhD",
+      "graduationYear": 2020,
+      "thesis": "Trust and Reliability-based frameworks for Secure Volunteer Cloud Computing",
+      "currentPosition": "Researcher in Cloud Computing Security"
+    },
+    {
+      "name": "Majid Memari",
+      "degree": "PhD",
+      "graduationYear": 2023,
+      "thesis": "Comparative Analysis of VAE and GAN for Image Generation to Improve OCR System",
+      "currentPosition": "AI Researcher"
+    },
+    {
+      "name": "Jawad Siddique",
+      "degree": "MS",
+      "graduationYear": 2022,
+      "thesis": "Using Deep learning to mitigate animal-vehicle accidents",
+      "currentPosition": "Data Scientist"
+    },
+    {
+      "name": "Subash Kharel",
+      "degree": "MS",
+      "graduationYear": 2021,
+      "thesis": "Detecting Potholes using deep learning",
+      "currentPosition": "Computer Vision Engineer",
+      "awards": ["Outstanding Thesis Award"]
+    },
+    {
+      "name": "Akhila Kambhatla",
+      "degree": "MS",
+      "image": "/images/team/akhila-kambhatla.jpeg",
+      "graduationYear": 2020,
+      "thesis": "Handgun detection in drone stream video using deep learning",
+      "currentPosition": "PhD Student at BASE Lab"
+    },
+    {
+      "name": "Abeer M. Almalky",
+      "degree": "MS",
+      "graduationYear": 2023,
+      "thesis": "Developing deep learning CNN for Weed growth detection",
+      "currentPosition": "AI Researcher in Agriculture"
+    },
+    {
+      "name": "Sandeep Goshika",
+      "degree": "MS",
+      "graduationYear": 2023,
+      "thesis": "Using Deep learning to detect defects in soybean leaf",
+      "currentPosition": "Machine Learning Engineer in AgriTech"
     }
   ]
+}
