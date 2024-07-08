@@ -45,7 +45,7 @@ export default async function PublicationsPage() {
               {yearGroup.items.map((publication, index) => (
                 <PublicationCard 
                   key={index} 
-                  publication={publication} 
+                  publication={{ ...publication, citationKey: publication.citationKey ?? '' }} 
                   bibtexData={bibtexData} 
                 />
               ))}
