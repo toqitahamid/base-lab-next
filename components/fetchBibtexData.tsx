@@ -1,12 +1,14 @@
 import { cache } from 'react';
 
 const fetchBibtexData = cache(async () => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-  const fullUrl = new URL('/publication.bib', baseUrl).toString();
-  const res = await fetch(fullUrl);
-  const text = await res.text();
-  return text;
+  try {
+    const res = await fetch('/publication.bib');
+    const text = await res.text();
+    return text;
+  } catch (error) {
+    console.error('Error fetching BibTeX data:', error);
+    return '';
+  }
 });
 
 export default fetchBibtexData;
-

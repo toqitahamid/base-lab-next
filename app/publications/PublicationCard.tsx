@@ -12,7 +12,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import fetchBibtexData from '@/components/fetchBibtexData';
 
 interface Publication {
   title: string;
@@ -22,31 +21,31 @@ interface Publication {
   url: string;
   abstract: string;
   citationKey: string;
-  type: 'journal' | 'conference';
+  type: string;
 }
 
-const PublicationCard = ({ publication }: { publication: Publication }) => {
+interface PublicationCardProps {
+  publication: Publication;
+  bibtexData: string;
+}
+
+const PublicationCard = ({ publication, bibtexData }: PublicationCardProps) => {
   const [citeOpen, setCiteOpen] = useState(false);
   const [abstractOpen, setAbstractOpen] = useState(false);
   const [bibtex, setBibtex] = useState('');
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    const loadBibtex = async () => {
-      const data = await fetchBibtexData();
+    if (citeOpen) {
       const regex = new RegExp(`@.*?{${publication.citationKey}[\\s\\S]*?}(?=\\s*@|\\s*$)`, 'g');
-      const match = data.match(regex);
+      const match = bibtexData.match(regex);
       if (match) {
         setBibtex(match[0]);
       } else {
         setBibtex('BibTeX not available for this publication.');
       }
-    };
-
-    if (citeOpen) {
-      loadBibtex();
     }
-  }, [citeOpen, publication.citationKey]);
+  }, [citeOpen, publication.citationKey, bibtexData]);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(bibtex).then(() => {

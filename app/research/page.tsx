@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
@@ -7,19 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import Image from 'next/image';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { useState, useEffect } from 'react';
-import fetchBibtexData from '@/components/fetchBibtexData';
 import publicationsData from '../../public/publications.json';
-
-
+import PublicationCardSimple from './PublicationCardSimple';
 
 interface Publication {
   title: string;
@@ -33,12 +20,13 @@ interface Publication {
   abstract?: string;
 }
 
-const ResearchPage = () => {
+export default function ResearchPage() {
   const sponsors = [
     { name: 'USDA', filename: 'usda-logo.png' },
     { name: 'NIFA', filename: 'nifa-logo.png' },
     { name: 'Illinois Innovation Network', filename: 'illinois-innovation-network-logo.png' }
   ];
+
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-4xl">
@@ -114,35 +102,35 @@ const ResearchPage = () => {
       <Separator className="my-12" />
 
       <section className="mb-12">
-      <h2 className="text-2xl font-semibold mb-6">Recent Publications</h2>
-      <Tabs defaultValue={publicationsData[0].year.toString()} className="w-full">
-        <TabsList className="mb-8 flex justify-start overflow-x-auto">
+        <h2 className="text-2xl font-semibold mb-6">Recent Publications</h2>
+        <Tabs defaultValue={publicationsData[0].year.toString()} className="w-full">
+          <TabsList className="mb-8 flex justify-start overflow-x-auto">
+            {publicationsData.slice(0, 3).map((yearGroup) => (
+              <TabsTrigger 
+                key={yearGroup.year} 
+                value={yearGroup.year.toString()}
+                className="px-4 py-2"
+              >
+                {yearGroup.year}
+              </TabsTrigger>
+            ))}
+          </TabsList>
           {publicationsData.slice(0, 3).map((yearGroup) => (
-            <TabsTrigger 
-              key={yearGroup.year} 
-              value={yearGroup.year.toString()}
-              className="px-4 py-2"
-            >
-              {yearGroup.year}
-            </TabsTrigger>
+            <TabsContent key={yearGroup.year} value={yearGroup.year.toString()}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {yearGroup.items.slice(0, 4).map((publication, index) => (
+                  <PublicationCardSimple key={index} publication={publication} />
+                ))}
+              </div>
+            </TabsContent>
           ))}
-        </TabsList>
-        {publicationsData.slice(0, 3).map((yearGroup) => (
-          <TabsContent key={yearGroup.year} value={yearGroup.year.toString()}>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {yearGroup.items.slice(0, 4).map((publication, index) => (
-                <PublicationCardSimple key={index} publication={publication} />
-              ))}
-            </div>
-          </TabsContent>
-        ))}
-      </Tabs>
-      <div className="mt-6 text-center">
-        <Link href="/publications" className="text-blue-600 hover:text-blue-800 transition-colors">
-          View all publications
-        </Link>
-      </div>
-    </section>
+        </Tabs>
+        <div className="mt-6 text-center">
+          <Link href="/publications" className="text-blue-600 hover:text-blue-800 transition-colors">
+            View all publications
+          </Link>
+        </div>
+      </section>
 
       <Separator className="my-12" />
 
@@ -168,70 +156,3 @@ const ResearchPage = () => {
   );
 };
 
-
-
-const PublicationCardSimple = ({ publication }: { publication: Publication }) => {
-  const [citeOpen, setCiteOpen] = useState(false);
-  const [bibtex, setBibtex] = useState('');
-
-
-  useEffect(() => {
-    const loadBibtex = async () => {
-      const data = await fetchBibtexData();
-      const regex = new RegExp(`@.*?{${publication.citationKey}[\\s\\S]*?}(?=\\s*@|\\s*$)`, 'g');
-      const match = data.match(regex);
-      if (match) {
-        setBibtex(match[0]);
-      } else {
-        setBibtex('BibTeX not available for this publication.');
-      }
-    };
-
-    if (citeOpen) {
-      loadBibtex();
-    }
-  }, [citeOpen, publication.citationKey]);
-
-  return (
-    <div className="bg-white shadow-sm rounded-lg p-4 hover:shadow-md transition-shadow">
-      <h3 className="text-lg font-semibold mb-2 line-clamp-2">{publication.title}</h3>
-      <p className="text-sm text-gray-600 mb-2 line-clamp-1">{publication.authors.join(", ")}</p>
-      <div className="flex items-center justify-between">
-        <span className="text-xs text-gray-500">
-          {publication.journal || publication.conference}
-        </span>
-        <div className="flex space-x-2">
-          <Button 
-            variant="outline" 
-            size="sm" 
-            className="text-xs"
-            asChild
-          >
-            <a 
-              href={publication.url} 
-              target="_blank" 
-              rel="noopener noreferrer" 
-            >
-              View
-            </a>
-          </Button>
-          <Dialog open={citeOpen} onOpenChange={setCiteOpen}>
-            <DialogTrigger asChild>
-              <Button variant="outline" size="sm" className="text-xs">Cite</Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[425px]">
-              <DialogHeader>
-                <DialogTitle>Citation</DialogTitle>
-              </DialogHeader>
-              <div className="mt-2">
-                <pre className="text-xs text-gray-700 whitespace-pre-wrap">{bibtex}</pre>
-              </div>
-            </DialogContent>
-          </Dialog>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default ResearchPage;

@@ -1,11 +1,21 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import dynamic from 'next/dynamic';
-import publicationsData from '../../public/publications.json';
+import PublicationCard from './PublicationCard';
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import publicationsData from '../../public/publications.json';
+import fs from 'fs/promises';
+import path from 'path';
 
-const PublicationCard = dynamic(() => import('./PublicationCard'), { ssr: false });
 
-export default function PublicationsPage() {
+async function getBibtexData() {
+  const bibtexPath = path.join(process.cwd(), 'public', 'publication.bib');
+  const bibtexData = await fs.readFile(bibtexPath, 'utf-8');
+  return bibtexData;
+}
+
+export default async function PublicationsPage() {
+  const bibtexData = await getBibtexData();
+  const publications = publicationsData;
+
   return (
     <main className="container mx-auto px-4 py-8 max-w-4xl">
       <Card className="mb-8">
@@ -17,9 +27,9 @@ export default function PublicationsPage() {
         </CardHeader>
       </Card>
 
-      <Tabs defaultValue={publicationsData[0].year.toString()} className="w-full">
+      <Tabs defaultValue={publications[0].year.toString()} className="w-full">
         <TabsList className="mb-8 flex justify-start overflow-x-auto">
-          {publicationsData.map((yearGroup) => (
+          {publications.map((yearGroup) => (
             <TabsTrigger 
               key={yearGroup.year} 
               value={yearGroup.year.toString()}
@@ -29,11 +39,15 @@ export default function PublicationsPage() {
             </TabsTrigger>
           ))}
         </TabsList>
-        {publicationsData.map((yearGroup) => (
+        {publications.map((yearGroup) => (
           <TabsContent key={yearGroup.year} value={yearGroup.year.toString()}>
             <div className="space-y-6">
               {yearGroup.items.map((publication, index) => (
-                <PublicationCard key={index} publication={{...publication, type: publication.type as "journal" | "conference", citationKey: publication.citationKey || ''}} />
+                <PublicationCard 
+                  key={index} 
+                  publication={publication} 
+                  bibtexData={bibtexData} 
+                />
               ))}
             </div>
           </TabsContent>
