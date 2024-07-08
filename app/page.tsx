@@ -12,7 +12,7 @@ import publicationsData from '../public/publications.json';
 
 export default function Home() {
   return (
-    <main className="container mx-auto px-4 py-12 max-w-4xl">
+    <main className="container mx-auto px-4 py-12 max-w-6xl">
       <section className="mb-24 text-center">
         <h1 className="text-5xl font-bold mb-6">{homeData.hero.title}</h1>
         <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
