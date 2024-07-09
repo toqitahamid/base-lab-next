@@ -4,7 +4,7 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 import publicationsData from '../../public/publications.json';
 import fs from 'fs/promises';
 import path from 'path';
-
+import PageHeader from '@/components/PageHeader';
 
 async function getBibtexData() {
   const bibtexPath = path.join(process.cwd(), 'public', 'publication.bib');
@@ -18,14 +18,11 @@ export default async function PublicationsPage() {
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-4xl">
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle className="text-3xl font-bold">Publications</CardTitle>
-          <CardDescription className="text-lg mt-2">
-            Explore our research papers and academic contributions
-          </CardDescription>
-        </CardHeader>
-      </Card>
+      <PageHeader 
+        title="Publications" 
+        description="Explore our research papers and academic contributions"
+      />
+      
 
       <Tabs defaultValue={publications[0].year.toString()} className="w-full">
         <TabsList className="mb-8 flex justify-start overflow-x-auto">

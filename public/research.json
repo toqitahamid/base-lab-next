@@ -1,12 +1,51 @@
-[
+{
+  "mission": "Our lab is dedicated to pushing the boundaries of Computer Vision and Deep Learning. We focus on developing innovative algorithms and techniques that have real-world applications, particularly in the areas of big data systems, object detection, and artificial intelligence for agriculture.",
+  "areas": {
+    "computerVision": "Advancing visual data interpretation to enable practical applications in diverse domains, including object detection and recognition.",
+    "deepLearning": "Developing and improving artificial neural networks for diverse practical applications with a strong emphasis on real-world impact.",
+    "bigDataSystems": "Creating scalable systems that ensure reliability in big data applications through tailored software engineering practices.",
+    "aiForAgriculture": "Applying artificial intelligence techniques to agricultural challenges, such as livestock management and crop health monitoring."
+  },
+  "currentProjects": [
     {
-      "title": "Deep Learning for Computer Vision",
-      "description": "Exploring the latest advancements in deep learning techniques for computer vision applications.",
-      "link": "/research/deep-learning-for-computer-vision"
+      "title": "AI for Greener Livestock: Educational and Research",
+      "award": "USDA-NIFA 2022-70001-37404",
+      "period": "May 1, 2022 - Apr 30, 2024"
     },
     {
-      "title": "Object Detection and Recognition",
-      "description": "Developing robust algorithms for detecting and recognizing objects in images and videos.",
-      "link": "/research/object-detection-and-recognition"
+      "title": "Detecting Subacute Ruminal Acidosis Using Real-Time Deep Learning",
+      "award": "USDA-NIFA 2023-70001-40997",
+      "period": "Sep 1, 2023 - Aug 31, 2025"
     }
+  ],
+  "labEquipment": [
+    {
+      "name": "FLIR GF77",
+      "image": "/images/equipment/flir-gf77.webp",
+      "description": "High-performance thermal imaging camera for gas detection and industrial inspections.",
+      "features": [
+        "Uncooled thermal imaging",
+        "High-resolution thermal sensor",
+        "Ability to detect various gases",
+        "Rugged design for industrial environments"
+      ]
+    },
+    {
+      "name": "DJI Mini 4 Pro",
+      "image": "/images/equipment/dji-mini-4-pro.webp",
+      "description": "Compact yet powerful drone for aerial imaging and research applications.",
+      "features": [
+        "4K/60fps video capability",
+        "1/1.3-inch CMOS sensor",
+        "Omnidirectional obstacle sensing",
+        "34-minute flight time",
+        "Lightweight design (＜249g)"
+      ]
+    }
+  ],
+  "sponsors": [
+    { "name": "USDA", "filename": "usda-logo.png" },
+    { "name": "NIFA", "filename": "nifa-logo.jpg" },
+    { "name": "Illinois Innovation Network", "filename": "illinois-innovation-network-logo.png" }
   ]
+}

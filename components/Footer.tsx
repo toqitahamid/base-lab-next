@@ -19,7 +19,7 @@ const Footer = () => {
               <li><Link href="/publications" className="hover:text-primary transition-colors">Publications</Link></li>
               <li><Link href="/team" className="hover:text-primary transition-colors">Team</Link></li>
               <li><Link href="/news" className="hover:text-primary transition-colors">News</Link></li>
-              <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/join" className="hover:text-primary transition-colors">Join</Link></li>
             </ul>
           </div>
           <div>
@@ -34,7 +34,7 @@ const Footer = () => {
               <a href="#" className="text-gray-400 hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:contact@cvdllab.edu" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="mailto:contact@siu.edu" className="text-gray-400 hover:text-primary transition-colors">
                 <Mail size={20} />
               </a>
             </div>

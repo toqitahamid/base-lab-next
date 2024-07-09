@@ -15,6 +15,12 @@
     },
     "carouselItems": [
       {
+        "title": "Conference Presentation at CVPR 2024",
+        "description": "Our team presented groundbreaking research on real-time cattle health monitoring.",
+        "image": "/images/activities/cvpr-poster.jpeg",
+        "link": "/news#cvpr-2024"
+      },
+      {
         "title": "AI-Powered Livestock Monitoring",
         "description": "Developing deep learning models for real-time health assessment of cattle.",
         "image": "/images/research/livestock-monitoring.jpg",
@@ -31,12 +37,6 @@
         "description": "Improving crop yield estimation using computer vision techniques.",
         "image": "/images/research/object-detection.jpg",
         "link": "/research#object-detection"
-      },
-      {
-        "title": "Conference Presentation at CVPR 2024",
-        "description": "Our team presented groundbreaking research on real-time cattle health monitoring.",
-        "image": "/images/activities/cvpr-poster.jpeg",
-        "link": "/news#cvpr-2024"
       }
     ],
     "researchFocusAreas": [
@@ -58,20 +58,6 @@
       { "label": "Research Grants", "value": "$2.5M" },
       { "label": "Team Members", "value": "15" },
       { "label": "Industry Partners", "value": "10" }
-    ],
-    "recentPublications": [
-      {
-        "title": "Deep Learning for Precision Agriculture: A Survey",
-        "authors": "Smith, J., Doe, A., et al.",
-        "journal": "IEEE Transactions on AI",
-        "year": 2023
-      },
-      {
-        "title": "Real-time Cattle Health Monitoring using Edge Computing",
-        "authors": "Johnson, M., Brown, L., et al.",
-        "conference": "CVPR 2023",
-        "year": 2023
-      }
     ],
     "sponsors": ["usda-logo.png", "nifa-logo.jpg", "illinois-innovation-network-logo.png"]
   }

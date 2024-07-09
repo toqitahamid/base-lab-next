@@ -1,208 +1,174 @@
 import React from 'react';
 import Link from 'next/link';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
+import Image from 'next/image';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import Image from 'next/image';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import publicationsData from '../../public/publications.json';
-import PublicationCardSimple from './PublicationCardSimple';
+import { ArrowRight, Brain, Camera, Database, Leaf, Award, Calendar } from "lucide-react";
+import fetchData from '@/components/DataFetcherServer';
+import PageHeader from '@/components/PageHeader';
 
-interface Publication {
+interface ResearchArea {
   title: string;
-  authors: string[];
-  journal?: string;
-  conference?: string;
-  url: string;
-  citationKey?: string;
-  doi?: string;
-  type?: string;
-  abstract?: string;
+  description: string;
+  icon: React.ReactNode;
 }
 
-export default function ResearchPage() {
-  const sponsors = [
-    { name: 'USDA', filename: 'usda-log.png' },
-    { name: 'NIFA', filename: 'nifa-logo.jpg' },
-    { name: 'Illinois Innovation Network', filename: 'illinois-innovation-network-logo.png' }
+interface Project {
+  title: string;
+  award: string;
+  period: string;
+}
+
+interface Equipment {
+  name: string;
+  image: string;
+  description: string;
+  features: string[];
+}
+
+interface Sponsor {
+  name: string;
+  filename: string;
+}
+
+export default async function ResearchPage() {
+  const researchData = await fetchData('/research.json');
+
+  const researchAreas: ResearchArea[] = [
+    { title: 'Computer Vision', description: researchData?.areas?.computerVision, icon: <Camera className="w-8 h-8" /> },
+    { title: 'Deep Learning', description: researchData?.areas?.deepLearning, icon: <Brain className="w-8 h-8" /> },
+    { title: 'Big Data Systems', description: researchData?.areas?.bigDataSystems, icon: <Database className="w-8 h-8" /> },
+    { title: 'AI for Agriculture', description: researchData?.areas?.aiForAgriculture, icon: <Leaf className="w-8 h-8" /> },
   ];
 
+  const currentProjects: Project[] = researchData?.currentProjects || [];
+  const labEquipment: Equipment[] = researchData?.labEquipment || [];
+  const sponsors: Sponsor[] = researchData?.sponsors || [];
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-4xl">
-      <Card className="mb-12">
-        <CardHeader>
-          <CardTitle className="text-3xl font-bold">Research</CardTitle>
-          <CardDescription className="text-lg mt-2">
-            Advancing the frontiers of Computer Vision and Deep Learning
-          </CardDescription>
-        </CardHeader>
-      </Card>
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Research Mission</h2>
-        <p className="text-gray-700 leading-relaxed">
-          Our lab is dedicated to pushing the boundaries of Computer Vision and Deep Learning. We focus on developing innovative algorithms and techniques that have real-world applications, particularly in the areas of big data systems, object detection, and artificial intelligence for agriculture.
-        </p>
-      </section>
-
+      <PageHeader 
+        title="Research" 
+        description="Advancing the frontiers of Computer Vision and Deep Learning"
+      />
+      <ResearchMission mission={researchData?.mission} />
       <Separator className="my-12" />
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-6">Research Focus Areas</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {['Computer Vision', 'Deep Learning', 'Big Data Systems', 'AI for Agriculture'].map((area, index) => (
-            <Card key={index} className="flex flex-col h-full">
-              <CardHeader>
-                <CardTitle className="text-xl">{area}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-gray-700">
-                  {area === 'Computer Vision' && "Advancing visual data interpretation to enable practical applications in diverse domains, including object detection and recognition."}
-                  {area === 'Deep Learning' && "Developing and improving artificial neural networks for diverse practical applications with a strong emphasis on real-world impact."}
-                  {area === 'Big Data Systems' && "Creating scalable systems that ensure reliability in big data applications through tailored software engineering practices."}
-                  {area === 'AI for Agriculture' && "Applying artificial intelligence techniques to agricultural challenges, such as livestock management and crop health monitoring."}
-                </p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
+      <ResearchAreas areas={researchAreas} />
       <Separator className="my-12" />
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-6">Current Projects</h2>
-        <div className="space-y-6">
-          {[
-            {
-              title: "AI for Greener Livestock: Educational and Research",
-              award: "USDA-NIFA 2022-70001-37404",
-              period: "May 1, 2022 - Apr 30, 2024"
-            },
-            {
-              title: "Detecting Subacute Ruminal Acidosis Using Real-Time Deep Learning",
-              award: "USDA-NIFA 2023-70001-40997",
-              period: "Sep 1, 2023 - Aug 31, 2025"
-            }
-          ].map((project, index) => (
-            <Card key={index} className="overflow-hidden">
-              <CardHeader className="bg-gray-50">
-                <CardTitle className="text-lg">{project.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="pt-4">
-                <Badge variant="secondary" className="mb-2">Award: {project.award}</Badge>
-                <p className="text-sm text-gray-600">Period: {project.period}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
+      <CurrentProjects projects={currentProjects} />
       <Separator className="my-12" />
-
-      <section className="mb-12">
-      <h2 className="text-2xl font-semibold mb-6">Lab Equipment</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Card className="overflow-hidden">
-          <div className="relative w-full pt-[75%]"> {/* 4:3 aspect ratio */}
-            <Image
-              src="/images/equipment/flir-gf77.webp"
-              alt="FLIR GF77"
-              fill
-              style={{ objectFit: 'contain' }}
-            />
-          </div>
-          <CardHeader>
-            <CardTitle>FLIR GF77</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground mb-2">High-performance thermal imaging camera for gas detection and industrial inspections.</p>
-            <ul className="list-disc list-inside text-sm">
-              <li>Uncooled thermal imaging</li>
-              <li>High-resolution thermal sensor</li>
-              <li>Ability to detect various gases</li>
-              <li>Rugged design for industrial environments</li>
-            </ul>
-          </CardContent>
-        </Card>
-        <Card className="overflow-hidden">
-          <div className="relative w-full pt-[75%]"> {/* 4:3 aspect ratio */}
-            <Image
-              src="/images/equipment/dji-mini-4-pro.webp"
-              alt="DJI Mini 4 Pro"
-              fill
-              style={{ objectFit: 'contain' }}
-            />
-          </div>
-          <CardHeader>
-            <CardTitle>DJI Mini 4 Pro</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground mb-2">Compact yet powerful drone for aerial imaging and research applications.</p>
-            <ul className="list-disc list-inside text-sm">
-              <li>4K/60fps video capability</li>
-              <li>1/1.3-inch CMOS sensor</li>
-              <li>Omnidirectional obstacle sensing</li>
-              <li>34-minute flight time</li>
-              <li>Lightweight design (＜249g)</li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-    </section>
-
+      <LabEquipment equipment={labEquipment} />
       <Separator className="my-12" />
-
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-6">Recent Publications</h2>
-        <Tabs defaultValue={publicationsData[0].year.toString()} className="w-full">
-          <TabsList className="mb-8 flex justify-start overflow-x-auto">
-            {publicationsData.slice(0, 3).map((yearGroup) => (
-              <TabsTrigger 
-                key={yearGroup.year} 
-                value={yearGroup.year.toString()}
-                className="px-4 py-2"
-              >
-                {yearGroup.year}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          {publicationsData.slice(0, 3).map((yearGroup) => (
-            <TabsContent key={yearGroup.year} value={yearGroup.year.toString()}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {yearGroup.items.slice(0, 4).map((publication, index) => (
-                  <PublicationCardSimple key={index} publication={publication} />
-                ))}
-              </div>
-            </TabsContent>
-          ))}
-        </Tabs>
-        <div className="mt-6 text-center">
-          <Link href="/publications" className="text-blue-600 hover:text-blue-800 transition-colors">
-            View all publications
-          </Link>
-        </div>
-      </section>
-
-      <Separator className="my-12" />
-
-      <section>
-      <h2 className="text-2xl font-semibold mb-6">Research Sponsors</h2>
-      <div className="flex flex-wrap justify-center items-center gap-16">
-        {sponsors.map((sponsor, index) => (
-          <div key={index} className="w-56 h-56 relative">
-            <Image
-              src={`/images/${sponsor.filename}`}
-              alt={sponsor.name}
-              fill
-              style={{ objectFit: 'contain' }}
-            />
-          </div>
-        ))}
-      </div>
-    </section>
+      <ResearchSponsors sponsors={sponsors} />
     </main>
   );
-};
+}
 
+const ResearchMission = ({ mission }: { mission?: string }) => (
+  <section className="mb-12">
+    <h2 className="text-2xl font-semibold mb-4">Research Mission</h2>
+    <Card>
+      <CardContent className="pt-6">
+        <p className="text-gray-700 leading-relaxed">
+          {mission || "Our lab is dedicated to pushing the boundaries of Computer Vision and Deep Learning."}
+        </p>
+      </CardContent>
+    </Card>
+  </section>
+);
+
+const ResearchAreas = ({ areas }: { areas: ResearchArea[] }) => (
+  <section className="mb-12">
+    <h2 className="text-2xl font-semibold mb-6">Research Focus Areas</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {areas.map((area, index) => (
+        <Card key={index} className="flex flex-col h-full hover:shadow-md transition-shadow duration-300">
+          <CardHeader>
+            <div className="flex items-center space-x-2">
+              {area.icon}
+              <CardTitle className="text-xl">{area.title}</CardTitle>
+            </div>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <p className="text-gray-700">{area.description}</p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
+);
+
+const CurrentProjects = ({ projects }: { projects: Project[] }) => (
+  <section className="mb-12">
+    <h2 className="text-2xl font-semibold mb-6">Current Projects</h2>
+    <div className="space-y-6">
+      {projects.map((project, index) => (
+        <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <CardHeader className="bg-gray-50">
+            <CardTitle className="text-lg">{project.title}</CardTitle>
+          </CardHeader>
+          <CardContent className="pt-4">
+            <Badge variant="secondary" className="mb-2 flex items-center">
+              <Award className="w-4 h-4 mr-1" /> Award: {project.award}
+            </Badge>
+            <p className="text-sm text-gray-600 flex items-center">
+              <Calendar className="w-4 h-4 mr-1" /> Period: {project.period}
+            </p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
+);
+
+const LabEquipment = ({ equipment }: { equipment: Equipment[] }) => (
+  <section className="mb-12">
+    <h2 className="text-2xl font-semibold mb-6">Lab Equipment</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {equipment.map((item, index) => (
+        <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <div className="relative w-full pt-[75%]">
+            <Image
+              src={item.image}
+              alt={item.name}
+              fill
+              style={{ objectFit: 'contain' }}
+            />
+          </div>
+          <CardHeader>
+            <CardTitle>{item.name}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
+            <ul className="list-disc list-inside text-sm">
+              {item.features.map((feature, featureIndex) => (
+                <li key={featureIndex}>{feature}</li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
+);
+
+
+const ResearchSponsors = ({ sponsors }: { sponsors: Sponsor[] }) => (
+  <section>
+    <h2 className="text-2xl font-semibold mb-6">Research Sponsors</h2>
+    <div className="flex flex-wrap justify-center items-center gap-16">
+      {sponsors.map((sponsor, index) => (
+        <div key={index} className="w-56 h-56 relative">
+          <Image
+            src={`/images/${sponsor.filename}`}
+            alt={sponsor.name}
+            fill
+            style={{ objectFit: 'contain' }}
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+);

@@ -6,8 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Globe, Twitter } from "lucide-react";
 import teamData from '../../public/team.json';
-
-
+import PageHeader from '@/components/PageHeader';
 
 interface TeamMemberProps {
   name: string;
@@ -23,8 +22,24 @@ interface TeamMemberProps {
   };
 }
 
+interface AlumniProps {
+  name: string;
+  degree: string;
+  graduationYear: number;
+  thesis: string;
+  currentPosition: string;
+  image?: string;
+  awards?: string[];
+  socialLinks?: {
+    linkedin?: string;
+    website?: string;
+    xcom?: string; 
+  };
+}
+
+
 const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: TeamMemberProps) => (
-  <Card className="overflow-hidden h-full flex flex-col">
+  <Card className="overflow-hidden h-full flex flex-col hover:shadow-md transition-shadow duration-300">
     <div className="flex items-center p-4">
       <div className="relative w-24 h-24 mr-4 flex-shrink-0">
         <Image
@@ -38,7 +53,7 @@ const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: 
       </div>
       <div>
         <CardTitle className="text-lg">{name}</CardTitle>
-        <Badge>{role}</Badge>
+        <Badge variant="secondary">{role}</Badge>
       </div>
     </div>
     <CardContent className="flex-grow flex flex-col justify-between">
@@ -87,24 +102,8 @@ const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: 
   </Card>
 );
 
-
-interface AlumniProps {
-  name: string;
-  degree: string;
-  graduationYear: number;
-  thesis: string;
-  currentPosition: string;
-  image?: string;
-  awards?: string[];
-  socialLinks?: {
-    linkedin?: string;
-    website?: string;
-    xcom?: string; 
-  };
-}
-
 const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, image, awards, socialLinks }: AlumniProps) => (
-  <Card className="overflow-hidden h-full flex flex-col">
+  <Card className="overflow-hidden h-full flex flex-col hover:shadow-md transition-shadow duration-300">
     <div className="flex items-center p-4">
       <div className="relative w-16 h-16 mr-4 flex-shrink-0">
         <Image
@@ -118,7 +117,7 @@ const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, i
       </div>
       <div>
         <CardTitle className="text-lg">{name}</CardTitle>
-        <Badge>{degree} {graduationYear}</Badge>
+        <Badge variant="outline">{degree} {graduationYear}</Badge>
       </div>
     </div>
     <CardContent className="flex-grow flex flex-col justify-between">
@@ -170,29 +169,25 @@ export default function TeamPage() {
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-4xl">
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle className="text-3xl font-bold">Our Team</CardTitle>
-          <CardDescription className="text-lg mt-2">
-            Meet the dedicated researchers and students of BASE Lab
-          </CardDescription>
-        </CardHeader>
-      </Card>
+      <PageHeader 
+        title="Our Team" 
+        description="Meet the dedicated researchers and students of BASE Lab"
+      />
 
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Lab Director</h2>
-        <Card className="overflow-hidden">
+        <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300">
           <div className="flex flex-col md:flex-row">
             <div className="md:w-1/3 p-4">
               <div className="relative w-full aspect-square">
-              <Image
+                <Image
                   src="/images/team/khaled-ahmed.jpeg"
                   alt="Dr. Khaled Ahmed"
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
                   style={{ 
                     objectFit: 'cover',
-                    objectPosition: 'center 5%' // Adjust this value as needed
+                    objectPosition: 'center 5%'
                   }}
                   className="rounded-lg"
                 />
@@ -217,7 +212,7 @@ export default function TeamPage() {
         </Card>
       </section>
 
-      <section>
+      <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Current Students</h2>
         <Tabs defaultValue="phd">
           <TabsList>

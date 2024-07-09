@@ -2,102 +2,165 @@ import React from 'react';
 import Link from 'next/link';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CheckCircle } from 'lucide-react';
+import PageHeader from '@/components/PageHeader';
+
+
+const positions = [
+  {
+    title: 'PhD Students',
+    description: 'Join our doctoral program and contribute to cutting-edge research in Computer Vision and Deep Learning.',
+    details: [
+      'Full funding available for qualified candidates',
+      'Opportunity to work on USDA-funded projects',
+      'Access to state-of-the-art computing resources',
+      'Collaboration with industry partners',
+      'Teaching assistantship opportunities'
+    ],
+    requirements: [
+      'M.S. in Computer Science or related field',
+      'Strong background in machine learning and computer vision',
+      'Excellent programming skills (Python, PyTorch/TensorFlow)',
+      'Good academic standing (minimum 3.5 GPA)',
+      'GRE scores (recommended but not required)',
+      'TOEFL/IELTS for international students'
+    ]
+  },
+  {
+    title: 'Masters Students',
+    description: 'Enhance your skills and knowledge through our master\'s program in Computer Science with a focus on AI and Computer Vision.',
+    details: [
+      'Thesis and non-thesis options available',
+      'Opportunities for research assistantships',
+      'Industry-relevant curriculum',
+      'Internship opportunities with partner companies',
+      'Pathway to PhD program for exceptional students'
+    ],
+    requirements: [
+      'B.S. in Computer Science or related field',
+      'Basic knowledge of machine learning and computer vision',
+      'Programming experience in Python',
+      'Minimum 3.0 GPA in undergraduate studies',
+      'GRE scores (recommended but not required)',
+      'TOEFL/IELTS for international students'
+    ]
+  },
+];
 
 export default function JoinPage() {
-  const positions = [
-    { title: 'PhD Students', description: 'Join our doctoral program and contribute to cutting-edge research.' },
-    { title: 'Masters Students', description: 'Enhance your skills and knowledge through our master\'s program.' },
-  ];
-
-  const requirements = [
-    { title: 'Academic Background', description: 'Strong foundation in Computer Science, Engineering, or related fields.' },
-    { title: 'Programming Skills', description: 'Proficiency in Python, C++, or other relevant programming languages.' },
-    { title: 'Research Experience', description: 'Previous research experience is preferred but not mandatory.' },
-    { title: 'English Proficiency', description: 'Excellent written and verbal communication skills in English.' },
-    { title: 'Motivation', description: 'Strong interest in AI, Computer Vision, and Deep Learning.' },
-    { title: 'Collaboration', description: 'Ability to work effectively in a team environment.' },
-  ];
-
   return (
-    <main className="container mx-auto px-4 py-8 max-w-4xl">
-      <Card className="mb-8">
-        <CardHeader>
-          <CardTitle className="text-3xl font-bold">Join Our Lab</CardTitle>
-          <CardDescription className="text-lg mt-2">
-            Explore opportunities to contribute to cutting-edge research in Computer Vision and Deep Learning
-          </CardDescription>
-        </CardHeader>
-      </Card>
+    <main className="container mx-auto px-4 py-12 max-w-4xl">
+        <PageHeader 
+        title="Join Our Lab" 
+        description="Explore opportunities to contribute to cutting-edge research in Computer Vision and Deep Learning"
+      />
+      
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Why Join Us?</h2>
-        <p className="text-gray-700 leading-relaxed mb-4">
-          At the Computer Vision and Deep Learning Lab, we are at the forefront of AI research, focusing on innovative applications in agriculture and beyond. By joining our team, you will have the opportunity to:
-        </p>
-        <ul className="list-disc list-inside text-gray-700 mb-4">
-          <li>Work on cutting-edge research projects</li>
-          <li>Collaborate with leading experts in the field</li>
-          <li>Access state-of-the-art equipment and resources</li>
-          <li>Contribute to real-world applications of AI</li>
-          <li>Develop your skills and advance your career in AI and Computer Vision</li>
-        </ul>
+        <h2 className="text-3xl font-semibold mb-6 text-primary">Why Join Us?</h2>
+        <Card>
+          <CardContent className="pt-6">
+            <p className="text-gray-700 leading-relaxed mb-4">
+              At the Computer Vision and Deep Learning Lab, we are at the forefront of AI research, focusing on innovative applications in agriculture and beyond. By joining our team, you will have the opportunity to:
+            </p>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                'Work on cutting-edge research projects',
+                'Collaborate with leading experts in the field',
+                'Access state-of-the-art equipment and resources',
+                'Contribute to real-world applications of AI',
+                'Develop your skills and advance your career in AI and Computer Vision',
+                'Publish in top-tier conferences and journals'
+              ].map((item, index) => (
+                <li key={index} className="flex items-center space-x-2">
+                  <CheckCircle className="text-green-500 flex-shrink-0" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </CardContent>
+        </Card>
       </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-6">Open Positions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {positions.map((position, index) => (
-            <Card key={index} className="flex flex-col h-full">
-              <CardHeader>
-                <CardTitle className="text-xl">{position.title}</CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-gray-700">{position.description}</p>
-              </CardContent>
-              <CardFooter>
-                <Button asChild>
-                  <Link href="/contact">Apply Now</Link>
-                </Button>
-              </CardFooter>
-            </Card>
+        <h2 className="text-3xl font-semibold mb-6 text-primary">Open Positions</h2>
+        <Tabs defaultValue="phd">
+          <TabsList className="mb-4">
+            <TabsTrigger value="phd">PhD Students</TabsTrigger>
+            <TabsTrigger value="masters">Masters Students</TabsTrigger>
+          </TabsList>
+          {positions.map((position) => (
+            <TabsContent key={position.title} value={position.title.toLowerCase().split(' ')[0]}>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="text-2xl">{position.title}</CardTitle>
+                  <CardDescription>{position.description}</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 className="font-semibold text-lg mb-2">Program Details</h4>
+                      <ul className="space-y-2">
+                        {position.details.map((detail, index) => (
+                          <li key={index} className="flex items-center space-x-2">
+                            <CheckCircle className="text-green-500 flex-shrink-0" />
+                            <span>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-lg mb-2">Requirements</h4>
+                      <ul className="space-y-2">
+                        {position.requirements.map((req, index) => (
+                          <li key={index} className="flex items-center space-x-2">
+                            <CheckCircle className="text-green-500 flex-shrink-0" />
+                            <span>{req}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
           ))}
-        </div>
+        </Tabs>
       </section>
+
+      
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-6">Requirements to Join</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {requirements.map((req, index) => (
-            <Card key={index} className="flex flex-col h-full">
-              <CardHeader>
-                <CardTitle className="text-lg">{req.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">{req.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        <h2 className="text-3xl font-semibold mb-6 text-primary">Application Process</h2>
+        <Card>
+          <CardContent className="pt-6">
+            <ol className="list-decimal list-inside text-gray-700 space-y-4">
+              <li>Review our research areas and open positions</li>
+              <li>Prepare your application materials:
+                <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
+                  <li>CV/resume</li>
+                  <li>Statement of purpose</li>
+                  <li>Transcripts</li>
+                  <li>Letters of recommendation</li>
+                  <li>Writing sample (for PhD applicants)</li>
+                </ul>
+              </li>
+              <li>Submit your application through the <Link href="https://gradschool.siu.edu/apply/" className="text-primary hover:underline">SIU Graduate School portal</Link></li>
+              <li>If selected, participate in an interview with our team</li>
+              <li>Receive an offer and join our lab!</li>
+            </ol>
+          </CardContent>
+        </Card>
       </section>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Application Process</h2>
-        <ol className="list-decimal list-inside text-gray-700 space-y-2">
-          <li>Review our research areas and open positions</li>
-          <li>Prepare your CV/resume and a statement of research interests</li>
-          <li>Contact us through our contact form or via email</li>
-          <li>If selected, participate in an interview with our team</li>
-          <li>Receive an offer and join our lab!</li>
-        </ol>
-      </section>
-
-      <Card className="text-center p-6">
-        <CardTitle className="text-2xl mb-4">Ready to Take the Next Step?</CardTitle>
-        <CardDescription className="mb-6">
+      <Card className="text-center p-8 bg-gradient-to-br from-primary/20 to-primary/5">
+        <CardTitle className="text-3xl mb-4 text-primary">Ready to Take the Next Step?</CardTitle>
+        <CardDescription className="text-lg mb-6">
           We are always looking for talented individuals to join our team. If you are passionate about AI and computer vision, we would love to hear from you!
         </CardDescription>
-        <Button asChild size="lg">
-          <Link href="/contact">Contact Us to Apply</Link>
+        <Button asChild size="lg" className="font-semibold">
+          <Link href="https://gradschool.siu.edu/apply/">Start Your Application</Link>
         </Button>
       </Card>
     </main>

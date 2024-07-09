@@ -27,9 +27,6 @@ const NavBar = () => {
             <NavLink href="/team">Team</NavLink>
             <NavLink href="/news">News</NavLink>
             <NavLink href="/join">Join</NavLink>
-            <Button asChild>
-              <Link href="/contact">Contact</Link>
-            </Button>
           </div>
           <div className="md:hidden flex items-center">
             <button onClick={toggleMenu} className="text-gray-500 hover:text-gray-700 focus:outline-none">
@@ -46,7 +43,6 @@ const NavBar = () => {
             <MobileNavLink href="/team">Team</MobileNavLink>
             <MobileNavLink href="/news">News</MobileNavLink>
             <MobileNavLink href="/join">Join</MobileNavLink>
-            <MobileNavLink href="/contact">Contact</MobileNavLink>
           </div>
         </div>
       )}

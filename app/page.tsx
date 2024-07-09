@@ -2,17 +2,20 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { ArrowRight, Brain, Camera, Leaf } from "lucide-react";
+import { ArrowRight, Brain, Camera, Leaf, Users, Award, BookOpen } from "lucide-react";
 import PublicationCardSimple from './research/PublicationCardSimple';
 
 // Static imports
 import homeData from '../public/home.json';
 import publicationsData from '../public/publications.json';
+import newsData from '../public/news.json';
 
 export default function Home() {
   return (
     <main className="container mx-auto px-4 py-12 max-w-6xl">
+      {/* Hero Section */}
       <section className="mb-24 text-center">
         <h1 className="text-5xl font-bold mb-6">{homeData.hero.title}</h1>
         <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
@@ -27,31 +30,34 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest Research and News Carousel */}
+      {/* Latest Works and Activities Carousel */}
       <section className="mb-24">
-        <h2 className="text-3xl font-semibold mb-8 text-center">Latest Research and News</h2>
-        <Carousel className="w-full max-w-4xl mx-auto">
+        <h2 className="text-3xl font-semibold mb-8 text-center">Latest Works and Activities</h2>
+        <Carousel className="w-full max-w-5xl mx-auto">
           <CarouselContent>
             {homeData.carouselItems.map((item, index) => (
               <CarouselItem key={index}>
-                <Card className="overflow-hidden">
-                  <div className="relative aspect-[16/9] w-full">
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      className="object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-0 left-0 p-6 text-white">
-                      <h3 className="text-2xl font-bold mb-2">{item.title}</h3>
-                      <p className="text-sm mb-4">{item.description}</p>
-                      <Button asChild variant="secondary" size="sm">
+                <div className="p-1">
+                  <Card className="overflow-hidden">
+                    <div className="relative aspect-video">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={index === 0}
+                        className="object-cover"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground mb-4">{item.description}</p>
+                      <Button asChild variant="outline">
                         <Link href={item.link}>Learn More</Link>
                       </Button>
-                    </div>
-                  </div>
-                </Card>
+                    </CardContent>
+                  </Card>
+                </div>
               </CarouselItem>
             ))}
           </CarouselContent>
@@ -59,6 +65,9 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
       </section>
+
+
+      
 
       {/* Research Focus Areas */}
       <section className="mb-24">
@@ -89,12 +98,35 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Latest News and Achievements */}
+      <section className="mb-24">
+        <h2 className="text-3xl font-semibold mb-8 text-center">Latest News and Achievements</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {newsData.slice(0, 4).map((item, index) => (
+            <Card key={index} className="h-full">
+              <CardHeader>
+                <CardTitle>{item.title}</CardTitle>
+                <CardDescription>{item.date}</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p>{item.description}</p>
+              </CardContent>
+              <CardFooter>
+                <Badge>{item.badge}</Badge>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+
       {/* Lab Highlights */}
       <section className="mb-24">
         <h2 className="text-3xl font-semibold mb-8 text-center">Lab Highlights</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           {homeData.quickStats.map((stat, index) => (
-            <Card key={index}>
+            <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
               <CardHeader>
                 <CardTitle className="text-4xl font-bold">{stat.value}</CardTitle>
               </CardHeader>
@@ -122,26 +154,54 @@ export default function Home() {
       </section>
 
       {/* Join Our Lab */}
-      <section className="mb-24 text-center">
-        <Card className="p-6">
-          <CardTitle className="text-3xl mb-4">Join Our Lab</CardTitle>
-          <CardDescription className="mb-6">
-            Interested in pushing the boundaries of AI? We are always looking for talented individuals.
-          </CardDescription>
-          <Button asChild>
-            <Link href="/join">Learn More</Link>
-          </Button>
+      <section className="mb-24">
+        <Card className="bg-primary text-primary-foreground">
+          <CardHeader>
+            <CardTitle className="text-3xl">Join Our Lab</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="mb-6">
+              Interested in pushing the boundaries of AI? We are always looking for talented individuals to join our team.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <Users className="mr-2" /> PhD Students
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>Conduct cutting-edge research in AI and Computer Vision.</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <CardTitle className="flex items-center">
+                    <BookOpen className="mr-2" /> Masters Students
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>Gain hands-on experience in advanced AI projects.</p>
+                </CardContent>
+              </Card>
+            </div>
+          </CardContent>
+          <CardFooter className="justify-center">
+            <Button asChild variant="secondary">
+              <Link href="/join">Learn More About Joining</Link>
+            </Button>
+          </CardFooter>
         </Card>
       </section>
 
       {/* Sponsors and Collaborators */}
       <section>
         <h2 className="text-3xl font-semibold mb-8 text-center">Our Sponsors and Collaborators</h2>
-        <div className="flex flex-wrap justify-center items-center gap-8">
+        <div className="flex flex-wrap justify-center items-center gap-16">
           {homeData.sponsors.map((logo, index) => (
-            <div key={index} className="w-32 h-32 relative">
+            <div key={index} className="w-48 h-48 relative">
               <Image
-                src={`/images/${logo}`}
+                src={`/images/sponsors/${logo}`}
                 alt={`Sponsor logo ${index + 1}`}
                 fill
                 style={{ objectFit: 'contain' }}
