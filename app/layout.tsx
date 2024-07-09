@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CV & DL Lab - Southern Illinois University",
+  title: "BASE Lab - Southern Illinois University",
   description: "Computer Vision and Deep Learning Lab at Southern Illinois University",
 };
 
