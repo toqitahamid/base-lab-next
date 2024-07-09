@@ -141,7 +141,7 @@ export default function Home() {
       {/* Recent Publications */}
       <section className="mb-24">
         <h2 className="text-3xl font-semibold mb-8 text-center">Recent Publications</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
           {publicationsData[0].items.slice(0, 4).map((publication, index) => (
             <PublicationCardSimple key={index} publication={publication} />
           ))}
@@ -153,6 +153,7 @@ export default function Home() {
         </div>
       </section>
 
+       
       {/* Join Our Lab */}
       <section className="mb-24">
         <Card className="bg-primary text-primary-foreground">

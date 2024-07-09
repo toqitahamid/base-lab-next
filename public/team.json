@@ -16,9 +16,10 @@
       "role": "PhD Student",
       "image": "/images/team/toqi-sarker.jpeg",
       "bio": "Toqi is developing deep learning techniques for detecting methane gas in livestock.",
-      "researchInterests": ["Deep Learning", "Environmental Monitoring", "Livestock Management"],
+      "researchInterests": ["Deep Learning", "Environmental Monitoring"],
       "socialLinks": {
-        "github": "https://github.com/toqi",
+        "website": "https://toqitahamid.com/",
+        "github": "https://github.com/toqitahamid",
         "linkedin": "https://linkedin.com/in/toqi",
         "xcom": "https://x.com/toqitahamid"
       }
@@ -88,6 +89,20 @@
       "currentPosition": "AI Researcher"
     },
     {
+      "name": "Sandeep Goshika",
+      "degree": "MS",
+      "graduationYear": 2023,
+      "thesis": "Using Deep learning to detect defects in soybean leaf",
+      "currentPosition": "Machine Learning Engineer in AgriTech"
+    },
+    {
+      "name": "Abeer M. Almalky",
+      "degree": "MS",
+      "graduationYear": 2023,
+      "thesis": "Developing deep learning CNN for Weed growth detection",
+      "currentPosition": "AI Researcher in Agriculture"
+    },
+    {
       "name": "Jawad Siddique",
       "degree": "MS",
       "graduationYear": 2022,
@@ -109,20 +124,6 @@
       "graduationYear": 2020,
       "thesis": "Handgun detection in drone stream video using deep learning",
       "currentPosition": "PhD Student at BASE Lab"
-    },
-    {
-      "name": "Abeer M. Almalky",
-      "degree": "MS",
-      "graduationYear": 2023,
-      "thesis": "Developing deep learning CNN for Weed growth detection",
-      "currentPosition": "AI Researcher in Agriculture"
-    },
-    {
-      "name": "Sandeep Goshika",
-      "degree": "MS",
-      "graduationYear": 2023,
-      "thesis": "Using Deep learning to detect defects in soybean leaf",
-      "currentPosition": "Machine Learning Engineer in AgriTech"
     }
   ]
 }

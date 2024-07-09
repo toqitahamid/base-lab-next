@@ -16,8 +16,7 @@ import {
 interface Publication {
   title: string;
   authors: string[];
-  journal?: string;
-  conference?: string;
+  publisher: string;
   url: string;
   abstract: string;
   citationKey: string;
@@ -61,27 +60,27 @@ const PublicationCard = ({ publication, bibtexData }: PublicationCardProps) => {
         <p className="text-sm text-gray-600 mb-3">{publication.authors.join(", ")}</p>
         <div className="flex items-center space-x-2 mb-4">
           <Badge variant={publication.type === "journal" ? "default" : "secondary"}>
-            {publication.type === "journal" ? "Journal" : "Conference"}
+            {publication.type.charAt(0).toUpperCase() + publication.type.slice(1)}
           </Badge>
           <span className="text-sm text-gray-500">
-            {publication.journal || publication.conference}
+            {publication.publisher}
           </span>
         </div>
         <div className="flex items-center justify-between mb-4">
-        <Button
-          variant="outline"
-          size="sm"
-          className="text-sm"
-          asChild
-        >
-          <a 
-            href={publication.url} 
-            target="_blank" 
-            rel="noopener noreferrer" 
+          <Button
+            variant="outline"
+            size="sm"
+            className="text-sm"
+            asChild
           >
-            View Publication <ExternalLink className="ml-1 h-4 w-4" />
-          </a>
-        </Button>
+            <a 
+              href={publication.url} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+            >
+              View Publication <ExternalLink className="ml-1 h-4 w-4" />
+            </a>
+          </Button>
           <div className="space-x-2">
             <Dialog open={abstractOpen} onOpenChange={setAbstractOpen}>
               <DialogTrigger asChild>
@@ -129,6 +128,6 @@ const PublicationCard = ({ publication, bibtexData }: PublicationCardProps) => {
       </CardContent>
     </Card>
   );
-};
+}
 
 export default PublicationCard;

@@ -31,6 +31,7 @@ interface AlumniProps {
   image?: string;
   awards?: string[];
   socialLinks?: {
+    github?: string;
     linkedin?: string;
     website?: string;
     xcom?: string; 
@@ -68,20 +69,6 @@ const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: 
       </div>
       {socialLinks && (
         <div className="flex space-x-2 mt-auto">
-          {socialLinks.github && (
-            <Button variant="outline" size="icon" asChild>
-              <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
-                <Github className="h-4 w-4" />
-              </a>
-            </Button>
-          )}
-          {socialLinks.linkedin && (
-            <Button variant="outline" size="icon" asChild>
-              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-4 w-4" />
-              </a>
-            </Button>
-          )}
           {socialLinks.website && (
             <Button variant="outline" size="icon" asChild>
               <a href={socialLinks.website} target="_blank" rel="noopener noreferrer">
@@ -93,6 +80,20 @@ const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: 
             <Button variant="outline" size="icon" asChild>
               <a href={socialLinks.xcom} target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+          {socialLinks.github && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+          {socialLinks.linkedin && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-4 w-4" />
               </a>
             </Button>
           )}
@@ -137,13 +138,6 @@ const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, i
       </div>
       {socialLinks && (
         <div className="flex space-x-2 mt-auto">
-          {socialLinks.linkedin && (
-            <Button variant="outline" size="icon" asChild>
-              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
-                <Linkedin className="h-4 w-4" />
-              </a>
-            </Button>
-          )}
           {socialLinks.website && (
             <Button variant="outline" size="icon" asChild>
               <a href={socialLinks.website} target="_blank" rel="noopener noreferrer">
@@ -155,6 +149,20 @@ const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, i
             <Button variant="outline" size="icon" asChild>
               <a href={socialLinks.xcom} target="_blank" rel="noopener noreferrer">
                 <Twitter className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+          {socialLinks.github && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.github} target="_blank" rel="noopener noreferrer">
+                <Github className="h-4 w-4" />
+              </a>
+            </Button>
+          )}
+          {socialLinks.linkedin && (
+            <Button variant="outline" size="icon" asChild>
+              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+                <Linkedin className="h-4 w-4" />
               </a>
             </Button>
           )}
