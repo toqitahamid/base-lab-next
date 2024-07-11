@@ -21,7 +21,7 @@ interface CarouselWithAutoplayProps {
 
 export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProps) {
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 5000, stopOnInteraction: true })
   )
 
   return (
