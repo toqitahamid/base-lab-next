@@ -133,6 +133,43 @@ export default function Home() {
       </section>
 
 
+      {/* Latest Works and Activities Carousel */}
+      <section className="mb-24">
+        <h2 className="text-3xl font-semibold mb-8 text-center">Latest Works and Activities</h2>
+        <Carousel className="w-full max-w-5xl mx-auto">
+          <CarouselContent>
+            {homeData.carouselItems.map((item, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1">
+                  <Card className="overflow-hidden">
+                    <div className="relative aspect-video">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        priority={index === 0}
+                        className="object-cover"
+                      />
+                    </div>
+                    <CardContent className="p-6">
+                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                      <p className="text-muted-foreground mb-4">{item.description}</p>
+                      <Button asChild variant="outline">
+                        <Link href={item.link}>Learn More</Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </section>
+
+
       {/* Sponsors and Collaborators */}
       <section>
         <h2 className="text-3xl font-semibold mb-8 text-center">Our Sponsors and Collaborators</h2>
@@ -230,41 +267,7 @@ export default function Home() {
       </section>
 
 
-      {/* Latest Works and Activities Carousel */}
-      <section className="mb-24">
-        <h2 className="text-3xl font-semibold mb-8 text-center">Latest Works and Activities</h2>
-        <Carousel className="w-full max-w-5xl mx-auto">
-          <CarouselContent>
-            {homeData.carouselItems.map((item, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1">
-                  <Card className="overflow-hidden">
-                    <div className="relative aspect-video">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        priority={index === 0}
-                        className="object-cover"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground mb-4">{item.description}</p>
-                      <Button asChild variant="outline">
-                        <Link href={item.link}>Learn More</Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
-      </section>
+      
 
 
       
