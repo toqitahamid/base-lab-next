@@ -62,7 +62,7 @@ export default function JoinPage() {
         <Card>
           <CardContent className="pt-6">
             <p className="text-gray-700 leading-relaxed mb-4">
-              At the Computer Vision and Deep Learning Lab, we are at the forefront of AI research, focusing on innovative applications in agriculture and beyond. By joining our team, you will have the opportunity to:
+              At the BASE Lab, we are at the forefront of AI research, focusing on innovative applications in agriculture and beyond. By joining our team, you will have the opportunity to:
             </p>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {[
