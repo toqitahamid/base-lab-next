@@ -36,33 +36,32 @@ export default function Home() {
     // <main className="container mx-auto px-4 py-12 max-w-6xl">
     <main>
       {/* Full-width hero section */}
-      <section className="relative mb-24 text-center w-full h-[30vh]">
-        <div className="absolute inset-0 z-0 overflow-hidden">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            className="absolute top-0 left-0 w-full object-cover"
-            style={{ height: '100vh', transform: 'translateY(-0%)' }}
-          >
-            <source src="/videos/lake-night.mov" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-        </div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full">
-          <h1 className={`text-5xl font-bold mb-4 text-white ${styles.heroTitle}`}>{homeData.hero.title}</h1>
-          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
-            {homeData.hero.description}
-          </p>
-          <div className="flex justify-center gap-6">
-            {homeData.hero.buttons.map((button, index) => (
-              <Button key={index} asChild variant={index === 0 ? "default" : "outline"}>
-                <Link href={button.link}>{button.text}</Link>
-              </Button>
-            ))}
-          </div>
-        </div>
-      </section>
+      <section className="relative mb-24 text-center w-full min-h-[50vh] md:h-[30vh] flex items-center justify-center">
+  <div className="absolute inset-0 z-0 overflow-hidden">
+    <video 
+      autoPlay 
+      loop 
+      muted 
+      className="absolute top-0 left-0 w-full h-full object-cover"
+    >
+      <source src="/videos/lake-night.mov" type="video/mp4" />
+    </video>
+    <div className="absolute inset-0 bg-black opacity-50"></div>
+  </div>
+  <div className="relative z-10 flex flex-col items-center justify-center w-full px-4 py-16 md:py-0">
+    <h1 className={`text-3xl md:text-5xl font-bold mb-4 text-white ${styles.heroTitle}`}>{homeData.hero.title}</h1>
+    <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
+      {homeData.hero.description}
+    </p>
+    <div className="flex flex-col md:flex-row justify-center gap-4 md:gap-6">
+      {homeData.hero.buttons.map((button, index) => (
+        <Button key={index} asChild variant={index === 0 ? "default" : "outline"} className="w-full md:w-auto">
+          <Link href={button.link}>{button.text}</Link>
+        </Button>
+      ))}
+    </div>
+  </div>
+</section>
 
 
 
