@@ -16,7 +16,7 @@
       "role": "PhD Student",
       "image": "/images/team/toqi-sarker.jpeg",
       "bio": "Toqi is developing deep learning techniques for detecting methane gas in livestock.",
-      "researchInterests": ["Deep Learning", "Environmental Monitoring"],
+      "researchInterests": ["Semantic Segmentation", "Low-level Vision", "Multi-modal Language Model"],
       "socialLinks": {
         "website": "https://toqitahamid.com/",
         "github": "https://github.com/toqitahamid",
