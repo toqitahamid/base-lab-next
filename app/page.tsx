@@ -41,7 +41,7 @@ export default function Home() {
     // <main className="container mx-auto px-4 py-12 max-w-6xl">
     <main>
       {/* Full-width hero section */}
-      <section className="relative mb-24 text-center w-full min-h-[50vh] md:h-[30vh] flex items-center justify-center">
+      <section className="relative mb-24 text-center w-full min-h-[30vh] md:h-[30vh] flex items-center justify-center">
   <div className="absolute inset-0 z-0 overflow-hidden">
     <video 
       autoPlay 
@@ -50,6 +50,7 @@ export default function Home() {
       playsInline
       className="absolute top-0 left-0 w-full h-full object-cover"
       poster="/videos/lake-night.jpg"
+      style={{ height: '100vh', transform: 'translateY(-0%)' }}
     >
       <source src="/videos/lake-night.mov" type="video/quicktime" />
       <source src="/videos/lake-night.mp4" type="video/mp4" />
@@ -75,21 +76,6 @@ export default function Home() {
 
 
       <div className="container mx-auto px-4 py-6 max-w-6xl">
-
-      {/* Hero Section */}
-      {/* <section className="mb-24 text-center">
-        <h1 className="text-5xl font-bold mb-6">{homeData.hero.title}</h1>
-        <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-          {homeData.hero.description}
-        </p>
-        <div className="flex justify-center gap-6">
-          {homeData.hero.buttons.map((button, index) => (
-            <Button key={index} asChild variant={index === 0 ? "default" : "outline"}>
-              <Link href={button.link}>{button.text}</Link>
-            </Button>
-          ))}
-        </div>
-      </section> */}
 
       
 
@@ -148,53 +134,6 @@ export default function Home() {
       </section>
 
 
-      {/* <section className="mb-24">
-        <h2 className="text-3xl font-semibold mb-8 text-center">Latest Works and Activities</h2>
-        <Carousel 
-        opts={{
-          align: "start",
-          loop: true,
-        }}
-        plugins={[
-          Autoplay({
-            delay: 5000,
-          }),
-        ]}
-        className="w-full max-w-5xl mx-auto"
-        >
-          <CarouselContent>
-            {homeData.carouselItems.map((item, index) => (
-              <CarouselItem key={index}>
-                <div className="p-1">
-                  <Card className="overflow-hidden">
-                    <div className="relative aspect-video">
-                      <Image
-                        src={item.image}
-                        alt={item.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        priority={index === 0}
-                        className="object-cover"
-                      />
-                    </div>
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                      <p className="text-muted-foreground mb-4">{item.description}</p>
-                      <Button asChild variant="outline">
-                        <Link href={item.link}>Learn More</Link>
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="hidden md:block">
-            <CarouselPrevious />
-            <CarouselNext />
-          </div>
-        </Carousel>
-      </section> */}
 
 
       {/* Sponsors and Collaborators */}
