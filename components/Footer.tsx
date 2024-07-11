@@ -23,7 +23,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-lg mb-4">Connect</h3>
+            <h3 className="text-gray-300 font-semibold text-lg mb-4">Connect</h3>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">
                 <Facebook size={20} />

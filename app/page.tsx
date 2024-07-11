@@ -7,6 +7,11 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { ArrowRight, Brain, Camera, Leaf, Users, Award, BookOpen, Network, Layers, Clock } from "lucide-react";
 import PublicationCardSimple from './research/PublicationCardSimple';
 import styles from './page.module.css';
+import Autoplay from 'embla-carousel-autoplay'
+
+import CarouselWithAutoplay from '@/components/CarouselWithAutoplay';
+
+
 
 // Static imports
 import homeData from '../public/home.json';
@@ -139,7 +144,24 @@ export default function Home() {
       {/* Latest Works and Activities Carousel */}
       <section className="mb-24">
         <h2 className="text-3xl font-semibold mb-8 text-center">Latest Works and Activities</h2>
-        <Carousel className="w-full max-w-5xl mx-auto">
+        <CarouselWithAutoplay items={homeData.carouselItems} />
+      </section>
+
+
+      {/* <section className="mb-24">
+        <h2 className="text-3xl font-semibold mb-8 text-center">Latest Works and Activities</h2>
+        <Carousel 
+        opts={{
+          align: "start",
+          loop: true,
+        }}
+        plugins={[
+          Autoplay({
+            delay: 5000,
+          }),
+        ]}
+        className="w-full max-w-5xl mx-auto"
+        >
           <CarouselContent>
             {homeData.carouselItems.map((item, index) => (
               <CarouselItem key={index}>
@@ -167,10 +189,12 @@ export default function Home() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <div className="hidden md:block">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
         </Carousel>
-      </section>
+      </section> */}
 
 
       {/* Sponsors and Collaborators */}
