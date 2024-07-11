@@ -154,7 +154,7 @@ export default function JoinPage() {
         </Card>
       </section>
 
-      <Card className="text-center p-8 bg-gradient-to-br from-primary/20 to-primary/5">
+      <Card className="text-center p-8 bg-gradient-to-br from-primary/10 to-primary/5">
         <CardTitle className="text-3xl mb-4 text-primary">Ready to Take the Next Step?</CardTitle>
         <CardDescription className="text-lg mb-6">
           We are always looking for talented individuals to join our team. If you are passionate about AI and computer vision, we would love to hear from you!

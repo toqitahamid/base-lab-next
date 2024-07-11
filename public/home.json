@@ -1,6 +1,6 @@
 {
     "hero": {
-      "title": "Computer Vision and Deep Learning Lab",
+      "title": "BASE: Bridging AI, Systems, and Environment",
       "description": "Advancing AI frontiers through innovative research in agriculture and beyond",
       "buttons": [
         {
@@ -41,16 +41,28 @@
     ],
     "researchFocusAreas": [
       {
-        "title": "Computer Vision",
-        "description": "Advancing visual data interpretation for object detection and recognition."
+          "title": "Computer Vision",
+          "description": "Developing advanced techniques for visual data interpretation, including object detection, recognition, and image processing, to enhance automated visual understanding in diverse applications."
       },
       {
-        "title": "Deep Learning",
-        "description": "Developing neural networks for diverse practical applications."
+          "title": "Deep Learning",
+          "description": "Designing and optimizing state-of-the-art neural network architectures and algorithms to address complex problems across various domains, with a focus on improving performance and scalability."
       },
       {
-        "title": "AI for Agriculture",
-        "description": "Applying AI to agricultural challenges like livestock management."
+          "title": "AI for Agriculture",
+          "description": "Applying artificial intelligence to agricultural challenges such as precision livestock management, crop health monitoring, and yield prediction, aiming to improve efficiency and sustainability in agriculture."
+      },
+      {
+          "title": "Federated Learning",
+          "description": "Creating robust federated learning frameworks to handle non-iid data and resource constraints, ensuring effective and secure distributed learning across heterogeneous environments."
+      },
+      {
+          "title": "Generative Models",
+          "description": "Advancing generative model techniques for data augmentation and realistic image synthesis, with a focus on improving the quality and diversity of synthetic data for various applications."
+      },
+      {
+          "title": "Real-time Systems",
+          "description": "Implementing real-time AI solutions to enable immediate and accurate decision-making in critical applications, ensuring timely responses and actions in dynamic and high-stakes environments."
       }
     ],
     "quickStats": [
@@ -59,5 +71,5 @@
       { "label": "Team Members", "value": "15" },
       { "label": "Industry Partners", "value": "10" }
     ],
-    "sponsors": ["usda-logo.png", "nifa-logo.jpg", "illinois-innovation-network-logo.png"]
+    "sponsors": ["usda-logo.png", "nifa-logo.png", "illinois-innovation-network-logo.png"]
   }

@@ -13,12 +13,12 @@ const NavBar = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   return (
-    <nav className="bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-[rgb(15,50,55)] shadow-md">
+      <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-xl font-bold text-primary">
-              BASE Lab
+            <Link href="/" className="text-xl font-bold text-white">
+              BASE LAB
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-4">
@@ -50,14 +50,15 @@ const NavBar = () => {
   );
 };
 
+
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <Link href={href} className="text-gray-700 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">
+  <Link href={href} className="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium">
     {children}
   </Link>
 );
 
 const MobileNavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
-  <Link href={href} className="text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">
+  <Link href={href} className="text-white hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium">
     {children}
   </Link>
 );

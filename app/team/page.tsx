@@ -59,7 +59,7 @@ const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: 
     </div>
     <CardContent className="flex-grow flex flex-col justify-between">
       <div>
-        <p className="text-sm text-muted-foreground mb-2 h-20 overflow-y-auto">{bio}</p>
+      <p className="text-sm text-gray-600 mb-2 h-20 overflow-y-auto">{bio}</p>
         <h4 className="font-semibold mb-1">Research Interests:</h4>
         <ul className="list-disc list-inside text-sm mb-4">
           {researchInterests.map((interest, index) => (
@@ -123,8 +123,9 @@ const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, i
     </div>
     <CardContent className="flex-grow flex flex-col justify-between">
       <div>
-        <p className="text-sm text-muted-foreground mb-2 h-16 overflow-y-auto">Thesis: {thesis}</p>
-        <p className="text-sm font-semibold mb-2">Current: {currentPosition}</p>
+        {/* <p className="text-sm text-gray-600 mb-2 h-20 overflow-y-auto">{bio}</p> */}
+        <p className="text-sm text-gray-600 mb-2 h-16 overflow-y-auto">Thesis: {thesis}</p>
+        <p className="text-sm text-gray-600 font-semibold mb-2">Current: {currentPosition}</p>
         {awards && awards.length > 0 && (
           <div className="mb-2">
             <p className="text-sm font-semibold">Awards:</p>

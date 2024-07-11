@@ -1,0 +1,8 @@
+.heroTitle {
+    color: hsl(var(--primary));
+  }
+
+
+  .custom-video-position {
+    object-position: bottom; /* Adjust this value to control the visible part of the video */
+}

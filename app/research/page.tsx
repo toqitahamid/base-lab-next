@@ -55,13 +55,13 @@ export default async function ResearchPage() {
       />
       <ResearchMission mission={researchData?.mission} />
       <Separator className="my-12" />
-      <ResearchAreas areas={researchAreas} />
-      <Separator className="my-12" />
+      {/* <ResearchAreas areas={researchAreas} />
+      <Separator className="my-12" /> */}
       <CurrentProjects projects={currentProjects} />
       <Separator className="my-12" />
       <LabEquipment equipment={labEquipment} />
-      <Separator className="my-12" />
-      <ResearchSponsors sponsors={sponsors} />
+      {/* <Separator className="my-12" />
+      <ResearchSponsors sponsors={sponsors} /> */}
     </main>
   );
 }
