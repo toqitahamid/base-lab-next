@@ -50,7 +50,7 @@ const positions = [
 
 export default function JoinPage() {
   return (
-    <main className="container mx-auto px-4 py-12 max-w-4xl">
+    <main className="container mx-auto px-4 py-12 max-w-6xl">
         <PageHeader 
         title="Join Our Lab" 
         description="Explore opportunities to contribute to cutting-edge research in Computer Vision and Deep Learning"

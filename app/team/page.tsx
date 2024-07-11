@@ -176,7 +176,7 @@ export default function TeamPage() {
   const { phdStudents, mastersStudents, alumni } = teamData;
 
   return (
-    <main className="container mx-auto px-4 py-8 max-w-4xl">
+    <main className="container mx-auto px-4 py-8 max-w-6xl">
       <PageHeader 
         title="Our Team" 
         description="Meet the dedicated researchers and students of BASE Lab"

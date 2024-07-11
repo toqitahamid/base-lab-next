@@ -79,7 +79,7 @@ export default async function NewsPage() {
   }
 
   return (
-    <main className="container mx-auto px-4 py-8 max-w-4xl">
+    <main className="container mx-auto px-4 py-8 max-w-6xl">
       <PageHeader 
         title="Latest News" 
         description="Stay updated with our recent achievements and announcements"

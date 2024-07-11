@@ -48,7 +48,7 @@ export default async function ResearchPage() {
   const sponsors: Sponsor[] = researchData?.sponsors || [];
 
   return (
-    <main className="container mx-auto px-4 py-8 max-w-4xl">
+    <main className="container mx-auto px-4 py-8 max-w-6xl">
       <PageHeader 
         title="Research" 
         description="Advancing the frontiers of Computer Vision and Deep Learning"
@@ -162,7 +162,7 @@ const ResearchSponsors = ({ sponsors }: { sponsors: Sponsor[] }) => (
       {sponsors.map((sponsor, index) => (
         <div key={index} className="w-56 h-56 relative">
           <Image
-            src={`/images/${sponsor.filename}`}
+            src={`/images/sponsors/${sponsor.filename}`}
             alt={sponsor.name}
             fill
             style={{ objectFit: 'contain' }}
