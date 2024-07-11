@@ -8,6 +8,8 @@ import { Github, Linkedin, Globe, Twitter } from "lucide-react";
 import teamData from '../../public/team.json';
 import PageHeader from '@/components/PageHeader';
 
+
+
 interface TeamMemberProps {
   name: string;
   role: string;
@@ -18,7 +20,8 @@ interface TeamMemberProps {
     github?: string;
     linkedin?: string;
     website?: string;
-    xcom?: string;  // Added X.com profile
+    xcom?: string;
+    googleScholar?: string; 
   };
 }
 
@@ -34,7 +37,8 @@ interface AlumniProps {
     github?: string;
     linkedin?: string;
     website?: string;
-    xcom?: string; 
+    xcom?: string;
+    googleScholar?: string; 
   };
 }
 
@@ -76,6 +80,29 @@ const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: 
               </a>
             </Button>
           )}
+          {socialLinks.googleScholar && (
+          <Button variant="outline" size="icon" asChild>
+            <a href={socialLinks.googleScholar} target="_blank" rel="noopener noreferrer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4"
+              >
+                <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+              </svg>
+            </a>
+          </Button>
+        )}
+
+        
+        
           {socialLinks.xcom && (
             <Button variant="outline" size="icon" asChild>
               <a href={socialLinks.xcom} target="_blank" rel="noopener noreferrer">
@@ -123,7 +150,6 @@ const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, i
     </div>
     <CardContent className="flex-grow flex flex-col justify-between">
       <div>
-        {/* <p className="text-sm text-gray-600 mb-2 h-20 overflow-y-auto">{bio}</p> */}
         <p className="text-sm text-gray-600 mb-2 h-16 overflow-y-auto">Thesis: {thesis}</p>
         <p className="text-sm text-gray-600 font-semibold mb-2">Current: {currentPosition}</p>
         {awards && awards.length > 0 && (
@@ -146,6 +172,26 @@ const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, i
               </a>
             </Button>
           )}
+          {socialLinks.googleScholar && (
+          <Button variant="outline" size="icon" asChild>
+            <a href={socialLinks.googleScholar} target="_blank" rel="noopener noreferrer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="h-4 w-4"
+              >
+                <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z" />
+              </svg>
+            </a>
+          </Button>
+        )}
           {socialLinks.xcom && (
             <Button variant="outline" size="icon" asChild>
               <a href={socialLinks.xcom} target="_blank" rel="noopener noreferrer">
@@ -183,43 +229,43 @@ export default function TeamPage() {
         description="Meet the dedicated researchers and students of BASE Lab"
       />
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Lab Director</h2>
-        <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300">
-          <div className="flex flex-col md:flex-row">
-            <div className="md:w-1/3 p-4">
-              <div className="relative w-full aspect-square">
-                <Image
-                  src="/images/team/khaled-ahmed.jpeg"
-                  alt="Dr. Khaled Ahmed"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  style={{ 
-                    objectFit: 'cover',
-                    objectPosition: 'center 5%'
-                  }}
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-            <div className="p-6 md:p-8 md:w-2/3">
-              <CardTitle className="text-2xl mb-2">Dr. Khaled Ahmed</CardTitle>
-              <CardDescription className="text-lg mb-4">Assistant Professor and Graduate Program Director</CardDescription>
-              <p className="text-gray-600 mb-4">
-                Khaled Ahmed is currently an assistant professor and graduate program director in the Department of Computer Science at Southern Illinois University. His research background is in Software Engineering, Distributed Systems, Parallel Computing, Machine Learning, Computer Vision, and Intelligent Transport systems.
-              </p>
-              <div className="flex space-x-4">
-                <Button variant="outline" asChild>
-                  <a href="mailto:khaled.ahmed@siu.edu">Contact</a>
-                </Button>
-                <Button variant="outline" asChild>
-                  <a href="https://khaledahmed.net" target="_blank" rel="noopener noreferrer">Website</a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </Card>
-      </section>
+<section className="mb-12">
+  <h2 className="text-2xl font-semibold mb-4">Lab Director</h2>
+  <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300">
+    <div className="flex flex-col md:flex-row">
+      <div className="w-full md:w-1/3 p-4">
+        <div className="relative w-full aspect-square max-w-[200px] md:max-w-none mx-auto md:mx-0">
+          <Image
+            src="/images/team/khaled-ahmed.jpeg"
+            alt="Dr. Khaled Ahmed"
+            fill
+            sizes="(max-width: 768px) 200px, 33vw"
+            style={{ 
+              objectFit: 'cover',
+              objectPosition: 'center 5%'
+            }}
+            className="rounded-lg"
+          />
+        </div>
+      </div>
+      <div className="p-6 md:p-8 md:w-2/3">
+        <CardTitle className="text-2xl mb-2">Dr. Khaled Ahmed</CardTitle>
+        <CardDescription className="text-lg mb-4">Assistant Professor and Graduate Program Director</CardDescription>
+        <p className="text-gray-600 mb-4">
+          Khaled Ahmed is currently an assistant professor and graduate program director in the Department of Computer Science at Southern Illinois University. His research background is in Software Engineering, Distributed Systems, Parallel Computing, Machine Learning, Computer Vision, and Intelligent Transport systems.
+        </p>
+        <div className="flex space-x-4">
+          <Button variant="outline" asChild>
+            <a href="mailto:khaled.ahmed@siu.edu">Contact</a>
+          </Button>
+          <Button variant="outline" asChild>
+            <a href="https://khaledahmed.net" target="_blank" rel="noopener noreferrer">Website</a>
+          </Button>
+        </div>
+      </div>
+    </div>
+  </Card>
+</section>
 
       <section className="mb-12">
         <h2 className="text-2xl font-semibold mb-4">Current Students</h2>

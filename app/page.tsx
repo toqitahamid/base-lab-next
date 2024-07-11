@@ -44,7 +44,7 @@ export default function Home() {
       muted 
       playsInline
       className="absolute top-0 left-0 w-full h-full object-cover"
-      // poster="/images/hero-poster.jpg"
+      poster="/videos/lake-night.jpg"
     >
       <source src="/videos/lake-night.mov" type="video/quicktime" />
       <source src="/videos/lake-night.mp4" type="video/mp4" />
@@ -69,7 +69,7 @@ export default function Home() {
 
 
 
-      <div className="container mx-auto px-4 py-12 max-w-6xl">
+      <div className="container mx-auto px-4 py-6 max-w-6xl">
 
       {/* Hero Section */}
       {/* <section className="mb-24 text-center">
@@ -174,21 +174,22 @@ export default function Home() {
 
 
       {/* Sponsors and Collaborators */}
-      <section>
-        <h2 className="text-3xl font-semibold mb-8 text-center">Our Sponsors and Collaborators</h2>
-        <div className="flex flex-wrap justify-center items-center gap-16">
-          {homeData.sponsors.map((logo, index) => (
-            <div key={index} className="w-48 h-48 relative">
-              <Image
-                src={`/images/sponsors/${logo}`}
-                alt={`Sponsor logo ${index + 1}`}
-                fill
-                style={{ objectFit: 'contain' }}
-              />
-            </div>
-          ))}
-        </div>
-      </section>
+      <section className="mb-24">
+  <h2 className="text-3xl font-semibold mb-8 text-center">Our Sponsors and Collaborators</h2>
+  <div className="grid grid-cols-3 gap-4 sm:gap-8 justify-items-center">
+    {homeData.sponsors.map((logo, index) => (
+      <div key={index} className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 relative">
+        <Image
+          src={`/images/sponsors/${logo}`}
+          alt={`Sponsor logo ${index + 1}`}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          style={{ objectFit: 'contain' }}
+        />
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* Recent Publications */}
       <section className="mb-24">
