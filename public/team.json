@@ -30,7 +30,7 @@
       "role": "PhD Student",
       "image": "/images/team/taminul-islam.jpg",
       "bio": "Taminul is working on artificial intelligence for detecting Acidosis disease in livestock.",
-      "researchInterests": ["Artificial Intelligence", "Livestock Health", "Disease Detection"],
+      "researchInterests": ["Computer Vision", "Object Detection and Segmentation", "Deep Learning", "Disease Detection"],
       "socialLinks": {
         "linkedin": "https://www.linkedin.com/in/taminul-islam/",
         "website": "https://taminulislam.github.io/",
