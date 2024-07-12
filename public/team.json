@@ -103,7 +103,8 @@
       "degree": "MS",
       "graduationYear": 2023,
       "thesis": "Developing deep learning CNN for Weed growth detection",
-      "currentPosition": "AI Researcher in Agriculture"
+      "currentPosition": "AI Researcher in Agriculture",
+      "awards": ["Outstanding Thesis Award"]
     },
     {
       "name": "Jawad Siddique",
