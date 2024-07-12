@@ -5,7 +5,7 @@
       "role": "PhD Student",
       "image": "/images/team/akhila-kambhatla.jpeg",
       "bio": "Akhila is researching real-time automatic handgun detection in drone stream video using deep learning.",
-      "researchInterests": ["Computer Vision", "Deep Learning", "Drone Technology", "Security Applications"],
+      "researchInterests": ["Computer Vision", "Deep Learning", "Swarm Intelligence", "Natural Language Processing"],
       "socialLinks": {
         "github": "https://github.com/akhila",
         "linkedin": "https://linkedin.com/in/akhila"
