@@ -16,27 +16,9 @@
     "carouselItems": [
       {
         "title": "Conference Presentation at CVPR 2024",
-        "description": "Our team presented groundbreaking research on real-time cattle health monitoring.",
-        "image": "/images/activities/cvpr-poster.jpeg",
+        "description": "Our team presented research on segmenting in-vitro methane emissions in cattle using optical gas imaging and deep learning.",
+        "image": "/images/activities/cvpr-poster.jpg",
         "link": "/news#cvpr-2024"
-      },
-      {
-        "title": "AI-Powered Livestock Monitoring",
-        "description": "Developing deep learning models for real-time health assessment of cattle.",
-        "image": "/images/research/livestock-monitoring.jpg",
-        "link": "/research#livestock-monitoring"
-      },
-      {
-        "title": "New Research Grant",
-        "description": "Secured $1.5M grant for AI in Agriculture from USDA-NIFA.",
-        "image": "/images/news/grant-announcement.jpg",
-        "link": "/news#usda-grant"
-      },
-      {
-        "title": "Advanced Object Detection in Agriculture",
-        "description": "Improving crop yield estimation using computer vision techniques.",
-        "image": "/images/research/object-detection.jpg",
-        "link": "/research#object-detection"
       }
     ],
     "researchFocusAreas": [
@@ -66,10 +48,10 @@
       }
     ],
     "quickStats": [
-      { "label": "Publications", "value": "50+" },
-      { "label": "Research Grants", "value": "$2.5M" },
-      { "label": "Team Members", "value": "15" },
-      { "label": "Industry Partners", "value": "10" }
+      { "label": "Publications", "value": "69+" },
+      { "label": "Research Projects", "value": "5+" },
+      { "label": "Team Members", "value": "8" },
+      { "label": "Years of Experience", "value": "19+" }
     ],
     "sponsors": ["usda-logo.png", "nifa-logo.png", "illinois-innovation-network-logo.png"]
   }

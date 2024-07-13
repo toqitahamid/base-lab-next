@@ -31,7 +31,7 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
         loop: true,
       }}
       plugins={[plugin.current]}
-      className="w-full max-w-5xl mx-auto"
+      className="w-full max-w-7xl mx-auto"
     >
       <CarouselContent>
         {items.map((item, index) => (
@@ -45,7 +45,7 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority={index === 0}
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
                 <CardContent className="p-6">
