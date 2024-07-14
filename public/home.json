@@ -21,22 +21,28 @@
         "link": "/news#cvpr-2024"
       },
       {
-        "title": "AI-Powered Livestock Monitoring",
-        "description": "Developing deep learning models for real-time health assessment of cattle.",
-        "image": "/images/research/livestock-monitoring.jpg",
-        "link": "/research#livestock-monitoring"
+        "title": "BASE Lab at the Graduate School Fair 2024",
+        "description": "PhD students Toqi and Taminul, along with Dr. Khaled, represented the BASE Lab and the School of Computing at the Graduate School Fair 2024 at Southern Illinois University Carbondale.",
+        "image": "/images/slider/gsf.jpeg",
+        "link": ""
       },
       {
-        "title": "New Research Grant",
-        "description": "Secured $1.5M grant for AI in Agriculture from USDA-NIFA.",
-        "image": "/images/news/grant-announcement.jpg",
-        "link": "/news#usda-grant"
+        "title": "PhD students with supervisor at agricultural field",
+        "description": "Our team is using drones to collect research samples from the field.",
+        "image": "/images/slider/field.png",
+        "link": ""
       },
       {
-        "title": "Advanced Object Detection in Agriculture",
-        "description": "Improving crop yield estimation using computer vision techniques.",
-        "image": "/images/research/object-detection.jpg",
-        "link": "/research#object-detection"
+        "title": "Collecting data using drone",
+        "description": "Our team is using drones to collect research samples from the agricultural field.",
+        "image": "/images/slider/drone.jpeg",
+        "link": ""
+      },
+      {
+        "title": "Research Sample at Greenhouse",
+        "description": "Our team prepared reseach sample in a greenhouse.",
+        "image": "/images/slider/greenhouse.jpeg",
+        "link": ""
       }
     ],
     "researchFocusAreas": [
