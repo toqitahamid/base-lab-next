@@ -16,9 +16,10 @@
     "carouselItems": [
       {
         "title": "Conference Presentation at CVPR 2024",
-        "description": "Our team presented groundbreaking research on real-time cattle health monitoring.",
-        "image": "/images/activities/cvpr-poster.jpeg",
+        "description": "Our team presented research on segmenting in-vitro methane emissions in cattle using optical gas imaging and deep learning.",
+        "image": "/images/activities/cvpr-poster.jpg",
         "link": "/news#cvpr-2024"
+<<<<<<< HEAD
       },
       {
         "title": "BASE Lab at the Graduate School Fair 2024",
@@ -43,6 +44,8 @@
         "description": "Our team prepared reseach sample in a greenhouse.",
         "image": "/images/slider/greenhouse.jpeg",
         "link": ""
+=======
+>>>>>>> d537599f55991f1f97626a4e6c0bda0a4f01363f
       }
     ],
     "researchFocusAreas": [
@@ -72,10 +75,10 @@
       }
     ],
     "quickStats": [
-      { "label": "Publications", "value": "50+" },
-      { "label": "Research Grants", "value": "$2.5M" },
-      { "label": "Team Members", "value": "15" },
-      { "label": "Industry Partners", "value": "10" }
+      { "label": "Publications", "value": "69+" },
+      { "label": "Research Projects", "value": "5+" },
+      { "label": "Team Members", "value": "8" },
+      { "label": "Years of Experience", "value": "19+" }
     ],
     "sponsors": ["usda-logo.png", "nifa-logo.png", "illinois-innovation-network-logo.png"]
   }
