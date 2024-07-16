@@ -16,7 +16,7 @@
     "carouselItems": [
       {
         "title": "Conference Presentation at CVPR 2024",
-        "description": "Our team presented research on segmenting in-vitro methane emissions in cattle using optical gas imaging and deep learning.",
+        "description": "Our team presented research on segmenting in vitro methane emissions in cattle using optical gas imaging and deep learning.",
         "image": "/images/activities/cvpr-poster.jpg",
         "link": "/news#cvpr-2024"
       }

@@ -8,15 +8,25 @@
   },
   "currentProjects": [
     {
-      "title": "AI for Greener Livestock: Educational and Research",
-      "award": "USDA-NIFA 2022-70001-37404",
-      "period": "May 1, 2022 - Apr 30, 2024"
+      "title": "Smart Farming Soybean: The use of AI to detect and estimate early insect infections in Soybean",
+      "award": "Illinois Soybean Center",
+      "period": "Aug 01, 2024 - July 30, 2025"
     },
     {
       "title": "Detecting Subacute Ruminal Acidosis Using Real-Time Deep Learning",
       "award": "USDA-NIFA 2023-70001-40997",
       "period": "Sep 1, 2023 - Aug 31, 2025"
-    }
+    },
+    {
+      "title": "Sustainable Farming in Illinois: Developing Deep learning algorithms for classifying the Growth stages of Weed in Soybean Field",
+      "award": "Illinois Innovation Network",
+      "period": "May 01, 2023 - Dec 31, 2024"
+    },
+    {
+      "title": "AI for Greener Livestock: Educational and Research",
+      "award": "USDA-NIFA 2022-70001-37404",
+      "period": "May 1, 2022 - Apr 30, 2024"
+    },
   ],
   "labEquipment": [
     {
