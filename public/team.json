@@ -52,7 +52,11 @@
       "role": "PhD Student",
       "image": "/images/team/joseph-kalinzi.jpg",
       "bio": "Joseph is designing AI avatars with context-aware dialogue generation, natural voice interactions, emotion and facial expression recognition and synthesis, and adaptive behavior through reinforcement learning.",
-      "researchInterests": ["Large Language Models", "Computer Vision", "Reinforcement Learning from Human Feedback", "Human-Computer Interaction"]
+      "researchInterests": ["Large Language Models", "Computer Vision", "Reinforcement Learning from Human Feedback", "Human-Computer Interaction"],
+      "socialLinks": {
+        "linkedin": "https://www.linkedin.com/in/joseph-kalinzi-1602a245/",
+        "github": "https://github.com/karlkode21"
+      }
     }
   ],
   "mastersStudents": [
