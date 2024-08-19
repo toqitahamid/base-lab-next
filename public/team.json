@@ -46,6 +46,13 @@
       "socialLinks": {
         "linkedin": "https://linkedin.com/in/laya"
       }
+    },
+    {
+      "name": "Joseph Kalinzi",
+      "role": "PhD Student",
+      "image": "/images/team/joseph-kalinzi.jpg",
+      "bio": "Joseph is designing AI avatars with context-aware dialogue generation, natural voice interactions, emotion and facial expression recognition and synthesis, and adaptive behavior through reinforcement learning.",
+      "researchInterests": ["Large Language Models", "Computer Vision", "Reinforcement Learning from Human Feedback", "Human-Computer Interaction"]
     }
   ],
   "mastersStudents": [
