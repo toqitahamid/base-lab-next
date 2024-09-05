@@ -80,6 +80,17 @@
         "github": "https://github.com/nishanth",
         "linkedin": "https://linkedin.com/in/nishanth"
       }
+    },
+    {
+      "name": "James Antwi Adinkrah",
+      "role": "Masters Student",
+      "image": "/images/team/james-antwi-adinkrah.png",
+      "bio": "James is working on Artificial Intelligent model for speech recognition tailored for medical assistant application.",
+      "researchInterests": ["Large Language Models", "Computer Vision", "Deep Learning"],
+      "socialLinks": {
+        "linkedin": "https://www.linkedin.com/in/adinkrah-james-antwi/",
+        "github": "https://github.com/James-Adin?tab=repositories"
+      }
     }
   ],
   "alumni": [
