@@ -7,7 +7,25 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Globe, Mail, Twitter } from "lucide-react";
 import teamData from '../../public/team.json';
 import PageHeader from '@/components/PageHeader';
+import { GraduationCap, Users, History } from 'lucide-react';
 
+
+
+interface SectionHeaderProps {
+  title: string;
+  icon: React.ReactNode;
+}
+
+const SectionHeader: React.FC<SectionHeaderProps> = ({ title, icon }) => (
+  <Card className="mb-6 bg-gradient-to-r from-primary/20 to-primary/10">
+    <CardHeader className="flex flex-row items-center space-x-4">
+      <div className="p-2 bg-primary rounded-full">
+        {icon}
+      </div>
+      <CardTitle className="text-2xl font-bold text-primary">{title}</CardTitle>
+    </CardHeader>
+  </Card>
+);
 
 
 interface TeamMemberProps {
@@ -219,6 +237,9 @@ const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, i
   </Card>
 );
 
+
+
+
 export default function TeamPage() {
   const { phdStudents, mastersStudents, alumni } = teamData;
 
@@ -229,12 +250,12 @@ export default function TeamPage() {
         description="Meet the dedicated researchers and students of BASE Lab"
       />
 
-<section className="mb-12">
-  <h2 className="text-2xl font-semibold mb-4">Lab Director</h2>
-  <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300">
-    <div className="flex flex-col md:flex-row">
-      <div className="w-full md:w-1/3 p-4">
-        <div className="relative w-full aspect-square max-w-[200px] md:max-w-none mx-auto md:mx-0">
+      <section className="mb-12">
+        <h2 className="text-2xl font-semibold mb-4">Lab Director</h2>
+        <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300">
+          <div className="flex flex-col md:flex-row">
+            <div className="w-full md:w-1/3 p-4">
+              <div className="relative w-full aspect-square max-w-[200px] md:max-w-none mx-auto md:mx-0">
           <Image
             src="/images/team/khaled-ahmed.jpeg"
             alt="Dr. Khaled Ahmed"
@@ -279,34 +300,36 @@ export default function TeamPage() {
       </div>
     </div>
   </Card>
-</section>
+      </section>
 
       <section className="mb-12">
-        <h2 className="text-2xl font-semibold mb-4">Current Students</h2>
-        <Tabs defaultValue="phd">
-          <TabsList>
-            <TabsTrigger value="phd">PhD Students</TabsTrigger>
-            <TabsTrigger value="masters">Masters Students</TabsTrigger>
-          </TabsList>
-          <TabsContent value="phd">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {phdStudents.map((student) => (
-                <TeamMember key={student.name} {...student} />
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="masters">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {mastersStudents.map((student) => (
-                <TeamMember key={student.name} {...student} />
-              ))}
-            </div>
-          </TabsContent>
-        </Tabs>
+        {/* <SectionHeader title="Current Students" icon={<Users className="h-6 w-6 text-white" />} /> */}
+        {/* <h2 className="text-2xl font-semibold mb-4">Current Students</h2> */}
+        
+        <div className="mb-8">
+          <SectionHeader title="PhD Students" icon={<GraduationCap className="h-6 w-6 text-white" />} />
+          {/* <h3 className="text-xl font-semibold mb-4">PhD Students</h3> */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {phdStudents.map((student) => (
+              <TeamMember key={student.name} {...student} />
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <SectionHeader title="Master's Students" icon={<GraduationCap className="h-6 w-6 text-white" />} />
+          {/* <h3 className="text-xl font-semibold mb-4">Master's Students</h3> */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {mastersStudents.map((student) => (
+              <TeamMember key={student.name} {...student} />
+            ))}
+          </div>
+        </div>
       </section>
 
       <section className="mt-12">
-        <h2 className="text-2xl font-semibold mb-4">Alumni</h2>
+        <SectionHeader title="Alumni" icon={<History className="h-6 w-6 text-white" />} />
+        {/* <h2 className="text-2xl font-semibold mb-4">Alumni</h2> */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {alumni.map((alum) => (
             <AlumniMember key={alum.name} {...alum} />
@@ -316,3 +339,101 @@ export default function TeamPage() {
     </main>
   );
 }
+
+// export default function TeamPage() {
+//   const { phdStudents, mastersStudents, alumni } = teamData;
+
+//   return (
+//     <main className="container mx-auto px-4 py-8 max-w-6xl">
+//       <PageHeader 
+//         title="Our Team" 
+//         description="Meet the dedicated researchers and students of BASE Lab"
+//       />
+
+// <section className="mb-12">
+//   <h2 className="text-2xl font-semibold mb-4">Lab Director</h2>
+//   <Card className="overflow-hidden hover:shadow-md transition-shadow duration-300">
+//     <div className="flex flex-col md:flex-row">
+//       <div className="w-full md:w-1/3 p-4">
+//         <div className="relative w-full aspect-square max-w-[200px] md:max-w-none mx-auto md:mx-0">
+//           <Image
+//             src="/images/team/khaled-ahmed.jpeg"
+//             alt="Dr. Khaled Ahmed"
+//             fill
+//             sizes="(max-width: 768px) 200px, (max-width: 1200px) 50vw, 33vw"
+//             style={{ 
+//               objectFit: 'cover',
+//               objectPosition: 'center 5%'
+//             }}
+//             className="rounded-lg"
+//           />
+//         </div>
+//       </div>
+//       <div className="p-6 md:p-8 md:w-2/3">
+//         <CardTitle className="text-2xl mb-2">Dr. Khaled Ahmed</CardTitle>
+//         <CardDescription className="text-lg mb-4">Associate Professor and Graduate Program Director</CardDescription>
+//         <div className="text-gray-600 mb-4 space-y-4">
+//           <p>
+//             Khaled Ahmed is currently an associate professor and graduate program director in the School of Computing at Southern Illinois University. He was previously an associate professor in the Department of Computer Science, College of Computer and Information Technology at King Faisal University. Moreover, he worked as a postdoctoral researcher at the University of Tokyo, Japan. He has over 19 years of experience in academia, research, and industry.
+//           </p>
+//           <p>
+//             Dr. Ahmed has a prolific publication record, including 69 articles in journals and conference proceedings, and he has edited four books on Peer-to-Peer networks, Wireless Sensor Networks, and advances in Big Data, Blockchain, and Deep Learning. He has acted as Principal Investigator (PI) and Co-PI in about 11 funded research projects. Currently, he is PI and Co-PI on three federal/state research funds.
+//           </p>
+//           <p>
+//             His current research focuses on the areas of Computer Vision, Deep Learning, Big Data, and real-time video analysis for safety applications.
+//           </p>
+//         </div>
+//         <div className="flex space-x-4">
+//           <Button variant="outline" asChild className="flex items-center space-x-2 hover:bg-primary hover:text-white transition-colors">
+//             <a href="mailto:khaled.ahmed@siu.edu">
+//               <Mail className="h-4 w-4" />
+//               <span>Contact</span>
+//             </a>
+//           </Button>
+//           <Button variant="outline" asChild className="flex items-center space-x-2 hover:bg-primary hover:text-white transition-colors">
+//             <a href="https://www2.cs.siu.edu/~kahmed/index.html" target="_blank" rel="noopener noreferrer">
+//               <Globe className="h-4 w-4" />
+//               <span>Website</span>
+//             </a>
+//           </Button>
+//         </div>
+//       </div>
+//     </div>
+//   </Card>
+// </section>
+
+//       <section className="mb-12">
+//         <h2 className="text-2xl font-semibold mb-4">Current Students</h2>
+//         <Tabs defaultValue="phd">
+//           <TabsList>
+//             <TabsTrigger value="phd">PhD Students</TabsTrigger>
+//             <TabsTrigger value="masters">Masters Students</TabsTrigger>
+//           </TabsList>
+//           <TabsContent value="phd">
+//             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//               {phdStudents.map((student) => (
+//                 <TeamMember key={student.name} {...student} />
+//               ))}
+//             </div>
+//           </TabsContent>
+//           <TabsContent value="masters">
+//             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//               {mastersStudents.map((student) => (
+//                 <TeamMember key={student.name} {...student} />
+//               ))}
+//             </div>
+//           </TabsContent>
+//         </Tabs>
+//       </section>
+
+//       <section className="mt-12">
+//         <h2 className="text-2xl font-semibold mb-4">Alumni</h2>
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+//           {alumni.map((alum) => (
+//             <AlumniMember key={alum.name} {...alum} />
+//           ))}
+//         </div>
+//       </section>
+//     </main>
+//   );
+// }
