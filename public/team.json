@@ -57,6 +57,16 @@
         "linkedin": "https://www.linkedin.com/in/joseph-kalinzi-1602a245/",
         "github": "https://github.com/karlkode21"
       }
+    },
+    {
+      "name": "Abdellah Lakhssassi",
+      "role": "PhD Student",
+      "image": "/images/team/abdellah-lakhssassi.jpeg",
+      "bio": "Abdellah is working on Precision Agriculture, or the use of Artificial Intelligence to Detect and Estimate Plant Stress.",
+      "researchInterests": ["Computer Vision", "Deep Learning", "AI in Video Games", "Genetic Algorithms"],
+      "socialLinks": {
+        "github": "https://github.com/Lakh-abdellah"
+      }
     }
   ],
   "mastersStudents": [
