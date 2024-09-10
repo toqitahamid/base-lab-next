@@ -3,6 +3,16 @@
     "year": 2024,
     "items": [
       {
+        "title": "Detection and Classification of Cannabis Seeds Using RetinaNet and Faster R-CNN",
+        "authors": ["Taminul Islam", "Toqi Tahamid Sarker", "Khaled R. Ahmed", "Naoufal Lakhssassi"],
+        "publisher": "MDPI Seeds",
+        "doi": "10.3390/seeds3030031",
+        "url": "https://doi.org/10.3390/seeds3030031",
+        "citationKey": "islam2024detection",
+        "type": "journal",
+        "abstract": "The rapid growth of the cannabis industry necessitates accurate and efficient methods for detecting and classifying cannabis seed varieties, which is crucial for quality control, regulatory compliance, and genetic research. This study presents a deep learning approach to automate the detection and classification of 17 different cannabis seed varieties, addressing the limitations of manual inspection processes. Leveraging a unique dataset of 3319 high-resolution seed images, we employ self-supervised bounding box annotation using the Grounding DINO model. Our research evaluates two prominent object detection models, Faster R-CNN and RetinaNet, with different backbone architectures (ResNet50, ResNet101, and ResNeXt101). Extensive experiments reveal that RetinaNet with a ResNet101 backbone achieves the highest strict mean average precision (mAP) of 0.9458 at IoU 0.5–0.95. At the same time, Faster R-CNN with ResNet50 excels at the relaxed 0.5 IoU threshold (0.9428 mAP) and maintains superior recall. Notably, the ResNeXt101 backbone, despite its complexity, shows slightly lower performance across most metrics than ResNet architectures. In terms of inference speed, the Faster R-CNN with a ResNeXt101 backbone demonstrates the fastest processing at 17.5 frames per second. This comprehensive evaluation, including performance-speed trade-offs and per-class detection analysis, highlights the potential of deep learning for automating cannabis seed analysis. Our findings address challenges in seed purity, consistency, and regulatory adherence within the cannabis agricultural domain, paving the way for improved productivity and quality control in the industry."
+      },
+      {
         "title": "Porosity Prediction of 3D Printed Components Using U-Net and Its Variants",
         "authors": ["Aluri Manoj", "Khaled R. Ahmed", "Ghada Omar"],
         "publisher": "2024 3rd International Conference on Artificial Intelligence For Internet of Things (AIIoT)",
