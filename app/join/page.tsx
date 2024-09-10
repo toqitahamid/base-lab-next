@@ -19,7 +19,7 @@ const positions = [
       'Teaching assistantship opportunities'
     ],
     requirements: [
-      'M.S. in Computer Science or related field',
+      'M.S. in Computer Science or related field (In exceptional cases, high achieving students with only bachelor degrees will be admitted to the program)',
       'Strong background in machine learning and computer vision',
       'Excellent programming skills (Python, PyTorch/TensorFlow)',
       'Good academic standing (minimum 3.5 GPA)',
