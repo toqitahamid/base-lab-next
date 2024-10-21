@@ -15,6 +15,12 @@
     },
     "carouselItems": [
       {
+        "title": "Poster Presentation at 5th Annual Hemp Cannabis Symposium 2024",
+        "description": "Our team presented research on detecting and classifying cannabis seeds using deep learning techniques.",
+        "image": "/images/slider/cannabis_conference.jpeg",
+        "link": ""
+      },
+      {
         "title": "BASE Lab at the Graduate School Fair 2024",
         "description": "PhD students Toqi and Taminul, along with Dr. Khaled, represented the BASE Lab and the School of Computing at the Graduate School Fair 2024 at Southern Illinois University Carbondale.",
         "image": "/images/slider/gsf.jpeg",
@@ -23,13 +29,13 @@
       {
         "title": "PhD students with supervisor at agricultural field",
         "description": "Our team is using drones to collect research samples from the field.",
-        "image": "/images/slider/field.png",
+        "image": "/images/slider/fields.jpeg",
         "link": ""
       },
       {
         "title": "Collecting data using drone",
         "description": "Our team is using drones to collect research samples from the agricultural field.",
-        "image": "/images/slider/drone.jpeg",
+        "image": "/images/slider/drone_at_field.jpeg",
         "link": ""
       },
       {
