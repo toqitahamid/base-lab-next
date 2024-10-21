@@ -15,12 +15,6 @@
     },
     "carouselItems": [
       {
-        "title": "Conference Presentation at CVPR 2024",
-        "description": "Our team presented research on segmenting in vitro methane emissions in cattle using optical gas imaging and deep learning.",
-        "image": "/images/slider/cvpr-poster.jpg",
-        "link": "/news#cvpr-2024"
-      },
-      {
         "title": "BASE Lab at the Graduate School Fair 2024",
         "description": "PhD students Toqi and Taminul, along with Dr. Khaled, represented the BASE Lab and the School of Computing at the Graduate School Fair 2024 at Southern Illinois University Carbondale.",
         "image": "/images/slider/gsf.jpeg",
@@ -43,6 +37,12 @@
         "description": "Our team prepared reseach sample in a greenhouse.",
         "image": "/images/slider/greenhouse.jpeg",
         "link": ""
+      },
+      {
+        "title": "Conference Presentation at CVPR 2024",
+        "description": "Our team presented research on segmenting in vitro methane emissions in cattle using optical gas imaging and deep learning.",
+        "image": "/images/slider/cvpr-poster.jpg",
+        "link": "/news#cvpr-2024"
       }
     ],
     "researchFocusAreas": [
