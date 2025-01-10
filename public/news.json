@@ -1,5 +1,23 @@
 [
   {
+    "date": "December 2024",
+    "title": "Paper presentation at ICMLA, Miami, FL",
+    "description": "Taminul Islam, a PhD student and a Research Assistant from the BASE Lab, presented our research titled \"WeedVision: Multi-Stage Growth and Classification of Weeds Using DETR and RetinaNet for Precision Agriculture\" at the Deep Learning and Applications special session during the 23rd International Conference on Machine Learning and Applications (ICMLA).",
+    "badge": "Academic"
+  },
+  {
+    "date": "November 2024",
+    "title": "Poster Presentation at IIN Sustainability Research Conference, Normal, IL",
+    "description": "Taminul Islam, a PhD student and Research Assistant from the BASE Lab, presented a poster titled \"WeedVision: Multi-Stage Growth and Classification of Weeds Using DETR and RetinaNet for Precision Agriculture\" at the Illinois Innovation Network’s Sustainability Research Conference, held at Illinois State University.",
+    "badge": "Academic"
+  },
+  {
+    "date": "October, 2024",
+    "title": "Poster Presentation at 5th Annual Hemp Cannabis Symposium, SIUC, Carbondale, IL",
+    "description": "Taminul Islam and Toqi Tahamid Sarker, PhD students and Research Assistants from the BASE Lab, presented a poster titled \"Detection and Classification of Cannabis Seeds Using RetinaNet and Faster R-CNN\" at Southern Illinois University’s 5th Annual Hemp Cannabis Symposium 2024.",
+    "badge": "Academic"
+  },
+  {
     "date": "August 2024",
     "title": "New Illinois Soybean Center Grant Awarded",
     "description": "Awarded a one-year research grant from Illinois Soybean Center for \"Smart Farming Soybean: The use of AI to detect and estimate early insect infections in Soybean\"",
