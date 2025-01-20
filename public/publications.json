@@ -1,6 +1,6 @@
 [
   {
-    "year": 2024,
+    "year": 2025,
     "items": [
       {
         "title": "Optical gas imaging and deep learning for quantifying enteric methane emissions from rumen fermentation in vitro",
@@ -11,7 +11,12 @@
         "citationKey": "embaby2025optical",
         "type": "journal",
         "abstract": "This study investigated the possibility of using a laser methane detector (LMD) and optical gas imaging (OGI) to detect and quantify enteric methane (CH4) produced by ruminants in vitro. Four single-flow continuous fermenters were used for rumen culture incubation with four different treatment diets: Control (50:50 forage to concentrate [F:C] ratio), Control + Bromoform (CBR), Low Forage (LF; 20:80), and High Forage (HF; 80:20). After 10 days of incubation, all fermenter contents were transferred and used in a 24 h ANKOM batch culture to measure CH4. The results show that the OGI system can detect and quantify CH4 emissions from the rumen fermentation in vitro. The OGI system can detect and quantify CH4 emissions from the rumen fermentation in vitro. The OGI system can detect and quantify CH4 emissions from the rumen fermentation in vitro. The OGI system can detect and quantify CH4 emissions from the rumen fermentation in vitro."
-      },
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "items": [
       {
         "title": "WeedVision: Multi-Stage Growth and Classification of Weeds using DETR and RetinaNet for Precision Agriculture",
         "authors": ["Taminul Islam", "Toqi Tahamid Sarker", "Khaled R. Ahmed", "Cristiana Bernardi Rankrape", "Karla Gage"],
