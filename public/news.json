@@ -1,5 +1,11 @@
 [
   {
+    "date": "January 2025",
+    "title": "New Publication: Deep Learning Meets Agricultural Sustainability",
+    "description": "Our lab's latest research \"Optical gas imaging and deep learning for quantifying enteric methane emissions from rumen fermentation in vitro\" published in IET Image Processing explores a potential new approach to greenhouse gas monitoring in the livestock industry. By combining Optical Gas Imaging (OGI) with deep learning, we've investigated a promising alternative to traditional methane quantification methods. Our interdisciplinary collaboration between Animal Science and Computer Science shows how we can make environmental sustainability more achievable for farmers and researchers alike. While further research is needed, this initial work represents an important step in exploring more accessible approaches to livestock greenhouse gas monitoring.",
+    "badge": "Publication"
+  },
+  {
     "date": "December 2024",
     "title": "Paper presentation at ICMLA, Miami, FL",
     "description": "Taminul Islam, a PhD student and a Research Assistant from the BASE Lab, presented our research titled \"WeedVision: Multi-Stage Growth and Classification of Weeds Using DETR and RetinaNet for Precision Agriculture\" at the Deep Learning and Applications special session during the 23rd International Conference on Machine Learning and Applications (ICMLA).",
