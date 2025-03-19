@@ -67,20 +67,20 @@
       "socialLinks": {
         "github": "https://github.com/Lakh-abdellah"
       }
+    },
+    {
+      "name": "Sri Vaishnavi Yata",
+      "role": "PhD Student",
+      "image": "/images/team/sri-vaishnavi-yata.jpeg",
+      "bio": "Sri is working on Waterhemp detection in cotton fields.",
+      "researchInterests": ["Computer Vision", "Deep Learning", "Artificial Intelligence"],
+      "socialLinks": {
+        "linkedin": "https://www.linkedin.com/in/srivaishnaviyata"
+      }
     }
   ],
   "mastersStudents": [
-    {
-      "name": "Nishanth Sagar Panthangi",
-      "role": "Masters Student",
-      "image": "/images/team/nishanth-sagar.jpeg",
-      "bio": "Nishanth is harnessing federated learning for smarter portfolio optimization.",
-      "researchInterests": ["Federated Learning", "Financial Technology", "Portfolio Optimization"],
-      "socialLinks": {
-        "github": "https://github.com/nishanth",
-        "linkedin": "https://linkedin.com/in/nishanth"
-      }
-    },
+    
     {
       "name": "James Antwi Adinkrah",
       "role": "Masters Student",
@@ -94,6 +94,19 @@
     }
   ],
   "alumni": [
+    {
+      "name": "Nishanth Sagar Panthangi",
+      "image": "/images/team/nishanth-sagar.jpeg",
+      "degree": "Masters",
+      "graduationYear": 2024,
+      "thesis": "Federated Learning for Portfolio Optimization",
+      "currentPosition": "Software Development Engineer - II at Amazon",
+      "socialLinks": {
+        "github": "https://github.com/nishanth",
+        "linkedin": "https://linkedin.com/in/nishanth"
+      }
+    },
+
     {
       "name": "Manoj Aluri",
       "image": "/images/team/manoj-aluri.jpeg",
