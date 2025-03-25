@@ -317,10 +317,6 @@ Common issues and solutions:
    - Check console for error messages
    - Verify JSON files have proper formatting
 
-## 🤝 Contributing
-
-Contributions are welcome! Please check the [contribution guidelines](CONTRIBUTING.md) before submitting pull requests.
-
 ## 📚 Resources
 
 - [Next.js Documentation](https://nextjs.org/docs)
