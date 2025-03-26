@@ -51,7 +51,7 @@
 ## 📸 Screenshots
 
 <div align="center">
-  <img src="public/images/slider/fields.jpeg" alt="Preview of the BASE Lab Website" width="700px" />
+  <img src="public/images/misc//base-lab-secreenshot.png" alt="Preview of the BASE Lab Website" width="700px" />
 </div>
 
 ## 🚀 Getting Started
