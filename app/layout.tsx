@@ -3,12 +3,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "BASE LAB - Southern Illinois University",
-  description: "Computer Vision and Deep Learning Lab at Southern Illinois University",
+  description: "Computer Vision and Deep Learning Research Lab at Southern Illinois University",
   icons: {
     icon: [
       { url: '/images/logo/base-lab-icon-v3.svg' },
@@ -44,6 +46,8 @@ export default function RootLayout({
           <main className="flex-grow">{children}</main>
           <Footer />
         </div>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
