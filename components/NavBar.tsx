@@ -25,7 +25,7 @@ const NavBar = () => {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
               <Image 
-                src="/images/logo/base-lab-v4.svg"
+                src="/images/logo/base-lab-v4@3x.png"
                 alt="BASE LAB Logo"
                 width={180}
                 height={80}
