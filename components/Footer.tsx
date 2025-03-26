@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Facebook, Twitter, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
@@ -7,7 +8,15 @@ const Footer = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-gray-300 font-semibold text-lg mb-4">BASE Lab</h3>
+            <div className="mb-4">
+              <Image 
+                src="/images/logo/base-lab-v4@3x.png"
+                alt="BASE LAB Logo"
+                width={200}
+                height={40}
+                className="mb-4"
+              />
+            </div>
             <p className="text-gray-300 text-sm">
               Advancing the frontiers of Computer Vision and Deep Learning at Southern Illinois University.
             </p>

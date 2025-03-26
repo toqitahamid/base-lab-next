@@ -9,6 +9,26 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "BASE LAB - Southern Illinois University",
   description: "Computer Vision and Deep Learning Lab at Southern Illinois University",
+  icons: {
+    icon: [
+      { url: '/images/logo/base-lab-icon-v3.svg' },
+      { url: '/images/logo/base-lab-icon-v3@3x.png', type: 'image/png' }
+    ],
+    shortcut: '/images/logo/base-lab-icon-v3.svg',
+    apple: '/images/logo/base-lab-icon-v3@3x.png',
+  },
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: "BASE LAB",
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
+  themeColor: '#0F3237',
 };
 
 export default function RootLayout({

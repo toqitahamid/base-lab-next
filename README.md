@@ -39,7 +39,7 @@
 
 ## 🌟 Features
 
-- 💻 **Modern Stack** - Built with Next.js 14, React 18, and TypeScript
+- 💻 **Modern Stack** - Built with Next.js 15, React 19, and TypeScript
 - 🎨 **Beautiful UI** - Sleek design with Tailwind CSS and Shadcn UI components
 - 📱 **Fully Responsive** - Perfect display on all device sizes
 - 🚀 **Optimized Performance** - Lightning-fast page loads with static generation

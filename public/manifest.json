@@ -1,0 +1,21 @@
+{
+  "name": "BASE LAB",
+  "short_name": "BASE LAB",
+  "description": "Computer Vision and Deep Learning Lab at Southern Illinois University",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F3237",
+  "theme_color": "#0F3237",
+  "icons": [
+    {
+      "src": "/images/logo/base-lab-icon-v3.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/logo/base-lab-icon-v3@3x.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+} 
