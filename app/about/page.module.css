@@ -1,0 +1,342 @@
+/* Custom styles for the About page */
+.mainContainer {
+  overflow-x: hidden;
+}
+
+.heroSection {
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+  position: relative;
+}
+
+/* Research Area Styles - New */
+.researchSection {
+  background-color: #ffffff;
+}
+
+.researchArea {
+  position: relative;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1rem;
+  background-color: white;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  z-index: 1;
+  border: 1px solid #f1f5f9;
+}
+
+.researchArea:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.researchBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05) 0%, rgba(37, 99, 235, 0) 60%);
+  z-index: -1;
+}
+
+.researchBackgroundAlt {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(124, 58, 237, 0) 60%);
+}
+
+.researchBackgroundAlt2 {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.05) 0%, rgba(5, 150, 105, 0) 60%);
+}
+
+.researchIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: linear-gradient(to bottom right, #3b82f6, #1d4ed8);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
+}
+
+.researchIconAlt {
+  background: linear-gradient(to bottom right, #8b5cf6, #6d28d9);
+  box-shadow: 0 8px 16px rgba(139, 92, 246, 0.3);
+}
+
+.researchIconAlt2 {
+  background: linear-gradient(to bottom right, #10b981, #059669);
+  box-shadow: 0 8px 16px rgba(16, 185, 129, 0.3);
+}
+
+.researchList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.researchList li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #4b5563;
+}
+
+.researchList li:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3b82f6;
+}
+
+.researchList li:nth-child(2):before {
+  background-color: #4f46e5;
+}
+
+.researchList li:nth-child(3):before {
+  background-color: #7c3aed;
+}
+
+.researchList li:nth-child(4):before {
+  background-color: #8b5cf6;
+}
+
+/* Publication Styles - New */
+.publicationsSection {
+  background-color: #ffffff;
+}
+
+.publicationCard {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 1px solid #f1f5f9;
+  height: 100%;
+}
+
+.publicationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #e2e8f0;
+}
+
+.publicationContent {
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.publicationStats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.citationCount {
+  text-align: center;
+}
+
+.publicationYear {
+  text-align: center;
+}
+
+.publicationTags {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.publicationTags span {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background-color: #f1f5f9;
+  color: #3b82f6;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.publicationTags span:hover {
+  background-color: #dbeafe;
+  transform: translateY(-1px);
+}
+
+/* Original styles */
+.missionSection {
+  background-color: #ffffff;
+}
+
+.missionItem {
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.missionItem:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+  border-left: 3px solid #3b82f6;
+  transform: translateX(4px);
+}
+
+.profileSection {
+  transition: box-shadow 0.3s ease;
+}
+
+.profileSection:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.publicationItem {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #f9fafb;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.publicationItem:hover {
+  background-color: #f0f4f8;
+  border-left: 3px solid #3b82f6;
+  transform: translateX(4px);
+}
+
+.imageWrapper {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.imageWrapper:hover {
+  transform: scale(1.02);
+}
+
+.imageBadge {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #3b82f6;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.valuesSection {
+  background-color: #f9fafb;
+  position: relative;
+}
+
+.valueCard {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cardAccent {
+  height: 4px;
+  width: 50px;
+  background: linear-gradient(to right, #3b82f6, #8b5cf6);
+  margin-top: 16px;
+  border-radius: 2px;
+}
+
+.joinSection {
+  background-color: #ffffff;
+  position: relative;
+}
+
+/* Timeline Styles */
+.timelineSection {
+  position: relative;
+}
+
+.timelineItem {
+  display: flex;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timelineRight {
+  flex-direction: row-reverse;
+}
+
+.timelineMarker {
+  background-color: #3b82f6;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.2);
+}
+
+.timelineContent {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  margin-left: 50%;
+  width: 45%;
+  border-left: 3px solid #3b82f6;
+}
+
+.timelineRight .timelineContent {
+  margin-left: 0;
+  margin-right: 50%;
+  border-left: none;
+  border-right: 3px solid #3b82f6;
+}
+
+.timelineContent:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .timelineItem, .timelineRight {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 30px;
+  }
+  
+  .timelineMarker {
+    left: 0;
+    transform: translateX(-50%);
+  }
+  
+  .timelineContent, .timelineRight .timelineContent {
+    margin-left: 20px;
+    margin-right: 0;
+    width: calc(100% - 20px);
+  }
+}
+
+/* Add any additional custom styles as needed */ 
