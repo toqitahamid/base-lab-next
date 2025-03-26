@@ -9,8 +9,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "BASE LAB - Southern Illinois University",
-  description: "Computer Vision and Deep Learning Research Lab at Southern Illinois University",
+  title: "BASE LAB @ SIU Carbondale",
+  description: "Computer Vision and Deep Learning Research Lab at Southern Illinois University at Carbondale",
   icons: {
     icon: [
       { url: '/images/logo/base-lab-icon-v3.svg' },

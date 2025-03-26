@@ -274,7 +274,7 @@ export default function TeamPage() {
         <CardDescription className="text-lg mb-4">Associate Professor and Graduate Program Director</CardDescription>
         <div className="text-gray-600 mb-4 space-y-4">
           <p>
-            Khaled Ahmed is currently an associate professor and graduate program director in the School of Computing at Southern Illinois University. He was previously an associate professor in the Department of Computer Science, College of Computer and Information Technology at King Faisal University. Moreover, he worked as a postdoctoral researcher at the University of Tokyo, Japan. He has over 19 years of experience in academia, research, and industry.
+            Khaled Ahmed is currently an associate professor and graduate program director in the School of Computing at Southern Illinois University at Carbondale. He was previously an associate professor in the Department of Computer Science, College of Computer and Information Technology at King Faisal University. Moreover, he worked as a postdoctoral researcher at the University of Tokyo, Japan. He has over 19 years of experience in academia, research, and industry.
           </p>
           <p>
             Dr. Ahmed has a prolific publication record, including 69 articles in journals and conference proceedings, and he has edited four books on Peer-to-Peer networks, Wireless Sensor Networks, and advances in Big Data, Blockchain, and Deep Learning. He has acted as Principal Investigator (PI) and Co-PI in about 11 funded research projects. Currently, he is PI and Co-PI on three federal/state research funds.

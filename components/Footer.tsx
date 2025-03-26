@@ -18,7 +18,7 @@ const Footer = () => {
               />
             </div>
             <p className="text-gray-300 text-sm">
-              Advancing the frontiers of Computer Vision and Deep Learning at Southern Illinois University.
+              Advancing the frontiers of Computer Vision and Deep Learning at Southern Illinois University at Carbondale.
             </p>
           </div>
           <div>
