@@ -7,7 +7,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { ArrowRight, Brain, Camera, Leaf, Users, Award, BookOpen, Network, Layers, Clock } from "lucide-react";
 import PublicationCardSimple from './research/PublicationCardSimple';
 import styles from './page.module.css';
-import Autoplay from 'embla-carousel-autoplay'
+
 
 import CarouselWithAutoplay from '@/components/CarouselWithAutoplay';
 
