@@ -138,21 +138,23 @@ export default function Home() {
 
       {/* Sponsors and Collaborators */}
       <section className="mb-24">
-  <h2 className="text-3xl font-semibold mb-8 text-center">Our Sponsors and Collaborators</h2>
-  <div className="grid grid-cols-3 gap-4 sm:gap-8 justify-items-center">
-    {homeData.sponsors.map((logo, index) => (
-      <div key={index} className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 relative">
-        <Image
-          src={`/images/sponsors/${logo}`}
-          alt={`Sponsor logo ${index + 1}`}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          style={{ objectFit: 'contain' }}
-        />
-      </div>
-    ))}
-  </div>
-</section>
+        <h2 className="text-3xl font-semibold mb-8 text-center">Our Sponsors and Collaborators</h2>
+        <Card className="p-8">
+          <div className="grid grid-cols-3 gap-4 sm:gap-8 justify-items-center">
+            {homeData.sponsors.map((logo, index) => (
+              <div key={index} className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 relative">
+                <Image
+                  src={`/images/sponsors/${logo}`}
+                  alt={`Sponsor logo ${index + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+            ))}
+          </div>
+        </Card>
+      </section>
 
       {/* Recent Publications */}
       <section className="mb-24">
