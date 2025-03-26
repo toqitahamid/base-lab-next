@@ -1,6 +1,7 @@
 "use client";
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Button } from "@/components/ui/button";
@@ -22,8 +23,14 @@ const NavBar = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="flex justify-between h-16">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="text-xl font-bold text-white">
-              BASE LAB
+            <Link href="/" className="flex items-center">
+              <Image 
+                src="/images/logo/base-lab-v4.svg"
+                alt="BASE LAB Logo"
+                width={180}
+                height={80}
+                priority
+              />
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-4">

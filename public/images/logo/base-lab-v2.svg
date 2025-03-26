@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.47 101.81">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 84.77px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        font-family: ProximaNova-Light, 'Proxima Nova';
+        font-weight: 300;
+      }
+
+      .cls-3, .cls-4 {
+        letter-spacing: .04em;
+      }
+
+      .cls-5 {
+        letter-spacing: .04em;
+      }
+
+      .cls-5, .cls-4, .cls-6 {
+        font-family: ProximaNova-Bold, 'Proxima Nova';
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        letter-spacing: .03em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <circle class="cls-2" cx="14.94" cy="18.56" r="4.12"/>
+      <circle class="cls-2" cx="4.12" cy="44.32" r="4.12"/>
+      <circle class="cls-2" cx="40.71" cy="80.91" r="4.12"/>
+      <circle class="cls-2" cx="40.71" cy="7.74" r="4.12"/>
+      <circle class="cls-2" cx="14.94" cy="70.09" r="4.12"/>
+      <circle class="cls-2" cx="66.48" cy="70.09" r="4.12"/>
+      <circle class="cls-2" cx="77.3" cy="44.32" r="4.12"/>
+      <circle class="cls-2" cx="66.48" cy="18.56" r="4.12"/>
+      <circle class="cls-2" cx="15.46" cy="44.32" r="3.09"/>
+      <circle class="cls-2" cx="23.19" cy="26.8" r="3.09"/>
+      <circle class="cls-2" cx="58.23" cy="26.8" r="3.09"/>
+      <circle class="cls-2" cx="58.23" cy="61.85" r="3.09"/>
+      <circle class="cls-2" cx="23.19" cy="61.85" r="3.09"/>
+      <circle class="cls-2" cx="65.96" cy="44.32" r="3.09"/>
+      <circle class="cls-2" cx="40.71" cy="19.07" r="3.09"/>
+      <circle class="cls-2" cx="40.71" cy="69.58" r="3.09"/>
+      <circle class="cls-2" cx="11.34" cy="56.18" r="2.06"/>
+      <circle class="cls-2" cx="52.56" cy="73.7" r="2.06"/>
+      <circle class="cls-2" cx="70.09" cy="56.69" r="2.06"/>
+      <circle class="cls-2" cx="28.86" cy="14.95" r="2.06"/>
+      <circle class="cls-2" cx="11.85" cy="31.96" r="2.06"/>
+      <circle class="cls-2" cx="28.34" cy="73.7" r="2.06"/>
+      <circle class="cls-2" cx="70.09" cy="32.47" r="2.06"/>
+      <circle class="cls-2" cx="53.08" cy="15.47" r="2.06"/>
+      <circle class="cls-2" cx="29.89" cy="33.5" r="2.06"/>
+      <circle class="cls-2" cx="40.71" cy="59.27" r="2.06"/>
+      <circle class="cls-2" cx="29.89" cy="55.15" r="2.06"/>
+      <circle class="cls-2" cx="55.66" cy="44.32" r="2.06"/>
+      <circle class="cls-2" cx="51.28" cy="33.76" r="1.8"/>
+      <circle class="cls-2" cx="51.28" cy="54.89" r="1.8"/>
+      <ellipse class="cls-2" cx="40.71" cy="29.12" rx="2.06" ry="1.8"/>
+      <circle class="cls-2" cx="25.51" cy="44.07" r="1.8"/>
+      <circle class="cls-2" cx="60.81" cy="36.08" r="1.55"/>
+      <circle class="cls-2" cx="20.61" cy="36.08" r="1.55"/>
+      <circle class="cls-2" cx="48.96" cy="24.23" r="1.55"/>
+      <circle class="cls-2" cx="48.96" cy="64.42" r="1.55"/>
+      <circle class="cls-2" cx="32.47" cy="64.42" r="1.55"/>
+      <circle class="cls-2" cx="32.47" cy="24.23" r="1.55"/>
+      <circle class="cls-2" cx="20.61" cy="52.57" r="1.55"/>
+      <circle class="cls-2" cx="60.81" cy="52.57" r="1.55"/>
+      <circle class="cls-2" cx="47.15" cy="44.07" r="1.29"/>
+      <circle class="cls-2" cx="45.09" cy="48.71" r="1.29"/>
+      <circle class="cls-2" cx="45.09" cy="39.94" r="1.29"/>
+      <circle class="cls-2" cx="36.33" cy="39.94" r="1.29"/>
+      <circle class="cls-2" cx="40.45" cy="37.88" r="1.29"/>
+      <circle class="cls-2" cx="40.45" cy="50.77" r="1.29"/>
+      <circle class="cls-2" cx="34.27" cy="44.07" r="1.29"/>
+      <circle class="cls-2" cx="36.33" cy="48.71" r="1.29"/>
+      <circle class="cls-2" cx="45.86" cy="56.18" r="1.03"/>
+      <path class="cls-2" d="M29.44,48.5c.58.93-.39,2.35-1.39,1.53-1.32-1.07.81-2.47,1.39-1.53Z"/>
+      <circle class="cls-2" cx="52.56" cy="49.48" r="1.03"/>
+      <path class="cls-2" d="M36.38,57.17c-.66.42-2.36-.39-1.53-1.4,1.08-1.31,2.46.8,1.53,1.4Z"/>
+      <path class="cls-2" d="M29.44,38.47c.8.49-.42,2.76-1.53,1.4-.82-1,.6-1.97,1.53-1.4Z"/>
+      <circle class="cls-2" cx="45.86" cy="32.47" r="1.03"/>
+      <circle class="cls-2" cx="36.07" cy="32.47" r="1.03"/>
+      <circle class="cls-2" cx="52.56" cy="39.17" r="1.03"/>
+    </g>
+    <text class="cls-1" transform="translate(92.63 70.61)"><tspan class="cls-4" x="0" y="0">B</tspan><tspan class="cls-6" x="59.59" y="0">A</tspan><tspan class="cls-5" x="120.37" y="0">SE</tspan><tspan class="cls-3" x="227.44" y="0">LAB</tspan></text>
+  </g>
+</svg>

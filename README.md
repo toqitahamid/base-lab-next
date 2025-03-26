@@ -1,6 +1,6 @@
 <!-- Banner -->
 <div align="center">
-  <img src="public/images/sponsors/illinois-innovation-network-logo.png" alt="BASE Lab" width="500"/>
+  <img src="public/images/logo//base-lab-logo-v5@4x.png" alt="BASE Lab" width="500"/>
   <h1>BASE LAB: Bridging AI, Systems, and Environment</h1>
   <p>🚀 A cutting-edge research lab website built with Next.js and modern web technologies</p>
   
@@ -158,7 +158,7 @@ Edit `public/publications.json` to add new publications:
 - Add a new year section if necessary
 - Each publication includes title, authors, publisher, DOI, etc.
 
-Alternatively, update the BibTeX file (`public/publication.bib`) with new entries.
+Additionally, update the BibTeX file (`public/publication.bib`) with new entries.
 
 #### Adding Images
 
