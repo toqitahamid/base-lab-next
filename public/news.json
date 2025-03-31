@@ -1,5 +1,11 @@
 [
   {
+    "date": "March 2025",
+    "title": "IIN Sustaining Illinois Funding for AI-Driven Sustainable Materials Research",
+    "description": "We are pleased to announce that our research proposal, 'AI-Driven Discovery of Sustainable Ionic Liquids: A Multimodal Deep Learning Approach for Enhanced Lignin and Plastic Deconstruction,' has been awarded funding by the IIN Sustaining Illinois program. The period of performance is May 16, 2025, to May 15, 2026",
+    "badge": "Grant"
+  },
+  {
     "date": "January 2025",
     "title": "New Publication: Deep Learning Meets Agricultural Sustainability",
     "description": "Our lab's latest research \"Optical gas imaging and deep learning for quantifying enteric methane emissions from rumen fermentation in vitro\" published in IET Image Processing explores a potential new approach to greenhouse gas monitoring in the livestock industry. By combining Optical Gas Imaging (OGI) with deep learning, we've investigated a promising alternative to traditional methane quantification methods. Our interdisciplinary collaboration between Animal Science and Computer Science shows how we can make environmental sustainability more achievable for farmers and researchers alike. While further research is needed, this initial work represents an important step in exploring more accessible approaches to livestock greenhouse gas monitoring.",
