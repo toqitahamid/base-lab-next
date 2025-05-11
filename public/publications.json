@@ -3,6 +3,16 @@
     "year": 2025,
     "items": [
       {
+        "title": "SoyStageNet: Balancing Accuracy and Efficiency for Real-Time Soybean Growth Stage Detection",
+        "authors": ["Abdellah Lakhssassi", "Toqi Tahamid Sarker", "Khaled Ahmed", "Naoufal Lakhssassi", "Khalid Meksem"],
+        "publisher": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition",
+        "doi": "",
+        "url": "",
+        "citationKey": "lakhssassi2025soystagenet",
+        "type": "conference",
+        "abstract": "We present SoyStageNet, a novel transformer-based architecture for accurate detection of soybean growth stages. Precise growth stage identification is critical for optimizing agricultural interventions, yet existing solutions rely on conventional CNN architectures with limited accuracy and efficiency. Our approach integrates a lightweight Mix Vision Transformer backbone with a Neural Architecture Search-based Feature Pyramid Network and task-aligned detection head to effectively capture the subtle morphological differences between growth stages. Comprehensive experiments on our specially collected and annotated soybean dataset demonstrate that SoyStageNet achieves 83.2% AP with only 17.3M parameters and real-time inference speed of 28.5 frames per second, an 87% reduction in model size compared to DINO while maintaining competitive accuracy. This efficiency makes SoyStageNet particularly suitable for resource-constrained agricultural applications requiring real-time growth stage monitoring."
+      },
+      {
         "title": "Optical gas imaging and deep learning for quantifying enteric methane emissions from rumen fermentation in vitro",
         "authors": ["Mohamed G. Embaby", "Toqi Tahamid Sarker", "Amer AbuGhazaleh", "Khaled R. Ahmed"],
         "publisher": "IET Image Processing",
