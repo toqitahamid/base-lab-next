@@ -31,8 +31,8 @@
         "title": "WeedVision: Multi-Stage Growth and Classification of Weeds using DETR and RetinaNet for Precision Agriculture",
         "authors": ["Taminul Islam", "Toqi Tahamid Sarker", "Khaled R. Ahmed", "Cristiana Bernardi Rankrape", "Karla Gage"],
         "publisher": "23rd International Conference on Machine Learning and Applications (ICMLA)",
-        "doi": "",
-        "url": "",
+        "doi": "10.1109/ICMLA61862.2024.00214",
+        "url": "https://ieeexplore.ieee.org/abstract/document/10903355",
         "citationKey": "islam2024weedvision",
         "type": "conference",
         "abstract": "Weed management remains a critical challenge in agriculture, where weeds compete with crops for essential resources, leading to significant yield losses. Accurate detection of weeds at various growth stages is crucial for effective management yet challenging for farmers, as it requires identifying different species at multiple growth phases. This research addresses these challenges by utilizing advanced object detection models—specifically, the Detection Transformer (DETR) with a ResNet-50 backbone and RetinaNet with a ResNeXt-101 backbone—to identify and classify 16 weed species of economic concern across 174 classes, spanning their 11-week growth stages from seedling to maturity. A robust dataset comprising 203,567 images was developed, meticulously labeled by species and growth stage. The models were rigorously trained and evaluated, with RetinaNet demonstrating superior performance, achieving a mean Average Precision (mAP) of 0.907 on the training set and 0.904 on the test set, compared to DETR's mAP of 0.854 and 0.840, respectively. RetinaNet also outperformed DETR in recall and inference speed of 7.28 FPS, making it more suitable for real-time applications. Both models showed improved accuracy as plants matured. This research provides crucial insights for developing precise, sustainable, and automated weed management strategies, paving the way for real-time species-specific detection systems and advancing AI-assisted agriculture through continued innovation in model development and early detection accuracy."
