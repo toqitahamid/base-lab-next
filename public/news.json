@@ -1,5 +1,5 @@
 [
-    {
+       {
     "date": "June 2025",
     "title": "Journal Article Accepted: WeedSwin",
     "description": "We are thrilled to announce that our journal article, 'WeedSwin Hierarchical Vision Transformer with SAM-2 for Multi-Stage Weed Detection and Classification' has been acepted by the Scientific Reports (Nature).  Congratulations to the team!",
@@ -8,20 +8,8 @@
 
   {
     "date": "June 2025",
-    "title": "Review Article Accepted: Carbon Emission Quantification of Machine Learning",
-    "description": "We are pleased to announce that our review article, 'Carbon Emission Quantification of Machine Learning: A Review' has been acepted by the IEEE Transactions on Sustainable Computing. This is one of our collaboration work with SHIELD Lab, SIU. Congratulations to the team!",
-    "badge": "Publication"
-  },
-  {
-    "date": "June 2025",
-    "title": "Journal Article Accepted: WeedSwin",
-    "description": "We are thrilled to announce that our journal article, 'WeedSwin Hierarchical Vision Transformer with SAM-2 for Multi-Stage Weed Detection and Classification' has been acepted by the Scientific Reports (Nature).  Congratulations to the team!",
-    "badge": "Publication"
-  },
-  {
-    "date": "June 2025",
-    "title": "Review Article Accepted: Carbon Emission Quantification of Machine Learning",
-    "description": "We are pleased to announce that our review article, 'Carbon Emission Quantification of Machine Learning: A Review' has been acepted by the IEEE Transactions on Sustainable Computing. This is one of our collaboration work with SHIELD Lab, SIU. Congratulations to the team!",
+    "title": "Review Article Published: Carbon Emission Quantification of Machine Learning",
+    "description": "We are excited to announce that our review article, 'Carbon Emission Quantification of Machine Learning: A Review' has been published in IEEE Transactions on Sustainable Computing. This collaborative work with SHIELD Lab, SIU represents an important contribution to sustainable computing research. Congratulations to the entire team!",
     "badge": "Publication"
   },
   {
