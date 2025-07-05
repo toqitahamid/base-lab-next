@@ -2,7 +2,7 @@
        {
     "date": "July 2025",
     "title": "Journal Article Published: WeedSwin",
-    "description": "We are thrilled to announce that our journal article, 'WeedSwin Hierarchical Vision Transformer with SAM-2 for Multi-Stage Weed Detection and Classification' has been published in Scientific Reports (Nature). This comprehensive research introduces two extensive datasets with over 320,000 images documenting 16 prevalent weed species across 11 growth stages, and proposes a novel WeedSwin Transformer architecture that achieved 0.993 ± 0.004 mAP with 218.27 FPS processing speed. Congratulations to the team!",
+    "description": "We are thrilled to announce that our journal article, 'WeedSwin Hierarchical Vision Transformer with SAM-2 for Multi-Stage Weed Detection and Classification' has been published in Scientific Reports (Nature). This comprehensive research introduces extensive datasets documenting prevalent weed species across multiple growth stages, and proposes a novel WeedSwin Transformer architecture that demonstrates exceptional performance in weed detection and classification for precision agriculture. Congratulations to the team!",
     "badge": "Publication"
   },
 
