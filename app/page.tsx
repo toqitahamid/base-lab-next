@@ -121,33 +121,77 @@ export default function Home() {
 
       {/* Research Focus Areas */}
       <section className="mb-24">
-          <h2 className="text-3xl font-semibold mb-12 text-center">Our Research Focus</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {homeData.researchFocusAreas.map((area, index) => (
-              <Card key={index} className="flex flex-col h-full transition-shadow duration-200 hover:shadow-lg">
-                <CardHeader className="pb-4">
-                  <div className="flex items-center mb-3">
-                    <div className="text-primary">
-                      {iconMap[area.title as keyof typeof iconMap]}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            Our Research Focus
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/70 mx-auto rounded-full mb-4" />
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Pushing the boundaries of artificial intelligence across diverse domains
+          </p>
+        </motion.div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {homeData.researchFocusAreas.map((area, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50, scale: 0.9 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ 
+                duration: 0.6, 
+                delay: index * 0.1,
+                ease: "easeOut"
+              }}
+              viewport={{ once: true }}
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group h-full"
+            >
+              <Card className="relative overflow-hidden h-full bg-gradient-to-br from-background to-muted/20 border-2 border-transparent hover:border-primary/20 transition-all duration-500 hover:shadow-xl group-hover:shadow-primary/10">
+                {/* Animated background gradient */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                {/* Floating orb effect */}
+                <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <CardHeader className="pb-6 relative z-10">
+                  <motion.div 
+                    className="flex flex-col items-center text-center mb-4"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                  >
+                    <div className="relative mb-4">
+                      <div className="absolute inset-0 bg-primary/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-500" />
+                      <div className="relative bg-gradient-to-br from-primary to-primary/80 p-4 rounded-full shadow-lg group-hover:shadow-xl transition-shadow duration-500">
+                        <div className="text-primary-foreground group-hover:scale-110 transition-transform duration-300">
+                          {iconMap[area.title as keyof typeof iconMap]}
+                        </div>
+                      </div>
                     </div>
-                    <CardTitle className="text-xl">{area.title}</CardTitle>
-                  </div>
+                    <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors duration-300">
+                      {area.title}
+                    </CardTitle>
+                  </motion.div>
                 </CardHeader>
-                <CardContent className="flex-grow pb-4">
-                  <p className="text-muted-foreground leading-relaxed">{area.description}</p>
+                
+                <CardContent className="flex-grow pb-6 relative z-10">
+                  <p className="text-muted-foreground leading-relaxed text-center group-hover:text-foreground transition-colors duration-300">
+                    {area.description}
+                  </p>
                 </CardContent>
-                <CardFooter className="pt-0">
-                  <Button variant="ghost" className="w-full justify-between group hover:bg-primary/5 transition-colors duration-200" asChild>
-                    <Link href="/research" className="flex items-center">
-                      Learn more 
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Link>
-                  </Button>
-                </CardFooter>
+                
+                {/* Bottom accent line */}
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </Card>
-            ))}
-          </div>
-        </section>
+            </motion.div>
+          ))}
+        </div>
+      </section>
      
 
       {/* Lab Highlights */}
