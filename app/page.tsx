@@ -44,7 +44,7 @@ export default function Home() {
     <>
       <main>
       {/* Hero section */}
-      <section className="relative mb-24 text-center w-full min-h-[30vh] md:h-[30vh] flex items-center justify-center">
+      <section className="relative mb-24 text-center w-full h-[60vh] md:h-[75vh] lg:h-[85vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <video 
             autoPlay 
@@ -62,13 +62,13 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/50 to-black/70"></div>
         </div>
         <motion.div 
-          className="relative z-10 flex flex-col items-center justify-center w-full px-4 py-16 md:py-0"
+          className="relative z-10 flex flex-col items-center justify-center w-full h-full px-2 md:px-4 py-4 md:py-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <motion.h1 
-            className={`text-3xl md:text-5xl font-bold mb-4 text-white ${styles.heroTitle}`}
+            className={`text-lg md:text-5xl font-bold mb-2 md:mb-4 text-white ${styles.heroTitle}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -76,7 +76,7 @@ export default function Home() {
             {homeData.hero.title}
           </motion.h1>
           <motion.p 
-            className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto"
+            className="text-sm md:text-xl text-gray-200 mb-4 md:mb-8 max-w-3xl mx-auto px-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
@@ -84,7 +84,7 @@ export default function Home() {
             {homeData.hero.description}
           </motion.p>
           <motion.div 
-            className="flex flex-col md:flex-row justify-center gap-4 md:gap-6"
+            className="flex flex-col md:flex-row justify-center gap-2 md:gap-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
@@ -113,31 +113,28 @@ export default function Home() {
 
 
 
-      <div className="container mx-auto px-4 py-6 max-w-6xl">
+      <div className="container mx-auto px-2 md:px-4 py-3 md:py-6 max-w-6xl">
 
       
 
       
 
       {/* Research Focus Areas */}
-      <section className="mb-24">
+      <section className="mb-12 md:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16 px-4"
         >
-          <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+          <h2 className="text-sm md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             Our Research Focus
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-primary/70 mx-auto rounded-full mb-4" />
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Pushing the boundaries of artificial intelligence across diverse domains
-          </p>
+          <div className="w-12 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-primary to-primary/70 mx-auto rounded-full" />
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
           {homeData.researchFocusAreas.map((area, index) => (
             <motion.div
               key={index}
@@ -159,7 +156,7 @@ export default function Home() {
                 {/* Floating orb effect */}
                 <div className="absolute -top-6 -right-6 w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <CardHeader className="pb-6 relative z-10">
+                <CardHeader className="pb-3 md:pb-6 relative z-10">
                   <motion.div 
                     className="flex flex-col items-center text-center mb-4"
                     whileHover={{ scale: 1.05 }}
@@ -173,14 +170,14 @@ export default function Home() {
                         </div>
                       </div>
                     </div>
-                    <CardTitle className="text-xl font-bold group-hover:text-primary transition-colors duration-300">
+                    <CardTitle className="text-sm md:text-xl font-bold group-hover:text-primary transition-colors duration-300">
                       {area.title}
                     </CardTitle>
                   </motion.div>
                 </CardHeader>
                 
-                <CardContent className="flex-grow pb-6 relative z-10">
-                  <p className="text-muted-foreground leading-relaxed text-center group-hover:text-foreground transition-colors duration-300">
+                <CardContent className="flex-grow pb-3 md:pb-6 relative z-10">
+                  <p className="text-xs md:text-base text-muted-foreground leading-relaxed text-center group-hover:text-foreground transition-colors duration-300">
                     {area.description}
                   </p>
                 </CardContent>
@@ -195,9 +192,20 @@ export default function Home() {
      
 
       {/* Lab Highlights */}
-      <section className="mb-24">
-        <h2 className="text-3xl font-semibold mb-12 text-center">Lab Highlights</h2>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="mb-12 md:mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-8 md:mb-16 px-4"
+        >
+          <h2 className="text-sm md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            Lab Highlights
+          </h2>
+          <div className="w-12 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-primary to-primary/70 mx-auto rounded-full" />
+        </motion.div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8 text-center">
           {homeData.quickStats.map((stat, index) => (
             <AnimatedCounter 
               key={index} 
@@ -211,64 +219,78 @@ export default function Home() {
 
 
       {/* Latest Works and Activities Carousel */}
-      <section className="mb-24">
-        <h2 className="text-3xl font-semibold mb-12 text-center">Latest Works and Activities</h2>
+      <section className="mb-12 md:mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-8 md:mb-16 px-4"
+        >
+          <h2 className="text-sm md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            Latest Works and Activities
+          </h2>
+          <div className="w-12 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-primary to-primary/70 mx-auto rounded-full" />
+        </motion.div>
         <CarouselWithAutoplay items={homeData.carouselItems} />
       </section>
 
 
 
 
-      {/* Sponsors and Collaborators */}
-      <section className="mb-24">
-        <h2 className="text-3xl font-semibold mb-12 text-center">Our Sponsors and Collaborators</h2>
-        <Card className="p-12">
-          <div className="grid grid-cols-3 gap-8 sm:gap-12 justify-items-center">
-            {homeData.sponsors.map((logo, index) => (
-              <div key={index} className="w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 relative">
-                <Image
-                  src={`/images/sponsors/${logo}`}
-                  alt={`Sponsor logo ${index + 1}`}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  style={{ objectFit: 'contain' }}
-                />
-              </div>
-            ))}
-            </div>
-          </Card>
-      </section>
 
       {/* Recent Publications */}
-      <section className="mb-24">
-        <h2 className="text-3xl font-semibold mb-12 text-center">Recent Publications</h2>
+      <section className="mb-12 md:mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-8 md:mb-16 px-4"
+        >
+          <h2 className="text-sm md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            Recent Publications
+          </h2>
+          <div className="w-12 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-primary to-primary/70 mx-auto rounded-full" />
+        </motion.div>
         <div className="grid grid-cols-1 gap-6">
           {publicationsData[0].items.slice(0, 4).map((publication, index) => (
             <PublicationCardSimple key={index} publication={publication} />
           ))}
         </div>
-        <div className="text-center mt-8">
-          <Button variant="outline" asChild>
+        <div className="text-center mt-4 md:mt-8">
+          <Button variant="outline" size="sm" className="md:text-base" asChild>
             <Link href="/publications">View All Publications</Link>
           </Button>
         </div>
       </section>
 
        {/* Latest News and Achievements */}
-       <section className="mb-24">
-        <h2 className="text-3xl font-semibold mb-8 text-center">Latest News and Achievements</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+       <section className="mb-12 md:mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-8 md:mb-16 px-4"
+        >
+          <h2 className="text-sm md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            Latest News and Achievements
+          </h2>
+          <div className="w-12 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-primary to-primary/70 mx-auto rounded-full" />
+        </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           {newsData.slice(0, 4).map((item, index) => (
             <Card key={index} className="h-full hover:shadow-md transition-shadow duration-200">
-              <CardHeader>
-                <CardTitle className="line-clamp-2">{item.title}</CardTitle>
-                <CardDescription>{item.date}</CardDescription>
+              <CardHeader className="pb-2 md:pb-4">
+                <CardTitle className="text-sm md:text-base line-clamp-2">{item.title}</CardTitle>
+                <CardDescription className="text-xs md:text-sm">{item.date}</CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="line-clamp-3">{item.description}</p>
+              <CardContent className="pb-2 md:pb-4">
+                <p className="text-xs md:text-sm line-clamp-3">{item.description}</p>
               </CardContent>
-              <CardFooter>
-                <Badge>{item.badge}</Badge>
+              <CardFooter className="pt-2">
+                <Badge className="text-xs">{item.badge}</Badge>
               </CardFooter>
             </Card>
           ))}
@@ -278,7 +300,7 @@ export default function Home() {
 
        
       {/* Enhanced Join Our Lab */}
-      <section className="mb-24">
+      <section className="mb-12 md:mb-24">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -297,14 +319,14 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <CardTitle className="text-4xl font-bold text-white mb-2">Join Our Lab</CardTitle>
+                <CardTitle className="text-lg md:text-4xl font-bold text-white mb-1 md:mb-2">Join Our Lab</CardTitle>
                 <div className="w-24 h-1 bg-white/30 mx-auto rounded-full" />
               </motion.div>
             </CardHeader>
             
             <CardContent className="relative z-10">
               <motion.p 
-                className="mb-8 text-gray-100 text-lg text-center max-w-2xl mx-auto leading-relaxed"
+                className="mb-4 md:mb-8 text-gray-100 text-sm md:text-lg text-center max-w-2xl mx-auto leading-relaxed px-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -330,8 +352,8 @@ export default function Home() {
                       className="group"
                     >
                       <Card className="bg-white/10 border-white/20 backdrop-blur-sm hover:bg-white/15 transition-all duration-300 h-full">
-                        <CardHeader className="pb-3">
-                          <CardTitle className="flex items-center text-white group-hover:scale-105 transition-transform duration-300">
+                        <CardHeader className="pb-2 md:pb-3">
+                          <CardTitle className="flex items-center text-white group-hover:scale-105 transition-transform duration-300 text-sm md:text-base">
                             <motion.div
                               whileHover={{ rotate: 10, scale: 1.1 }}
                               transition={{ type: "spring", stiffness: 300, damping: 20 }}
@@ -342,7 +364,7 @@ export default function Home() {
                           </CardTitle>
                         </CardHeader>
                         <CardContent>
-                          <p className="text-gray-100 leading-relaxed">{item.description}</p>
+                          <p className="text-gray-100 leading-relaxed text-xs md:text-base">{item.description}</p>
                         </CardContent>
                       </Card>
                     </motion.div>
@@ -363,12 +385,13 @@ export default function Home() {
                 <Button 
                   asChild 
                   variant="secondary" 
-                  size="lg" 
-                  className="bg-white text-[rgb(15,50,55)] hover:bg-gray-100 px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
+                  size="sm" 
+                  className="md:size-lg bg-white text-[rgb(15,50,55)] hover:bg-gray-100 px-4 md:px-8 py-2 md:py-4 text-sm md:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 rounded-xl"
                 >
                   <Link href="/join" className="flex items-center">
-                    Learn More About Joining
-                    <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                    <span className="hidden md:inline">Learn More About Joining</span>
+                    <span className="md:hidden">Join Us</span>
+                    <ArrowRight className="ml-2 h-4 w-4 md:h-5 md:w-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </Button>
               </motion.div>
@@ -377,9 +400,36 @@ export default function Home() {
         </motion.div>
       </section>
 
-
-      
-
+      {/* Sponsors and Collaborators */}
+      <section className="mb-12 md:mb-24">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-8 md:mb-16 px-4"
+        >
+          <h2 className="text-sm md:text-3xl lg:text-4xl font-bold mb-2 md:mb-4 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
+            Our Sponsors and Collaborators
+          </h2>
+          <div className="w-12 md:w-24 h-0.5 md:h-1 bg-gradient-to-r from-primary to-primary/70 mx-auto rounded-full" />
+        </motion.div>
+        <Card className="p-4 md:p-12">
+          <div className="grid grid-cols-3 gap-4 md:gap-8 lg:gap-12 justify-items-center">
+            {homeData.sponsors.map((logo, index) => (
+              <div key={index} className="w-16 h-16 sm:w-24 sm:h-24 md:w-40 md:h-40 relative">
+                <Image
+                  src={`/images/sponsors/${logo}`}
+                  alt={`Sponsor logo ${index + 1}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  style={{ objectFit: 'contain' }}
+                />
+              </div>
+            ))}
+            </div>
+          </Card>
+      </section>
 
       
       </div>

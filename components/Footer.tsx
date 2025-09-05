@@ -4,47 +4,47 @@ import { Facebook, Twitter, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[rgb(15,50,55)] text-white py-8">
-      <div className="container mx-auto px-4 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <footer className="bg-[rgb(15,50,55)] text-white py-4 md:py-8">
+      <div className="container mx-auto px-2 md:px-4 max-w-6xl">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
           <div>
             <div className="mb-4">
               <Image 
                 src="/images/logo/base-lab-v4@3x.png"
                 alt="BASE LAB Logo"
-                width={200}
-                height={40}
-                className="mb-4"
+                width={150}
+                height={30}
+                className="mb-2 md:mb-4 md:w-[200px] md:h-[40px]"
               />
             </div>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-300 text-xs md:text-sm">
               Advancing the frontiers of Computer Vision and Deep Learning at Southern Illinois University at Carbondale.
             </p>
           </div>
           <div>
-            <h3 className="text-gray-300 font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link href="/research" className="hover:text-primary transition-colors">Research</Link></li>
-              <li><Link href="/publications" className="hover:text-primary transition-colors">Publications</Link></li>
-              <li><Link href="/team" className="hover:text-primary transition-colors">Team</Link></li>
-              <li><Link href="/news" className="hover:text-primary transition-colors">News</Link></li>
-              <li><Link href="/join" className="hover:text-primary transition-colors">Join</Link></li>
+            <h3 className="text-gray-300 font-semibold text-sm md:text-lg mb-2 md:mb-4">Quick Links</h3>
+            <ul className="space-y-1 md:space-y-2">
+              <li><Link href="/research" className="text-xs md:text-sm hover:text-primary transition-colors">Research</Link></li>
+              <li><Link href="/publications" className="text-xs md:text-sm hover:text-primary transition-colors">Publications</Link></li>
+              <li><Link href="/team" className="text-xs md:text-sm hover:text-primary transition-colors">Team</Link></li>
+              <li><Link href="/news" className="text-xs md:text-sm hover:text-primary transition-colors">News</Link></li>
+              <li><Link href="/join" className="text-xs md:text-sm hover:text-primary transition-colors">Join</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-gray-300 font-semibold text-lg mb-4">Connect</h3>
-            <div className="flex space-x-4">
+            <h3 className="text-gray-300 font-semibold text-sm md:text-lg mb-2 md:mb-4">Connect</h3>
+            <div className="flex space-x-2 md:space-x-4">
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">
-                <Facebook size={20} />
+                <Facebook size={16} className="md:w-5 md:h-5" />
               </a>
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">
-                <Twitter size={20} />
+                <Twitter size={16} className="md:w-5 md:h-5" />
               </a>
               <a href="#" className="text-gray-300 hover:text-primary transition-colors">
-                <Linkedin size={20} />
+                <Linkedin size={16} className="md:w-5 md:h-5" />
               </a>
               <a href="mailto:contact@siu.edu" className="text-gray-300 hover:text-primary transition-colors">
-                <Mail size={20} />
+                <Mail size={16} className="md:w-5 md:h-5" />
               </a>
             </div>
           </div>

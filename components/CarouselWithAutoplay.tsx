@@ -48,11 +48,14 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
                     className="object-contain"
                   />
                 </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground mb-4">{item.description}</p>
-                  <Button asChild variant="outline">
-                    <Link href={item.link}>Learn More</Link>
+                <CardContent className="p-3 md:p-6">
+                  <h3 className="text-sm md:text-xl font-semibold mb-1 md:mb-2">{item.title}</h3>
+                  <p className="text-xs md:text-base text-muted-foreground mb-2 md:mb-4">{item.description}</p>
+                  <Button asChild variant="outline" size="sm" className="md:size-default text-xs md:text-sm">
+                    <Link href={item.link}>
+                      <span className="hidden md:inline">Learn More</span>
+                      <span className="md:hidden">More</span>
+                    </Link>
                   </Button>
                 </CardContent>
               </Card>
