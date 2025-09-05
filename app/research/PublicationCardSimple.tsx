@@ -21,7 +21,7 @@ const PublicationCardSimple = ({ publication }: { publication: Publication }) =>
         <Button 
           variant="outline" 
           size="sm" 
-          className="text-xs md:text-sm hover:bg-primary hover:text-white transition-colors">
+          className="text-xs md:text-sm hover:bg-primary hover:text-white transition-colors"
           asChild
         >
           <a 
