@@ -36,7 +36,6 @@ export default async function PublicationsPage() {
               key={index} 
               publication={{ ...publication, citationKey: publication.citationKey ?? '' }} 
               bibtexData={bibtexData}
-              index={index}
             />
           ))}
         </div>

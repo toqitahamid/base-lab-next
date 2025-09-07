@@ -24,10 +24,9 @@ interface Publication {
 interface PublicationCardProps {
   publication: Publication;
   bibtexData: string;
-  index: number;
 }
 
-const PublicationCard = ({ publication, bibtexData, index }: PublicationCardProps) => {
+const PublicationCard = ({ publication, bibtexData }: PublicationCardProps) => {
   const [citeOpen, setCiteOpen] = useState(false);
   const [abstractOpen, setAbstractOpen] = useState(false);
   const [bibtex, setBibtex] = useState('');
@@ -52,10 +51,6 @@ const PublicationCard = ({ publication, bibtexData, index }: PublicationCardProp
     });
   };
 
-  // Solid white background for all cards
-  const getRowBackground = () => {
-    return 'bg-white';
-  };
 
   // Publication type colors for better distinction
   const getTypeColor = (type: string) => {
@@ -74,7 +69,7 @@ const PublicationCard = ({ publication, bibtexData, index }: PublicationCardProp
   };
 
   return (
-    <div className={`${getRowBackground()} py-6 px-6 border-b border-gray-100 hover:shadow-sm transition-shadow duration-200`}>
+    <div className="bg-white py-6 px-6 border-b border-gray-100 hover:shadow-sm transition-shadow duration-200">
       {/* Title */}
       <div className="mb-3">
         <h3 className="text-lg font-bold text-gray-900 leading-tight">
