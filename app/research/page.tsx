@@ -50,17 +50,90 @@ export default async function ResearchPage() {
 
   return (
     <main className="container mx-auto px-4 py-8 max-w-6xl">
-      <PageHeader 
-        title="Research" 
-        description="Advancing the frontiers of Computer Vision and Deep Learning"
-      />
-      <ResearchMission mission={researchData?.mission} />
-      {/* <ResearchAreas areas={researchAreas} /> */}
-      <CurrentProjects projects={currentProjects} />
-      <PastProjects projects={pastProjects} />
-      <LabEquipment equipment={labEquipment} />
-      {/* <Separator className="my-12" />
-      <ResearchSponsors sponsors={sponsors} /> */}
+      <div className="bg-white rounded-lg border border-gray-200">
+        {/* Current Projects */}
+        <div className="px-8 py-8 border-b border-gray-100">
+          <h2 className="text-2xl font-medium text-gray-900 mb-8">Current Projects</h2>
+          <div className="space-y-8">
+            {currentProjects.map((project, index) => (
+              <div key={index} className="pb-6 border-b border-gray-50 last:border-b-0 last:pb-0">
+                <h3 className="text-lg font-medium text-gray-900 mb-4 leading-relaxed">
+                  {project.title}
+                </h3>
+                
+                <div className="flex flex-wrap gap-6 text-sm">
+                  <div className="text-gray-600">
+                    <span className="font-medium text-gray-700">Award:</span> {project.award}
+                  </div>
+                  <div className="text-gray-600">
+                    <span className="font-medium text-gray-700">Period:</span> {project.period}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Past Projects */}
+        <div className="px-8 py-8 border-b border-gray-100">
+          <h2 className="text-2xl font-medium text-gray-900 mb-8">Past Projects</h2>
+          <div className="space-y-8">
+            {pastProjects.map((project, index) => (
+              <div key={index} className="pb-6 border-b border-gray-50 last:border-b-0 last:pb-0">
+                <h3 className="text-lg font-medium text-gray-900 mb-4 leading-relaxed">
+                  {project.title}
+                </h3>
+                
+                <div className="flex flex-wrap gap-6 text-sm">
+                  <div className="text-gray-600">
+                    <span className="font-medium text-gray-700">Award:</span> {project.award}
+                  </div>
+                  <div className="text-gray-600">
+                    <span className="font-medium text-gray-700">Period:</span> {project.period}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Lab Equipment */}
+        <div className="px-8 py-8">
+          <h2 className="text-2xl font-medium text-gray-900 mb-8">Lab Equipment</h2>
+          <div className="space-y-12">
+            {labEquipment.map((item, index) => (
+              <div key={index} className="flex flex-col lg:flex-row gap-8 pb-8 border-b border-gray-50 last:border-b-0 last:pb-0">
+                {/* Image Section */}
+                <div className="lg:w-1/2">
+                  <div className="relative w-full pt-[60%] bg-white rounded-lg border border-gray-100">
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      style={{ objectFit: 'contain' }}
+                      className="p-6"
+                    />
+                  </div>
+                </div>
+                
+                {/* Content Section */}
+                <div className="lg:w-1/2 lg:pl-4">
+                  <h3 className="text-xl font-medium text-gray-900 mb-4">{item.name}</h3>
+                  <p className="text-gray-700 mb-6 leading-relaxed">{item.description}</p>
+                  <div className="space-y-3">
+                    {item.features.map((feature, featureIndex) => (
+                      <div key={featureIndex} className="text-sm text-gray-600 flex items-start">
+                        <span className="text-gray-400 mr-3 mt-1">•</span>
+                        <span>{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </main>
   );
 }
