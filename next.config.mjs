@@ -3,7 +3,16 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'standalone',
   images: {
-    domains: ['localhost'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+      {
+        protocol: 'https',
+        hostname: 'localhost',
+      },
+    ],
   },
   // Configure experimental features
   experimental: {
