@@ -151,6 +151,7 @@
     },
     {
       "name": "Subash Kharel",
+      "image": "/images/team/subash-kharel.jpeg",
       "degree": "MS",
       "graduationYear": 2021,
       "thesis": "Detecting Potholes using deep learning",
