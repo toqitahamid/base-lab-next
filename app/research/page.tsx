@@ -36,7 +36,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ArrowRight, Brain, Camera, Database, Leaf, Award, Calendar } from "lucide-react";
+import { ArrowRight, Brain, Camera, Database, Leaf, Award, Calendar, ExternalLink } from "lucide-react";
 import researchData from '../../public/research.json';
 import PageHeader from '@/components/PageHeader';
 
@@ -50,6 +50,7 @@ interface Project {
   title: string;
   award: string;
   period: string;
+  website?: string;
 }
 
 interface Equipment {
@@ -129,6 +130,15 @@ export default async function ResearchPage() {
                       <div className="text-gray-700">
                         <span className="font-medium">Period:</span> {project.period}
                       </div>
+                      {project.website && (
+                        <div className="text-gray-700">
+                          <Link href={project.website} target="_blank" rel="noopener noreferrer" 
+                                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+                            <span className="font-medium">Project Website</span>
+                            <ExternalLink className="w-3 h-3 ml-1" />
+                          </Link>
+                        </div>
+                      )}
                     </div>
                   </div>
                 ))}
