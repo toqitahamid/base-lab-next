@@ -67,16 +67,6 @@
       "socialLinks": {
         "github": "https://github.com/Lakh-abdellah"
       }
-    },
-    {
-      "name": "Sri Vaishnavi Yata",
-      "role": "PhD Student",
-      "image": "/images/team/sri-vaishnavi-yata.jpeg",
-      "bio": "Sri is working on Waterhemp detection in cotton fields.",
-      "researchInterests": ["Computer Vision", "Deep Learning", "Artificial Intelligence"],
-      "socialLinks": {
-        "linkedin": "https://www.linkedin.com/in/srivaishnaviyata"
-      }
     }
   ],
   "mastersStudents": [
