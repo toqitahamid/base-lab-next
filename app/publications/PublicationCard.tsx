@@ -77,14 +77,11 @@ const PublicationCard = ({ publication, bibtexData }: PublicationCardProps) => {
         </h3>
       </div>
 
-      {/* Publisher, type, and year */}
+      {/* Publisher with year and type */}
       <div className="flex items-center gap-3 mb-3 flex-wrap">
-        <span className="text-sm text-gray-700 font-medium">{publication.publisher}</span>
+        <span className="text-sm text-gray-600 font-medium italic">{publication.publisher}, {publication.year}</span>
         <span className={`text-xs px-2 py-1 font-semibold ${getTypeColor(publication.type)}`}>
-          {publication.type}
-        </span>
-        <span className="text-sm font-semibold text-gray-500 bg-gray-100 px-2 py-1">
-          {publication.year}
+          {publication.type.charAt(0).toUpperCase() + publication.type.slice(1).toLowerCase()}
         </span>
       </div>
 

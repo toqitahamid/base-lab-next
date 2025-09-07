@@ -134,13 +134,13 @@ export default function Home() {
                   <h3 className="text-base md:text-lg font-bold text-gray-900 mb-3 leading-tight">
                     {publication.title}
                   </h3>
+                  <p className="text-gray-600 mb-3 text-sm font-medium italic">
+                    {publication.publisher}, {publicationsData[0].year}
+                  </p>
                   <p className="text-gray-700 mb-4 text-sm leading-relaxed">
                     {publication.authors.join(", ")}
                   </p>
-                  <div className="flex items-center justify-between">
-                    <span className="bg-slate-100 text-slate-700 px-3 py-1 text-xs font-medium rounded-full">
-                      {publication.publisher}
-                    </span>
+                  <div className="flex items-center justify-end">
                     <a 
                       href={publication.url} 
                       target="_blank" 
