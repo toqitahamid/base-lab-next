@@ -3,6 +3,37 @@
     "year": 2025,
     "items": [
       {
+        "title": "Quantum Parallel Processing Framework for Image Processing Applications",
+        "authors": ["Juan Carlos Salcedo", "Khaled R. Ahmed"],
+        "publisher": "2025 IEEE 16th International Symposium on Autonomous Decentralized Systems (ISADS)",
+        "doi": "10.1109/ISADS66912.2025.00007",
+        "url": "https://doi.org/10.1109/ISADS66912.2025.00007",
+        "citationKey": "salcedo2025quantum",
+        "type": "conference",
+        "abstract": "Quantum computing stands at a transformative threshold, with error-correcting quantum processors expected to emerge within the next five years. This technological advancement will be crucial for maintaining competitive advantage in fields such as cryptography, optimization, molecular medicine, and image processing, with mainstream quantum computing projected by 2030. This study introduces a novel Quantum Parallel Framework (QPF) designed to prepare for the integration of quantum computing in industrial applications. The research focuses on developing and implementing parallel quantum algorithms for practical commercial applications, particularly in image processing. The QPF provides a comprehensive methodology for organizations to build expertise in quantum computing integration with classical systems. It includes a Qiskit interface for managing quantum algorithms and communications with Quantum Processing Units (QPUs), along with a C++ and OpenGL-based front end. The framework's capabilities are demonstrated through a case study implementing a Quantum Hadamard Edge Detector (QHED) in parallel execution. The study evaluates various performance parameters, including QHED threads, processors, Non-Uniform Memory Allocation (NUMA) strategy, thread priority, and image resolution, to optimize processing efficiency. The framework provides a practical pathway for organizations to develop and mature their quantum computing capabilities, focusing on real-world applications and system integration. This work contributes to the growing field of quantum computing by offering a methodology that can be adapted for various quantum algorithms and applications, particularly in preparation for more powerful self-error correcting QPUs.",
+        "bibtex": "@INPROCEEDINGS{11124035,\n  author={Salcedo, Juan Carlos and Ahmed, Khaled},\n  booktitle={2025 IEEE 16th International Symposium on Autonomous Decentralized Systems (ISADS)},\n  title={Quantum Parallel Processing Framework for Image Processing Applications},\n  year={2025},\n  volume={},\n  number={},\n  pages={16-20},\n  keywords={Quantum algorithm;Instruction sets;Operating systems;Image edge detection;Qubit;Organizations;System integration;Scheduling;Resource management;Testing;Quantum;parallel distributed processing;Hadamard edge detection;open closed loop systems;C++;Python},\n  doi={10.1109/ISADS66912.2025.00007}}"
+      },
+      {
+        "title": "WeedSense: Multi-Task Learning for Weed Segmentation, Height Estimation, and Growth Stage Classification",
+        "authors": ["Toqi Tahamid Sarker", "Khaled R. Ahmed", "Taminul Islam", "Cristiana Bernardi Rankrape", "Karla Gage"],
+        "publisher": "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)",
+        "doi": "10.48550/arXiv.2508.14486",
+        "url": "https://arxiv.org/abs/2508.14486",
+        "citationKey": "islam2025weedsense",
+        "type": "conference",
+        "abstract": "Weed management represents a critical challenge in agriculture, significantly impacting crop yields and requiring substantial resources for control. Effective weed monitoring and analysis strategies are crucial for implementing sustainable agricultural practices and site-specific management approaches. We introduce WeedSense, a novel multi-task learning architecture for comprehensive weed analysis that jointly performs semantic segmentation, height estimation, and growth stage classification. We present a unique dataset capturing 16 weed species over an 11-week growth cycle with pixel-level annotations, height measurements, and temporal labels. WeedSense leverages a dual-path encoder incorporating Universal Inverted Bottleneck blocks and a Multi-Task Bifurcated Decoder with transformer-based feature fusion to generate multi-scale features and enable simultaneous prediction across multiple tasks. WeedSense outperforms other state-of-the-art models on our comprehensive evaluation. On our multi-task dataset, WeedSense achieves mIoU of 89.78% for segmentation, 1.67cm MAE for height estimation, and 99.99% accuracy for growth stage classification while maintaining real-time inference at 160 FPS. Our multitask approach achieves 3× faster inference than sequential single-task execution and uses 32.4% fewer parameters."
+      },
+      {
+        "title": "GasTwinFormer: A Hybrid Vision Transformer for Livestock Methane Emission Segmentation and Dietary Classification in Optical Gas Imaging",
+        "authors": ["Toqi Tahamid Sarker", "Mohamed Embaby", "Taminul Islam", "Amer AbuGhazaleh", "Khaled R. Ahmed"],
+        "publisher": "Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)",
+        "doi": "10.48550/arXiv.2508.15057",
+        "url": "https://arxiv.org/abs/2508.15057",
+        "citationKey": "sarker2025gastwinformer",
+        "type": "conference",
+        "abstract": "Livestock methane emissions represent 32% of human-caused methane production, making automated monitoring critical for climate mitigation strategies. We introduce GasTwinFormer, a hybrid vision transformer for real-time methane emission segmentation and dietary classification in optical gas imaging through a novel Mix Twin encoder alternating between spatially-reduced global attention and locally-grouped attention mechanisms. Our architecture incorporates a lightweight LR-ASPP decoder for multi-scale feature aggregation and enables simultaneous methane segmentation and dietary classification in a unified framework. We contribute the first comprehensive beef cattle methane emission dataset using OGI, containing 11,694 annotated frames across three dietary treatments. GasTwinFormer achieves 74.47% mIoU and 83.63% mF1 for segmentation while maintaining exceptional efficiency with only 3.348M parameters, 3.428G FLOPs, and 114.9 FPS inference speed. Additionally, our method achieves perfect dietary classification accuracy (100%), demonstrating the effectiveness of leveraging diet-emission correlations. Extensive ablation studies validate each architectural component, establishing GasTwinFormer as a practical solution for real-time livestock emission monitoring."
+      },
+      {
         "title": "WeedSwin hierarchical vision transformer with SAM-2 for multi-stage weed detection and classification",
         "authors": ["Taminul Islam", "Toqi Tahamid Sarker", "Khaled R. Ahmed", "Cristiana Bernardi Rankrape", "Karla Gage"],
         "publisher": "Scientific Reports",
