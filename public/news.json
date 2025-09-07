@@ -1,4 +1,10 @@
 [
+  {
+    "date": "September 2025",
+    "title": "Two Papers Accepted at ICCV 2025",
+    "description": "Two papers have been accepted at ICCV 2025. WeedSense, a multi-task architecture that simultaneously performs weed segmentation, height estimation, and growth stage classification, was accepted at the 10th Computer Vision in Plant Phenotyping and Agriculture workshop. The second paper, GasTwinFormer, introduces a hybrid vision transformer for real-time livestock methane monitoring and has been selected for oral presentation and as a best paper nominee at the SEA: Sustainability with Earth Observation & AI workshop.",
+    "badge": "Publication"
+  },
        {
     "date": "July 2025",
     "title": "Journal Article Published: WeedSwin",
