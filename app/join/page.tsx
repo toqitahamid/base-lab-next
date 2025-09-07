@@ -1,5 +1,36 @@
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Join Our Team",
+  description: "Join BASE LAB at Southern Illinois University and contribute to groundbreaking research in Computer Vision, Deep Learning, and Distributed Computing. Open positions for PhD and Masters students.",
+  keywords: [
+    "join research lab",
+    "PhD positions",
+    "masters positions",
+    "graduate research opportunities",
+    "computer science PhD",
+    "AI research positions",
+    "computer vision jobs",
+    "deep learning research",
+    "academic positions",
+    "SIU graduate program",
+    "research assistantships",
+    "funded PhD positions",
+    "graduate admissions"
+  ],
+  openGraph: {
+    title: "Join BASE LAB - Research Opportunities",
+    description: "Apply for PhD and Masters positions at BASE LAB. Contribute to cutting-edge research in Computer Vision, Deep Learning, and AI.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Join BASE LAB - Research Opportunities",
+    description: "Apply for PhD and Masters positions at BASE LAB. Contribute to cutting-edge research in Computer Vision, Deep Learning, and AI.",
+  },
+};
 import { Button } from "@/components/ui/button";
 import { CheckCircle } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';

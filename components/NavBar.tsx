@@ -26,7 +26,7 @@ const NavBar = () => {
             <Link href="/" className="flex items-center">
               <Image 
                 src="/images/logo/base-lab-v4@3x.png"
-                alt="BASE LAB Logo"
+                alt="BASE LAB at SIU Carbondale - Computer Vision and Deep Learning Research Laboratory Logo"
                 width={180}
                 height={80}
                 priority

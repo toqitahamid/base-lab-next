@@ -1,5 +1,36 @@
 import React from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Our Team",
+  description: "Meet the talented researchers, faculty, and students at BASE LAB. Our team specializes in Computer Vision, Deep Learning, and Distributed Computing research at Southern Illinois University Carbondale.",
+  keywords: [
+    "research team",
+    "faculty members",
+    "PhD students",
+    "masters students",
+    "computer science researchers",
+    "AI researchers",
+    "SIU faculty",
+    "academic team",
+    "research group",
+    "computer vision experts",
+    "deep learning researchers",
+    "distributed computing team",
+    "academic alumni"
+  ],
+  openGraph: {
+    title: "Our Team - BASE LAB Researchers",
+    description: "Meet the talented researchers and students at BASE LAB, specializing in Computer Vision, Deep Learning, and Distributed Computing.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Team - BASE LAB Researchers",
+    description: "Meet the talented researchers and students at BASE LAB, specializing in Computer Vision, Deep Learning, and Distributed Computing.",
+  },
+};
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -67,7 +98,7 @@ const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: 
       <div className="relative w-24 h-24 mr-4 flex-shrink-0">
         <Image
           src={image || '/images/team/placeholder.png'}
-          alt={name}
+          alt={`${name}, ${role} at BASE LAB, specializing in ${researchInterests.slice(0, 2).join(' and ')} research`}
           fill
           sizes="96px"
           style={{ objectFit: 'cover' }}
@@ -156,7 +187,7 @@ const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, i
       <div className="relative w-20 h-20 mr-4 flex-shrink-0">
         <Image
           src={image || '/images/team/placeholder.png'}
-          alt={name}
+          alt={`${name}, ${degree} graduate from BASE LAB, ${graduationYear}, currently ${currentPosition}`}
           fill
           sizes="80px"
           style={{ objectFit: 'cover' }}
@@ -266,10 +297,10 @@ export default function TeamPage() {
                 <div className="relative w-32 h-32">
                   <Image
                     src="/images/team/khaled-ahmed.jpeg"
-                    alt="Dr. Khaled Ahmed"
+                    alt="Dr. Khaled Ahmed, Associate Professor and BASE LAB Director, leading expert in Computer Vision and Deep Learning research"
                     fill
                     sizes="128px"
-                    style={{ 
+                    style={{
                       objectFit: 'cover',
                       objectPosition: 'center 5%'
                     }}

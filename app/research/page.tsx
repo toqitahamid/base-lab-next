@@ -1,5 +1,36 @@
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Research",
+  description: "Explore our cutting-edge research in Computer Vision, Deep Learning, Big Data Systems, and AI for Agriculture. Discover current projects, funded research, and state-of-the-art laboratory equipment.",
+  keywords: [
+    "research projects",
+    "computer vision research",
+    "deep learning projects",
+    "big data research",
+    "agricultural AI",
+    "funded research",
+    "laboratory equipment",
+    "research grants",
+    "AI applications",
+    "smart systems",
+    "real-time processing",
+    "academic research projects",
+    "SIU research initiatives"
+  ],
+  openGraph: {
+    title: "Research Projects - BASE LAB Innovations",
+    description: "Discover our cutting-edge research in Computer Vision, Deep Learning, and AI applications at Southern Illinois University.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Research Projects - BASE LAB Innovations",
+    description: "Discover our cutting-edge research in Computer Vision, Deep Learning, and AI applications at Southern Illinois University.",
+  },
+};
 import Image from 'next/image';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";

@@ -1,5 +1,35 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description: "Learn about BASE LAB's mission, research focus, and achievements. We specialize in Computer Vision, Deep Learning, and Distributed Computing with groundbreaking applications in smart systems and AI.",
+  keywords: [
+    "about BASE LAB",
+    "research lab mission",
+    "computer vision research focus",
+    "deep learning achievements",
+    "distributed computing lab",
+    "AI research lab",
+    "academic research group",
+    "SIU research lab",
+    "smart systems research",
+    "neural network research",
+    "real-time AI systems",
+    "academic excellence"
+  ],
+  openGraph: {
+    title: "About BASE LAB - Computer Vision & AI Research",
+    description: "Discover BASE LAB's mission and groundbreaking research in Computer Vision, Deep Learning, and Distributed Computing at Southern Illinois University.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About BASE LAB - Computer Vision & AI Research",
+    description: "Discover BASE LAB's mission and groundbreaking research in Computer Vision, Deep Learning, and Distributed Computing at Southern Illinois University.",
+  },
+};
 import { Users, Target, Lightbulb, Globe, Bookmark, Star, Sparkles, Trophy, BookOpen, Rocket } from "lucide-react";
 import styles from './page.module.css';
 
@@ -11,7 +41,7 @@ export default function About() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/images/hero-background.jpg"
-            alt="Lab Background"
+            alt="BASE LAB research facility at Southern Illinois University showcasing advanced computer vision and AI research environment"
             fill
             className="object-cover opacity-20"
             priority
@@ -20,7 +50,7 @@ export default function About() {
         <div className="container mx-auto px-4 max-w-6xl relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Base Lab</h1>
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto">
-            Advancing cutting-edge research in Distributed Computing, Deep Learning, and Computer Vision at Southern Illinois University.
+            Advancing cutting-edge research in Distributed Computing, Deep Learning, and Computer Vision at Southern Illinois University Carbondale.
           </p>
           <div className="flex justify-center mt-8 space-x-4">
             <a href="/team" className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
@@ -145,7 +175,7 @@ export default function About() {
             <div className={`${styles.imageWrapper} relative h-[300px] rounded-2xl overflow-hidden shadow-xl`}>
               <Image
                 src="/images/director-profile.jpg"
-                alt="Dr. Khaled R. Ahmed"
+                alt="Dr. Khaled R. Ahmed, Associate Professor and Lab Director of BASE LAB at Southern Illinois University, expert in Computer Vision and Deep Learning"
                 fill
                 className="object-cover"
               />

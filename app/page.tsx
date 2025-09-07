@@ -1,6 +1,46 @@
 'use client';
 
 import Image from 'next/image';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Home",
+  description: "Welcome to BASE LAB at Southern Illinois University Carbondale. Discover our cutting-edge research in Computer Vision, Deep Learning, and Distributed Computing. Explore our latest publications, team members, and research opportunities.",
+  keywords: [
+    "BASE LAB",
+    "SIU Carbondale",
+    "computer vision research",
+    "deep learning lab",
+    "artificial intelligence research",
+    "academic research lab",
+    "pothole detection research",
+    "defect analysis AI",
+    "agricultural monitoring",
+    "machine learning research",
+    "distributed computing",
+    "neural networks",
+    "computer science department"
+  ],
+  openGraph: {
+    title: "BASE LAB @ SIU Carbondale - Leading AI Research Lab",
+    description: "Discover cutting-edge research in Computer Vision, Deep Learning, and Distributed Computing at Southern Illinois University Carbondale.",
+    type: "website",
+    images: [
+      {
+        url: "/images/logo/base-lab-logo-v5@4x.png",
+        width: 1200,
+        height: 630,
+        alt: "BASE LAB Research Lab at SIU Carbondale",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "BASE LAB @ SIU Carbondale - Leading AI Research Lab",
+    description: "Discover cutting-edge research in Computer Vision, Deep Learning, and Distributed Computing at Southern Illinois University Carbondale.",
+    images: ["/images/logo/base-lab-logo-v5@4x.png"],
+  },
+};
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
@@ -297,7 +337,7 @@ export default function Home() {
                 <div key={index} className="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 relative">
                   <Image
                     src={`/images/sponsors/${logo}`}
-                    alt={`Sponsor logo ${index + 1}`}
+                    alt={`BASE LAB sponsor and collaborator logo - ${logo.replace('.png', '').replace('.jpg', '').replace('-', ' ').toUpperCase()}`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     style={{ objectFit: 'contain' }}

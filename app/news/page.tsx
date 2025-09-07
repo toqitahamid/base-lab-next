@@ -1,5 +1,35 @@
 import React from 'react';
 import { Badge } from "@/components/ui/badge";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "News & Updates",
+  description: "Stay updated with the latest news, achievements, and announcements from BASE LAB. Discover our recent publications, conference presentations, awards, and research breakthroughs.",
+  keywords: [
+    "research news",
+    "academic announcements",
+    "conference presentations",
+    "research awards",
+    "publication updates",
+    "lab achievements",
+    "SIU news",
+    "AI research updates",
+    "computer vision news",
+    "deep learning updates",
+    "academic milestones",
+    "research breakthroughs"
+  ],
+  openGraph: {
+    title: "News & Updates - BASE LAB Latest Developments",
+    description: "Stay updated with the latest news, achievements, and announcements from BASE LAB at Southern Illinois University.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "News & Updates - BASE LAB Latest Developments",
+    description: "Stay updated with the latest news, achievements, and announcements from BASE LAB at Southern Illinois University.",
+  },
+};
 import { Award, BookOpen, Newspaper, Lightbulb } from "lucide-react";
 import fs from 'fs/promises';
 import path from 'path';

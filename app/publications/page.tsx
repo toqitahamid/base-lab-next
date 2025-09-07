@@ -3,6 +3,37 @@ import publicationsData from '../../public/publications.json';
 import fs from 'fs/promises';
 import path from 'path';
 import PageHeader from '@/components/PageHeader';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Publications",
+  description: "Explore our comprehensive collection of research publications in Computer Vision, Deep Learning, and Distributed Computing. Featuring groundbreaking work on smart pothole detection, defect analysis, and real-time AI systems.",
+  keywords: [
+    "research publications",
+    "computer vision papers",
+    "deep learning publications",
+    "academic papers",
+    "SIU research",
+    "AI research papers",
+    "pothole detection paper",
+    "defect analysis research",
+    "neural network publications",
+    "distributed computing papers",
+    "scholarly articles",
+    "conference papers",
+    "journal publications"
+  ],
+  openGraph: {
+    title: "Publications - BASE LAB Research Papers",
+    description: "Discover our latest research publications in Computer Vision, Deep Learning, and Distributed Computing from Southern Illinois University.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Publications - BASE LAB Research Papers",
+    description: "Discover our latest research publications in Computer Vision, Deep Learning, and Distributed Computing from Southern Illinois University.",
+  },
+};
 
 async function getBibtexData() {
   const bibtexPath = path.join(process.cwd(), 'public', 'publication.bib');
