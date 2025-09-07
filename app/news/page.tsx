@@ -85,11 +85,11 @@ export default async function NewsPage() {
         title="Latest News" 
         description="Stay updated with our recent achievements and announcements"
       />
-      <Card className="overflow-hidden">
+      <Card className="overflow-hidden border border-gray-200 rounded-lg bg-gray-50/50 mb-8">
         <CardContent className="p-0">
           <div className="divide-y divide-gray-100">
             {newsItems.map((item: NewsItem, index: number) => (
-              <div key={index} className="bg-white py-6 px-6 hover:shadow-sm transition-shadow duration-200">
+              <div key={index} className="bg-white py-6 px-6">
                 {/* Title and Badge */}
                 <div className="flex justify-between items-start mb-3 gap-4">
                   <h3 className="text-lg font-bold text-gray-900 leading-tight flex-1">

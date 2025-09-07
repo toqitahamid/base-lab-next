@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   description: "Computer Vision and Deep Learning Research Lab at Southern Illinois University at Carbondale",
   icons: {
     icon: [
-      { url: '/images/logo/base-lab-icon-v3.svg' },
-      { url: '/images/logo/base-lab-icon-v3@3x.png', type: 'image/png' }
+      { url: '/images/logo/base-lab-icon-v5.svg' },
+      { url: '/images/logo/base-lab-icon-v5@3x.png', type: 'image/png' }
     ],
-    shortcut: '/images/logo/base-lab-icon-v3.svg',
-    apple: '/images/logo/base-lab-icon-v3@3x.png',
+    shortcut: '/images/logo/base-lab-icon-v5.svg',
+    apple: '/images/logo/base-lab-icon-v5@3x.png',
   },
   manifest: '/manifest.json',
   appleWebApp: {
