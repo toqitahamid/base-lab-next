@@ -4,6 +4,7 @@ import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from 'embla-carousel-autoplay'
 import { Card, CardContent } from "@/components/ui/card";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from 'next/image';
 
 interface CarouselItem {
@@ -21,6 +22,7 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
   const plugin = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true })
   )
+  const [api, setApi] = React.useState<any>()
 
   return (
     <Carousel
@@ -30,12 +32,13 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
       }}
       plugins={[plugin.current]}
       className="w-full max-w-7xl mx-auto"
+      setApi={setApi}
     >
       <CarouselContent>
         {items.map((item, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <Card className="overflow-hidden bg-white border border-gray-200">
+              <Card className="overflow-hidden border-0 shadow-none bg-transparent rounded-lg">
                 <div className="relative aspect-video">
                   <Image
                     src={item.image}
@@ -55,9 +58,19 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="hidden md:block">
-        <CarouselPrevious />
-        <CarouselNext />
+      <div className="flex justify-center mt-6 gap-3">
+        <button 
+          onClick={() => api?.scrollPrev()} 
+          className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <button 
+          onClick={() => api?.scrollNext()} 
+          className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
       </div>
     </Carousel>
   )

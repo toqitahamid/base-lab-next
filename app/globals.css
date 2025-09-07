@@ -133,7 +133,7 @@
 
 @layer base {
   body {
-    background-color: rgb(243,241,236);
+    background-color: #faf9f6;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -159,7 +159,7 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: rgb(243,241,236);
+    background: #faf9f6;
   }
 
   ::-webkit-scrollbar-thumb {
