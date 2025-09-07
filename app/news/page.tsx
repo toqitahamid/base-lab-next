@@ -1,9 +1,8 @@
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Award, BookOpen, Newspaper, Lightbulb } from "lucide-react";
-import fetchData from '@/components/DataFetcherServer';
+import fs from 'fs/promises';
+import path from 'path';
 import PageHeader from '@/components/PageHeader';
 
 interface NewsItem {
@@ -13,23 +12,25 @@ interface NewsItem {
   badge: string;
 }
 
-async function getNewsItems(): Promise<Record<string, NewsItem[]>> {
+async function getNewsItems(): Promise<NewsItem[]> {
   try {
-    const data = await fetchData('/news.json');
+    const newsPath = path.join(process.cwd(), 'public', 'news.json');
+    const newsData = await fs.readFile(newsPath, 'utf-8');
+    const data = JSON.parse(newsData);
+    
     if (!Array.isArray(data)) {
       console.error('Fetched data is not an array:', data);
-      return {};
+      return [];
     }
-    const groupedByYear = data.reduce<Record<string, NewsItem[]>>((acc, item: NewsItem) => {
-      const year = new Date(item.date).getFullYear().toString();
-      if (!acc[year]) acc[year] = [];
-      acc[year].push(item);
-      return acc;
-    }, {});
-    return groupedByYear;
+    // Sort by date (newest first)
+    return data.sort((a: NewsItem, b: NewsItem) => {
+      const dateA = new Date(a.date);
+      const dateB = new Date(b.date);
+      return dateB.getTime() - dateA.getTime();
+    });
   } catch (error) {
     console.error('Error fetching news items:', error);
-    return {};
+    return [];
   }
 }
 
@@ -60,20 +61,21 @@ const getBadgeIcon = (badge: string) => {
 };
 
 export default async function NewsPage() {
-  const groupedNewsItems = await getNewsItems();
-  const years = Object.keys(groupedNewsItems).sort((a, b) => Number(b) - Number(a));
+  const newsItems = await getNewsItems();
 
-  if (years.length === 0) {
+  if (newsItems.length === 0) {
     return (
-      <main className="container mx-auto px-4 py-8 max-w-4xl">
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-3xl font-bold">Latest News</CardTitle>
-            <CardDescription className="text-lg mt-2">
-              Unable to load news at this time. Please check back later.
-            </CardDescription>
-          </CardHeader>
-        </Card>
+      <main className="container mx-auto px-4 py-8 max-w-6xl">
+        <PageHeader 
+          title="Latest News" 
+          description="Stay updated with our recent achievements and announcements"
+        />
+        <div className="p-6">
+          <h2 className="text-xl font-semibold mb-2">No news available</h2>
+          <p className="text-gray-600">
+            Unable to load news at this time. Please check back later.
+          </p>
+        </div>
       </main>
     );
   }
@@ -84,38 +86,38 @@ export default async function NewsPage() {
         title="Latest News" 
         description="Stay updated with our recent achievements and announcements"
       />
-      <Tabs defaultValue={years[0]} className="w-full">
-        <TabsList className="mb-8 flex justify-start overflow-x-auto">
-          {years.map((year) => (
-            <TabsTrigger key={year} value={year} className="px-4 py-2">
-              {year}
-            </TabsTrigger>
-          ))}
-        </TabsList>
-        {years.map((year) => (
-          <TabsContent key={year} value={year}>
-            <div className="space-y-8">
-              {groupedNewsItems[year].map((item: NewsItem, index: number) => (
-                <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow duration-300">
-                  <CardHeader className="bg-gray-50">
-                    <div className="flex justify-between items-center">
-                      <CardTitle className="text-xl">{item.title}</CardTitle>
-                      <Badge className={`flex items-center ${getBadgeColor(item.badge)}`}>
-                        {getBadgeIcon(item.badge)}
-                        {item.badge}
-                      </Badge>
-                    </div>
-                    <CardDescription>{item.date}</CardDescription>
-                  </CardHeader>
-                  <CardContent className="pt-4">
-                    <p>{item.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-        ))}
-      </Tabs>
+      <div className="mb-8">
+        <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-6">
+          <div className="divide-y divide-gray-200">
+            {newsItems.map((item: NewsItem, index: number) => (
+              <div key={index} className="py-6 px-6">
+                {/* Title and Badge */}
+                <div className="flex justify-between items-start mb-3 gap-4">
+                  <h3 className="text-lg font-bold text-gray-900 leading-tight flex-1">
+                    {item.title}
+                  </h3>
+                  <Badge className={`flex items-center flex-shrink-0 ${getBadgeColor(item.badge)}`}>
+                    {getBadgeIcon(item.badge)}
+                    {item.badge}
+                  </Badge>
+                </div>
+                
+                {/* Date */}
+                <div className="mb-3">
+                  <span className="text-sm font-semibold text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                    {item.date}
+                  </span>
+                </div>
+                
+                {/* Description */}
+                <div className="text-sm text-gray-800 leading-relaxed">
+                  {item.description}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

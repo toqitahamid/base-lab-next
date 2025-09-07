@@ -8,12 +8,12 @@
   "theme_color": "#0F3237",
   "icons": [
     {
-      "src": "/images/logo/base-lab-icon-v3.svg",
+      "src": "/images/logo/base-lab-icon-v5.svg",
       "sizes": "any",
       "type": "image/svg+xml"
     },
     {
-      "src": "/images/logo/base-lab-icon-v3@3x.png",
+      "src": "/images/logo/base-lab-icon-v5@3x.png",
       "sizes": "180x180",
       "type": "image/png"
     }

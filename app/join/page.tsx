@@ -1,8 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { CheckCircle } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
@@ -57,112 +55,126 @@ export default function JoinPage() {
       />
       
 
+      {/* Join content with unified container styling */}
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-6 text-primary">Why Join Us?</h2>
-        <Card>
-          <CardContent className="pt-6">
-            <p className="text-gray-700 leading-relaxed mb-4">
-              At the BASE Lab, we are at the forefront of AI research, focusing on innovative applications in agriculture and beyond. By joining our team, you will have the opportunity to:
-            </p>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {[
-                'Work on cutting-edge research projects',
-                'Collaborate with leading experts in the field',
-                'Access state-of-the-art equipment and resources',
-                'Contribute to real-world applications of AI',
-                'Develop your skills and advance your career in AI and Computer Vision',
-                'Publish in top-tier conferences and journals'
-              ].map((item, index) => (
-                <li key={index} className="flex items-center space-x-2">
-                  <CheckCircle className="text-green-500 flex-shrink-0" />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      </section>
+        <div className="border border-gray-200 rounded-lg bg-gray-50/50">
+          <div className="divide-y divide-gray-200">
+            {/* Why Join Us */}
+            <div className="py-6 px-6">
+              <h2 className="text-2xl font-medium text-gray-900 mb-8">Why Join Us?</h2>
+              <p className="text-sm text-gray-800 leading-relaxed mb-6">
+                At the BASE Lab, we are at the forefront of AI research, focusing on innovative applications in agriculture and beyond. By joining our team, you will have the opportunity to:
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  'Work on cutting-edge research projects',
+                  'Collaborate with leading experts in the field',
+                  'Access state-of-the-art equipment and resources',
+                  'Contribute to real-world applications of AI',
+                  'Develop your skills and advance your career in AI and Computer Vision',
+                  'Publish in top-tier conferences and journals'
+                ].map((item, index) => (
+                  <div key={index} className="flex items-start space-x-3">
+                    <CheckCircle className="text-green-500 flex-shrink-0 w-5 h-5 mt-0.5" />
+                    <span className="text-sm text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-6 text-primary">Open Positions</h2>
-        <Tabs defaultValue="phd">
-          <TabsList className="mb-4">
-            <TabsTrigger value="phd">PhD Students</TabsTrigger>
-            <TabsTrigger value="masters">Masters Students</TabsTrigger>
-          </TabsList>
-          {positions.map((position) => (
-            <TabsContent key={position.title} value={position.title.toLowerCase().split(' ')[0]}>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-2xl">{position.title}</CardTitle>
-                  <CardDescription>{position.description}</CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <h4 className="font-semibold text-lg mb-2">Program Details</h4>
-                      <ul className="space-y-2">
-                        {position.details.map((detail, index) => (
-                          <li key={index} className="flex items-center space-x-2">
-                            <CheckCircle className="text-green-500 flex-shrink-0" />
-                            <span>{detail}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-lg mb-2">Requirements</h4>
-                      <ul className="space-y-2">
-                        {position.requirements.map((req, index) => (
-                          <li key={index} className="flex items-center space-x-2">
-                            <CheckCircle className="text-green-500 flex-shrink-0" />
-                            <span>{req}</span>
-                          </li>
-                        ))}
-                      </ul>
+            {/* Open Positions */}
+            <div className="py-6 px-6">
+              <h2 className="text-2xl font-medium text-gray-900 mb-8">Open Positions</h2>
+              <div className="space-y-12">
+                {positions.map((position, index) => (
+                  <div key={position.title} className={`${index !== positions.length - 1 ? 'pb-8 border-b border-gray-100' : ''}`}>
+                    <div className="space-y-6">
+                      <div>
+                        <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{position.title}</h3>
+                        <p className="text-sm text-gray-800 leading-relaxed mb-6">{position.description}</p>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                          <h4 className="text-sm font-medium text-gray-700 mb-4">Program Details</h4>
+                          <div className="space-y-3">
+                            {position.details.map((detail, detailIndex) => (
+                              <div key={detailIndex} className="flex items-start space-x-3">
+                                <CheckCircle className="text-green-500 flex-shrink-0 w-4 h-4 mt-0.5" />
+                                <span className="text-sm text-gray-700">{detail}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                        <div>
+                          <h4 className="text-sm font-medium text-gray-700 mb-4">Requirements</h4>
+                          <div className="space-y-3">
+                            {position.requirements.map((req, reqIndex) => (
+                              <div key={reqIndex} className="flex items-start space-x-3">
+                                <CheckCircle className="text-green-500 flex-shrink-0 w-4 h-4 mt-0.5" />
+                                <span className="text-sm text-gray-700">{req}</span>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          ))}
-        </Tabs>
+                ))}
+              </div>
+            </div>
+
+            {/* Application Process */}
+            <div className="py-6 px-6">
+              <h2 className="text-2xl font-medium text-gray-900 mb-8">Application Process</h2>
+              <div className="space-y-4">
+                <div className="flex items-start space-x-4">
+                  <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-medium">1</span>
+                  <span className="text-sm text-gray-700">Review our research areas and open positions</span>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-medium">2</span>
+                  <div>
+                    <span className="text-sm text-gray-700">Prepare your application materials:</span>
+                    <div className="ml-4 mt-2 space-y-1">
+                      {['CV/resume', 'Statement of purpose', 'Transcripts', 'Letters of recommendation', 'Writing sample (for PhD applicants)'].map((item, index) => (
+                        <div key={index} className="flex items-start space-x-2">
+                          <span className="text-gray-400 mt-1">•</span>
+                          <span className="text-sm text-gray-700">{item}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-medium">3</span>
+                  <span className="text-sm text-gray-700">
+                    Submit your application through the <Link href="https://gradschool.siu.edu/apply/" className="text-sky-600 hover:text-sky-800 font-medium">SIU Graduate School portal</Link>
+                  </span>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-medium">4</span>
+                  <span className="text-sm text-gray-700">If selected, participate in an interview with our team</span>
+                </div>
+                <div className="flex items-start space-x-4">
+                  <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-medium">5</span>
+                  <span className="text-sm text-gray-700">Receive an offer and join our lab!</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="py-6 px-6 text-center bg-gray-50">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Take the Next Step?</h2>
+              <p className="text-sm text-gray-800 mb-6 leading-relaxed max-w-2xl mx-auto">
+                We are always looking for talented individuals to join our team. If you are passionate about AI and computer vision, we would love to hear from you!
+              </p>
+              <Button asChild size="lg" className="font-medium">
+                <Link href="https://gradschool.siu.edu/apply/">Start Your Application</Link>
+              </Button>
+            </div>
+          </div>
+        </div>
       </section>
-
-      
-
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-6 text-primary">Application Process</h2>
-        <Card>
-          <CardContent className="pt-6">
-            <ol className="list-decimal list-inside text-gray-700 space-y-4">
-              <li>Review our research areas and open positions</li>
-              <li>Prepare your application materials:
-                <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-                  <li>CV/resume</li>
-                  <li>Statement of purpose</li>
-                  <li>Transcripts</li>
-                  <li>Letters of recommendation</li>
-                  <li>Writing sample (for PhD applicants)</li>
-                </ul>
-              </li>
-              <li>Submit your application through the <Link href="https://gradschool.siu.edu/apply/" className="text-primary hover:underline">SIU Graduate School portal</Link></li>
-              <li>If selected, participate in an interview with our team</li>
-              <li>Receive an offer and join our lab!</li>
-            </ol>
-          </CardContent>
-        </Card>
-      </section>
-
-      <Card className="text-center p-8 bg-gradient-to-br from-primary/10 to-primary/5">
-        <CardTitle className="text-3xl mb-4 text-primary">Ready to Take the Next Step?</CardTitle>
-        <CardDescription className="text-lg mb-6">
-          We are always looking for talented individuals to join our team. If you are passionate about AI and computer vision, we would love to hear from you!
-        </CardDescription>
-        <Button asChild size="lg" className="font-semibold">
-          <Link href="https://gradschool.siu.edu/apply/">Start Your Application</Link>
-        </Button>
-      </Card>
     </main>
   );
 }
