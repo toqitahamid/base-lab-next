@@ -85,11 +85,11 @@ export default function Home() {
         </motion.div>
       </section>
 
-      <div className="container mx-auto px-4 py-6 max-w-6xl">
+      <div className="container mx-auto px-2 md:px-4 py-6 max-w-6xl">
 
       {/* Latest Works */}
       <section className="mb-6 pb-6 border-b border-gray-100">
-        <div className="px-6 py-8">
+        <div className="px-2 md:px-6 py-4 md:py-8">
           <div className="border border-gray-200 rounded-lg p-6 bg-gray-50/50" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
             <CarouselWithAutoplay items={homeData.carouselItems} />
           </div>
@@ -99,17 +99,13 @@ export default function Home() {
       {/* Research Focus */}
       <section className="mb-6 pb-6 border-b border-gray-100">
         <div className="">
-          <div className="px-6 py-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Research Focus</h2>
-            <p className="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
-              Advancing AI frontiers through cutting-edge research in computer vision, deep learning, and agricultural applications.
-            </p>
-            
+          <div className="px-2 md:px-6 py-4 md:py-8">
+            <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-6 text-center">Research Focus</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {homeData.researchFocusAreas.map((area, index) => (
                 <div key={index}>
                   <div className="p-6 h-full border border-gray-200 rounded-lg bg-gray-50/50" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
-                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">
                       {area.title}
                     </h3>
                     <p className="text-gray-600 leading-relaxed text-sm">
@@ -126,16 +122,16 @@ export default function Home() {
       {/* Recent Publications */}
       <section className="mb-6 pb-6 border-b border-gray-100">
         <div className="">
-          <div className="px-6 py-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Recent Publications</h2>
+          <div className="px-2 md:px-6 py-4 md:py-8">
+            <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">Recent Publications</h2>
             
-            <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-6 mb-8" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
+            <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-4 md:p-6 mb-8" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
               {publicationsData[0].items.slice(0, 3).map((publication, index) => (
                 <div 
                   key={index}
-                  className={`p-6 ${index !== publicationsData[0].items.slice(0, 3).length - 1 ? 'border-b border-gray-200' : ''}`}
+                  className={`p-4 md:p-6 ${index !== publicationsData[0].items.slice(0, 3).length - 1 ? 'border-b border-gray-200' : ''}`}
                 >
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
+                  <h3 className="text-base md:text-lg font-bold text-gray-900 mb-3 leading-tight">
                     {publication.title}
                   </h3>
                   <p className="text-gray-700 mb-4 text-sm leading-relaxed">
@@ -170,19 +166,19 @@ export default function Home() {
       {/* Latest News */}
       <section className="mb-6 pb-6 border-b border-gray-100">
         <div className="">
-          <div className="px-6 py-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Latest News</h2>
+          <div className="px-2 md:px-6 py-4 md:py-8">
+            <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">Latest News</h2>
             
-            <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-6 mb-8" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
+            <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-4 md:p-6 mb-8" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
               {newsData.slice(0, 4).map((item, index) => (
                 <div 
                   key={index}
-                  className={`p-6 ${
+                  className={`p-4 md:p-6 ${
                     index !== newsData.slice(0, 4).length - 1 ? 'border-b border-gray-200' : ''
                   }`}
                 >
                   <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-lg font-bold text-gray-900 leading-tight flex-1 pr-4">
+                    <h3 className="text-base md:text-lg font-bold text-gray-900 leading-tight flex-1 pr-4">
                       {item.title}
                     </h3>
                     <span className="bg-blue-100 text-blue-700 px-3 py-1 text-xs font-medium rounded-full flex-shrink-0">
@@ -215,21 +211,21 @@ export default function Home() {
       {/* Join Our Lab */}
       <section className="mb-6 pb-6 border-b border-gray-100">
         <div className="">
-          <div className="px-6 py-8">
+          <div className="px-2 md:px-6 py-4 md:py-8">
             <div className="bg-gradient-to-br from-[rgb(15,50,55)] to-[rgb(25,70,75)] rounded-lg shadow-sm overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent" />
               <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-32 translate-x-32" />
               <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-24 -translate-x-24" />
               
-              <div className="relative z-10 px-8 py-12">
+              <div className="relative z-10 px-6 md:px-8 py-8 md:py-12">
             <div className="text-center mb-8">
               <div>
-                <h2 className="text-3xl font-bold text-white mb-4">Join Our Lab</h2>
+                <h2 className="text-lg md:text-3xl font-bold text-white mb-4">Join Our Lab</h2>
                 <div className="w-24 h-1 bg-white/30 mx-auto rounded-full" />
               </div>
             </div>
             
-            <p className="mb-8 text-gray-100 text-lg text-center max-w-2xl mx-auto leading-relaxed">
+            <p className="mb-8 text-gray-100 text-sm md:text-lg text-center max-w-2xl mx-auto leading-relaxed">
               Interested in pushing the boundaries of AI? We are always looking for talented individuals to join our team.
             </p>
             
@@ -241,12 +237,12 @@ export default function Home() {
                 const Icon = item.icon;
                 return (
                   <div key={index} className="">
-                    <div className="bg-white/10 border border-white/20 backdrop-blur-sm h-full p-6 rounded-lg">
+                    <div className="bg-white/10 border border-white/20 backdrop-blur-sm h-full p-4 md:p-6 rounded-lg">
                       <div className="flex items-center text-white mb-3">
                         <Icon className="mr-3 h-6 w-6" />
-                        <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                        <h3 className="text-sm md:text-lg font-semibold text-white">{item.title}</h3>
                       </div>
-                      <p className="text-white leading-relaxed">{item.description}</p>
+                      <p className="text-white text-sm md:text-base leading-relaxed">{item.description}</p>
                     </div>
                   </div>
                 );
@@ -257,7 +253,7 @@ export default function Home() {
               <div>
                 <Button 
                   asChild 
-                  className="bg-white text-[rgb(15,50,55)] hover:bg-gray-100 px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="bg-white text-[rgb(15,50,55)] hover:bg-gray-100 px-6 md:px-8 py-3 text-sm md:text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   <Link href="/join" className="flex items-center">
                     Learn More About Joining
@@ -275,9 +271,9 @@ export default function Home() {
       {/* Sponsors and Collaborators */}
       <section className="mb-6 pb-6 border-b border-gray-100">
         <div className="">
-          <div className="px-6 py-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Our Sponsors and Collaborators</h2>
-            <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-6" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
+          <div className="px-2 md:px-6 py-4 md:py-8">
+            <h2 className="text-xl md:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">Our Sponsors and Collaborators</h2>
+            <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-4 md:p-6" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
               <div className="grid grid-cols-3 gap-8 justify-items-center">
               {homeData.sponsors.map((logo, index) => (
                 <div key={index} className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 relative flex items-center justify-center">

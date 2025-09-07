@@ -44,7 +44,7 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
               />
             </div>
             <div className="p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{items[0]?.title || 'Loading...'}</h3>
+              <h3 className="text-lg font-bold text-gray-900 mb-3 leading-snug">{items[0]?.title || 'Loading...'}</h3>
               <p className="text-sm text-gray-800 leading-relaxed">{items[0]?.description || 'Loading...'}</p>
             </div>
           </div>
@@ -79,7 +79,7 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{item.title}</h3>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 leading-snug">{item.title}</h3>
                   <p className="text-sm text-gray-800 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
@@ -87,18 +87,18 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="flex justify-center mt-6 gap-3">
-        <button 
-          onClick={() => api?.scrollPrev()} 
-          className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center"
+      <div className="flex justify-center mt-4 md:mt-6 gap-4">
+        <button
+          onClick={() => api?.scrollPrev()}
+          className="w-12 h-12 md:w-10 md:h-10 rounded-full border border-gray-300 hover:border-gray-400 hover:bg-gray-50 flex items-center justify-center transition-all duration-200 shadow-sm hover:shadow-md"
         >
-          <ChevronLeft className="h-5 w-5" />
+          <ChevronLeft className="h-6 w-6 md:h-5 md:w-5" />
         </button>
-        <button 
-          onClick={() => api?.scrollNext()} 
-          className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center"
+        <button
+          onClick={() => api?.scrollNext()}
+          className="w-12 h-12 md:w-10 md:h-10 rounded-full border border-gray-300 hover:border-gray-400 hover:bg-gray-50 flex items-center justify-center transition-all duration-200 shadow-sm hover:shadow-md"
         >
-          <ChevronRight className="h-5 w-5" />
+          <ChevronRight className="h-6 w-6 md:h-5 md:w-5" />
         </button>
       </div>
     </Carousel>
