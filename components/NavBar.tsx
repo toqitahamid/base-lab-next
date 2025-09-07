@@ -41,14 +41,19 @@ const NavBar = () => {
             <NavLink href="/join">Join</NavLink>
           </div>
           <div className="md:hidden flex items-center">
-            <button onClick={toggleMenu} className="text-white hover:text-gray-300 focus:outline-none">
+            <button
+              onClick={toggleMenu}
+              className="text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 rounded"
+              aria-expanded={isMenuOpen}
+              aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+            >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-[rgb(15,50,55)]">
+        <div className="md:hidden bg-[rgb(15,50,55)]" role="navigation" aria-label="Mobile navigation menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <MobileNavLink href="/research" onClick={() => handleNavigation('/research')}>Research</MobileNavLink>
             <MobileNavLink href="/publications" onClick={() => handleNavigation('/publications')}>Publications</MobileNavLink>
@@ -69,9 +74,9 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
 );
 
 const MobileNavLink = ({ href, onClick, children }: { href: string; onClick: () => void; children: React.ReactNode }) => (
-  <a href={href} onClick={(e) => { e.preventDefault(); onClick(); }} className="text-white hover:bg-[rgb(25,60,65)] block px-3 py-2 rounded-md text-base font-medium">
+  <Link href={href} onClick={onClick} className="text-white hover:bg-[rgb(25,60,65)] block px-3 py-2 rounded-md text-base font-medium">
     {children}
-  </a>
+  </Link>
 );
 
 export default NavBar;

@@ -3,30 +3,17 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { ArrowRight, Users, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import styles from './page.module.css';
-
-
 import CarouselWithAutoplay from '@/components/CarouselWithAutoplay';
-
-
 
 // Static imports
 import homeData from '../public/home.json';
 import publicationsData from '../public/publications.json';
 import newsData from '../public/news.json';
 
-
-
-
-
-
 export default function Home() {
-
-  
-
 
   return (
     <>
@@ -34,14 +21,13 @@ export default function Home() {
       {/* Hero section */}
       <section className="relative mb-16 text-center w-full h-[40vh] md:h-[45vh] lg:h-[50vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <video 
-            autoPlay 
-            loop 
-            muted 
+          <video
+            autoPlay
+            loop
+            muted
             playsInline
             className="absolute top-0 left-0 w-full h-full object-cover"
             poster="/videos/lake-night.jpg"
-            style={{ height: '100vh', transform: 'translateY(-0%)' }}
           >
             <source src="/videos/lake-night.mov" type="video/quicktime" />
             <source src="/videos/lake-night.mp4" type="video/mp4" />
@@ -294,12 +280,12 @@ export default function Home() {
             <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-6" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
               <div className="grid grid-cols-3 gap-8 justify-items-center">
               {homeData.sponsors.map((logo, index) => (
-                <div key={index} className="w-20 h-20 sm:w-32 sm:h-32 md:w-40 md:h-40 relative">
+                <div key={index} className="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 lg:w-40 lg:h-40 relative flex items-center justify-center">
                   <Image
                     src={`/images/sponsors/${logo}`}
                     alt={`BASE LAB sponsor and collaborator logo - ${logo.replace('.png', '').replace('.jpg', '').replace('-', ' ').toUpperCase()}`}
                     fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    sizes="(max-width: 640px) 96px, (max-width: 768px) 128px, (max-width: 1024px) 144px, 160px"
                     style={{ objectFit: 'contain' }}
                   />
                 </div>

@@ -23,6 +23,35 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
     Autoplay({ delay: 5000, stopOnInteraction: true })
   )
   const [api, setApi] = React.useState<any>()
+  const [isClient, setIsClient] = React.useState(false)
+
+  React.useEffect(() => {
+    setIsClient(true)
+  }, [])
+
+  if (!isClient) {
+    return (
+      <div className="w-full max-w-7xl mx-auto">
+        <div className="p-1">
+          <div className="overflow-hidden border-0 shadow-none bg-transparent rounded-lg">
+            <div className="relative aspect-video">
+              <Image
+                src={items[0]?.image || ''}
+                alt={items[0]?.title || 'Loading...'}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-contain"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{items[0]?.title || 'Loading...'}</h3>
+              <p className="text-sm text-gray-800 leading-relaxed">{items[0]?.description || 'Loading...'}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <Carousel
@@ -42,7 +71,7 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
                 <div className="relative aspect-video">
                   <Image
                     src={item.image}
-                    alt={item.title}
+                    alt={`BASE LAB ${item.title} - Research presentation and activity image`}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority={index === 0}
