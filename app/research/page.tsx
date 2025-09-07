@@ -55,8 +55,8 @@ export default async function ResearchPage() {
       />
 
       {/* Research content with publications page styling */}
-      <section className="mb-12">
-        <div className="border border-gray-200 rounded-lg bg-gray-50/50">
+      <section className="mb-6">
+        <div style={{ backgroundColor: '#faf9f6' }}>
           <div className="divide-y divide-gray-200">
             {/* Current Projects */}
             <div className="py-6 px-6">

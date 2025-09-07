@@ -30,7 +30,7 @@ export default async function PublicationsPage() {
 
       {/* Publications list with improved styling */}
       <section className="mb-12">
-        <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-6">
+        <div className="p-6" style={{ backgroundColor: '#faf9f6' }}>
           <div className="divide-y divide-gray-200">
             {allPublications.map((publication, index) => (
               <PublicationCard 

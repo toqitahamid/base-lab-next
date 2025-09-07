@@ -62,7 +62,7 @@ interface AlumniProps {
 
 
 const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: TeamMemberProps) => (
-  <div className="h-full flex flex-col p-4 border border-gray-200 rounded-lg bg-gray-50/50">
+  <div className="h-full flex flex-col p-4 border border-gray-200 rounded-lg" style={{ backgroundColor: '#faf9f6' }}>
     <div className="flex items-center mb-4">
       <div className="relative w-24 h-24 mr-4 flex-shrink-0">
         <Image
@@ -151,7 +151,7 @@ const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: 
 );
 
 const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, image, awards, socialLinks }: AlumniProps) => (
-  <div className="h-full flex flex-col p-4 border border-gray-200 rounded-lg bg-gray-50/50">
+  <div className="h-full flex flex-col p-4 border border-gray-200 rounded-lg" style={{ backgroundColor: '#faf9f6' }}>
     <div className="flex items-center mb-4">
       <div className="relative w-20 h-20 mr-4 flex-shrink-0">
         <Image
@@ -256,10 +256,10 @@ export default function TeamPage() {
       />
 
       {/* Team content with unified container styling */}
-      <section className="mb-12">
-        <div className="space-y-1 border border-gray-200 rounded-lg bg-gray-50/50 overflow-hidden">
+      <section className="mb-6">
+        <div className="divide-y divide-gray-200" style={{ backgroundColor: '#faf9f6' }}>
           {/* Lab Director */}
-          <div className="px-8 py-8 border-b border-gray-100 bg-gray-50/50">
+          <div className="px-8 py-8" style={{ backgroundColor: '#faf9f6' }}>
             <h2 className="text-2xl font-medium text-gray-900 mb-8">Lab Director</h2>
             <div className="flex items-start gap-8">
               <div className="flex-shrink-0">
@@ -310,7 +310,7 @@ export default function TeamPage() {
           </div>
 
           {/* PhD Students */}
-          <div className="px-8 py-8 border-b border-gray-100">
+          <div className="px-8 py-8">
             <h2 className="text-2xl font-medium text-gray-900 mb-8">PhD Students</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {phdStudents.map((student) => (
@@ -320,7 +320,7 @@ export default function TeamPage() {
           </div>
 
           {/* Master's Students */}
-          <div className="px-8 py-8 border-b border-gray-100">
+          <div className="px-8 py-8">
             <h2 className="text-2xl font-medium text-gray-900 mb-8">Master&apos;s Students</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {mastersStudents.map((student) => (

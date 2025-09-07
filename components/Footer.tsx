@@ -1,57 +1,43 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Facebook, Twitter, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-[rgb(15,50,55)] text-white py-4 md:py-8">
-      <div className="container mx-auto px-2 md:px-4 max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
-          <div>
-            <div className="mb-4">
-              <Image 
-                src="/images/logo/base-lab-v4@3x.png"
-                alt="BASE LAB Logo"
-                width={150}
-                height={30}
-                className="mb-2 md:mb-4 md:w-[200px] md:h-[40px]"
-              />
-            </div>
-            <p className="text-gray-300 text-xs md:text-sm">
-              Advancing the frontiers of Computer Vision and Deep Learning at Southern Illinois University at Carbondale.
+    <footer className="bg-white border-t border-gray-200">
+      <div className="max-w-6xl mx-auto px-6 py-4">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-6">
+          {/* Logo & Description */}
+          <div className="flex items-center gap-4">
+            <Image 
+              src="/images/logo/base-lab-logo-v5@4x.png"
+              alt="BASE LAB Logo"
+              width={160}
+              height={32}
+            />
+            <p className="text-gray-500 text-xs">
+              © {new Date().getFullYear()}
             </p>
           </div>
-          <div>
-            <h3 className="text-gray-300 font-semibold text-sm md:text-lg mb-2 md:mb-4">Quick Links</h3>
-            <ul className="space-y-1 md:space-y-2">
-              <li><Link href="/research" className="text-xs md:text-sm hover:text-primary transition-colors">Research</Link></li>
-              <li><Link href="/publications" className="text-xs md:text-sm hover:text-primary transition-colors">Publications</Link></li>
-              <li><Link href="/team" className="text-xs md:text-sm hover:text-primary transition-colors">Team</Link></li>
-              <li><Link href="/news" className="text-xs md:text-sm hover:text-primary transition-colors">News</Link></li>
-              <li><Link href="/join" className="text-xs md:text-sm hover:text-primary transition-colors">Join</Link></li>
-            </ul>
-          </div>
-          <div>
-            <h3 className="text-gray-300 font-semibold text-sm md:text-lg mb-2 md:mb-4">Connect</h3>
-            <div className="flex space-x-2 md:space-x-4">
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
-                <Facebook size={16} className="md:w-5 md:h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
-                <Twitter size={16} className="md:w-5 md:h-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-primary transition-colors">
-                <Linkedin size={16} className="md:w-5 md:h-5" />
-              </a>
-              <a href="mailto:contact@siu.edu" className="text-gray-300 hover:text-primary transition-colors">
-                <Mail size={16} className="md:w-5 md:h-5" />
-              </a>
-            </div>
+          
+          {/* Navigation Links */}
+          <div className="flex flex-wrap gap-6">
+            <Link href="/research" className="text-gray-600 hover:text-gray-900 text-sm">
+              Research
+            </Link>
+            <Link href="/publications" className="text-gray-600 hover:text-gray-900 text-sm">
+              Publications
+            </Link>
+            <Link href="/team" className="text-gray-600 hover:text-gray-900 text-sm">
+              Team
+            </Link>
+            <Link href="/news" className="text-gray-600 hover:text-gray-900 text-sm">
+              News
+            </Link>
+            <Link href="/join" className="text-gray-600 hover:text-gray-900 text-sm">
+              Join
+            </Link>
           </div>
         </div>
-        {/* <div className="mt-8 pt-8 border-t border-gray-200 text-center text-sm">
-          <p>&copy; {new Date().getFullYear()} BASE Lab, Southern Illinois University. All rights reserved.</p>
-        </div> */}
       </div>
     </footer>
   );

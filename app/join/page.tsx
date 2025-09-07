@@ -56,9 +56,8 @@ export default function JoinPage() {
       
 
       {/* Join content with unified container styling */}
-      <section className="mb-12">
-        <div className="border border-gray-200 rounded-lg bg-gray-50/50">
-          <div className="divide-y divide-gray-200">
+      <section className="mb-6">
+        <div className="p-6 divide-y divide-gray-200">
             {/* Why Join Us */}
             <div className="py-6 px-6">
               <h2 className="text-2xl font-medium text-gray-900 mb-8">Why Join Us?</h2>
@@ -163,7 +162,7 @@ export default function JoinPage() {
             </div>
 
             {/* Call to Action */}
-            <div className="py-6 px-6 text-center bg-gray-50">
+            <div className="py-6 px-6 text-center">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Take the Next Step?</h2>
               <p className="text-sm text-gray-800 mb-6 leading-relaxed max-w-2xl mx-auto">
                 We are always looking for talented individuals to join our team. If you are passionate about AI and computer vision, we would love to hear from you!
@@ -172,7 +171,6 @@ export default function JoinPage() {
                 <Link href="https://gradschool.siu.edu/apply/">Start Your Application</Link>
               </Button>
             </div>
-          </div>
         </div>
       </section>
     </main>

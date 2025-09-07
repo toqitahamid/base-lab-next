@@ -87,7 +87,7 @@ export default async function NewsPage() {
         description="Stay updated with our recent achievements and announcements"
       />
       <div className="mb-8">
-        <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-6">
+        <div className="p-6" style={{ backgroundColor: '#faf9f6' }}>
           <div className="divide-y divide-gray-200">
             {newsItems.map((item: NewsItem, index: number) => (
               <div key={index} className="py-6 px-6">
