@@ -30,14 +30,16 @@ export default async function PublicationsPage() {
 
       {/* Publications list with improved styling */}
       <section className="mb-12">
-        <div className="space-y-1 bg-white rounded-lg shadow-sm border overflow-hidden">
-          {allPublications.map((publication, index) => (
-            <PublicationCard 
-              key={index} 
-              publication={{ ...publication, citationKey: publication.citationKey ?? '' }} 
-              bibtexData={bibtexData}
-            />
-          ))}
+        <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-6">
+          <div className="divide-y divide-gray-200">
+            {allPublications.map((publication, index) => (
+              <PublicationCard 
+                key={index} 
+                publication={{ ...publication, citationKey: publication.citationKey ?? '' }} 
+                bibtexData={bibtexData}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </main>

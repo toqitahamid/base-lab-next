@@ -69,7 +69,7 @@ const PublicationCard = ({ publication, bibtexData }: PublicationCardProps) => {
   };
 
   return (
-    <div className="bg-white py-6 px-6 border-b border-gray-100 hover:shadow-sm transition-shadow duration-200">
+    <div className="bg-gray-50/50 py-6 px-6">
       {/* Title */}
       <div className="mb-3">
         <h3 className="text-lg font-bold text-gray-900 leading-tight">
