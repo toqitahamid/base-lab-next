@@ -1,8 +1,8 @@
 import React from 'react';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Award, BookOpen, Newspaper, Lightbulb } from "lucide-react";
-import fetchData from '@/components/DataFetcherServer';
+import fs from 'fs/promises';
+import path from 'path';
 import PageHeader from '@/components/PageHeader';
 
 interface NewsItem {
@@ -14,7 +14,10 @@ interface NewsItem {
 
 async function getNewsItems(): Promise<NewsItem[]> {
   try {
-    const data = await fetchData('/news.json');
+    const newsPath = path.join(process.cwd(), 'public', 'news.json');
+    const newsData = await fs.readFile(newsPath, 'utf-8');
+    const data = JSON.parse(newsData);
+    
     if (!Array.isArray(data)) {
       console.error('Fetched data is not an array:', data);
       return [];
@@ -67,14 +70,12 @@ export default async function NewsPage() {
           title="Latest News" 
           description="Stay updated with our recent achievements and announcements"
         />
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl">No news available</CardTitle>
-            <CardDescription>
-              Unable to load news at this time. Please check back later.
-            </CardDescription>
-          </CardHeader>
-        </Card>
+        <div className="p-6">
+          <h2 className="text-xl font-semibold mb-2">No news available</h2>
+          <p className="text-gray-600">
+            Unable to load news at this time. Please check back later.
+          </p>
+        </div>
       </main>
     );
   }
@@ -85,11 +86,11 @@ export default async function NewsPage() {
         title="Latest News" 
         description="Stay updated with our recent achievements and announcements"
       />
-      <Card className="overflow-hidden border border-gray-200 rounded-lg bg-gray-50/50 mb-8">
-        <CardContent className="p-0">
-          <div className="divide-y divide-gray-100">
+      <div className="mb-8">
+        <div className="border border-gray-200 rounded-lg bg-gray-50/50 p-6">
+          <div className="divide-y divide-gray-200">
             {newsItems.map((item: NewsItem, index: number) => (
-              <div key={index} className="bg-white py-6 px-6">
+              <div key={index} className="py-6 px-6">
                 {/* Title and Badge */}
                 <div className="flex justify-between items-start mb-3 gap-4">
                   <h3 className="text-lg font-bold text-gray-900 leading-tight flex-1">
@@ -115,8 +116,8 @@ export default async function NewsPage() {
               </div>
             ))}
           </div>
-        </CardContent>
-      </Card>
+        </div>
+      </div>
     </main>
   );
 }
