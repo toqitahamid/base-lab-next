@@ -296,7 +296,7 @@ export default function TeamPage() {
               <div className="flex-shrink-0">
                 <div className="relative w-32 h-32">
                   <Image
-                    src="/images/team/khaled-ahmed.jpeg"
+                    src="/images/team/khaled-ahmed.png"
                     alt="Dr. Khaled Ahmed, Associate Professor and BASE LAB Director, leading expert in Computer Vision and Deep Learning research"
                     fill
                     sizes="128px"
