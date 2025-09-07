@@ -80,14 +80,6 @@
       {
           "title": "Federated Learning",
           "description": "Creating robust federated learning frameworks to handle non-iid data and resource constraints, ensuring effective and secure distributed learning across heterogeneous environments."
-      },
-      {
-          "title": "Generative Models",
-          "description": "Advancing generative model techniques for data augmentation and realistic image synthesis, with a focus on improving the quality and diversity of synthetic data for various applications."
-      },
-      {
-          "title": "Real-time Systems",
-          "description": "Implementing real-time AI solutions to enable immediate and accurate decision-making in critical applications, ensuring timely responses and actions in dynamic and high-stakes environments."
       }
     ],
     "quickStats": [

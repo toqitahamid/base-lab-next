@@ -4,9 +4,7 @@ import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from 'embla-carousel-autoplay'
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Image from 'next/image';
-import Link from 'next/link';
 
 interface CarouselItem {
   title: string;
@@ -37,7 +35,7 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
         {items.map((item, index) => (
           <CarouselItem key={index}>
             <div className="p-1">
-              <Card className="overflow-hidden">
+              <Card className="overflow-hidden bg-white border border-gray-200">
                 <div className="relative aspect-video">
                   <Image
                     src={item.image}
@@ -48,15 +46,9 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
                     className="object-contain"
                   />
                 </div>
-                <CardContent className="p-3 md:p-6">
-                  <h3 className="text-sm md:text-xl font-semibold mb-1 md:mb-2">{item.title}</h3>
-                  <p className="text-xs md:text-base text-muted-foreground mb-2 md:mb-4">{item.description}</p>
-                  <Button asChild variant="outline" size="sm" className="md:size-default text-xs md:text-sm">
-                    <Link href={item.link}>
-                      <span className="hidden md:inline">Learn More</span>
-                      <span className="md:hidden">More</span>
-                    </Link>
-                  </Button>
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">{item.title}</h3>
+                  <p className="text-sm text-gray-800 leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             </div>
