@@ -6,7 +6,9 @@
       "Bash(npm run lint)",
       "Bash(npm run build:*)",
       "Bash(npm run dev:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "WebSearch",
+      "WebFetch(domain:www.nvidia.com)"
     ],
     "deny": [],
     "ask": []

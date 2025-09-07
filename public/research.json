@@ -32,7 +32,8 @@
     {
       "title": "AI for Greener Livestock: Educational and Research",
       "award": "USDA-NIFA 2022-70001-37404",
-      "period": "May 1, 2022 - Apr 30, 2024"
+      "period": "May 1, 2022 - Apr 30, 2024",
+      "website": "https://ai-greener-livestock.github.io/"
     }
   ],
   "labEquipment": [
@@ -57,6 +58,21 @@
         "Omnidirectional obstacle sensing",
         "34-minute flight time",
         "Lightweight design (＜249g)"
+      ]
+    },
+    {
+      "name": "NVIDIA Jetson Orin Nano Super Developer Kit",
+      "image": "/images/equipment/nvidia-jetson-orin-nano.jpg",
+      "description": "AI supercomputer for edge computing applications, enabling generative AI and computer vision at the edge with exceptional performance-per-watt efficiency.",
+      "features": [
+        "67 TOPS AI performance",
+        "8GB LPDDR5 memory with 102 GB/s bandwidth",
+        "NVIDIA Ampere GPU with 1024 CUDA cores",
+        "6-core Arm Cortex-A78AE CPU at 1.7 GHz",
+        "Support for generative AI models including vision transformers",
+        "Multiple camera interfaces (MIPI CSI)",
+        "Rich I/O connectivity including USB 3.2, M.2 slots",
+        "NVIDIA JetPack SDK support"
       ]
     }
   ],
