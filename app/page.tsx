@@ -90,7 +90,7 @@ export default function Home() {
       {/* Latest Works */}
       <section className="mb-6 pb-6 border-b border-gray-100">
         <div className="px-6 py-8">
-          <div className="border border-gray-200 rounded-lg p-6 mx-4 bg-gray-50/50" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
+          <div className="border border-gray-200 rounded-lg p-6 bg-gray-50/50" style={{boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)'}}>
             <CarouselWithAutoplay items={homeData.carouselItems} />
           </div>
         </div>
