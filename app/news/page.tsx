@@ -134,7 +134,7 @@ export default async function NewsPage() {
                 
                 {/* Date */}
                 <div className="mb-3">
-                  <span className="text-sm font-semibold text-gray-500 bg-gray-100 px-2 py-1 rounded">
+                  <span className="text-sm font-medium text-sky-600">
                     {item.date}
                   </span>
                 </div>

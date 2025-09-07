@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
@@ -140,15 +141,42 @@ export default function Home() {
                   <p className="text-gray-700 mb-4 text-sm leading-relaxed">
                     {publication.authors.join(", ")}
                   </p>
-                  <div className="flex items-center justify-end">
-                    <a 
-                      href={publication.url} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-slate-700 hover:text-slate-900 font-semibold flex items-center transition-colors duration-300 text-sm"
-                    >
-                      Read Paper <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
+                  <div className="flex items-center gap-2 text-sm">
+                    {(() => {
+                      const actions = [];
+                      
+                      // Paper link
+                      if (publication.url && publication.url.trim() !== '') {
+                        actions.push(
+                          <a 
+                            key="paper"
+                            href={publication.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-sky-600 hover:text-sky-800 font-medium"
+                          >
+                            Paper
+                          </a>
+                        );
+                      }
+                      
+                      // Abstract button (if available)
+                      if (publication.abstract && publication.abstract.trim() !== '') {
+                        actions.push(
+                          <button key="abstract" className="text-sky-600 hover:text-sky-800 font-medium">
+                            Abstract
+                          </button>
+                        );
+                      }
+                      
+                      // Render actions with separators
+                      return actions.map((action, index) => (
+                        <React.Fragment key={index}>
+                          {action}
+                          {index < actions.length - 1 && <span className="text-gray-400">/</span>}
+                        </React.Fragment>
+                      ));
+                    })()}
                   </div>
                 </div>
               ))}
@@ -177,15 +205,12 @@ export default function Home() {
                     index !== newsData.slice(0, 4).length - 1 ? 'border-b border-gray-200' : ''
                   }`}
                 >
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-base md:text-lg font-bold text-gray-900 leading-tight flex-1 pr-4">
+                  <div className="mb-3">
+                    <h3 className="text-base md:text-lg font-bold text-gray-900 leading-tight">
                       {item.title}
                     </h3>
-                    <span className="bg-blue-100 text-blue-700 px-3 py-1 text-xs font-medium rounded-full flex-shrink-0">
-                      {item.badge}
-                    </span>
                   </div>
-                  <p className="text-blue-600 text-sm mb-3 font-medium">{item.date}</p>
+                  <p className="text-sky-600 text-sm mb-3 font-medium">{item.date}</p>
                   <p className="text-gray-700 leading-relaxed text-sm">{item.description}</p>
                 </div>
               ))}
