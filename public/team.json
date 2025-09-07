@@ -120,6 +120,7 @@
     },
     {
       "name": "Majid Memari",
+      "image": "/images/team/majid-memari.jpeg",
       "degree": "PhD",
       "graduationYear": 2023,
       "thesis": "Comparative Analysis of VAE and GAN for Image Generation to Improve OCR System",
@@ -142,6 +143,7 @@
     },
     {
       "name": "Jawad Siddique",
+      "image": "/images/team/jawad-siddique.jpeg",
       "degree": "MS",
       "graduationYear": 2022,
       "thesis": "Using Deep learning to mitigate animal-vehicle accidents",
