@@ -44,6 +44,7 @@ export default async function ResearchPage() {
   ];
 
   const currentProjects: Project[] = researchData?.currentProjects || [];
+  const pastProjects: Project[] = researchData?.pastProjects || [];
   const labEquipment: Equipment[] = researchData?.labEquipment || [];
   const sponsors: Sponsor[] = researchData?.sponsors || [];
 
@@ -54,11 +55,9 @@ export default async function ResearchPage() {
         description="Advancing the frontiers of Computer Vision and Deep Learning"
       />
       <ResearchMission mission={researchData?.mission} />
-      <Separator className="my-12" />
-      {/* <ResearchAreas areas={researchAreas} />
-      <Separator className="my-12" /> */}
+      {/* <ResearchAreas areas={researchAreas} /> */}
       <CurrentProjects projects={currentProjects} />
-      <Separator className="my-12" />
+      <PastProjects projects={pastProjects} />
       <LabEquipment equipment={labEquipment} />
       {/* <Separator className="my-12" />
       <ResearchSponsors sponsors={sponsors} /> */}
@@ -67,15 +66,15 @@ export default async function ResearchPage() {
 }
 
 const ResearchMission = ({ mission }: { mission?: string }) => (
-  <section className="mb-12">
-    <h2 className="text-2xl font-semibold mb-4">Research Mission</h2>
-    <Card>
-      <CardContent className="pt-6">
-        <p className="text-gray-700 leading-relaxed">
+  <section className="mb-16">
+    <h2 className="text-2xl font-bold mb-8 text-gray-900">Research Mission</h2>
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+      <div className="p-6">
+        <p className="text-base text-gray-700 leading-relaxed">
           {mission || "Our lab is dedicated to pushing the boundaries of Computer Vision and Deep Learning."}
         </p>
-      </CardContent>
-    </Card>
+      </div>
+    </div>
   </section>
 );
 
@@ -101,55 +100,101 @@ const ResearchAreas = ({ areas }: { areas: ResearchArea[] }) => (
 );
 
 const CurrentProjects = ({ projects }: { projects: Project[] }) => (
-  <section className="mb-12">
-    <h2 className="text-2xl font-semibold mb-6">Current Projects</h2>
-    <div className="space-y-6">
-      {projects.map((project, index) => (
-        <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow duration-300">
-          <CardHeader className="bg-gray-50">
-            <CardTitle className="text-lg">{project.title}</CardTitle>
-          </CardHeader>
-          <CardContent className="pt-4">
-            <Badge variant="secondary" className="mb-2 flex items-center">
-              <Award className="w-4 h-4 mr-1" /> Award: {project.award}
-            </Badge>
-            <p className="text-sm text-gray-600 flex items-center">
-              <Calendar className="w-4 h-4 mr-1" /> Period: {project.period}
-            </p>
-          </CardContent>
-        </Card>
-      ))}
+  <section className="mb-16">
+    <h2 className="text-2xl font-bold mb-8 text-gray-900">Current Projects</h2>
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+      <div className="divide-y divide-gray-100">
+        {projects.map((project, index) => (
+          <div key={index} className="p-6">
+            <div className="flex justify-between items-start gap-4 mb-4">
+              <h3 className="text-lg font-bold text-gray-900 leading-tight flex-1">
+                {project.title}
+              </h3>
+            </div>
+            
+            <div className="flex flex-wrap gap-3 text-sm">
+              <div className="flex items-center bg-green-100 text-green-800 px-3 py-1 rounded-full">
+                <Award className="w-4 h-4 mr-2" />
+                <span className="font-medium">Award: {project.award}</span>
+              </div>
+              <div className="flex items-center bg-gray-100 text-gray-700 px-3 py-1 rounded-full">
+                <Calendar className="w-4 h-4 mr-2" />
+                <span className="font-medium">Period: {project.period}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+const PastProjects = ({ projects }: { projects: Project[] }) => (
+  <section className="mb-16">
+    <h2 className="text-2xl font-bold mb-8 text-gray-900">Past Projects</h2>
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+      <div className="divide-y divide-gray-100">
+        {projects.map((project, index) => (
+          <div key={index} className="p-6">
+            <div className="flex justify-between items-start gap-4 mb-4">
+              <h3 className="text-lg font-bold text-gray-900 leading-tight flex-1">
+                {project.title}
+              </h3>
+            </div>
+            
+            <div className="flex flex-wrap gap-3 text-sm">
+              <div className="flex items-center bg-blue-100 text-blue-800 px-3 py-1 rounded-full">
+                <Award className="w-4 h-4 mr-2" />
+                <span className="font-medium">Award: {project.award}</span>
+              </div>
+              <div className="flex items-center bg-gray-100 text-gray-700 px-3 py-1 rounded-full">
+                <Calendar className="w-4 h-4 mr-2" />
+                <span className="font-medium">Period: {project.period}</span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   </section>
 );
 
 const LabEquipment = ({ equipment }: { equipment: Equipment[] }) => (
-  <section className="mb-12">
-    <h2 className="text-2xl font-semibold mb-6">Lab Equipment</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {equipment.map((item, index) => (
-        <Card key={index} className="overflow-hidden hover:shadow-md transition-shadow duration-300">
-          <div className="relative w-full pt-[75%]">
-            <Image
-              src={item.image}
-              alt={item.name}
-              fill
-              style={{ objectFit: 'contain' }}
-            />
+  <section className="mb-16">
+    <h2 className="text-2xl font-bold mb-8 text-gray-900">Lab Equipment</h2>
+    <div className="bg-white border border-gray-200 rounded-lg overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+        {equipment.map((item, index) => (
+          <div key={index} className="p-6">
+            {/* Image Section */}
+            <div className="mb-4">
+              <div className="relative w-full pt-[60%] bg-white rounded-lg overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  style={{ objectFit: 'contain' }}
+                  className="p-4"
+                />
+              </div>
+            </div>
+            
+            {/* Content Section */}
+            <div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{item.name}</h3>
+              <p className="text-gray-700 mb-4 leading-relaxed">{item.description}</p>
+              <div className="space-y-2">
+                {item.features.map((feature, featureIndex) => (
+                  <div key={featureIndex} className="flex items-start">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                    <span className="text-sm text-gray-700">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
-          <CardHeader>
-            <CardTitle>{item.name}</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
-            <ul className="list-disc list-inside text-sm">
-              {item.features.map((feature, featureIndex) => (
-                <li key={featureIndex}>{feature}</li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
-      ))}
+        ))}
+      </div>
     </div>
   </section>
 );
