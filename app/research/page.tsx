@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowRight, Brain, Camera, Database, Leaf, Award, Calendar } from "lucide-react";
-import fetchData from '@/components/DataFetcherServer';
+import researchData from '../../public/research.json';
 import PageHeader from '@/components/PageHeader';
 
 interface ResearchArea {
@@ -34,7 +34,6 @@ interface Sponsor {
 }
 
 export default async function ResearchPage() {
-  const researchData = await fetchData('/research.json');
 
   const researchAreas: ResearchArea[] = [
     { title: 'Computer Vision', description: researchData?.areas?.computerVision, icon: <Camera className="w-8 h-8" /> },
@@ -57,87 +56,89 @@ export default async function ResearchPage() {
 
       {/* Research content with publications page styling */}
       <section className="mb-12">
-        <div className="space-y-1 bg-white rounded-lg shadow-sm border overflow-hidden">
-          {/* Current Projects */}
-          <div className="px-8 py-8 border-b border-gray-100">
-            <h2 className="text-2xl font-medium text-gray-900 mb-8">Current Projects</h2>
-            <div className="space-y-8">
-              {currentProjects.map((project, index) => (
-                <div key={index} className="pb-6 border-b border-gray-50 last:border-b-0 last:pb-0">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
-                    {project.title}
-                  </h3>
-                  
-                  <div className="flex flex-wrap gap-6 text-sm">
-                    <div className="text-gray-700">
-                      <span className="font-medium">Award:</span> {project.award}
-                    </div>
-                    <div className="text-gray-700">
-                      <span className="font-medium">Period:</span> {project.period}
+        <div className="border border-gray-200 rounded-lg bg-gray-50/50">
+          <div className="divide-y divide-gray-200">
+            {/* Current Projects */}
+            <div className="py-6 px-6">
+              <h2 className="text-2xl font-medium text-gray-900 mb-8">Current Projects</h2>
+              <div className="space-y-8">
+                {currentProjects.map((project, index) => (
+                  <div key={index} className="pb-6 border-b border-gray-100 last:border-b-0 last:pb-0">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
+                      {project.title}
+                    </h3>
+                    
+                    <div className="flex flex-wrap gap-6 text-sm">
+                      <div className="text-gray-700">
+                        <span className="font-medium">Award:</span> {project.award}
+                      </div>
+                      <div className="text-gray-700">
+                        <span className="font-medium">Period:</span> {project.period}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-          
-          {/* Past Projects */}
-          <div className="px-8 py-8 border-b border-gray-100">
-            <h2 className="text-2xl font-medium text-gray-900 mb-8">Past Projects</h2>
-            <div className="space-y-8">
-              {pastProjects.map((project, index) => (
-                <div key={index} className="pb-6 border-b border-gray-50 last:border-b-0 last:pb-0">
-                  <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
-                    {project.title}
-                  </h3>
-                  
-                  <div className="flex flex-wrap gap-6 text-sm">
-                    <div className="text-gray-700">
-                      <span className="font-medium">Award:</span> {project.award}
-                    </div>
-                    <div className="text-gray-700">
-                      <span className="font-medium">Period:</span> {project.period}
+            
+            {/* Past Projects */}
+            <div className="py-6 px-6">
+              <h2 className="text-2xl font-medium text-gray-900 mb-8">Past Projects</h2>
+              <div className="space-y-8">
+                {pastProjects.map((project, index) => (
+                  <div key={index} className="pb-6 border-b border-gray-100 last:border-b-0 last:pb-0">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 leading-tight">
+                      {project.title}
+                    </h3>
+                    
+                    <div className="flex flex-wrap gap-6 text-sm">
+                      <div className="text-gray-700">
+                        <span className="font-medium">Award:</span> {project.award}
+                      </div>
+                      <div className="text-gray-700">
+                        <span className="font-medium">Period:</span> {project.period}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
-          </div>
-          
-          {/* Lab Equipment */}
-          <div className="px-8 py-8">
-            <h2 className="text-2xl font-medium text-gray-900 mb-8">Lab Equipment</h2>
-            <div className="space-y-12">
-              {labEquipment.map((item, index) => (
-                <div key={index} className="flex flex-col lg:flex-row gap-8 pb-8 border-b border-gray-50 last:border-b-0 last:pb-0">
-                  {/* Image Section */}
-                  <div className="lg:w-1/2">
-                    <div className="relative w-full pt-[60%] bg-white rounded-lg border border-gray-100">
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        fill
-                        style={{ objectFit: 'contain' }}
-                        className="p-6"
-                      />
+            
+            {/* Lab Equipment */}
+            <div className="py-6 px-6">
+              <h2 className="text-2xl font-medium text-gray-900 mb-8">Lab Equipment</h2>
+              <div className="space-y-12">
+                {labEquipment.map((item, index) => (
+                  <div key={index} className="flex flex-col lg:flex-row gap-8 pb-8 border-b border-gray-100 last:border-b-0 last:pb-0">
+                    {/* Image Section */}
+                    <div className="lg:w-1/2">
+                      <div className="relative w-full pt-[60%] bg-white rounded-lg border border-gray-100">
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          style={{ objectFit: 'contain' }}
+                          className="p-6"
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* Content Section */}
+                    <div className="lg:w-1/2 lg:pl-4">
+                      <h3 className="text-lg font-bold text-gray-900 mb-3">{item.name}</h3>
+                      <p className="text-sm text-gray-800 font-medium mb-4 leading-relaxed">{item.description}</p>
+                      <div className="space-y-2">
+                        {item.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="text-sm text-gray-700 flex items-start">
+                            <span className="text-gray-400 mr-3 mt-1">•</span>
+                            <span>{feature}</span>
+                          </div>
+                        ))}
+                      </div>
                     </div>
                   </div>
-                  
-                  {/* Content Section */}
-                  <div className="lg:w-1/2 lg:pl-4">
-                    <h3 className="text-lg font-bold text-gray-900 mb-3">{item.name}</h3>
-                    <p className="text-sm text-gray-800 font-medium mb-4 leading-relaxed">{item.description}</p>
-                    <div className="space-y-2">
-                      {item.features.map((feature, featureIndex) => (
-                        <div key={featureIndex} className="text-sm text-gray-700 flex items-start">
-                          <span className="text-gray-400 mr-3 mt-1">•</span>
-                          <span>{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
