@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Dialog,
   DialogContent,
@@ -13,11 +13,12 @@ interface Publication {
   title: string;
   authors: string[];
   publisher: string;
-  url: string;
-  abstract: string;
-  citationKey: string;
+  url?: string;
+  abstract?: string;
+  citationKey?: string;
   type: string;
   year: number;
+  code?: string;
 }
 
 interface PublicationCardProps {
@@ -51,9 +52,9 @@ const PublicationCard = ({ publication, bibtexData, index }: PublicationCardProp
     });
   };
 
-  // Better alternating backgrounds for visibility
+  // Solid white background for all cards
   const getRowBackground = () => {
-    return index % 2 === 0 ? 'bg-white' : 'bg-gray-50';
+    return 'bg-white';
   };
 
   // Publication type colors for better distinction
@@ -101,73 +102,103 @@ const PublicationCard = ({ publication, bibtexData, index }: PublicationCardProp
 
       {/* Action links */}
       <div className="flex items-center gap-2 text-sm">
-        <a 
-          href={publication.url} 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="text-sky-600 hover:text-sky-800 font-medium"
-        >
-          Paper
-        </a>
-        
-        <span className="text-gray-400">/</span>
-        
-        <a 
-          href="#"
-          className="text-sky-600 hover:text-sky-800 font-medium"
-        >
-          Code
-        </a>
-        
-        <span className="text-gray-400">/</span>
-        
-        <Dialog open={abstractOpen} onOpenChange={setAbstractOpen}>
-          <DialogTrigger asChild>
-            <button className="text-sky-600 hover:text-sky-800 font-medium">
-              Abstract
-            </button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[700px]">
-            <DialogHeader>
-              <DialogTitle className="text-xl font-bold text-gray-900">Abstract</DialogTitle>
-            </DialogHeader>
-            <div className="mt-4 p-4 bg-gray-50">
-              <p className="text-sm text-gray-800 leading-relaxed">{publication.abstract}</p>
-            </div>
-          </DialogContent>
-        </Dialog>
-        
-        
-        <span className="text-gray-400">/</span>
-        
-        <Dialog open={citeOpen} onOpenChange={setCiteOpen}>
-          <DialogTrigger asChild>
-            <button className="text-sky-600 hover:text-sky-800 font-medium">
-              Cite
-            </button>
-          </DialogTrigger>
-          <DialogContent className="sm:max-w-[700px]">
-            <DialogHeader>
-              <DialogTitle className="text-xl font-bold text-gray-900">BibTeX Citation</DialogTitle>
-            </DialogHeader>
-            <div className="relative mt-4">
-              {bibtex !== 'BibTeX not available for this publication.' && (
-                <button
-                  onClick={copyToClipboard}
-                  type="button"
-                  className="absolute top-3 right-3 z-10 bg-gray-700 text-white hover:bg-gray-800 px-3 py-1 text-xs font-medium"
-                >
-                  {copied ? 'Copied!' : 'Copy'}
-                </button>
-              )}
-              <div className="bg-gray-900 p-4">
-                <pre className="text-green-400 text-xs whitespace-pre-wrap break-words font-mono">
-                  {bibtex}
-                </pre>
-              </div>
-            </div>
-          </DialogContent>
-        </Dialog>
+        {/* Collect available actions */}
+        {(() => {
+          const actions = [];
+          
+          // Paper link
+          if (publication.url && publication.url.trim() !== '') {
+            actions.push(
+              <a 
+                key="paper"
+                href={publication.url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sky-600 hover:text-sky-800 font-medium"
+              >
+                Paper
+              </a>
+            );
+          }
+          
+          // Code link
+          if (publication.code && publication.code.trim() !== '') {
+            actions.push(
+              <a 
+                key="code"
+                href={publication.code}
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sky-600 hover:text-sky-800 font-medium"
+              >
+                Code
+              </a>
+            );
+          }
+          
+          // Abstract button
+          if (publication.abstract && publication.abstract.trim() !== '') {
+            actions.push(
+              <Dialog key="abstract" open={abstractOpen} onOpenChange={setAbstractOpen}>
+                <DialogTrigger asChild>
+                  <button className="text-sky-600 hover:text-sky-800 font-medium">
+                    Abstract
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[700px]">
+                  <DialogHeader>
+                    <DialogTitle className="text-xl font-bold text-gray-900">Abstract</DialogTitle>
+                  </DialogHeader>
+                  <div className="mt-4 p-4 bg-gray-50">
+                    <p className="text-sm text-gray-800 leading-relaxed">{publication.abstract}</p>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            );
+          }
+          
+          // Cite button
+          if (publication.citationKey && publication.citationKey.trim() !== '') {
+            actions.push(
+              <Dialog key="cite" open={citeOpen} onOpenChange={setCiteOpen}>
+                <DialogTrigger asChild>
+                  <button className="text-sky-600 hover:text-sky-800 font-medium">
+                    Cite
+                  </button>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-[700px]">
+                  <DialogHeader>
+                    <DialogTitle className="text-xl font-bold text-gray-900">BibTeX Citation</DialogTitle>
+                  </DialogHeader>
+                  <div className="relative mt-4">
+                    {bibtex !== 'BibTeX not available for this publication.' && (
+                      <button
+                        onClick={copyToClipboard}
+                        type="button"
+                        className="absolute top-3 right-3 z-10 bg-gray-700 text-white hover:bg-gray-800 px-3 py-1 text-xs font-medium"
+                      >
+                        {copied ? 'Copied!' : 'Copy'}
+                      </button>
+                    )}
+                    <div className="bg-gray-900 p-4">
+                      <pre className="text-green-400 text-xs whitespace-pre-wrap break-words font-mono">
+                        {bibtex}
+                      </pre>
+                    </div>
+                  </div>
+                </DialogContent>
+              </Dialog>
+            );
+          }
+          
+          // Render actions with separators
+          return actions.map((action, index) => (
+            <React.Fragment key={index}>
+              {action}
+              {index < actions.length - 1 && <span className="text-gray-400">/</span>}
+            </React.Fragment>
+          ));
+        })()}
       </div>
     </div>
   );
