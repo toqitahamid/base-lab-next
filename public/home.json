@@ -16,6 +16,12 @@
     "carouselItems": [
 
       {
+        "title": "Awarded at Illinois Young Innovator of the Year",
+        "description": "PhD Student Taminul Islam has been awarded 3rd place in the 2025 Illinois Young Innovator of the Year, among 16 selective talks by Falling Walls Lab Illinois.",
+        "image": "/images/slider/falling_wall.jpg",
+        "link": ""
+      },
+      {
         "title": "Conference Presentation at ICMLA 2024",
         "description": "PhD student Taminul Islam presented our research on weed growth stage classification and detection at the Deep Learning and Applications special session during the 23rd International Conference on Machine Learning and Applications (ICMLA).",
         "image": "/images/slider/icmla-2024.jpeg",

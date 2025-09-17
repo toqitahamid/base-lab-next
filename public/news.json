@@ -1,8 +1,8 @@
 [
   {
     "date": "September 2025",
-    "title": "Doctoral Research Fellowship awarded",
-    "description": "PhD student Toqi Tahamid Sarker has been awarded the Doctoral Research Fellowship.",
+    "title": "Awarded at Illinois Young Innovator of the Year",
+    "description": "PhD Student Taminul Islam has been awarded 3rd place in the 2025 Illinois Young Innovator of the Year, among 16 selective talks by Falling Walls Lab Illinois.",
     "badge": "Award"
   },
   {
@@ -11,7 +11,14 @@
     "description": "Two papers have been accepted at ICCV 2025. WeedSense, a multi-task architecture that simultaneously performs weed segmentation, height estimation, and growth stage classification, was accepted at the 10th Computer Vision in Plant Phenotyping and Agriculture workshop. The second paper, GasTwinFormer, introduces a hybrid vision transformer for real-time livestock methane monitoring and has been selected for oral presentation and as a best paper nominee at the SEA: Sustainability with Earth Observation & AI workshop.",
     "badge": "Publication"
   },
-       {
+
+  {
+    "date": "August 2025",
+    "title": "Doctoral Research Fellowship awarded",
+    "description": "PhD student Toqi Tahamid Sarker has been awarded the Doctoral Research Fellowship.",
+    "badge": "Award"
+  },
+  {
     "date": "July 2025",
     "title": "Journal Article Published: WeedSwin",
     "description": "We are thrilled to announce that our journal article, 'WeedSwin Hierarchical Vision Transformer with SAM-2 for Multi-Stage Weed Detection and Classification' has been published in Scientific Reports (Nature). This comprehensive research introduces extensive datasets documenting prevalent weed species across multiple growth stages, and proposes a novel WeedSwin Transformer architecture that demonstrates exceptional performance in weed detection and classification for precision agriculture. Congratulations to the team!",
