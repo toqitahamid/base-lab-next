@@ -1,6 +1,12 @@
 [
   {
     "date": "September 2025",
+    "title": "Conference Paper Accepted at ISVC 2025: CarboFormer",
+    "description": "We are thrilled to announce that our conference paper 'CarboFormer: A Lightweight Semantic Segmentation Architecture for Efficient Carbon Dioxide Detection Using Optical Gas Imaging' has been accepted in ISVC 2025. Congratulations to the team!",
+    "badge": "Publication"
+  },
+  {
+    "date": "September 2025",
     "title": "Awarded at Illinois Young Innovator of the Year",
     "description": "PhD Student Taminul Islam has been awarded 3rd place in the 2025 Illinois Young Innovator of the Year, among 16 selective talks by Falling Walls Lab Illinois.",
     "badge": "Award"
