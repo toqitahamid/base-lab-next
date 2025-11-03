@@ -1,5 +1,11 @@
 [
   {
+    "date": "October 2025",
+    "title": "Oral Presentations at ICCV 2025 Workshops in Honolulu, Hawaii",
+    "description": "PhD student Toqi Tahamid Sarker delivered oral presentations at two prestigious workshops during ICCV 2025. He presented at the 1st Sustainability with Earth Observation & AI (SEA) workshop and the 10th Computer Vision in Plant Phenotyping and Agriculture (CVPPA) workshop, showcasing our research on GasTwinFormer and WeedSense respectively.",
+    "badge": "Academic"
+  },
+  {
     "date": "September 2025",
     "title": "Conference Paper Accepted at ISVC 2025: CarboFormer",
     "description": "We are thrilled to announce that our conference paper 'CarboFormer: A Lightweight Semantic Segmentation Architecture for Efficient Carbon Dioxide Detection Using Optical Gas Imaging' has been accepted in ISVC 2025. Congratulations to the team!",

@@ -14,7 +14,18 @@
       ]
     },
     "carouselItems": [
-
+      {
+        "title": "WeedSense Poster Presentation at ICCV 2025",
+        "description": "PhD student Toqi Tahamid Sarker presented WeedSense at the 10th Computer Vision in Plant Phenotyping and Agriculture (CVPPA) workshop at ICCV 2025 in Honolulu, Hawaii.",
+        "image": "/images/posters/weedsense_poster-230531_ver_pdf.webp",
+        "link": ""
+      },
+      {
+        "title": "GasTwinFormer Poster Presentation at ICCV 2025",
+        "description": "PhD student Toqi Tahamid Sarker presented GasTwinFormer at the Sustainability with Earth Observation & AI (SEA) workshop at ICCV 2025 in Honolulu, Hawaii.",
+        "image": "/images/posters/gastwinformer_iccv2025_poster-sans-serif-230531_ver_pdf.webp",
+        "link": ""
+      },
       {
         "title": "Awarded at Illinois Young Innovator of the Year",
         "description": "PhD Student Taminul Islam has been awarded 3rd place in the 2025 Illinois Young Innovator of the Year, among 16 selective talks by Falling Walls Lab Illinois.",
