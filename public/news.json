@@ -1,6 +1,12 @@
 [
   {
     "date": "October 2025",
+    "title": "Conference Paper Accepted at IEEE Big Data 2025: ArmFormer",
+    "description": "We are pleased to announce that our conference paper 'ArmFormer: Lightweight Transformer Architecture for Real-Time MultiClass Weapon Segmentation and Classification' has been accepted at IEEE Big Data 2025. Congratulations to the team!",
+    "badge": "Publication"
+  },
+  {
+    "date": "October 2025",
     "title": "Oral Presentations at ICCV 2025 Workshops in Honolulu, Hawaii",
     "description": "PhD student Toqi Tahamid Sarker delivered oral presentations at two prestigious workshops during ICCV 2025. He presented at the 1st Sustainability with Earth Observation & AI (SEA) workshop and the 10th Computer Vision in Plant Phenotyping and Agriculture (CVPPA) workshop, showcasing our research on GasTwinFormer and WeedSense respectively.",
     "badge": "Academic"
