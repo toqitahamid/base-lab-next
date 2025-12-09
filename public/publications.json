@@ -3,6 +3,16 @@
     "year": 2025,
     "items": [
       {
+        "title": "ArmFormer: Lightweight Transformer Architecture for Real-Time Multi-Class Weapon Segmentation and Classification",
+        "authors": ["Akhila Kambhatla", "Taminul Islam", "Khaled R. Ahmed"],
+        "publisher": "IEEE Big Data 2025",
+        "doi": "10.48550/arXiv.2510.16854",
+        "url": "https://arxiv.org/abs/2510.16854",
+        "citationKey": "kambhatla2025armformer",
+        "type": "conference",
+        "abstract": "The escalating threat of weapon-related violence necessitates automated detection systems capable of pixel-level precision for accurate threat assessment in real-time security applications. Traditional weapon detection approaches rely on object detection frameworks that provide only coarse bounding box localizations, lacking the fine-grained segmentation required for comprehensive threat analysis. Furthermore, existing semantic segmentation models either sacrifice accuracy for computational efficiency or require excessive computational resources incompatible with edge deployment scenarios. This paper presents ArmFormer, a lightweight transformer-based semantic segmentation framework that strategically integrates Convolutional Block Attention Module (CBAM) with MixVisionTransformer architecture to achieve superior accuracy while maintaining computational efficiency suitable for resource-constrained edge devices. Our approach combines CBAM-enhanced encoder backbone with attention-integrated hamburger decoder to enable multi-class weapon segmentation across five categories: handgun, rifle, knife, revolver, and human. Comprehensive experiments demonstrate that ArmFormer achieves state-of-the-art performance with 80.64% mIoU and 89.13% mFscore while maintaining real-time inference at 82.26 FPS. With only 4.886G FLOPs and 3.66M parameters, ArmFormer outperforms heavyweight models requiring up to 48x more computation, establishing it as the optimal solution for deployment on portable security cameras, surveillance drones, and embedded AI accelerators in distributed security infrastructure."
+      },
+      {
         "title": "Quantum Parallel Processing Framework for Image Processing Applications",
         "authors": ["Juan Carlos Salcedo", "Khaled R. Ahmed"],
         "publisher": "IEEE 16th International Symposium on Autonomous Decentralized Systems (ISADS)",
