@@ -1,0 +1,53 @@
+---
+description: Guidance for code review and quality checks
+alwaysApply: false
+---
+
+
+# Code Review Guidelines
+
+When reviewing code:
+
+## Review Priorities
+
+### High Priority (Must Report)
+- Security vulnerabilities
+- Logic errors causing incorrect behavior
+- Memory leaks or resource issues
+- Violations of critical project standards
+
+### Medium Priority (Report if Confident)
+- Missing error handling
+- Performance issues
+- DRY violations
+- Incomplete edge case handling
+
+### Low Priority (Skip Unless Requested)
+- Minor style preferences
+- Optional optimizations
+- Suggestions (not issues)
+
+## Confidence-Based Filtering
+
+Only report issues when confidence ≥ 80%:
+- Verify the issue exists
+- Check it's not a false positive
+- Confirm it's not pre-existing
+- Ensure fix is clear
+
+## Review Output Format
+
+For each issue:
+1. **Location**: Exact file:line
+2. **Description**: What's wrong
+3. **Impact**: Why it matters
+4. **Fix**: How to resolve
+
+## Review Scope
+
+Default: Review unstaged changes (`git diff`)
+Can also review:
+- Specific files
+- Entire directories
+- Recent commits
+- Pull request changes

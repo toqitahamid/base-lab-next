@@ -1,0 +1,43 @@
+---
+description: Guidance for architecture design and planning
+globs:
+alwaysApply: false
+---
+
+# Architecture Design Guidelines
+
+When designing feature architecture:
+
+## Design Process
+
+1. **Analyze Existing Patterns First**
+   - Find similar features in codebase
+   - Extract conventions and patterns
+   - Identify reusable abstractions
+
+2. **Design Multiple Approaches**
+   Present 2-3 options with different trade-offs:
+   - **Minimal**: Smallest change, fastest delivery
+   - **Clean**: Best long-term maintainability
+   - **Pragmatic**: Balanced approach
+
+3. **Provide Clear Recommendations**
+   - State your preferred approach
+   - Explain reasoning
+   - Let user make final decision
+
+## Architecture Blueprint Contents
+
+- **Files to create**: New files with purpose
+- **Files to modify**: Changes to existing files
+- **Component design**: Responsibilities and interfaces
+- **Data flow**: How data moves through system
+- **Build sequence**: Order of implementation
+
+## Design Principles
+
+- Match existing patterns exactly
+- Prefer composition over inheritance
+- Design for testability
+- Consider error handling upfront
+- Think about edge cases

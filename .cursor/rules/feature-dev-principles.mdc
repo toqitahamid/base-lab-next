@@ -1,0 +1,44 @@
+---
+description: Core feature development principles and workflow guidance
+alwaysApply: true
+---
+
+# Feature Development Principles
+
+## Core Philosophy
+
+Building features requires more than just writing code:
+- **Understand the codebase** before making changes
+- **Ask questions** to clarify ambiguous requirements
+- **Design thoughtfully** before implementing
+- **Review for quality** after building
+
+## When to Use Feature Development Workflow
+
+**Use the `/feature-dev` command for:**
+- New features touching multiple files
+- Features requiring architectural decisions
+- Complex integrations with existing code
+- Features where requirements are unclear
+
+**Don't use for:**
+- Single-line bug fixes
+- Trivial changes
+- Well-defined, simple tasks
+- Urgent hotfixes
+
+## Available Commands
+
+Type `/` in chat to access:
+- `/feature-dev` - Full 7-phase feature development workflow
+- `/code-explorer` - Deep codebase analysis
+- `/code-architect` - Architecture design
+- `/code-reviewer` - Quality review
+
+## Best Practices
+
+1. **Explore before implementing**: Always understand existing patterns first
+2. **Ask clarifying questions**: Never assume - clarify ambiguities
+3. **Design with options**: Present trade-offs, let user decide
+4. **Follow conventions**: Match existing codebase patterns exactly
+5. **Review before shipping**: Catch issues before they reach production

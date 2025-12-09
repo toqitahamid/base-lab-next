@@ -1,0 +1,40 @@
+---
+description: Guidance for codebase exploration and analysis tasks
+globs:
+alwaysApply: false
+---
+
+# Code Exploration Guidelines
+
+When exploring or analyzing existing code:
+
+## Exploration Checklist
+
+1. **Find Entry Points**
+   - APIs, routes, handlers
+   - UI components
+   - CLI commands
+   - Event listeners
+
+2. **Trace Execution Flow**
+   - Follow function calls
+   - Map data transformations
+   - Document side effects
+
+3. **Identify Patterns**
+   - Architectural patterns (MVC, layered, etc.)
+   - Common abstractions
+   - Error handling conventions
+   - Logging patterns
+
+4. **Document Findings**
+   - Use file:line references
+   - Note essential files to read
+   - Highlight key decisions
+
+## Output Quality
+
+- Be specific: Include exact file paths and line numbers
+- Be thorough: Don't miss important components
+- Be organized: Group related findings
+- Be actionable: Identify what needs to be understood before modifying
