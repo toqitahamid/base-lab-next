@@ -1,5 +1,19 @@
 [
   {
+    "year": 2026,
+    "items": [
+      {
+        "title": "Evaluating Open-Source Transformer Models for Unsupervised Sentiment Analysis in Medical Dialogue Datasets",
+        "authors": ["J. Kalinzi", "J. Adinkrah", "K. Ahmed", "R. Selinfreund"],
+        "publisher": "19th International Conference on Health Informatics (HEALTHINF)",
+        "doi": "",
+        "url": "",
+        "citationKey": "kalinzi2026evaluating",
+        "type": "conference"
+      }
+    ]
+  },
+  {
     "year": 2025,
     "items": [
       {
