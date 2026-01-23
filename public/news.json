@@ -1,6 +1,12 @@
 [
   {
     "date": "January 2026",
+    "title": "Paper Accepted at WACV 2026",
+    "description": "Our paper \"FUME: Fused Unified Multi-Gas Emission Network for Livestock Rumen Acidosis Detection\" has been accepted (oral) to the HARVEST-Vision @ WACV 2026.",
+    "badge": "Publication"
+  },
+  {
+    "date": "January 2026",
     "title": "Smartphone-Based Chlorophyll Monitoring System Using AI Models for Precision Stress Management in Soybeans",
     "description": "Awarded a research grant from the Soybean Center at Southern Illinois University Carbondale for $15,000. Period of performance: January 01, 2026 to December 31, 2026.",
     "badge": "Grant"
