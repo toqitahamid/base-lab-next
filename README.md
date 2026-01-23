@@ -92,10 +92,10 @@ base-lab-next/
 ├── app/               # Next.js pages and routes
 ├── components/        # Reusable UI components
 ├── lib/               # Utility functions
-├── public/            # Static assets and JSON data
+├── data/              # JSON content data files
+├── public/            # Static assets
 │   ├── images/        # Image assets
 │   ├── videos/        # Video assets
-│   └── *.json         # Content data
 └── styles/            # Global styles
 ```
 
@@ -105,21 +105,21 @@ This comprehensive guide will help new maintainers update and manage the BASE La
 
 ### Content Management System
 
-The website uses JSON files in the `public/` directory as its content database:
+The website uses JSON files in the `data/` directory as its content database:
 
 #### Key Data Files
 
-- `home.json` - Home page content (hero section, research areas, stats, carousel items)
-- `team.json` - Team member profiles and information
-- `publications.json` - Research publications organized by year
-- `news.json` - News and events items
-- `research.json` - Research project details
+- `data/home.json` - Home page content (hero section, research areas, stats, carousel items)
+- `data/team.json` - Team member profiles and information
+- `data/publications.json` - Research publications organized by year
+- `data/news.json` - News and events items
+- `data/research.json` - Research project details
 
 ### Adding & Updating Content
 
 #### Team Members
 
-Edit `public/team.json` and add a new entry with this structure:
+Edit `data/team.json` and add a new entry with this structure:
 
 ```json
 {
@@ -139,7 +139,7 @@ Edit `public/team.json` and add a new entry with this structure:
 
 #### News Items
 
-Edit `public/news.json` and add a new entry at the beginning:
+Edit `data/news.json` and add a new entry at the beginning:
 
 ```json
 {
@@ -153,12 +153,12 @@ Edit `public/news.json` and add a new entry at the beginning:
 
 #### Publications
 
-Edit `public/publications.json` to add new publications:
+Edit `data/publications.json` to add new publications:
 - Publications are organized by year
 - Add a new year section if necessary
 - Each publication includes title, authors, publisher, DOI, etc.
 
-Additionally, update the BibTeX file (`public/publication.bib`) with new entries.
+Additionally, update the BibTeX file (`data/publication.bib`) with new entries.
 
 #### Adding Images
 
@@ -179,23 +179,23 @@ Additionally, update the BibTeX file (`public/publication.bib`) with new entries
 
 #### Home Page
 - Edit `app/page.tsx` for layout changes
-- Content comes from `public/home.json`
+- Content comes from `data/home.json`
 
 #### Team Page
 - Edit `app/team/page.tsx` for layout changes
-- Data comes from `public/team.json`
+- Data comes from `data/team.json`
 
 #### Publications Page
 - Edit `app/publications/page.tsx` for layout changes
-- Data comes from `public/publications.json`
+- Data comes from `data/publications.json`
 
 #### Research Page
 - Edit `app/research/page.tsx` for layout changes
-- Data comes from `public/research.json`
+- Data comes from `data/research.json`
 
 #### News Page
 - Edit `app/news/page.tsx` for layout changes
-- Data comes from `public/news.json`
+- Data comes from `data/news.json`
 
 #### Join Page
 - Edit `app/join/page.tsx` directly to update content

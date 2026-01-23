@@ -44,7 +44,7 @@ interface NewsItem {
 
 async function getNewsItems(): Promise<NewsItem[]> {
   try {
-    const newsPath = path.join(process.cwd(), 'public', 'news.json');
+    const newsPath = path.join(process.cwd(), 'data', 'news.json');
     const newsData = await fs.readFile(newsPath, 'utf-8');
     const data = JSON.parse(newsData);
     

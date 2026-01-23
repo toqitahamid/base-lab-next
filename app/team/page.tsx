@@ -36,7 +36,7 @@ import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Globe, Mail, Twitter } from "lucide-react";
-import teamData from '../../public/team.json';
+import teamData from '../../data/team.json';
 import PageHeader from '@/components/PageHeader';
 import { GraduationCap, Users, History } from 'lucide-react';
 

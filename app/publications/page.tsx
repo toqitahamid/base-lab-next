@@ -1,5 +1,5 @@
 import PublicationCard from './PublicationCard';
-import publicationsData from '../../public/publications.json';
+import publicationsData from '../../data/publications.json';
 import fs from 'fs/promises';
 import path from 'path';
 import PageHeader from '@/components/PageHeader';
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 };
 
 async function getBibtexData() {
-  const bibtexPath = path.join(process.cwd(), 'public', 'publication.bib');
+  const bibtexPath = path.join(process.cwd(), 'data', 'publication.bib');
   const bibtexData = await fs.readFile(bibtexPath, 'utf-8');
   return bibtexData;
 }

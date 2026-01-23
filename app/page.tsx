@@ -10,9 +10,9 @@ import styles from './page.module.css';
 import CarouselWithAutoplay from '@/components/CarouselWithAutoplay';
 
 // Static imports
-import homeData from '../public/home.json';
-import publicationsData from '../public/publications.json';
-import newsData from '../public/news.json';
+import homeData from '../data/home.json';
+import publicationsData from '../data/publications.json';
+import newsData from '../data/news.json';
 
 export default function Home() {
 

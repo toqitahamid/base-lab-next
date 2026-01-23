@@ -37,7 +37,7 @@ import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowRight, Brain, Camera, Database, Leaf, Award, Calendar, ExternalLink } from "lucide-react";
-import researchData from '../../public/research.json';
+import researchData from '../../data/research.json';
 import PageHeader from '@/components/PageHeader';
 
 interface ResearchArea {

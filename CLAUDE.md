@@ -24,10 +24,10 @@ The development server runs on http://localhost:3000 by default.
 - `components/` - Reusable React components
   - `ui/` - Shadcn UI components (using Radix UI primitives)
 - `lib/` - Utility functions and helpers
-- `public/` - Static assets and JSON content files
+- `data/` - Content data files (home.json, team.json, publications.json, news.json, research.json, publication.bib)
+- `public/` - Static assets (images, videos, manifest)
   - `images/` - Image assets organized by category (team/, slider/, sponsors/)
   - `videos/` - Video assets
-  - JSON data files: `home.json`, `team.json`, `publications.json`, `news.json`, `research.json`
 
 ### Key Technologies
 - **Next.js 15** with App Router and React Server Components
@@ -38,7 +38,7 @@ The development server runs on http://localhost:3000 by default.
 - **Lucide React** and React Icons for icons
 
 ### Content Management
-The website uses JSON files in `public/` as a simple CMS:
+The website uses JSON files in `data/` as a simple CMS:
 - Content is fetched server-side and rendered statically
 - Images are referenced with paths relative to `public/`
 - Each JSON file corresponds to a specific page or content type
@@ -65,7 +65,7 @@ The website uses JSON files in `public/` as a simple CMS:
 ## Development Patterns
 
 ### Adding New Content
-1. For dynamic content (team, news, publications): Edit corresponding JSON file in `public/`
+1. For dynamic content (team, news, publications): Edit corresponding JSON file in `data/`
 2. For new pages: Create new route in `app/` directory following App Router conventions
 3. For new components: Follow existing patterns in `components/` directory
 
