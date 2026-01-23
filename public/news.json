@@ -1,6 +1,12 @@
 [
   {
     "date": "January 2026",
+    "title": "Highly Cited Paper 2024-2025: Detection and Classification of Cannabis Seeds",
+    "description": "Our article 'Detection and Classification of Cannabis Seeds Using RetinaNet and Faster R-CNN' published in Seeds (MDPI) has been recognized as a Highly Cited Paper for 2024-2025. Authored by Taminul Islam, Toqi Tahamid Sarker, Khaled R Ahmed, and Naoufal Lakhssassi.",
+    "badge": "Award"
+  },
+  {
+    "date": "January 2026",
     "title": "Paper Accepted at WACV 2026",
     "description": "Our paper \"FUME: Fused Unified Multi-Gas Emission Network for Livestock Rumen Acidosis Detection\" has been accepted (oral) to the HARVEST-Vision @ WACV 2026.",
     "badge": "Publication"

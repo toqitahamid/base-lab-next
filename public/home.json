@@ -15,6 +15,12 @@
     },
     "carouselItems": [
       {
+        "title": "Highly Cited Paper 2024-2025: Detection and Classification of Cannabis Seeds",
+        "description": "Our article 'Detection and Classification of Cannabis Seeds Using RetinaNet and Faster R-CNN' published in Seeds (MDPI) has been recognized as a Highly Cited Paper for 2024-2025.",
+        "image": "/images/news/2026/01/2026-01-22-seeds_Highly_Cited_Paper.jpg",
+        "link": ""
+      },
+      {
         "title": "WeedSense Poster Presentation at ICCV 2025",
         "description": "PhD student Toqi Tahamid Sarker presented WeedSense at the 10th Computer Vision in Plant Phenotyping and Agriculture (CVPPA) workshop at ICCV 2025 in Honolulu, Hawaii.",
         "image": "/images/posters/weedsense_poster-230531_ver_pdf.webp",
