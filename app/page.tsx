@@ -161,7 +161,7 @@ export default function Home() {
                       }
                       
                       // Abstract button (if available)
-                      if (publication.abstract && publication.abstract.trim() !== '') {
+                      if ('abstract' in publication && typeof publication.abstract === 'string' && publication.abstract.trim() !== '') {
                         actions.push(
                           <button key="abstract" className="text-sky-600 hover:text-sky-800 font-medium">
                             Abstract
