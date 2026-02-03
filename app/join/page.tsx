@@ -48,12 +48,11 @@ const positions = [
       'Teaching assistantship opportunities'
     ],
     requirements: [
-      'M.S. in Computer Science or related field (In exceptional cases, high achieving students with only bachelor degrees will be admitted to the program)',
+      'M.S. in Computer Science or related field with minimum GPA of 3.25/4.0 (In exceptional cases, high achieving students with only bachelor degrees may be admitted)',
       'Strong background in machine learning and computer vision',
       'Excellent programming skills (Python, PyTorch/TensorFlow)',
-      'Good academic standing (minimum 3.5 GPA)',
-      'GRE scores (recommended but not required)',
-      'TOEFL/IELTS for international students'
+      'GRE general test scores required',
+      'TOEFL (min. 80 iBT) or IELTS (min. 6.5) for international students'
     ]
   },
   {
@@ -61,18 +60,17 @@ const positions = [
     description: 'Enhance your skills and knowledge through our master\'s program in Computer Science with a focus on AI and Computer Vision.',
     details: [
       'Thesis and non-thesis options available',
-      'Opportunities for research assistantships',
+      'Opportunities for research and teaching assistantships',
       'Industry-relevant curriculum',
-      'Internship opportunities with partner companies',
+      'Tuition waiver for assistantship holders',
       'Pathway to PhD program for exceptional students'
     ],
     requirements: [
       'B.S. in Computer Science or related field',
-      'Basic knowledge of machine learning and computer vision',
-      'Programming experience in Python',
-      'Minimum 3.0 GPA in undergraduate studies',
-      'GRE scores (recommended but not required)',
-      'TOEFL/IELTS for international students'
+      'Minimum 2.70 GPA (last 60 credit hours) or 3.0 overall GPA',
+      'Prerequisite coursework: Calculus, Data Structures, Algorithms, Computer Organization',
+      'GRE scores (recommended, no minimum)',
+      'TOEFL (min. 80 iBT) or IELTS (min. 6.5) for international students'
     ]
   },
 ];
@@ -166,7 +164,7 @@ export default function JoinPage() {
                   <div>
                     <span className="text-sm text-gray-700">Prepare your application materials:</span>
                     <div className="ml-4 mt-2 space-y-1">
-                      {['CV/resume', 'Statement of purpose', 'Transcripts', 'Letters of recommendation', 'Writing sample (for PhD applicants)'].map((item, index) => (
+                      {['CV/resume', 'Statement of purpose', 'Unofficial transcripts (all colleges attended)', 'GRE scores (required for PhD)', 'TOEFL/IELTS scores (international applicants)', 'Letters of recommendation (contact info for references)'].map((item, index) => (
                         <div key={index} className="flex items-start space-x-2">
                           <span className="text-gray-400 mt-1">•</span>
                           <span className="text-sm text-gray-700">{item}</span>
@@ -177,9 +175,11 @@ export default function JoinPage() {
                 </div>
                 <div className="flex items-start space-x-4">
                   <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-medium">3</span>
-                  <span className="text-sm text-gray-700">
-                    Submit your application through the <Link href="https://gradschool.siu.edu/apply/" className="text-sky-600 hover:text-sky-800 font-medium">SIU Graduate School portal</Link>
-                  </span>
+                  <div>
+                    <span className="text-sm text-gray-700">
+                      Submit your application through the <Link href="https://myfuture.siu.edu/apply/" className="text-sky-600 hover:text-sky-800 font-medium">SIU Graduate School portal</Link> with the $65 non-refundable application fee
+                    </span>
+                  </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <span className="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-medium">4</span>
@@ -190,6 +190,9 @@ export default function JoinPage() {
                   <span className="text-sm text-gray-700">Receive an offer and join our lab!</span>
                 </div>
               </div>
+              <p className="text-xs text-gray-500 mt-6">
+                Note: Official transcripts are required after admission. International students may need to submit financial documentation. For complete requirements, visit the <Link href="https://gradcatalog.siu.edu/programs/cs/" className="text-sky-600 hover:text-sky-800">SIU Graduate Catalog</Link>.
+              </p>
             </div>
 
             {/* Call to Action */}
@@ -199,7 +202,7 @@ export default function JoinPage() {
                 We are always looking for talented individuals to join our team. If you are passionate about AI and computer vision, we would love to hear from you!
               </p>
               <Button asChild size="lg" className="font-medium">
-                <Link href="https://gradschool.siu.edu/apply/">Start Your Application</Link>
+                <Link href="https://myfuture.siu.edu/apply/">Start Your Application</Link>
               </Button>
             </div>
         </div>
