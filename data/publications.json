@@ -27,6 +27,16 @@
     "year": 2025,
     "items": [
       {
+        "title": "DELTA-SoyStage: A Lightweight Detection Architecture for Full-Cycle Soybean Growth Stage Monitoring",
+        "authors": ["Abdellah Lakhssassi", "Yasser Salhi", "Naoufal Lakhssassi", "Khalid Meksem", "Khaled R. Ahmed"],
+        "publisher": "Sensors (MDPI)",
+        "doi": "",
+        "url": "",
+        "citationKey": "lakhssassi2025delta",
+        "type": "journal",
+        "abstract": "A lightweight model for full cycle soybean stage detection using deep learning techniques."
+      },
+      {
         "title": "CarboFormer: A Lightweight Semantic Segmentation Architecture for Efficient Carbon Dioxide Detection Using Optical Gas Imaging",
         "authors": ["Taminul Islam", "Toqi Tahamid Sarker", "Mohamed Embaby", "Khaled R. Ahmed", "Amer AbuGhazaleh"],
         "publisher": "International Symposium on Visual Computing (ISVC) 2025",
