@@ -388,7 +388,7 @@ export default function TeamPage() {
             <div className="px-8 py-8">
               <h2 className="text-2xl font-medium text-gray-900 mb-8">Master&apos;s Students</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {mastersStudents.map((student) => (
+                {(mastersStudents as TeamMemberProps[]).map((student) => (
                   <TeamMember key={student.name} {...student} />
                 ))}
               </div>
