@@ -3,14 +3,59 @@
     "year": 2026,
     "items": [
       {
+        "title": "Mask-Guided Multi-Task Learning: Real-Time RGB Prediction of Plant Photosynthetic Efficiency at the Edge",
+        "authors": ["Abdellah Lakhssassi", "Taminul Islam", "Cristiana Bernardi Rankrape", "Naoufal Lakhssassi", "Karla Gage", "Khaled R. Ahmed"],
+        "publisher": "International Conference on Pattern Recognition (ICPR)",
+        "doi": "",
+        "url": "",
+        "citationKey": "lakhssassi2026maskguided",
+        "type": "conference",
+        "status": "Accepted"
+      },
+      {
+        "title": "WeedRepFormer: Reparameterizable Vision Transformers for Real-Time Waterhemp Segmentation and Gender Classification",
+        "authors": ["Toqi Tahamid Sarker", "Taminul Islam", "Abdellah Lakhssassi", "Cristiana Bernardi Rankrape", "Kaitlin E. Creager", "Karla Gage", "Khaled R. Ahmed"],
+        "publisher": "International Conference on Pattern Recognition (ICPR)",
+        "doi": "",
+        "url": "",
+        "citationKey": "sarker2026weedrepformer",
+        "type": "conference",
+        "status": "Accepted"
+      },
+      {
+        "title": "TRACE: Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock",
+        "authors": ["Taminul Islam", "Abdellah Lakhssassi", "Toqi Tahamid Sarker", "Mohamed Embaby", "Khaled R. Ahmed", "Amer AbuGhazaleh"],
+        "publisher": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "doi": "",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026W/V4A/papers/Islam_TRACE_Thermal_Recognition_Attentive-Framework_for_CO2_Emissions_from_Livestock_CVPRW_2026_paper.pdf",
+        "code": "https://github.com/taminulislam/trace",
+        "citationKey": "Islam_2026_CVPR",
+        "type": "conference",
+        "abstract": "Quantifying exhaled CO2 from free-roaming cattle is both a direct indicator of rumen metabolic state and a prerequisite for farm-scale carbon accounting, yet no existing system can deliver continuous, spatially resolved measurements without physical confinement or contact. We present TRACE (Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock), the first unified framework to jointly address per-frame CO2 plume segmentation and clip-level emission flux classification from midwave infrared (MWIR) thermal video. TRACE contributes three domain-specific advances: a Thermal Gas-Aware Attention (TGAA) encoder that incorporates per-pixel gas intensity as a spatial supervisory signal to direct self-attention toward high-emission regions at each encoder stage; an Attention-based Temporal Fusion (ATF) module that captures breath-cycle dynamics through structured cross-frame attention for sequence-level flux classification; and a four-stage progressive training curriculum that couples both objectives while preventing gradient interference. Benchmarked against fifteen state-of-the-art models on the CO2 Farm Thermal Gas Dataset, TRACE achieves an mIoU of 0.998 and the best result on every segmentation and classification metric simultaneously, outperforming domain-specific gas segmenters with several times more parameters and surpassing all baselines in flux classification. Ablation studies confirm that each component is individually essential: gas-conditioned attention alone determines precise plume boundary localization, and temporal reasoning is indispensable for flux-level discrimination. TRACE establishes a practical path toward non-invasive, continuous, per-animal CO2 monitoring from overhead thermal cameras at commercial scale.",
+        "bibtex": "@InProceedings{Islam_2026_CVPR,\n    author    = {Islam, Taminul and Lakhssassi, Abdellah and Sarker, Toqi Tahamid and Embaby, Mohamed and Ahmed, Khaled R. and AbuGhazaleh, Amer},\n    title     = {TRACE: Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock},\n    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},\n    month     = {June},\n    year      = {2026},\n    pages     = {9740-9750}\n}"
+      },
+      {
+        "title": "FryNet: Dual-Stream Adversarial Fusion for Non-Destructive Frying Oil Oxidation Assessment",
+        "authors": ["Khaled R. Ahmed", "Toqi Tahamid Sarker", "Taminul Islam", "Tamany M. Alanezi", "Amer AbuGhazaleh"],
+        "publisher": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "doi": "",
+        "url": "https://openaccess.thecvf.com/content/CVPR2026W/VISION26/papers/Ahmed_FryNet_Dual-Stream_Adversarial_Fusion_for_Non-Destructive_Frying_Oil_Oxidation_Assessment_CVPRW_2026_paper.pdf",
+        "citationKey": "Ahmed_2026_CVPR",
+        "type": "conference",
+        "abstract": "Monitoring frying oil degradation is critical for food safety, yet current practice relies on destructive wet-chemistry assays that provide no spatial information and are unsuitable for real-time use. We identify a fundamental obstacle in thermal-image-based inspection, the camera-fingerprint shortcut, whereby models memorize sensor-specific noise and thermal bias instead of learning oxidation chemistry, collapsing under video-disjoint evaluation. We propose FryNet, a dual-stream RGB-thermal framework that jointly performs oil-region segmentation, serviceability classification, and regression of four chemical oxidation indices (PV, p-AV, Totox, temperature) in a single forward pass. A ThermalMiT-B2 backbone with channel and spatial attention extracts thermal features, while an RGB-MAE Encoder learns chemically grounded representations via masked autoencoding and chemical alignment. Dual-Encoder DANN adversarially regularizes both streams against video identity via Gradient Reversal Layers, and FiLM fusion bridges thermal structure with RGB chemical context. On 7,226 paired frames across 28 frying videos, FryNet achieves 98.97% mIoU, 100% classification accuracy, and 2.32 mean regression MAE, outperforming all seven baselines.",
+        "bibtex": "@InProceedings{Ahmed_2026_CVPR,\n    author    = {Ahmed, Khaled R and Sarker, Toqi Tahamid and Islam, Taminul and Alanezi, Tamany M and AbuGhazaleh, Amer},\n    title     = {FryNet: Dual-Stream Adversarial Fusion for Non-Destructive Frying Oil Oxidation Assessment},\n    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},\n    month     = {June},\n    year      = {2026},\n    pages     = {7220-7229}\n}"
+      },
+      {
         "title": "FUME: Fused Unified Multi-Gas Emission Network for Livestock Rumen Acidosis Detection",
         "authors": ["Taminul Islam", "Toqi Tahamid Sarker", "Mohamed Embaby", "Khaled R. Ahmed", "Amer AbuGhazaleh"],
-        "publisher": "arXiv preprint arXiv:2601.08205",
-        "doi": "10.48550/arXiv.2601.08205",
-        "url": "https://arxiv.org/abs/2601.08205",
-        "citationKey": "islam2026fume",
-        "type": "preprint",
-        "bibtex": "@article{islam2026fume,\n  title={FUME: Fused Unified Multi-Gas Emission Network for Livestock Rumen Acidosis Detection},\n  author={Islam, Taminul and Sarker, Toqi Tahamid and Embaby, Mohamed and Ahmed, Khaled R and AbuGhazaleh, Amer},\n  journal={arXiv preprint arXiv:2601.08205},\n  year={2026}\n}"
+        "publisher": "Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+        "doi": "",
+        "url": "https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/papers/Islam_FUME_Fused_Unified_Multi-Gas_Emission_Network_for_Livestock_Rumen_Acidosis_WACVW_2026_paper.pdf",
+        "code": "https://github.com/taminulislam/fume",
+        "citationKey": "Islam_2026_WACV",
+        "type": "conference",
+        "abstract": "Ruminal acidosis is a prevalent metabolic disorder in dairy cattle causing significant economic losses and animal welfare concerns. Current diagnostic methods rely on invasive pH measurement, limiting scalability for continuous monitoring. We present FUME (Fused Unified Multi-gas Emission Network), the first deep learning approach for rumen acidosis detection from dual-gas optical imaging under in vitro conditions. Our method leverages complementary carbon dioxide (CO2) and methane (CH4) emission patterns captured by infrared cameras to classify rumen health into Healthy, Transitional, and Acidotic states. FUME employs a lightweight dual-stream architecture with weight-shared encoders, modality-specific self-attention, and channel attention fusion, jointly optimizing gas plume segmentation and classification of dairy cattle health. We introduce the first dual-gas Optical Gas Imaging (OGI) dataset comprising 8,967 annotated frames across six pH levels with pixel-level segmentation masks. Experiments demonstrate that FUME achieves 80.99% mIoU and 98.82% classification accuracy while using only 1.28M parameters and 1.97G MACs—outperforming state-of-the-art methods in segmentation quality with 10× lower computational cost. Ablation studies reveal that CO2 provides the most discriminative signal and dual-task learning is essential for optimal performance. Our work establishes the feasibility of gas emission-based livestock health monitoring, paving the way for practical, in vitro acidosis detection systems.",
+        "bibtex": "@InProceedings{Islam_2026_WACV,\n    author    = {Islam, Taminul and Sarker, Toqi Tahamid and Embaby, Mohamed and Ahmed, Khaled R. and Abughazaleh, Amer},\n    title     = {FUME: Fused Unified Multi-Gas Emission Network for Livestock Rumen Acidosis Detection},\n    booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops},\n    month     = {March},\n    year      = {2026},\n    pages     = {510-519}\n}"
       },
       {
         "title": "Evaluating Open-Source Transformer Models for Unsupervised Sentiment Analysis in Medical Dialogue Datasets",

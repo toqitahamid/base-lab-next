@@ -35,7 +35,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Globe, Mail, Twitter } from "lucide-react";
+import { Github, Linkedin, Globe, Mail, Twitter, Award } from "lucide-react";
 import teamData from '../../data/team.json';
 import PageHeader from '@/components/PageHeader';
 import { GraduationCap, Users, History } from 'lucide-react';
@@ -65,21 +65,36 @@ interface TeamMemberProps {
   image?: string;
   bio: string;
   researchInterests: string[];
+  badges?: string[];
   socialLinks?: {
     github?: string;
     linkedin?: string;
     website?: string;
     xcom?: string;
-    googleScholar?: string; 
+    googleScholar?: string;
   };
 }
+
+// Expanded labels for the short award badges shown under student names
+const badgeTitles: Record<string, string> = {
+  DRF: 'Doctoral Research Fellowship',
+  DRA: 'Dissertation Research Assistantship',
+  VCR: 'Vice Chancellor for Research',
+};
+
+// Muted matte styling per award badge
+const badgeStyles: Record<string, string> = {
+  DRF: 'bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-50',
+  DRA: 'bg-violet-50 text-violet-700 border border-violet-200 hover:bg-violet-50',
+  VCR: 'bg-teal-50 text-teal-700 border border-teal-200 hover:bg-teal-50',
+};
 
 interface AlumniProps {
   name: string;
   degree: string;
   graduationYear: number;
-  thesis: string;
-  currentPosition: string;
+  thesis?: string;
+  currentPosition?: string;
   image?: string;
   awards?: string[];
   socialLinks?: {
@@ -92,7 +107,7 @@ interface AlumniProps {
 }
 
 
-const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: TeamMemberProps) => (
+const TeamMember = ({ name, role, image, bio, researchInterests, badges, socialLinks }: TeamMemberProps) => (
   <div className="h-full flex flex-col p-4 border border-gray-200 rounded-lg" style={{ backgroundColor: '#faf9f6' }}>
     <div className="flex items-center mb-4">
       <div className="relative w-24 h-24 mr-4 flex-shrink-0">
@@ -108,6 +123,20 @@ const TeamMember = ({ name, role, image, bio, researchInterests, socialLinks }: 
       <div>
         <h3 className="text-lg font-bold text-gray-900 leading-tight">{name}</h3>
         <p className="text-sm text-gray-700 font-medium">{role}</p>
+        {badges && badges.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-1.5">
+            {badges.map((badge) => (
+              <Badge
+                key={badge}
+                className={`text-xs font-semibold gap-1 ${badgeStyles[badge] || ''}`}
+                title={badgeTitles[badge] || badge}
+              >
+                <Award className="h-3 w-3" />
+                {badge}
+              </Badge>
+            ))}
+          </div>
+        )}
       </div>
     </div>
     <div className="flex-grow flex flex-col justify-between">
@@ -187,7 +216,7 @@ const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, i
       <div className="relative w-20 h-20 mr-4 flex-shrink-0">
         <Image
           src={image || '/images/team/placeholder.png'}
-          alt={`${name}, ${degree} graduate from BASE LAB, ${graduationYear}, currently ${currentPosition}`}
+          alt={`${name}, ${degree} graduate from BASE LAB, ${graduationYear}${currentPosition ? `, currently ${currentPosition}` : ''}`}
           fill
           sizes="80px"
           style={{ objectFit: 'cover' }}
@@ -201,8 +230,12 @@ const AlumniMember = ({ name, degree, graduationYear, thesis, currentPosition, i
     </div>
     <div className="flex-grow flex flex-col justify-between">
       <div>
-        <p className="text-sm text-gray-800 mb-3 leading-relaxed"><span className="font-medium">Thesis:</span> {thesis}</p>
-        <p className="text-sm text-gray-800 font-medium mb-3"><span className="font-medium">Current:</span> {currentPosition}</p>
+        {thesis && (
+          <p className="text-sm text-gray-800 mb-3 leading-relaxed"><span className="font-medium">Thesis:</span> {thesis}</p>
+        )}
+        {currentPosition && (
+          <p className="text-sm text-gray-800 font-medium mb-3"><span className="font-medium">Current:</span> {currentPosition}</p>
+        )}
         {awards && awards.length > 0 && (
           <div className="mb-3">
             <h4 className="text-sm font-medium text-gray-700 mb-2">Awards:</h4>
@@ -330,7 +363,7 @@ export default function TeamPage() {
                     </a>
                   </Button>
                   <Button variant="outline" asChild className="flex items-center space-x-2">
-                    <a href="https://www2.cs.siu.edu/~kahmed/index.html" target="_blank" rel="noopener noreferrer">
+                    <a href="http://k-ahmed.com/" target="_blank" rel="noopener noreferrer">
                       <Globe className="h-4 w-4" />
                       <span>Website</span>
                     </a>
@@ -351,21 +384,23 @@ export default function TeamPage() {
           </div>
 
           {/* Master's Students */}
-          <div className="px-8 py-8">
-            <h2 className="text-2xl font-medium text-gray-900 mb-8">Master&apos;s Students</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {mastersStudents.map((student) => (
-                <TeamMember key={student.name} {...student} />
-              ))}
+          {mastersStudents.length > 0 && (
+            <div className="px-8 py-8">
+              <h2 className="text-2xl font-medium text-gray-900 mb-8">Master&apos;s Students</h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {mastersStudents.map((student) => (
+                  <TeamMember key={student.name} {...student} />
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Alumni */}
           <div className="px-8 py-8">
             <h2 className="text-2xl font-medium text-gray-900 mb-8">Alumni</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {alumni.map((alum) => (
-                <AlumniMember key={alum.name} {...alum} />
+                <AlumniMember key={`${alum.name}-${alum.degree}-${alum.graduationYear}`} {...alum} />
               ))}
             </div>
           </div>

@@ -15,6 +15,18 @@
     },
     "carouselItems": [
       {
+        "title": "Conference Presentation at CVPR 2026 in Denver, CO",
+        "description": "PhD student Taminul Islam presented 'TRACE: Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock' at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 in Denver, CO.",
+        "image": "/images/slider/cvpr-trace.jpg",
+        "link": ""
+      },
+      {
+        "title": "Oral Presentation at WACV 2026 in Tucson, AZ",
+        "description": "PhD student Taminul Islam delivered an oral presentation of 'FUME: Fused Unified Multi-Gas Emission Network for Livestock Rumen Acidosis Detection' at the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2026 in Tucson, AZ.",
+        "image": "/images/slider/wacv-fume.jpg",
+        "link": ""
+      },
+      {
         "title": "Highly Cited Paper 2024-2025: Detection and Classification of Cannabis Seeds",
         "description": "Our article 'Detection and Classification of Cannabis Seeds Using RetinaNet and Faster R-CNN' published in Seeds (MDPI) has been recognized as a Highly Cited Paper for 2024-2025.",
         "image": "/images/news/2026/01/2026-01-22-seeds_Highly_Cited_Paper.jpg",
@@ -30,6 +42,12 @@
         "title": "GasTwinFormer Poster Presentation at ICCV 2025",
         "description": "PhD student Toqi Tahamid Sarker presented GasTwinFormer at the Sustainability with Earth Observation & AI (SEA) workshop at ICCV 2025 in Honolulu, Hawaii.",
         "image": "/images/posters/gastwinformer_iccv2025_poster-sans-serif-230531_ver_pdf.webp",
+        "link": ""
+      },
+      {
+        "title": "Conference Presentation at ISVC 2025: CarboFormer",
+        "description": "Our team presented 'CarboFormer: A Lightweight Semantic Segmentation Architecture for Efficient Carbon Dioxide Detection Using Optical Gas Imaging' at the International Symposium on Visual Computing (ISVC) 2025.",
+        "image": "/images/slider/isvc-carboforfer.jpg",
         "link": ""
       },
       {

@@ -19,6 +19,8 @@ interface Publication {
   type: string;
   year: number;
   code?: string;
+  arxiv?: string;
+  status?: string;
 }
 
 interface PublicationCardProps {
@@ -79,7 +81,9 @@ const PublicationCard = ({ publication, bibtexData }: PublicationCardProps) => {
 
       {/* Publisher with year and type */}
       <div className="flex items-center gap-3 mb-3 flex-wrap">
-        <span className="text-sm text-gray-600 font-medium italic">{publication.publisher}, {publication.year}</span>
+        <span className="text-sm text-gray-600 font-medium italic">
+          {publication.status ? `${publication.status} in ` : ''}{publication.publisher}, {publication.year}
+        </span>
         <span className={`text-xs px-2 py-1 font-semibold ${getTypeColor(publication.type)}`}>
           {publication.type.charAt(0).toUpperCase() + publication.type.slice(1).toLowerCase()}
         </span>
@@ -113,6 +117,21 @@ const PublicationCard = ({ publication, bibtexData }: PublicationCardProps) => {
             );
           }
           
+          // arXiv link
+          if (publication.arxiv && publication.arxiv.trim() !== '') {
+            actions.push(
+              <a
+                key="arxiv"
+                href={publication.arxiv}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sky-600 hover:text-sky-800 font-medium"
+              >
+                arXiv
+              </a>
+            );
+          }
+
           // Code link
           if (publication.code && publication.code.trim() !== '') {
             actions.push(

@@ -1,22 +1,12 @@
 {
   "phdStudents": [
     {
-      "name": "Akhila Kambhatla",
-      "role": "PhD Student",
-      "image": "/images/team/akhila-kambhatla.jpeg",
-      "bio": "Akhila is researching real-time automatic handgun detection in drone stream video using deep learning.",
-      "researchInterests": ["Computer Vision", "Deep Learning", "Swarm Intelligence", "Natural Language Processing"],
-      "socialLinks": {
-        "github": "https://github.com/akhila",
-        "linkedin": "https://linkedin.com/in/akhila"
-      }
-    },
-    {
       "name": "Toqi Tahamid Sarker",
       "role": "PhD Student",
       "image": "/images/team/toqi-sarker.jpeg",
       "bio": "Toqi is developing deep learning techniques for detecting methane gas in livestock.",
       "researchInterests": ["Semantic Segmentation", "Low-level Vision", "Multi-modal Language Model"],
+      "badges": ["DRF", "DRA", "VCR"],
       "socialLinks": {
         "website": "https://toqitahamid.com/",
         "github": "https://github.com/toqitahamid",
@@ -29,23 +19,14 @@
       "name": "Taminul Islam",
       "role": "PhD Student",
       "image": "/images/team/taminul-islam.jpg",
-      "bio": "Taminul is working on artificial intelligence for detecting Acidosis disease in livestock.",
-      "researchInterests": ["Computer Vision", "Efficient LLMs/VLMs", "Multimodal Multi-task Learning"],
+      "bio": "Taminul is developing lightweight, real-time vision transformers and VLMs for semantic segmentation, multimodal fusion, and multi-task learning, applied to optical gas imaging of livestock emissions, thermal sensing, and precision agriculture at the edge.",
+      "researchInterests": ["Video Object Segmentation", "Efficient LLMs/VLMs", "RGB-Thermal Fusion", "Multimodal Multi-task Learning"],
+      "badges": ["DRF"],
       "socialLinks": {
         "linkedin": "https://www.linkedin.com/in/taminul-islam/",
         "github": "https://github.com/taminulislam",
-        "website": "https://taminulislam.github.io/",
+        "website": "https://www.taminul.com",
         "googleScholar": "https://scholar.google.com/citations?user=Kgo_S9sAAAAJ&hl=en&oi=ao"
-      }
-    },
-    {
-      "name": "Laya Karimi Chahrogh",
-      "role": "PhD Student",
-      "image": "/images/team/laya-karimi.jpeg",
-      "bio": "Laya is exploring federated learning techniques for autonomous driving.",
-      "researchInterests": ["Federated Learning", "Autonomous Driving", "Distributed AI"],
-      "socialLinks": {
-        "linkedin": "https://linkedin.com/in/laya"
       }
     },
     {
@@ -65,26 +46,44 @@
       "image": "/images/team/abdellah-lakhssassi.jpeg",
       "bio": "Abdellah is working on Precision Agriculture, or the use of Artificial Intelligence to Detect and Estimate Plant Stress.",
       "researchInterests": ["Computer Vision", "Deep Learning", "AI in Video Games", "Genetic Algorithms"],
+      "badges": ["DRF"],
       "socialLinks": {
         "github": "https://github.com/Lakh-abdellah"
       }
+    },
+    {
+      "name": "Laya Karimi Chahrogh",
+      "role": "PhD Student",
+      "image": "/images/team/laya-karimi.jpeg",
+      "bio": "Laya is exploring federated learning techniques for autonomous driving.",
+      "researchInterests": ["Federated Learning", "Autonomous Driving", "Distributed AI"],
+      "socialLinks": {
+        "linkedin": "https://linkedin.com/in/laya"
+      }
     }
   ],
-  "mastersStudents": [
-    
+  "mastersStudents": [],
+  "alumni": [
+    {
+      "name": "Akhila Kambhatla",
+      "image": "/images/team/akhila-kambhatla.jpeg",
+      "degree": "PhD",
+      "graduationYear": 2026,
+      "socialLinks": {
+        "github": "https://github.com/akhila",
+        "linkedin": "https://linkedin.com/in/akhila"
+      }
+    },
     {
       "name": "James Antwi Adinkrah",
-      "role": "Masters Student",
       "image": "/images/team/james-antwi-adinkrah.png",
-      "bio": "James is working on Artificial Intelligent model for speech recognition tailored for medical assistant application.",
-      "researchInterests": ["Large Language Models", "Computer Vision", "Deep Learning"],
+      "degree": "Masters",
+      "graduationYear": 2026,
       "socialLinks": {
         "linkedin": "https://www.linkedin.com/in/adinkrah-james-antwi/",
         "github": "https://github.com/James-Adin?tab=repositories"
       }
-    }
-  ],
-  "alumni": [
+    },
     {
       "name": "Nishanth Sagar Panthangi",
       "image": "/images/team/nishanth-sagar.jpeg",
@@ -164,7 +163,7 @@
       "image": "/images/team/akhila-kambhatla.jpeg",
       "graduationYear": 2020,
       "thesis": "Handgun detection in drone stream video using deep learning",
-      "currentPosition": "PhD Student at BASE Lab"
+      "currentPosition": "Completed PhD at BASE Lab (2026)"
     }
   ]
 }
