@@ -26,12 +26,11 @@
       "period": "Sep 1, 2023 - Aug 31, 2026",
       "award": "USDA-NIFA 2023-70001-40997",
       "methods": ["Semantic Segmentation", "Multi-Gas Fusion", "Thermal Recognition", "Attention Mechanisms"],
-      "papers": 5,
+      "papers": 4,
       "papersList": [
         { "name": "VLMDual", "url": "https://www.sciencedirect.com/science/article/pii/S2772375526005836" },
         { "name": "TRACE", "url": "https://openaccess.thecvf.com/content/CVPR2026W/V4A/papers/Islam_TRACE_Thermal_Recognition_Attentive-Framework_for_CO2_Emissions_from_Livestock_CVPRW_2026_paper.pdf" },
         { "name": "FUME", "url": "https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/papers/Islam_FUME_Fused_Unified_Multi-Gas_Emission_Network_for_Livestock_Rumen_Acidosis_WACVW_2026_paper.pdf" },
-        { "name": "GasTwinFormer", "url": "https://openaccess.thecvf.com/content/ICCV2025W/SEA/html/Sarker_GasTwinFormer_A_Hybrid_Vision_Transformer_for_Livestock_Methane_Emission_Segmentation_ICCVW_2025_paper.html" },
         { "name": "CarboFormer", "url": "https://link.springer.com/chapter/10.1007/978-3-032-14495-9_1" }
       ],
       "projectUrl": "https://sara-detect.github.io/"
@@ -51,6 +50,22 @@
     }
   ],
   "past": [
+    {
+      "title": "AI for Greener Livestock: Educational and Research",
+      "subtitle": "Deep learning and optical gas imaging for quantifying livestock methane emissions",
+      "description": "Educational and research program applying deep learning to optical gas imaging for quantifying methane emissions from livestock, advancing climate-smart animal agriculture.",
+      "image": "/images/projects/greener-livestock.jpeg",
+      "period": "May 1, 2022 - Apr 30, 2024",
+      "award": "USDA-NIFA 2022-70001-37404",
+      "methods": ["Optical Gas Imaging", "Semantic Segmentation", "Methane Quantification"],
+      "papers": 3,
+      "papersList": [
+        { "name": "GasTwinFormer", "url": "https://openaccess.thecvf.com/content/ICCV2025W/SEA/html/Sarker_GasTwinFormer_A_Hybrid_Vision_Transformer_for_Livestock_Methane_Emission_Segmentation_ICCVW_2025_paper.html" },
+        { "name": "Gasformer", "url": "https://openaccess.thecvf.com/content/CVPR2024W/Vision4Ag/html/Sarker_Gasformer_A_Transformer-based_Architecture_for_Segmenting_Methane_Emissions_from_Livestock_CVPRW_2024_paper.html" },
+        { "name": "Enteric Methane Quantification", "url": "https://doi.org/10.1049/ipr2.13327" }
+      ],
+      "projectUrl": "https://ai-greener-livestock.github.io/"
+    },
     {
       "title": "Vision Transformers for Precision Weed Management",
       "subtitle": "Multi-stage weed detection, segmentation, and growth analysis with hierarchical transformers",
@@ -114,21 +129,6 @@
         { "name": "Weed Growth Stages", "url": "https://doi.org/10.3390/agronomy13030934" },
         { "name": "Weed Growth Counting", "url": "https://doi.org/10.1109/ISADS56919.2023.10092053" }
       ]
-    },
-    {
-      "title": "AI for Greener Livestock: Educational and Research",
-      "subtitle": "Deep learning and optical gas imaging for quantifying livestock methane emissions",
-      "description": "Educational and research program applying deep learning to optical gas imaging for quantifying methane emissions from livestock, advancing climate-smart animal agriculture.",
-      "image": "/images/projects/greener-livestock.jpeg",
-      "period": "May 1, 2022 - Apr 30, 2024",
-      "award": "USDA-NIFA 2022-70001-37404",
-      "methods": ["Optical Gas Imaging", "Semantic Segmentation", "Methane Quantification"],
-      "papers": 2,
-      "papersList": [
-        { "name": "Gasformer", "url": "https://openaccess.thecvf.com/content/CVPR2024W/Vision4Ag/html/Sarker_Gasformer_A_Transformer-based_Architecture_for_Segmenting_Methane_Emissions_from_Livestock_CVPRW_2024_paper.html" },
-        { "name": "Enteric Methane Quantification", "url": "https://doi.org/10.1049/ipr2.13327" }
-      ],
-      "projectUrl": "https://ai-greener-livestock.github.io/"
     }
   ]
 }
