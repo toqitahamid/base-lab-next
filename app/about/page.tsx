@@ -56,8 +56,8 @@ export default function About() {
             <a href="/team" className="px-6 py-3 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl">
               Meet Our Team
             </a>
-            <a href="/research" className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition-colors">
-              Our Research
+            <a href="/projects" className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-full hover:bg-blue-50 transition-colors">
+              Our Projects
             </a>
           </div>
         </div>

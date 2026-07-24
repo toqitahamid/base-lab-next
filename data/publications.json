@@ -3,6 +3,17 @@
     "year": 2026,
     "items": [
       {
+        "title": "VLMDual: A Vision-Language Distillation Framework for Joint Classification and Plume Segmentation in Rumen Acidosis Detection",
+        "authors": ["Taminul Islam", "Toqi Tahamid Sarker", "Mohamed Embaby", "Khaled R. Ahmed", "Amer AbuGhazaleh"],
+        "publisher": "Smart Agricultural Technology",
+        "doi": "",
+        "url": "https://www.sciencedirect.com/science/article/pii/S2772375526005836",
+        "code": "https://github.com/taminulislam/vlmdual",
+        "citationKey": "islam2026vlmdual",
+        "type": "journal",
+        "bibtex": "@article{islam2026vlmdual,\n  title={VLMDual: A Vision-Language Distillation Framework for Joint Classification and Plume Segmentation in Rumen Acidosis Detection},\n  author={Islam, Taminul and Sarker, Toqi Tahamid and Embaby, Mohamed and Ahmed, Khaled R and AbuGhazaleh, Amer},\n  journal={Smart Agricultural Technology},\n  pages={102358},\n  year={2026},\n  publisher={Elsevier}\n}"
+      },
+      {
         "title": "Mask-Guided Multi-Task Learning: Real-Time RGB Prediction of Plant Photosynthetic Efficiency at the Edge",
         "authors": ["Abdellah Lakhssassi", "Taminul Islam", "Cristiana Bernardi Rankrape", "Naoufal Lakhssassi", "Karla Gage", "Khaled R. Ahmed"],
         "publisher": "International Conference on Pattern Recognition (ICPR)",

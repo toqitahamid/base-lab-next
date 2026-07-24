@@ -1,5 +1,11 @@
 [
   {
+    "date": "July 2026",
+    "title": "Journal Article Published: VLMDual in Smart Agricultural Technology (Q1)",
+    "description": "We are pleased to announce that our journal article 'VLMDual: A Vision-Language Distillation Framework for Joint Classification and Plume Segmentation in Rumen Acidosis Detection' has been published in Smart Agricultural Technology (Elsevier), a Q1 journal. Authored by Taminul Islam, Toqi Tahamid Sarker, Mohamed Embaby, Khaled R. Ahmed, and Amer AbuGhazaleh. Congratulations to the team!",
+    "badge": "Publication"
+  },
+  {
     "date": "June 2026",
     "title": "Two Papers Presented at CVPR 2026 in Denver, CO",
     "description": "PhD student Taminul Islam presented two of our papers at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 in Denver, CO. He presented 'TRACE: Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock' and 'FryNet: Dual-Stream Adversarial Fusion for Non-Destructive Frying Oil Oxidation Assessment'. Congratulations to the team!",

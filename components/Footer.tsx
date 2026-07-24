@@ -21,8 +21,11 @@ const Footer = () => {
           
           {/* Navigation Links */}
           <div className="flex flex-wrap gap-6">
-            <Link href="/research" className="text-gray-600 hover:text-gray-900 text-sm">
-              Research
+            <Link href="/projects" className="text-gray-600 hover:text-gray-900 text-sm">
+              Projects
+            </Link>
+            <Link href="/equipment" className="text-gray-600 hover:text-gray-900 text-sm">
+              Equipment
             </Link>
             <Link href="/publications" className="text-gray-600 hover:text-gray-900 text-sm">
               Publications

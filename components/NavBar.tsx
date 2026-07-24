@@ -34,8 +34,9 @@ const NavBar = () => {
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-4">
-            <NavLink href="/research">Research</NavLink>
+            <NavLink href="/projects">Projects</NavLink>
             <NavLink href="/publications">Publications</NavLink>
+            <NavLink href="/equipment">Equipment</NavLink>
             <NavLink href="/team">Team</NavLink>
             <NavLink href="/news">News</NavLink>
             <NavLink href="/join">Join</NavLink>
@@ -55,8 +56,9 @@ const NavBar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-[rgb(15,50,55)]" role="navigation" aria-label="Mobile navigation menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <MobileNavLink href="/research" onClick={() => handleNavigation('/research')}>Research</MobileNavLink>
+            <MobileNavLink href="/projects" onClick={() => handleNavigation('/projects')}>Projects</MobileNavLink>
             <MobileNavLink href="/publications" onClick={() => handleNavigation('/publications')}>Publications</MobileNavLink>
+            <MobileNavLink href="/equipment" onClick={() => handleNavigation('/equipment')}>Equipment</MobileNavLink>
             <MobileNavLink href="/team" onClick={() => handleNavigation('/team')}>Team</MobileNavLink>
             <MobileNavLink href="/news" onClick={() => handleNavigation('/news')}>News</MobileNavLink>
             <MobileNavLink href="/join" onClick={() => handleNavigation('/join')}>Join</MobileNavLink>

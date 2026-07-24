@@ -1,0 +1,134 @@
+{
+  "active": [
+    {
+      "title": "Smartphone-Based Chlorophyll Monitoring System Using AI Models for Precision Stress Management in Soybeans",
+      "subtitle": "Smartphone-based AI for precision stress management in soybean fields",
+      "description": "Developing a smartphone-based chlorophyll monitoring system powered by AI models to detect early nutrient and stress indicators in soybean fields, enabling low-cost, in-field precision stress management.",
+      "image": "/images/projects/soybean-chlorophyll.png",
+      "period": "January 01, 2026 - December 31, 2026",
+      "award": "Soybean Center, Southern Illinois University Carbondale, $15,000",
+      "methods": ["Smartphone Imaging", "Chlorophyll Estimation", "Deep Learning", "Precision Agriculture"]
+    },
+    {
+      "title": "AI-Driven Discovery of Sustainable Ionic Liquids: A Multimodal Deep Learning Approach for Enhanced Lignin and Plastic Deconstruction",
+      "subtitle": "Multimodal deep learning for accelerated discovery of sustainable solvent systems for biopolymer and plastic valorization",
+      "description": "Vision-centric deep learning frameworks that fuse 3D imaging cues with cross-modal signals to forecast solvent–substrate interactions, enabling faster screening of sustainable solvent candidates.",
+      "image": "/images/projects/chemistry.png",
+      "period": "May 16, 2025 - May 15, 2026",
+      "award": "IIN Sustaining Illinois",
+      "methods": ["3D Image Processing", "Multimodal Fusion", "Vision Transformers", "Cross-Modal Learning"]
+    },
+    {
+      "title": "Detecting Subacute Ruminal Acidosis Using Real-Time Deep Learning",
+      "subtitle": "Non-invasive detection of subacute ruminal acidosis via optical gas and thermal imaging",
+      "description": "A multi-paper effort segmenting CO₂, methane, and multi-gas plumes from optical gas imaging — combining lightweight ViT backbones, attention-based fusion, and thermal recognition for non-invasive livestock health monitoring.",
+      "image": "/images/projects/acidosis.png",
+      "period": "Sep 1, 2023 - Aug 31, 2026",
+      "award": "USDA-NIFA 2023-70001-40997",
+      "methods": ["Semantic Segmentation", "Multi-Gas Fusion", "Thermal Recognition", "Attention Mechanisms"],
+      "papers": 5,
+      "papersList": [
+        { "name": "VLMDual", "url": "https://www.sciencedirect.com/science/article/pii/S2772375526005836" },
+        { "name": "TRACE", "url": "https://openaccess.thecvf.com/content/CVPR2026W/V4A/papers/Islam_TRACE_Thermal_Recognition_Attentive-Framework_for_CO2_Emissions_from_Livestock_CVPRW_2026_paper.pdf" },
+        { "name": "FUME", "url": "https://openaccess.thecvf.com/content/WACV2026W/HARVEST-Vision/papers/Islam_FUME_Fused_Unified_Multi-Gas_Emission_Network_for_Livestock_Rumen_Acidosis_WACVW_2026_paper.pdf" },
+        { "name": "GasTwinFormer", "url": "https://openaccess.thecvf.com/content/ICCV2025W/SEA/html/Sarker_GasTwinFormer_A_Hybrid_Vision_Transformer_for_Livestock_Methane_Emission_Segmentation_ICCVW_2025_paper.html" },
+        { "name": "CarboFormer", "url": "https://link.springer.com/chapter/10.1007/978-3-032-14495-9_1" }
+      ],
+      "projectUrl": "https://sara-detect.github.io/"
+    },
+    {
+      "title": "Computer Vision for Wildlife Monitoring",
+      "subtitle": "Automated wildlife census and habitat analysis across camera-trap, thermal, and aerial imagery",
+      "description": "Perception pipelines spanning ground-level RGB, thermal infrared, and drone-based orthoimagery to support large-scale ecological surveys and wildlife population studies.",
+      "image": "/images/projects/wildlife.png",
+      "period": "2026 – Present",
+      "methods": ["Object Detection", "Distance Estimation", "Thermal Imaging", "Aerial Orthoimage Analysis"],
+      "subs": [
+        { "name": "SpatioTrap", "desc": "Calibrated distance estimation in camera-trap photos." },
+        { "name": "ThermoCount", "desc": "Thermal ungulate detection and counting in forests." },
+        { "name": "AerialHab", "desc": "Orthoimage analysis for aquatic habitat structures." }
+      ]
+    }
+  ],
+  "past": [
+    {
+      "title": "Vision Transformers for Precision Weed Management",
+      "subtitle": "Multi-stage weed detection, segmentation, and growth analysis with hierarchical transformers",
+      "description": "Hierarchical and reparameterizable transformers, multi-task heads, and SAM-2 priors for real-time weed perception across diverse agricultural environments.",
+      "image": "/images/projects/weed.jpeg",
+      "period": "2024 – 2026",
+      "methods": ["Hierarchical ViT", "SAM-2", "DETR · RetinaNet", "Multi-Task Learning"],
+      "papers": 4,
+      "papersList": [
+        { "name": "WeedSwin", "url": "https://doi.org/10.1038/s41598-025-05092-z" },
+        { "name": "WeedRepFormer", "url": "" },
+        { "name": "WeedSense", "url": "https://openaccess.thecvf.com/content/ICCV2025W/CVPPA/html/Sarker_WeedSense_Multi-Task_Learning_for_Weed_Segmentation_Height_Estimation_and_Growth_ICCVW_2025_paper.html" },
+        { "name": "WeedVision", "url": "https://ieeexplore.ieee.org/abstract/document/10903355" }
+      ]
+    },
+    {
+      "title": "Real-Time Detection for Safety and Quality Control",
+      "subtitle": "Lightweight transformer architectures for industrial detection and quality assessment",
+      "description": "Lightweight transformer designs for real-time multi-class weapon segmentation, and dual-stream adversarial fusion for non-destructive frying-oil oxidation assessment.",
+      "image": "/images/projects/industrial.png",
+      "period": "2024 – 2026",
+      "methods": ["Lightweight Transformers", "Adversarial Dual-Stream Fusion", "Real-Time Segmentation"],
+      "papers": 2,
+      "papersList": [
+        { "name": "ArmFormer", "url": "https://arxiv.org/abs/2510.16854" },
+        { "name": "FryNet", "url": "https://openaccess.thecvf.com/content/CVPR2026W/VISION26/papers/Ahmed_FryNet_Dual-Stream_Adversarial_Fusion_for_Non-Destructive_Frying_Oil_Oxidation_Assessment_CVPRW_2026_paper.pdf" }
+      ]
+    },
+    {
+      "title": "Object Detection for Cannabis Seed Identification",
+      "subtitle": "CNN-based detection frameworks for cannabis seed identification and variant classification",
+      "description": "Early-stage applied work on CNN detection pipelines for agricultural seed identification using RetinaNet and Faster R-CNN.",
+      "image": "/images/projects/cannabis.png",
+      "period": "2024",
+      "methods": ["RetinaNet", "Faster R-CNN", "Object Detection"],
+      "papers": 2,
+      "papersList": [
+        { "name": "Cannabis Seeds", "url": "https://doi.org/10.3390/seeds3030031" },
+        { "name": "Cannabis Seed Variant", "url": "https://arxiv.org/abs/2403.10722" }
+      ]
+    },
+    {
+      "title": "Smart Farming Soybean: The use of AI to detect and estimate early insect infections in Soybean",
+      "subtitle": "AI-driven early detection of insect infestations in soybean fields",
+      "description": "AI-driven detection and estimation of early insect infestations in soybean fields, supporting timely intervention and reduced crop losses.",
+      "image": "/images/projects/soybean-insect.png",
+      "period": "Aug 01, 2024 - July 30, 2025",
+      "award": "Illinois Soybean Center",
+      "methods": ["Object Detection", "Infestation Estimation", "Deep Learning"]
+    },
+    {
+      "title": "Sustainable Farming in Illinois: Developing Deep learning algorithms for classifying the Growth stages of Weed in Soybean Field",
+      "subtitle": "Deep learning for weed growth stage classification in soybean fields",
+      "description": "Deep learning algorithms for detecting and classifying weed growth stages in soybean fields, enabling stage-aware, sustainable weed management.",
+      "image": "/images/projects/weed-growth.png",
+      "period": "May 01, 2023 - Dec 31, 2024",
+      "award": "Illinois Innovation Network",
+      "methods": ["Growth Stage Classification", "Object Detection", "Real-Time Inference"],
+      "papers": 2,
+      "papersList": [
+        { "name": "Weed Growth Stages", "url": "https://doi.org/10.3390/agronomy13030934" },
+        { "name": "Weed Growth Counting", "url": "https://doi.org/10.1109/ISADS56919.2023.10092053" }
+      ]
+    },
+    {
+      "title": "AI for Greener Livestock: Educational and Research",
+      "subtitle": "Deep learning and optical gas imaging for quantifying livestock methane emissions",
+      "description": "Educational and research program applying deep learning to optical gas imaging for quantifying methane emissions from livestock, advancing climate-smart animal agriculture.",
+      "image": "/images/projects/greener-livestock.jpeg",
+      "period": "May 1, 2022 - Apr 30, 2024",
+      "award": "USDA-NIFA 2022-70001-37404",
+      "methods": ["Optical Gas Imaging", "Semantic Segmentation", "Methane Quantification"],
+      "papers": 2,
+      "papersList": [
+        { "name": "Gasformer", "url": "https://openaccess.thecvf.com/content/CVPR2024W/Vision4Ag/html/Sarker_Gasformer_A_Transformer-based_Architecture_for_Segmenting_Methane_Emissions_from_Livestock_CVPRW_2024_paper.html" },
+        { "name": "Enteric Methane Quantification", "url": "https://doi.org/10.1049/ipr2.13327" }
+      ],
+      "projectUrl": "https://ai-greener-livestock.github.io/"
+    }
+  ]
+}

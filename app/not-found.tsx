@@ -23,9 +23,9 @@ export default function NotFound() {
           </Button>
 
           <Button variant="outline" asChild className="w-full">
-            <Link href="/research" className="flex items-center justify-center">
+            <Link href="/projects" className="flex items-center justify-center">
               <ArrowLeft className="mr-2 h-4 w-4" />
-              View Our Research
+              View Our Projects
             </Link>
           </Button>
         </div>
