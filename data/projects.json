@@ -55,7 +55,7 @@
       "subtitle": "Deep learning and optical gas imaging for quantifying livestock methane emissions",
       "description": "Educational and research program applying deep learning to optical gas imaging for quantifying methane emissions from livestock, advancing climate-smart animal agriculture.",
       "image": "/images/projects/greener-livestock.jpeg",
-      "period": "May 1, 2022 - Apr 30, 2024",
+      "period": "May 1, 2022 - Apr 30, 2025",
       "award": "USDA-NIFA 2022-70001-37404",
       "methods": ["Optical Gas Imaging", "Semantic Segmentation", "Methane Quantification"],
       "papers": 3,
