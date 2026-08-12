@@ -1,4 +1,10 @@
 {
+    "announcement": {
+      "badge": "We're Hiring",
+      "text": "Graduate Research Assistant (50% FTE) position in AI, Machine Learning, Deep Learning, and Computer Vision — immediate joining for Fall 2026 and Spring 2027.",
+      "linkText": "View Details",
+      "link": "/hiring"
+    },
     "hero": {
       "title": "BASE: Bridging AI, Systems, and Environment",
       "description": "Advancing AI frontiers through innovative research in agriculture and beyond",

@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, BookOpen } from "lucide-react";
+import { ArrowRight, Users, BookOpen, Megaphone } from "lucide-react";
 import { motion } from "framer-motion";
 import styles from './page.module.css';
 import CarouselWithAutoplay from '@/components/CarouselWithAutoplay';
@@ -87,6 +87,35 @@ export default function Home() {
       </section>
 
       <div className="container mx-auto px-2 md:px-4 py-6 max-w-6xl">
+
+      {/* Hiring Announcement */}
+      {homeData.announcement && (
+        <section className="mb-6">
+          <div className="px-2 md:px-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="border border-red-300 bg-yellow-50 rounded-lg p-4 md:p-5 flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-4"
+              style={{ boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)' }}
+            >
+              <span className="inline-flex items-center gap-1.5 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full flex-shrink-0">
+                <Megaphone className="h-3.5 w-3.5" />
+                {homeData.announcement.badge}
+              </span>
+              <p className="flex-1 text-sm text-gray-800 leading-relaxed">
+                {homeData.announcement.text}
+              </p>
+              <Button asChild size="sm" className="flex-shrink-0 bg-red-600 hover:bg-red-700 text-white">
+                <Link href={homeData.announcement.link} className="flex items-center">
+                  {homeData.announcement.linkText}
+                  <ArrowRight className="ml-1.5 h-4 w-4" />
+                </Link>
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+      )}
 
       {/* Latest Works */}
       <section className="mb-6 pb-6 border-b border-gray-100">
