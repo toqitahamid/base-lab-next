@@ -3,6 +3,16 @@
     "year": 2026,
     "items": [
       {
+        "title": "Reference-Conditioned Distance Intervals on Unseen Camera Traps",
+        "authors": ["Toqi Tahamid Sarker", "Taminul Islam", "Seth J. Morelock", "Guillaume Bastille-Rousseau", "Khaled R. Ahmed"],
+        "publisher": "Computer Vision for Ecology (CV4E) Workshop at the European Conference on Computer Vision (ECCV)",
+        "doi": "",
+        "url": "",
+        "citationKey": "sarker2026reference",
+        "type": "conference",
+        "status": "Accepted"
+      },
+      {
         "title": "VLMDual: A Vision-Language Distillation Framework for Joint Classification and Plume Segmentation in Rumen Acidosis Detection",
         "authors": ["Taminul Islam", "Toqi Tahamid Sarker", "Mohamed Embaby", "Khaled R. Ahmed", "Amer AbuGhazaleh"],
         "publisher": "Smart Agricultural Technology",
@@ -70,12 +80,13 @@
       },
       {
         "title": "Evaluating Open-Source Transformer Models for Unsupervised Sentiment Analysis in Medical Dialogue Datasets",
-        "authors": ["J. Kalinzi", "J. Adinkrah", "K. Ahmed", "R. Selinfreund"],
-        "publisher": "19th International Conference on Health Informatics (HEALTHINF)",
-        "doi": "",
-        "url": "",
+        "authors": ["Joseph Kalinzi", "James Adinkrah", "Khaled R. Ahmed", "Richard Selinfreund"],
+        "publisher": "Proceedings of the 19th International Joint Conference on Biomedical Engineering Systems and Technologies (BIOSTEC) - Volume 4: HEALTHINF",
+        "doi": "10.5220/0014341500004070",
+        "url": "https://www.scitepress.org/Papers/2026/143415/143415.pdf",
         "citationKey": "kalinzi2026evaluating",
-        "type": "conference"
+        "type": "conference",
+        "bibtex": "@inproceedings{kalinzi2026evaluating,\n  title={Evaluating Open-Source Transformer Models for Unsupervised Sentiment Analysis in Medical Dialogue Datasets},\n  author={Kalinzi, Joseph and Adinkrah, James and Ahmed, Khaled R and Selinfreund, Richard},\n  booktitle={Proceedings of the 19th International Joint Conference on Biomedical Engineering Systems and Technologies (BIOSTEC 2026) - Volume 4: HEALTHINF},\n  pages={374--382},\n  year={2026},\n  publisher={SCITEPRESS}\n}"
       }
     ]
   },

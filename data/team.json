@@ -2,7 +2,7 @@
   "phdStudents": [
     {
       "name": "Toqi Tahamid Sarker",
-      "role": "PhD Student",
+      "role": "PhD Candidate",
       "image": "/images/team/toqi-sarker.jpeg",
       "bio": "Toqi is developing deep learning techniques for detecting methane gas in livestock.",
       "researchInterests": ["Semantic Segmentation", "Low-level Vision", "Multi-modal Language Model"],
@@ -59,6 +59,18 @@
       "researchInterests": ["Federated Learning", "Autonomous Driving", "Distributed AI"],
       "socialLinks": {
         "linkedin": "https://linkedin.com/in/laya"
+      }
+    },
+    {
+      "name": "Johnbosco Chinonso Nnamso",
+      "role": "PhD Student",
+      "image": "/images/team/Nnamso_profile.png",
+      "bio": "Johnbosco is working on AI-driven software systems, multimodal machine learning, computer vision, and intelligent digital tools for real-world applications.",
+      "researchInterests": ["Computer Vision", "Multimodal Learning", "Vision-Language Models (VLMs)", "Intelligent Digital Health Systems", "Edge AI"],
+      "socialLinks": {
+        "website": "https://johnbosconnamso.com",
+        "github": "https://github.com/Goecol",
+        "linkedin": "https://www.linkedin.com/in/johnbosco-nnamso/"
       }
     }
   ],
