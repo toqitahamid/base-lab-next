@@ -62,6 +62,16 @@
       }
     },
     {
+      "name": "Malek Rababa",
+      "role": "PhD Student",
+      "image": "/images/team/malek_photo.png",
+      "bio": "Malek is developing deep learning and Vision-Language Models for microscopic pathogen detection and segmentation, with applications in food safety and secure AI.",
+      "researchInterests": ["Computer Vision & Deep Learning", "Vision-Language Models (VLMs)", "AI Security", "AI for Food Safety"],
+      "socialLinks": {
+        "linkedin": "https://www.linkedin.com/in/malek-rababa-b53231429"
+      }
+    },
+    {
       "name": "Johnbosco Chinonso Nnamso",
       "role": "PhD Student",
       "image": "/images/team/Nnamso_profile.png",
