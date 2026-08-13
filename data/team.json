@@ -101,6 +101,7 @@
       "image": "/images/team/james-antwi-adinkrah.png",
       "degree": "Masters",
       "graduationYear": 2026,
+      "thesis": "Report-Guided Pseudo-Label Generation and Transformation-Based Detection for Chest X-Ray Pathology Localization Without Manual Annotation",
       "socialLinks": {
         "linkedin": "https://www.linkedin.com/in/adinkrah-james-antwi/",
         "github": "https://github.com/James-Adin?tab=repositories"
