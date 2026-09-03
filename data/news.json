@@ -1,6 +1,12 @@
 [
   {
     "date": "August 2026",
+    "title": "Taminul Islam Advances to PhD Candidacy",
+    "description": "Congratulations to BASE Lab member Taminul Islam, who successfully defended his PhD dissertation proposal and advanced to PhD candidacy.",
+    "badge": "Academic"
+  },
+  {
+    "date": "August 2026",
     "title": "Paper Accepted at the CV4E Workshop at ECCV 2026",
     "description": "We are pleased to announce that our paper 'Reference-Conditioned Distance Intervals on Unseen Camera Traps' has been accepted at the Computer Vision for Ecology (CV4E) workshop at the European Conference on Computer Vision (ECCV) 2026. Authored by Toqi Tahamid Sarker, Taminul Islam, Seth J. Morelock, Guillaume Bastille-Rousseau, and Khaled R. Ahmed. Congratulations to the team!",
     "badge": "Publication"
@@ -14,7 +20,7 @@
   {
     "date": "June 2026",
     "title": "Two Papers Presented at CVPR 2026 in Denver, CO",
-    "description": "PhD student Taminul Islam presented two of our papers at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 in Denver, CO. He presented 'TRACE: Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock' and 'FryNet: Dual-Stream Adversarial Fusion for Non-Destructive Frying Oil Oxidation Assessment'. Congratulations to the team!",
+    "description": "PhD candidate Taminul Islam presented two of our papers at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 in Denver, CO. He presented 'TRACE: Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock' and 'FryNet: Dual-Stream Adversarial Fusion for Non-Destructive Frying Oil Oxidation Assessment'. Congratulations to the team!",
     "badge": "Academic"
   },
   {
@@ -22,6 +28,12 @@
     "title": "Two Papers Accepted at ICPR 2026",
     "description": "We are pleased to announce that two of our papers have been accepted at the International Conference on Pattern Recognition (ICPR) 2026: 'Mask-Guided Multi-Task Learning: Real-Time RGB Prediction of Plant Photosynthetic Efficiency at the Edge' and 'WeedRepFormer: Reparameterizable Vision Transformers for Real-Time Waterhemp Segmentation and Gender Classification'. Congratulations to the team!",
     "badge": "Publication"
+  },
+  {
+    "date": "May 2026",
+    "title": "Akhila Kambhatla Successfully Defends PhD Dissertation",
+    "description": "Congratulations to BASE Lab member Akhila Kambhatla, who successfully defended her PhD dissertation and earned her PhD degree. Well done, Dr. Kambhatla!",
+    "badge": "Academic"
   },
   {
     "date": "May 2026",
@@ -34,6 +46,12 @@
     "title": "Two Papers Accepted at CVPR 2026",
     "description": "We are thrilled to announce that two of our papers have been accepted at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 workshops: 'TRACE: Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock' and 'FryNet: Dual-Stream Adversarial Fusion for Non-Destructive Frying Oil Oxidation Assessment'. Congratulations to the team!",
     "badge": "Publication"
+  },
+  {
+    "date": "March 2026",
+    "title": "Toqi Tahamid Sarker Advances to PhD Candidacy",
+    "description": "Congratulations to BASE Lab member Toqi Tahamid Sarker, who successfully defended his PhD dissertation proposal and advanced to PhD candidacy.",
+    "badge": "Academic"
   },
   {
     "date": "March 2026",

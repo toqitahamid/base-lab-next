@@ -17,7 +17,7 @@
     },
     {
       "name": "Taminul Islam",
-      "role": "PhD Student",
+      "role": "PhD Candidate",
       "image": "/images/team/taminul-islam.jpg",
       "bio": "Taminul is developing lightweight, real-time vision transformers and VLMs for semantic segmentation, multimodal fusion, and multi-task learning, applied to optical gas imaging of livestock emissions, thermal sensing, and precision agriculture at the edge.",
       "researchInterests": ["Video Object Segmentation", "Efficient LLMs/VLMs", "RGB-Thermal Fusion", "Multimodal Multi-task Learning"],
@@ -91,6 +91,7 @@
       "image": "/images/team/akhila-kambhatla.jpeg",
       "degree": "PhD",
       "graduationYear": 2026,
+      "thesis": "Intelligent Surveillance for Weapon Threat Detection: Transformer-Based Detection and Segmentation Using Thermal and RGB Imagery",
       "socialLinks": {
         "github": "https://github.com/akhila",
         "linkedin": "https://linkedin.com/in/akhila"
