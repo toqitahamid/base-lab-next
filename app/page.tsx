@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, BookOpen, Briefcase } from "lucide-react";
+import { ArrowRight, Users, BookOpen } from "lucide-react";
 import { motion } from "framer-motion";
 import styles from './page.module.css';
 import CarouselWithAutoplay from '@/components/CarouselWithAutoplay';
@@ -100,9 +100,6 @@ export default function Home() {
               style={{ boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)' }}
             >
               <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-                <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center">
-                  <Briefcase className="h-6 w-6" />
-                </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">
                     {homeData.announcement.badge}

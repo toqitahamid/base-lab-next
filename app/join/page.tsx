@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
 };
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Briefcase, ArrowRight, GraduationCap, ExternalLink } from 'lucide-react';
+import { CheckCircle, ArrowRight, ExternalLink } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
 
@@ -114,9 +114,6 @@ export default function JoinPage() {
             <div className="py-6 px-6">
               <h2 className="text-2xl font-medium text-gray-900 mb-8">Open Positions</h2>
               <div className="rounded-lg border border-gray-200 bg-white p-5 mb-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-                <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center">
-                  <Briefcase className="h-6 w-6" />
-                </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Now Hiring</p>
                   <h3 className="text-base md:text-lg font-bold text-gray-900 leading-tight">Graduate Research Assistant (50% FTE)</h3>
@@ -173,9 +170,6 @@ export default function JoinPage() {
             <div className="py-6 px-6">
               <h2 className="text-2xl font-medium text-gray-900 mb-8">Funding Opportunities</h2>
               <div className="rounded-lg border border-gray-200 bg-white p-5 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
-                <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center">
-                  <GraduationCap className="h-6 w-6" />
-                </div>
                 <div className="flex-1 min-w-0">
                   <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Scholarship &middot; 2027 Cycle Open</p>
                   <h3 className="text-base md:text-lg font-bold text-gray-900 leading-tight">DoD SMART Scholarship-for-Service</h3>
