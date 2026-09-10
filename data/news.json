@@ -1,5 +1,13 @@
 [
   {
+    "date": "September 2026",
+    "title": "Funding Opportunity: DoD SMART Scholarship-for-Service (2027 Cycle)",
+    "description": "The Department of Defense SMART (Science, Mathematics, and Research for Transformation) Scholarship-for-Service program is accepting applications for the 2027 cycle. SMART provides full tuition, an annual stipend, summer internships, and guaranteed civilian employment with the DoD after graduation for U.S. citizens pursuing STEM degrees, including Computer Science. Students interested in joining BASE Lab are encouraged to review the eligibility requirements and apply.",
+    "badge": "Opportunity",
+    "link": "https://www.smartscholarship.org/smart/en?id=smart_eligibility",
+    "linkText": "Check SMART eligibility and apply"
+  },
+  {
     "date": "August 2026",
     "title": "Taminul Islam Advances to PhD Candidacy",
     "description": "Congratulations to BASE Lab member Taminul Islam, who successfully defended his PhD dissertation proposal and advanced to PhD candidacy.",
@@ -113,7 +121,6 @@
     "description": "Two papers have been accepted at ICCV 2025. WeedSense, a multi-task architecture that simultaneously performs weed segmentation, height estimation, and growth stage classification, was accepted at the 10th Computer Vision in Plant Phenotyping and Agriculture workshop. The second paper, GasTwinFormer, introduces a hybrid vision transformer for real-time livestock methane monitoring and has been selected for oral presentation and as a best paper nominee at the SEA: Sustainability with Earth Observation & AI workshop.",
     "badge": "Publication"
   },
-
   {
     "date": "August 2025",
     "title": "Doctoral Research Fellowship awarded",
@@ -126,7 +133,6 @@
     "description": "We are thrilled to announce that our journal article, 'WeedSwin Hierarchical Vision Transformer with SAM-2 for Multi-Stage Weed Detection and Classification' has been published in Scientific Reports (Nature). This comprehensive research introduces extensive datasets documenting prevalent weed species across multiple growth stages, and proposes a novel WeedSwin Transformer architecture that demonstrates exceptional performance in weed detection and classification for precision agriculture. Congratulations to the team!",
     "badge": "Publication"
   },
-
   {
     "date": "June 2025",
     "title": "Review Article Published: Carbon Emission Quantification of Machine Learning",

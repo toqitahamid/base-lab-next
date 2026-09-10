@@ -40,6 +40,8 @@ interface NewsItem {
   date: string;
   description: string;
   badge: string;
+  link?: string;
+  linkText?: string;
 }
 
 async function getNewsItems(): Promise<NewsItem[]> {
@@ -142,6 +144,14 @@ export default async function NewsPage() {
                 {/* Description */}
                 <div className="text-sm text-gray-800 leading-relaxed">
                   {item.description}
+                  {item.link && (
+                    <>
+                      {' '}
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:text-sky-800 font-medium">
+                        {item.linkText ?? 'Learn more'}
+                      </a>
+                    </>
+                  )}
                 </div>
               </div>
             ))}

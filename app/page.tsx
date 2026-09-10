@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Users, BookOpen, Megaphone } from "lucide-react";
+import { ArrowRight, Users, BookOpen, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 import styles from './page.module.css';
 import CarouselWithAutoplay from '@/components/CarouselWithAutoplay';
@@ -96,22 +96,38 @@ export default function Home() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="border border-red-300 bg-yellow-50 rounded-lg p-4 md:p-5 flex flex-col md:flex-row items-start md:items-center gap-3 md:gap-4"
+              className="relative overflow-hidden rounded-lg border border-gray-200 bg-white p-5 md:p-6"
               style={{ boxShadow: '0 0 60px rgba(0, 0, 0, 0.08)' }}
             >
-              <span className="inline-flex items-center gap-1.5 bg-red-600 text-white text-xs font-semibold px-3 py-1 rounded-full flex-shrink-0">
-                <Megaphone className="h-3.5 w-3.5" />
-                {homeData.announcement.badge}
-              </span>
-              <p className="flex-1 text-sm text-gray-800 leading-relaxed">
-                {homeData.announcement.text}
-              </p>
-              <Button asChild size="sm" className="flex-shrink-0 bg-red-600 hover:bg-red-700 text-white">
-                <Link href={homeData.announcement.link} className="flex items-center">
-                  {homeData.announcement.linkText}
-                  <ArrowRight className="ml-1.5 h-4 w-4" />
-                </Link>
-              </Button>
+              <div className="flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+                <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center">
+                  <Briefcase className="h-6 w-6" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">
+                    {homeData.announcement.badge}
+                  </p>
+                  <h3 className="text-base md:text-lg font-bold text-gray-900 leading-tight">
+                    {homeData.announcement.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mt-1">
+                    {homeData.announcement.text}
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {homeData.announcement.tags.map((tag) => (
+                      <span key={tag} className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs font-medium text-gray-700">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <Button asChild className="flex-shrink-0">
+                  <Link href={homeData.announcement.link} className="flex items-center">
+                    {homeData.announcement.linkText}
+                    <ArrowRight className="ml-1.5 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -240,7 +256,17 @@ export default function Home() {
                     </h3>
                   </div>
                   <p className="text-sky-600 text-sm mb-3 font-medium">{item.date}</p>
-                  <p className="text-gray-700 leading-relaxed text-sm">{item.description}</p>
+                  <p className="text-gray-700 leading-relaxed text-sm">
+                    {item.description}
+                    {'link' in item && item.link && (
+                      <>
+                        {' '}
+                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-sky-600 hover:text-sky-800 font-medium">
+                          {('linkText' in item && item.linkText) || 'Learn more'}
+                        </a>
+                      </>
+                    )}
+                  </p>
                 </div>
               ))}
               

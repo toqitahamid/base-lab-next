@@ -1,139 +1,161 @@
 {
     "announcement": {
-      "badge": "We're Hiring",
-      "text": "Graduate Research Assistant (50% FTE) position in AI, Machine Learning, Deep Learning, and Computer Vision — immediate joining for Fall 2026 and Spring 2027.",
-      "linkText": "View Details",
-      "link": "/hiring"
+        "badge": "We're Hiring",
+        "title": "Graduate Research Assistant (50% FTE)",
+        "text": "AI, Machine Learning, Deep Learning, and Computer Vision. Immediate joining for Fall 2026 and Spring 2027.",
+        "tags": [
+            "50% FTE",
+            "Fall 2026 & Spring 2027",
+            "M.S. / Ph.D. in CS"
+        ],
+        "linkText": "View Details",
+        "link": "/hiring"
     },
     "hero": {
-      "title": "BASE: Bridging AI, Systems, and Environment",
-      "description": "Advancing AI frontiers through innovative research in agriculture and beyond",
-      "buttons": [
-        {
-          "text": "Our Projects",
-          "link": "/projects"
-        },
-        {
-          "text": "Meet the Team",
-          "link": "/team"
-        }
-      ]
+        "title": "BASE: Bridging AI, Systems, and Environment",
+        "description": "Advancing AI frontiers through innovative research in agriculture and beyond",
+        "buttons": [
+            {
+                "text": "Our Projects",
+                "link": "/projects"
+            },
+            {
+                "text": "Meet the Team",
+                "link": "/team"
+            }
+        ]
     },
     "carouselItems": [
-      {
-        "title": "Conference Presentation at CVPR 2026 in Denver, CO",
-        "description": "PhD student Taminul Islam presented 'TRACE: Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock' at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 in Denver, CO.",
-        "image": "/images/slider/cvpr-trace.jpg",
-        "link": ""
-      },
-      {
-        "title": "Oral Presentation at WACV 2026 in Tucson, AZ",
-        "description": "PhD student Taminul Islam delivered an oral presentation of 'FUME: Fused Unified Multi-Gas Emission Network for Livestock Rumen Acidosis Detection' at the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2026 in Tucson, AZ.",
-        "image": "/images/slider/wacv-fume.jpg",
-        "link": ""
-      },
-      {
-        "title": "Highly Cited Paper 2024-2025: Detection and Classification of Cannabis Seeds",
-        "description": "Our article 'Detection and Classification of Cannabis Seeds Using RetinaNet and Faster R-CNN' published in Seeds (MDPI) has been recognized as a Highly Cited Paper for 2024-2025.",
-        "image": "/images/news/2026/01/2026-01-22-seeds_Highly_Cited_Paper.jpg",
-        "link": ""
-      },
-      {
-        "title": "WeedSense Poster Presentation at ICCV 2025",
-        "description": "PhD student Toqi Tahamid Sarker presented WeedSense at the 10th Computer Vision in Plant Phenotyping and Agriculture (CVPPA) workshop at ICCV 2025 in Honolulu, Hawaii.",
-        "image": "/images/posters/weedsense_poster-230531_ver_pdf.webp",
-        "link": ""
-      },
-      {
-        "title": "GasTwinFormer Poster Presentation at ICCV 2025",
-        "description": "PhD student Toqi Tahamid Sarker presented GasTwinFormer at the Sustainability with Earth Observation & AI (SEA) workshop at ICCV 2025 in Honolulu, Hawaii.",
-        "image": "/images/posters/gastwinformer_iccv2025_poster-sans-serif-230531_ver_pdf.webp",
-        "link": ""
-      },
-      {
-        "title": "Conference Presentation at ISVC 2025: CarboFormer",
-        "description": "Our team presented 'CarboFormer: A Lightweight Semantic Segmentation Architecture for Efficient Carbon Dioxide Detection Using Optical Gas Imaging' at the International Symposium on Visual Computing (ISVC) 2025.",
-        "image": "/images/slider/isvc-carboforfer.jpg",
-        "link": ""
-      },
-      {
-        "title": "Awarded at Illinois Young Innovator of the Year",
-        "description": "PhD Student Taminul Islam has been awarded 3rd place in the 2025 Illinois Young Innovator of the Year, among 16 selective talks by Falling Walls Lab Illinois.",
-        "image": "/images/slider/falling_wall.jpg",
-        "link": ""
-      },
-      {
-        "title": "Conference Presentation at ICMLA 2024",
-        "description": "PhD student Taminul Islam presented our research on weed growth stage classification and detection at the Deep Learning and Applications special session during the 23rd International Conference on Machine Learning and Applications (ICMLA).",
-        "image": "/images/slider/icmla-2024.jpeg",
-        "link": ""
-      },
-      {
-        "title": "Poster Presentation at IIN Sustainability Research Conference",
-        "description": "Taminul Islam presented a poster on our research on weed growth stage classification and detection at the Illinois Innovation Network’s Sustainability Research Conference, held at Illinois State University.",
-        "image": "/images/slider/iin-2024.jpeg",
-        "link": ""
-      },
-      {
-        "title": "Poster Presentation at 5th Annual Hemp Cannabis Symposium 2024",
-        "description": "Our team presented research on detecting and classifying cannabis seeds using deep learning techniques.",
-        "image": "/images/slider/cannabis_conference.jpeg",
-        "link": ""
-      },
-      {
-        "title": "BASE Lab at the Graduate School Fair 2024",
-        "description": "PhD students Toqi and Taminul, along with Dr. Khaled, represented the BASE Lab and the School of Computing at the Graduate School Fair 2024 at Southern Illinois University Carbondale.",
-        "image": "/images/slider/gsf.jpeg",
-        "link": ""
-      },
-      {
-        "title": "PhD students with supervisor at agricultural field",
-        "description": "Our team is using drones to collect research samples from the field.",
-        "image": "/images/slider/fields.jpeg",
-        "link": ""
-      },
-      {
-        "title": "Collecting data using drone",
-        "description": "Our team is using drones to collect research samples from the agricultural field.",
-        "image": "/images/slider/drone_at_field.jpeg",
-        "link": ""
-      },
-      {
-        "title": "Research Sample at Greenhouse",
-        "description": "Our team prepared reseach sample in a greenhouse.",
-        "image": "/images/slider/greenhouse.jpeg",
-        "link": ""
-      },
-      {
-        "title": "Conference Presentation at CVPR 2024",
-        "description": "Our team presented research on segmenting in vitro methane emissions in cattle using optical gas imaging and deep learning.",
-        "image": "/images/slider/cvpr-poster.jpg",
-        "link": "/news#cvpr-2024"
-      }
+        {
+            "title": "Conference Presentation at CVPR 2026 in Denver, CO",
+            "description": "PhD student Taminul Islam presented 'TRACE: Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock' at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 in Denver, CO.",
+            "image": "/images/slider/cvpr-trace.jpg",
+            "link": ""
+        },
+        {
+            "title": "Oral Presentation at WACV 2026 in Tucson, AZ",
+            "description": "PhD student Taminul Islam delivered an oral presentation of 'FUME: Fused Unified Multi-Gas Emission Network for Livestock Rumen Acidosis Detection' at the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) 2026 in Tucson, AZ.",
+            "image": "/images/slider/wacv-fume.jpg",
+            "link": ""
+        },
+        {
+            "title": "Highly Cited Paper 2024-2025: Detection and Classification of Cannabis Seeds",
+            "description": "Our article 'Detection and Classification of Cannabis Seeds Using RetinaNet and Faster R-CNN' published in Seeds (MDPI) has been recognized as a Highly Cited Paper for 2024-2025.",
+            "image": "/images/news/2026/01/2026-01-22-seeds_Highly_Cited_Paper.jpg",
+            "link": ""
+        },
+        {
+            "title": "WeedSense Poster Presentation at ICCV 2025",
+            "description": "PhD student Toqi Tahamid Sarker presented WeedSense at the 10th Computer Vision in Plant Phenotyping and Agriculture (CVPPA) workshop at ICCV 2025 in Honolulu, Hawaii.",
+            "image": "/images/posters/weedsense_poster-230531_ver_pdf.webp",
+            "link": ""
+        },
+        {
+            "title": "GasTwinFormer Poster Presentation at ICCV 2025",
+            "description": "PhD student Toqi Tahamid Sarker presented GasTwinFormer at the Sustainability with Earth Observation & AI (SEA) workshop at ICCV 2025 in Honolulu, Hawaii.",
+            "image": "/images/posters/gastwinformer_iccv2025_poster-sans-serif-230531_ver_pdf.webp",
+            "link": ""
+        },
+        {
+            "title": "Conference Presentation at ISVC 2025: CarboFormer",
+            "description": "Our team presented 'CarboFormer: A Lightweight Semantic Segmentation Architecture for Efficient Carbon Dioxide Detection Using Optical Gas Imaging' at the International Symposium on Visual Computing (ISVC) 2025.",
+            "image": "/images/slider/isvc-carboforfer.jpg",
+            "link": ""
+        },
+        {
+            "title": "Awarded at Illinois Young Innovator of the Year",
+            "description": "PhD Student Taminul Islam has been awarded 3rd place in the 2025 Illinois Young Innovator of the Year, among 16 selective talks by Falling Walls Lab Illinois.",
+            "image": "/images/slider/falling_wall.jpg",
+            "link": ""
+        },
+        {
+            "title": "Conference Presentation at ICMLA 2024",
+            "description": "PhD student Taminul Islam presented our research on weed growth stage classification and detection at the Deep Learning and Applications special session during the 23rd International Conference on Machine Learning and Applications (ICMLA).",
+            "image": "/images/slider/icmla-2024.jpeg",
+            "link": ""
+        },
+        {
+            "title": "Poster Presentation at IIN Sustainability Research Conference",
+            "description": "Taminul Islam presented a poster on our research on weed growth stage classification and detection at the Illinois Innovation Network’s Sustainability Research Conference, held at Illinois State University.",
+            "image": "/images/slider/iin-2024.jpeg",
+            "link": ""
+        },
+        {
+            "title": "Poster Presentation at 5th Annual Hemp Cannabis Symposium 2024",
+            "description": "Our team presented research on detecting and classifying cannabis seeds using deep learning techniques.",
+            "image": "/images/slider/cannabis_conference.jpeg",
+            "link": ""
+        },
+        {
+            "title": "BASE Lab at the Graduate School Fair 2024",
+            "description": "PhD students Toqi and Taminul, along with Dr. Khaled, represented the BASE Lab and the School of Computing at the Graduate School Fair 2024 at Southern Illinois University Carbondale.",
+            "image": "/images/slider/gsf.jpeg",
+            "link": ""
+        },
+        {
+            "title": "PhD students with supervisor at agricultural field",
+            "description": "Our team is using drones to collect research samples from the field.",
+            "image": "/images/slider/fields.jpeg",
+            "link": ""
+        },
+        {
+            "title": "Collecting data using drone",
+            "description": "Our team is using drones to collect research samples from the agricultural field.",
+            "image": "/images/slider/drone_at_field.jpeg",
+            "link": ""
+        },
+        {
+            "title": "Research Sample at Greenhouse",
+            "description": "Our team prepared reseach sample in a greenhouse.",
+            "image": "/images/slider/greenhouse.jpeg",
+            "link": ""
+        },
+        {
+            "title": "Conference Presentation at CVPR 2024",
+            "description": "Our team presented research on segmenting in vitro methane emissions in cattle using optical gas imaging and deep learning.",
+            "image": "/images/slider/cvpr-poster.jpg",
+            "link": "/news#cvpr-2024"
+        }
     ],
     "researchFocusAreas": [
-      {
-          "title": "Computer Vision",
-          "description": "Developing advanced techniques for visual data interpretation, including object detection, recognition, and image processing, to enhance automated visual understanding in diverse applications."
-      },
-      {
-          "title": "Deep Learning",
-          "description": "Designing and optimizing state-of-the-art neural network architectures and algorithms to address complex problems across various domains, with a focus on improving performance and scalability."
-      },
-      {
-          "title": "AI for Agriculture",
-          "description": "Applying artificial intelligence to agricultural challenges such as precision livestock management, crop health monitoring, and yield prediction, aiming to improve efficiency and sustainability in agriculture."
-      },
-      {
-          "title": "Federated Learning",
-          "description": "Creating robust federated learning frameworks to handle non-iid data and resource constraints, ensuring effective and secure distributed learning across heterogeneous environments."
-      }
+        {
+            "title": "Computer Vision",
+            "description": "Developing advanced techniques for visual data interpretation, including object detection, recognition, and image processing, to enhance automated visual understanding in diverse applications."
+        },
+        {
+            "title": "Deep Learning",
+            "description": "Designing and optimizing state-of-the-art neural network architectures and algorithms to address complex problems across various domains, with a focus on improving performance and scalability."
+        },
+        {
+            "title": "AI for Agriculture",
+            "description": "Applying artificial intelligence to agricultural challenges such as precision livestock management, crop health monitoring, and yield prediction, aiming to improve efficiency and sustainability in agriculture."
+        },
+        {
+            "title": "Federated Learning",
+            "description": "Creating robust federated learning frameworks to handle non-iid data and resource constraints, ensuring effective and secure distributed learning across heterogeneous environments."
+        }
     ],
     "quickStats": [
-      { "label": "Publications", "value": "69+" },
-      { "label": "Research Projects", "value": "5+" },
-      { "label": "Team Members", "value": "8" },
-      { "label": "Years of Experience", "value": "19+" }
+        {
+            "label": "Publications",
+            "value": "69+"
+        },
+        {
+            "label": "Research Projects",
+            "value": "5+"
+        },
+        {
+            "label": "Team Members",
+            "value": "8"
+        },
+        {
+            "label": "Years of Experience",
+            "value": "19+"
+        }
     ],
-    "sponsors": ["usda-logo.png", "nifa-logo.png", "illinois-innovation-network-logo.png"]
-  }
+    "sponsors": [
+        "usda-logo.png",
+        "nifa-logo.png",
+        "illinois-innovation-network-logo.png"
+    ]
+}

@@ -190,7 +190,7 @@ export default function HiringPage() {
             <h2 className="text-2xl font-medium text-gray-900 mb-6">Application Materials</h2>
             <p className="text-sm text-gray-800 leading-relaxed mb-4">
               Interested applicants should submit the following to Dr. Khaled Ahmed
-              (<a href="mailto:Khaled.ahmed@siu.edu" className="text-sky-600 hover:text-sky-800 font-medium">Khaled.ahmed@siu.edu</a>):
+              (<a href="mailto:khaled.ahmed@siu.edu" className="text-sky-600 hover:text-sky-800 font-medium">khaled.ahmed@siu.edu</a>):
             </p>
             <div className="space-y-2 mb-8">
               {applicationMaterials.map((item, index) => (
@@ -202,7 +202,7 @@ export default function HiringPage() {
             </div>
             <div className="text-center">
               <Button asChild size="lg" className="font-medium">
-                <a href="mailto:Khaled.ahmed@siu.edu?subject=Graduate%20Research%20Assistant%20Application%20-%20BASE%20Lab" className="flex items-center">
+                <a href="mailto:khaled.ahmed@siu.edu?subject=Graduate%20Research%20Assistant%20Application%20-%20BASE%20Lab" className="flex items-center">
                   <Mail className="mr-2 h-4 w-4" />
                   Apply by Email
                 </a>

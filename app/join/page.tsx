@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   },
 };
 import { Button } from "@/components/ui/button";
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Briefcase, ArrowRight, GraduationCap, ExternalLink } from 'lucide-react';
 import PageHeader from '@/components/PageHeader';
 
 
@@ -113,6 +113,24 @@ export default function JoinPage() {
             {/* Open Positions */}
             <div className="py-6 px-6">
               <h2 className="text-2xl font-medium text-gray-900 mb-8">Open Positions</h2>
+              <div className="rounded-lg border border-gray-200 bg-white p-5 mb-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+                <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center">
+                  <Briefcase className="h-6 w-6" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Now Hiring</p>
+                  <h3 className="text-base md:text-lg font-bold text-gray-900 leading-tight">Graduate Research Assistant (50% FTE)</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mt-1">
+                    AI, Machine Learning, Deep Learning, and Computer Vision. Immediate joining for Fall 2026 and Spring 2027.
+                  </p>
+                </div>
+                <Button asChild className="flex-shrink-0">
+                  <Link href="/hiring" className="flex items-center">
+                    View Details
+                    <ArrowRight className="ml-1.5 h-4 w-4" />
+                  </Link>
+                </Button>
+              </div>
               <div className="space-y-12">
                 {positions.map((position, index) => (
                   <div key={position.title} className={`${index !== positions.length - 1 ? 'pb-8 border-b border-gray-100' : ''}`}>
@@ -148,6 +166,36 @@ export default function JoinPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+
+            {/* Funding Opportunities */}
+            <div className="py-6 px-6">
+              <h2 className="text-2xl font-medium text-gray-900 mb-8">Funding Opportunities</h2>
+              <div className="rounded-lg border border-gray-200 bg-white p-5 flex flex-col md:flex-row md:items-center gap-4 md:gap-6">
+                <div className="flex-shrink-0 h-12 w-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center">
+                  <GraduationCap className="h-6 w-6" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-1">Scholarship &middot; 2027 Cycle Open</p>
+                  <h3 className="text-base md:text-lg font-bold text-gray-900 leading-tight">DoD SMART Scholarship-for-Service</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed mt-1">
+                    Department of Defense program for U.S. citizens pursuing undergraduate or graduate STEM degrees, including Computer Science. Covers full tuition and leads to a guaranteed civilian position with the DoD after graduation.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {['Full tuition', 'Annual stipend', 'Summer internships', 'Post-graduation DoD employment', 'U.S. citizens'].map((tag) => (
+                      <span key={tag} className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs font-medium text-gray-700">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <Button asChild className="flex-shrink-0">
+                  <Link href="https://www.smartscholarship.org/smart/en?id=smart_eligibility" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                    Check Eligibility
+                    <ExternalLink className="ml-1.5 h-4 w-4" />
+                  </Link>
+                </Button>
               </div>
             </div>
 
