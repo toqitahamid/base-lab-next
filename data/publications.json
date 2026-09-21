@@ -26,8 +26,8 @@
       {
         "title": "Mask-Guided Multi-Task Learning: Real-Time RGB Prediction of Plant Photosynthetic Efficiency at the Edge",
         "authors": ["Abdellah Lakhssassi", "Taminul Islam", "Cristiana Bernardi Rankrape", "Naoufal Lakhssassi", "Karla Gage", "Khaled R. Ahmed"],
-        "publisher": "International Conference on Pattern Recognition (ICPR)",
-        "doi": "",
+        "publisher": "Computer Vision for Biodiversity Monitoring and Conservation (CVBMC) Workshop at the International Conference on Pattern Recognition (ICPR)",
+        "doi": "10.1007/978-3-032-39518-4_23",
         "url": "",
         "citationKey": "lakhssassi2026maskguided",
         "type": "conference",
@@ -36,8 +36,8 @@
       {
         "title": "WeedRepFormer: Reparameterizable Vision Transformers for Real-Time Waterhemp Segmentation and Gender Classification",
         "authors": ["Toqi Tahamid Sarker", "Taminul Islam", "Abdellah Lakhssassi", "Cristiana Bernardi Rankrape", "Kaitlin E. Creager", "Karla Gage", "Khaled R. Ahmed"],
-        "publisher": "International Conference on Pattern Recognition (ICPR)",
-        "doi": "",
+        "publisher": "Computer Vision for Biodiversity Monitoring and Conservation (CVBMC) Workshop at the International Conference on Pattern Recognition (ICPR)",
+        "doi": "10.1007/978-3-032-39518-4_28",
         "url": "",
         "citationKey": "sarker2026weedrepformer",
         "type": "conference",
