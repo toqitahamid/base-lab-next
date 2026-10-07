@@ -3,6 +3,16 @@
     "year": 2026,
     "items": [
       {
+        "title": "MedSentiBERT: Distilling a Frontier-LLM Sentiment Labelling Policy into a Compact Clinical Classifier",
+        "authors": ["Joseph Kalinzi", "Khaled R. Ahmed"],
+        "publisher": "IEEE 38th International Conference on Tools with Artificial Intelligence (ICTAI)",
+        "doi": "",
+        "url": "",
+        "citationKey": "kalinzi2026medsentibert",
+        "type": "conference",
+        "status": "Accepted"
+      },
+      {
         "title": "Mask-Guided Multi-Task Learning: Real-Time RGB Prediction of Plant Photosynthetic Efficiency at the Edge",
         "authors": ["Abdellah Lakhssassi", "Taminul Islam", "Cristiana Bernardi Rankrape", "Naoufal Lakhssassi", "Karla Gage", "Khaled R. Ahmed"],
         "publisher": "Computer Vision for Biodiversity Monitoring and Conservation (CVBMC) Workshop at the International Conference on Pattern Recognition (ICPR)",
