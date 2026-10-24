@@ -7,7 +7,7 @@ import PageHeader from '@/components/PageHeader';
 
 export const metadata: Metadata = {
   title: "We're Hiring - Graduate Research Assistant",
-  description: "The BASE Research Lab at Southern Illinois University Carbondale is hiring a Graduate Research Assistant (50% FTE) in AI, Machine Learning, Deep Learning, and Computer Vision. Immediate joining for Fall 2026 and Spring 2027.",
+  description: "The BASE Research Lab at Southern Illinois University Carbondale is hiring a Graduate Research Assistant (50% FTE) in AI, Machine Learning, Deep Learning, and Computer Vision. Immediate joining for Spring 2027.",
   keywords: [
     "graduate research assistant",
     "GRA position",
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "BASE Lab is Hiring - Graduate Research Assistant (AI/ML)",
-    description: "Graduate Research Assistant (50% FTE) position in AI, Machine Learning, Deep Learning, and Computer Vision at SIU Carbondale. Immediate joining for Fall 2026 and Spring 2027.",
+    description: "Graduate Research Assistant (50% FTE) position in AI, Machine Learning, Deep Learning, and Computer Vision at SIU Carbondale. Immediate joining for Spring 2027.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "BASE Lab is Hiring - Graduate Research Assistant (AI/ML)",
-    description: "Graduate Research Assistant (50% FTE) position in AI, Machine Learning, Deep Learning, and Computer Vision at SIU Carbondale. Immediate joining for Fall 2026 and Spring 2027.",
+    description: "Graduate Research Assistant (50% FTE) position in AI, Machine Learning, Deep Learning, and Computer Vision at SIU Carbondale. Immediate joining for Spring 2027.",
   },
 };
 
@@ -102,7 +102,7 @@ export default function HiringPage() {
               </span>
               <span className="inline-flex items-center gap-1.5 bg-red-100 text-red-700 text-xs font-semibold px-3 py-1 rounded-full">
                 <CalendarClock className="h-3.5 w-3.5" />
-                Immediate Joining — Fall 2026 &amp; Spring 2027
+                Immediate Joining — Spring 2027
               </span>
             </div>
             <p className="text-sm text-gray-800 leading-relaxed">
