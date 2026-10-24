@@ -4,7 +4,7 @@ import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Autoplay from 'embla-carousel-autoplay'
 import { Card, CardContent } from "@/components/ui/card";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink } from "lucide-react";
 import Image from 'next/image';
 
 interface CarouselItem {
@@ -12,6 +12,7 @@ interface CarouselItem {
   description: string;
   image: string;
   link: string;
+  linkText?: string;
 }
 
 interface CarouselWithAutoplayProps {
@@ -81,6 +82,17 @@ export default function CarouselWithAutoplay({ items }: CarouselWithAutoplayProp
                 <CardContent className="p-6">
                   <h3 className="text-lg font-bold text-gray-900 mb-3 leading-snug">{item.title}</h3>
                   <p className="text-sm text-gray-800 leading-relaxed">{item.description}</p>
+                  {item.link && item.linkText && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center mt-3 text-sm font-medium text-sky-600 hover:text-sky-800"
+                    >
+                      {item.linkText}
+                      <ExternalLink className="w-3 h-3 ml-1" />
+                    </a>
+                  )}
                 </CardContent>
               </Card>
             </div>

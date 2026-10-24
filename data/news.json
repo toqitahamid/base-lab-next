@@ -1,6 +1,30 @@
 [
   {
     "date": "October 2026",
+    "title": "KFVS12 Features BASE Lab's AI Deer-Counting Work",
+    "description": "KFVS12 covered SIU's effort to find better ways to track Illinois deer populations, comparing trail cameras, thermal-imaging vehicle surveys, and drones. BASE Lab PhD candidate Taminul Islam is developing AI software that detects and counts deer in thermal footage while avoiding double counts.",
+    "badge": "Media",
+    "link": "https://www.kfvs12.com/2026/10/22/siu-students-search-better-ways-track-illinois-deer-populations/",
+    "linkText": "Read the KFVS12 story"
+  },
+  {
+    "date": "October 2026",
+    "title": "SIU News: Zoology and Computer Science Team Up for IDNR Deer Density Study",
+    "description": "SIU News highlighted a collaboration between the Center for Wildlife Sustainability Research and BASE Lab to help the Illinois Department of Natural Resources compare deer-density estimation methods. BASE Lab PhD students Toqi Tahamid Sarker and Taminul Islam built AI models for estimating deer distance in trail-camera images and for detecting and counting deer in thermal imagery, work accepted to an ECCV 2026 workshop.",
+    "badge": "Media",
+    "link": "https://news.siu.edu/2026/10/101226-siu-zoology-computer-science-researchers-team-up-for-idnr-deer-density-study.php",
+    "linkText": "Read the SIU News story"
+  },
+  {
+    "date": "October 2026",
+    "title": "Paper Published in Journal of Imaging",
+    "description": "Our paper 'BactSegNet: A Growth-Stage-Aware, Searched Instance-Segmentation Model for Salmonella and Escherichia coli Microcolonies in Pure-Culture Bright-Field Microscopy with a Food-Matrix Surrogate' by Malek Rababa, Namariq Dhahir, Anas AlSobeh, Amer AbuGhazaleh, and Khaled R. Ahmed has been published in MDPI Journal of Imaging.",
+    "badge": "Publication",
+    "link": "https://www.mdpi.com/2313-433X/12/11/525",
+    "linkText": "Read the paper"
+  },
+  {
+    "date": "October 2026",
     "title": "Paper Accepted at ICTAI 2026",
     "description": "Our paper 'MedSentiBERT: Distilling a Frontier-LLM Sentiment Labelling Policy into a Compact Clinical Classifier' by Joseph Kalinzi and Khaled R. Ahmed has been accepted at IEEE ICTAI 2026.",
     "badge": "Publication"

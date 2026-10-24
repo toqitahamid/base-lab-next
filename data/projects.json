@@ -1,11 +1,28 @@
 {
   "active": [
     {
+      "title": "Computer Vision for Wildlife Monitoring",
+      "subtitle": "Automated wildlife census and habitat analysis across camera-trap, thermal, and aerial imagery",
+      "description": "Perception pipelines spanning ground-level RGB, thermal infrared, and drone-based orthoimagery to support large-scale ecological surveys and wildlife population studies.",
+      "image": "/images/projects/wildlife.png",
+      "period": "2026 – Present",
+      "methods": ["Object Detection", "Distance Estimation", "Thermal Imaging", "Aerial Orthoimage Analysis"],
+      "subs": [
+        { "name": "SpatioTrap", "desc": "Calibrated distance estimation in camera-trap photos." },
+        { "name": "ThermoCount", "desc": "Thermal ungulate detection and counting in forests." },
+        { "name": "AerialHab", "desc": "Orthoimage analysis for aquatic habitat structures." }
+      ],
+      "mediaList": [
+        { "name": "KFVS12", "url": "https://www.kfvs12.com/2026/10/22/siu-students-search-better-ways-track-illinois-deer-populations/" },
+        { "name": "SIU News", "url": "https://news.siu.edu/2026/10/101226-siu-zoology-computer-science-researchers-team-up-for-idnr-deer-density-study.php" }
+      ]
+    },
+    {
       "title": "Smartphone-Based Chlorophyll Monitoring System Using AI Models for Precision Stress Management in Soybeans",
       "subtitle": "Smartphone-based AI for precision stress management in soybean fields",
       "description": "Developing a smartphone-based chlorophyll monitoring system powered by AI models to detect early nutrient and stress indicators in soybean fields, enabling low-cost, in-field precision stress management.",
       "image": "/images/projects/soybean-chlorophyll.png",
-      "period": "January 01, 2026 - December 31, 2026",
+      "period": "January 01, 2026 - Present",
       "award": "Soybean Center, Southern Illinois University Carbondale, $15,000",
       "methods": ["Smartphone Imaging", "Chlorophyll Estimation", "Deep Learning", "Precision Agriculture"]
     },
@@ -14,14 +31,41 @@
       "subtitle": "Multimodal deep learning for accelerated discovery of sustainable solvent systems for biopolymer and plastic valorization",
       "description": "Vision-centric deep learning frameworks that fuse 3D imaging cues with cross-modal signals to forecast solvent–substrate interactions, enabling faster screening of sustainable solvent candidates.",
       "image": "/images/projects/chemistry.png",
-      "period": "May 16, 2025 - May 15, 2026",
+      "period": "May 16, 2025 - Present",
       "award": "IIN Sustaining Illinois",
       "methods": ["3D Image Processing", "Multimodal Fusion", "Vision Transformers", "Cross-Modal Learning"]
     },
     {
+      "title": "AI-Powered Early Detection of Foodborne Pathogens in Microscopy",
+      "subtitle": "Growth-stage-aware instance segmentation of Salmonella and E. coli microcolonies for rapid food-safety screening",
+      "description": "Neural-architecture-searched instance segmentation that detects and measures small, low-contrast Salmonella and E. coli microcolonies in bright-field microscopy, conditioned on growth stage and robust to food-matrix interference, to enable earlier, physically calibrated pathogen screening.",
+      "image": "/images/projects/foodborne-pathogens.jpg",
+      "period": "2026 – Present",
+      "methods": ["Instance Segmentation", "Neural Architecture Search", "Growth-Stage Conditioning", "Bright-Field Microscopy"],
+      "papers": 1,
+      "papersList": [
+        { "name": "BactSegNet", "url": "https://www.mdpi.com/2313-433X/12/11/525" }
+      ]
+    },
+    {
+      "title": "Clinical Language AI for Patient Sentiment Analysis",
+      "subtitle": "Distilling frontier large language models into compact, deployable clinical sentiment classifiers",
+      "description": "Benchmarking open-source transformers on medical dialogue and distilling a frontier-LLM sentiment labelling policy into a compact clinical classifier, bringing LLM-level understanding of patient sentiment to efficient, privacy-friendly on-premise deployment.",
+      "image": "/images/projects/clinical-sentiment.jpg",
+      "period": "2026 – Present",
+      "methods": ["Knowledge Distillation", "Large Language Models", "Clinical NLP", "Sentiment Analysis"],
+      "papers": 2,
+      "papersList": [
+        { "name": "MedSentiBERT", "url": "" },
+        { "name": "Medical Dialogue Sentiment", "url": "https://www.scitepress.org/Papers/2026/143415/143415.pdf" }
+      ]
+    }
+  ],
+  "past": [
+    {
       "title": "Detecting Subacute Ruminal Acidosis Using Real-Time Deep Learning",
       "subtitle": "Non-invasive detection of subacute ruminal acidosis via optical gas and thermal imaging",
-      "description": "A multi-paper effort segmenting CO₂, methane, and multi-gas plumes from optical gas imaging — combining lightweight ViT backbones, attention-based fusion, and thermal recognition for non-invasive livestock health monitoring.",
+      "description": "A multi-paper effort segmenting CO₂, methane, and multi-gas plumes from optical gas imaging, combining lightweight ViT backbones, attention-based fusion, and thermal recognition for non-invasive livestock health monitoring.",
       "image": "/images/projects/acidosis.png",
       "period": "Sep 1, 2023 - Aug 31, 2026",
       "award": "USDA-NIFA 2023-70001-40997",
@@ -35,21 +79,6 @@
       ],
       "projectUrl": "https://sara-detect.github.io/"
     },
-    {
-      "title": "Computer Vision for Wildlife Monitoring",
-      "subtitle": "Automated wildlife census and habitat analysis across camera-trap, thermal, and aerial imagery",
-      "description": "Perception pipelines spanning ground-level RGB, thermal infrared, and drone-based orthoimagery to support large-scale ecological surveys and wildlife population studies.",
-      "image": "/images/projects/wildlife.png",
-      "period": "2026 – Present",
-      "methods": ["Object Detection", "Distance Estimation", "Thermal Imaging", "Aerial Orthoimage Analysis"],
-      "subs": [
-        { "name": "SpatioTrap", "desc": "Calibrated distance estimation in camera-trap photos." },
-        { "name": "ThermoCount", "desc": "Thermal ungulate detection and counting in forests." },
-        { "name": "AerialHab", "desc": "Orthoimage analysis for aquatic habitat structures." }
-      ]
-    }
-  ],
-  "past": [
     {
       "title": "AI for Greener Livestock: Educational and Research",
       "subtitle": "Deep learning and optical gas imaging for quantifying livestock methane emissions",

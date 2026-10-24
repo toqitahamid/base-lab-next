@@ -27,6 +27,31 @@
     },
     "carouselItems": [
         {
+            "title": "BASE Lab Featured on WSIL Heartland News",
+            "description": "Our team members Taminul Islam and Toqi Tahamid Sarker were featured on WSIL 3 Heartland News for their AI research supporting the SIU and Illinois Department of Natural Resources deer density study, which could help improve deer management in Illinois.",
+            "image": "/images/slider/wsil-deer-research.jpg",
+            "link": "/videos/wsil-deer-research.mp4",
+            "linkText": "Watch the news segment"
+        },
+        {
+            "title": "Doctoral Fellowship Awarded to Taminul Islam",
+            "description": "PhD student Taminul Islam was recognized by the SIU Graduate School as a Doctoral Fellow for the 2026-2027 academic year.",
+            "image": "/images/slider/taminul_fellowship.jpg",
+            "link": ""
+        },
+        {
+            "title": "Doctoral Fellowship Awarded to Abdellah Lakhssassi",
+            "description": "PhD student Abdellah Lakhssassi was recognized by the SIU Graduate School as a Doctoral Fellow for the 2026-2027 academic year.",
+            "image": "/images/slider/abdellah_fellowship.jpg",
+            "link": ""
+        },
+        {
+            "title": "Dissertation Research Award to Toqi Tahamid Sarker",
+            "description": "PhD candidate Toqi Tahamid Sarker was recognized by the SIU Graduate School as a Dissertation Research Award recipient for the 2026-2027 academic year.",
+            "image": "/images/slider/toqi_fellowship.jpg",
+            "link": ""
+        },
+        {
             "title": "Conference Presentation at CVPR 2026 in Denver, CO",
             "description": "PhD student Taminul Islam presented 'TRACE: Thermal Recognition Attentive-Framework for CO2 Emissions from Livestock' at the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2026 in Denver, CO.",
             "image": "/images/slider/cvpr-trace.jpg",

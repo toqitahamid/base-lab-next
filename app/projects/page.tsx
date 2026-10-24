@@ -56,6 +56,7 @@ interface ResearchProject {
   subs?: SubTrack[];
   papers?: number;
   papersList?: PaperRef[];
+  mediaList?: PaperRef[];
   repoUrl?: string;
   paperUrl?: string;
   projectUrl?: string;
@@ -77,10 +78,10 @@ async function getProjects(): Promise<ProjectsData> {
   }
 }
 
-function PaperChips({ papers }: { papers: PaperRef[] }) {
+function PaperChips({ papers, label = 'Papers' }: { papers: PaperRef[]; label?: string }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <span className="text-sm font-medium text-gray-700">Papers:</span>
+      <span className="text-sm font-medium text-gray-700">{label}:</span>
       {papers.map((paper, i) =>
         paper.url ? (
           <a
@@ -165,6 +166,7 @@ function ActiveCard({ p }: { p: ResearchProject }) {
 
           <div className="mt-auto pt-3 border-t border-gray-100 space-y-3">
             {p.papersList && p.papersList.length > 0 && <PaperChips papers={p.papersList} />}
+            {p.mediaList && p.mediaList.length > 0 && <PaperChips papers={p.mediaList} label="Media Coverage" />}
             <MethodTags methods={p.methods} />
             {p.projectUrl && (
               <a
@@ -210,6 +212,7 @@ function PastCard({ p }: { p: ResearchProject }) {
         <p className="text-sm text-gray-800 leading-relaxed">{p.description}</p>
         <div className="mt-auto pt-3 border-t border-gray-100 space-y-3">
           {p.papersList && p.papersList.length > 0 && <PaperChips papers={p.papersList} />}
+          {p.mediaList && p.mediaList.length > 0 && <PaperChips papers={p.mediaList} label="Media Coverage" />}
           <MethodTags methods={p.methods} />
           {p.projectUrl && (
             <a
