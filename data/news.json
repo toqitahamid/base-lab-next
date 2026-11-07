@@ -1,5 +1,13 @@
 [
   {
+    "date": "November 2026",
+    "title": "Review Paper Published in Journal of Imaging",
+    "description": "Our review paper 'Binding Text to Pixels: A Narrative Review of Supervision Granularity in Language-Guided Chest Radiograph Segmentation and Grounding' by Joseph Kalinzi, Taminul Islam, and Khaled R. Ahmed has been published in the Journal of Imaging (MDPI).",
+    "badge": "Publication",
+    "link": "https://doi.org/10.3390/jimaging12110559",
+    "linkText": "Read the paper"
+  },
+  {
     "date": "October 2026",
     "title": "KFVS12 Features BASE Lab's AI Deer-Counting Work",
     "description": "KFVS12 covered SIU's effort to find better ways to track Illinois deer populations, comparing trail cameras, thermal-imaging vehicle surveys, and drones. BASE Lab PhD candidate Taminul Islam is developing AI software that detects and counts deer in thermal footage while avoiding double counts.",
