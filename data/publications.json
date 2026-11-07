@@ -3,16 +3,6 @@
     "year": 2026,
     "items": [
       {
-        "title": "BactSegNet: A Growth-Stage-Aware, Searched Instance-Segmentation Model for Salmonella and Escherichia coli Microcolonies in Pure-Culture Bright-Field Microscopy with a Food-Matrix Surrogate",
-        "authors": ["Malek Rababa", "Namariq Dhahir", "Anas AlSobeh", "Amer AbuGhazaleh", "Khaled R. Ahmed"],
-        "publisher": "Journal of Imaging",
-        "doi": "10.3390/jimaging12110525",
-        "url": "https://www.mdpi.com/2313-433X/12/11/525",
-        "citationKey": "rababa2026bactsegnet",
-        "type": "journal",
-        "abstract": "Instance segmentation of small, dense, low-contrast microcolonies against confounding food matrices limits early microscopy-based screening for Salmonella and E. coli. We present BactSegNet, combining EfficientNetV2, BiFPN, selective-kernel attention, and growth-stage FiLM conditioning based on a learnable embedding of recorded acquisition stage. BE-NAS explored a 2304-configuration search space and evaluated 71 unique architectures. Across twelve retrained candidates, proxy and full-training rankings agreed (Spearman ρ=0.867 for mAP@50 and ρ=0.790 for mAP@50–95). Across the 71 architectures evaluated in the BE-NAS proxy search, three-seed proxy fitness showed high reliability (ICC(1,1)=0.91; 213 seed-level evaluations), while phenotype caching reduced 180 scheduled evaluations to 71 unique trainings (213 rather than 540 seed-level proxy runs). On 14,318 expert-verified polygon instances spanning six stages, two species, and onion-present/absent conditions, BactSegNet-L achieved mask mAP@50 = 0.9636 and mAP@50–95 = 0.7154, 3.56 percentage points above a multi-seed YOLOv8 baseline and higher mAP@50 than sixteen class-aware single-run references across three paradigms. A capacity-preserving stage-perturbation control reduced mAP@50 from 0.9636±0.0049 with correct stage assignments to 0.9487±0.0040 after shuffling image–stage correspondence across three seeds. Gains reached 8.66 pp for Salmonella at 1.5 h and 4.90 pp on onion. Across 2756 matched instances, area MAPE was 12.15% with r=0.997, dominated by the largest instances. BactSegNet-Efficient retained 0.9510 mAP@50 with 19.1% fewer FLOPs at 43.9 fps. The main dataset comprises pure-culture frames; an independent, expert-annotated mixed-culture evaluation (400 images, 3.5 and 4.0 h) yielded mask mAP@50=0.8857±0.0206 across three seeds without retraining. Recorded growth-stage metadata are required at inference, unlike the image-only comparison models. These results support early, physically calibrated microcolony segmentation while distinguishing the original pure-culture evaluation from the additional mixed-culture test."
-      },
-      {
         "title": "Binding Text to Pixels: A Narrative Review of Supervision Granularity in Language-Guided Chest Radiograph Segmentation and Grounding",
         "authors": ["Joseph Kalinzi", "Taminul Islam", "Khaled R. Ahmed"],
         "publisher": "Journal of Imaging",
@@ -21,6 +11,16 @@
         "citationKey": "kalinzi2026binding",
         "type": "journal",
         "bibtex": "@article{kalinzi2026binding,\n  title={Binding Text to Pixels: A Narrative Review of Supervision Granularity in Language-Guided Chest Radiograph Segmentation and Grounding},\n  author={Kalinzi, Joseph and Islam, Taminul and Ahmed, Khaled R},\n  journal={Journal of Imaging},\n  volume={12},\n  number={11},\n  pages={559},\n  year={2026},\n  publisher={MDPI}\n}"
+      },
+      {
+        "title": "BactSegNet: A Growth-Stage-Aware, Searched Instance-Segmentation Model for Salmonella and Escherichia coli Microcolonies in Pure-Culture Bright-Field Microscopy with a Food-Matrix Surrogate",
+        "authors": ["Malek Rababa", "Namariq Dhahir", "Anas AlSobeh", "Amer AbuGhazaleh", "Khaled R. Ahmed"],
+        "publisher": "Journal of Imaging",
+        "doi": "10.3390/jimaging12110525",
+        "url": "https://www.mdpi.com/2313-433X/12/11/525",
+        "citationKey": "rababa2026bactsegnet",
+        "type": "journal",
+        "abstract": "Instance segmentation of small, dense, low-contrast microcolonies against confounding food matrices limits early microscopy-based screening for Salmonella and E. coli. We present BactSegNet, combining EfficientNetV2, BiFPN, selective-kernel attention, and growth-stage FiLM conditioning based on a learnable embedding of recorded acquisition stage. BE-NAS explored a 2304-configuration search space and evaluated 71 unique architectures. Across twelve retrained candidates, proxy and full-training rankings agreed (Spearman ρ=0.867 for mAP@50 and ρ=0.790 for mAP@50–95). Across the 71 architectures evaluated in the BE-NAS proxy search, three-seed proxy fitness showed high reliability (ICC(1,1)=0.91; 213 seed-level evaluations), while phenotype caching reduced 180 scheduled evaluations to 71 unique trainings (213 rather than 540 seed-level proxy runs). On 14,318 expert-verified polygon instances spanning six stages, two species, and onion-present/absent conditions, BactSegNet-L achieved mask mAP@50 = 0.9636 and mAP@50–95 = 0.7154, 3.56 percentage points above a multi-seed YOLOv8 baseline and higher mAP@50 than sixteen class-aware single-run references across three paradigms. A capacity-preserving stage-perturbation control reduced mAP@50 from 0.9636±0.0049 with correct stage assignments to 0.9487±0.0040 after shuffling image–stage correspondence across three seeds. Gains reached 8.66 pp for Salmonella at 1.5 h and 4.90 pp on onion. Across 2756 matched instances, area MAPE was 12.15% with r=0.997, dominated by the largest instances. BactSegNet-Efficient retained 0.9510 mAP@50 with 19.1% fewer FLOPs at 43.9 fps. The main dataset comprises pure-culture frames; an independent, expert-annotated mixed-culture evaluation (400 images, 3.5 and 4.0 h) yielded mask mAP@50=0.8857±0.0206 across three seeds without retraining. Recorded growth-stage metadata are required at inference, unlike the image-only comparison models. These results support early, physically calibrated microcolony segmentation while distinguishing the original pure-culture evaluation from the additional mixed-culture test."
       },
       {
         "title": "MedSentiBERT: Distilling a Frontier-LLM Sentiment Labelling Policy into a Compact Clinical Classifier",
