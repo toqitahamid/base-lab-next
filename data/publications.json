@@ -7,7 +7,7 @@
         "authors": ["Joseph Kalinzi", "Taminul Islam", "Khaled R. Ahmed"],
         "publisher": "Journal of Imaging",
         "doi": "10.3390/jimaging12110559",
-        "url": "https://doi.org/10.3390/jimaging12110559",
+        "url": "https://www.mdpi.com/2313-433X/12/11/559",
         "citationKey": "kalinzi2026binding",
         "type": "journal",
         "bibtex": "@article{kalinzi2026binding,\n  title={Binding Text to Pixels: A Narrative Review of Supervision Granularity in Language-Guided Chest Radiograph Segmentation and Grounding},\n  author={Kalinzi, Joseph and Islam, Taminul and Ahmed, Khaled R},\n  journal={Journal of Imaging},\n  volume={12},\n  number={11},\n  pages={559},\n  year={2026},\n  publisher={MDPI}\n}"
