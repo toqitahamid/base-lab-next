@@ -8,7 +8,9 @@
       "period": "2026 – Present",
       "methods": ["Object Detection", "Distance Estimation", "Thermal Imaging", "Aerial Orthoimage Analysis"],
       "subs": [
-        { "name": "ThermoCount", "desc": "Thermal ungulate detection and counting in forests." }
+        { "name": "Reference-Conditioned Distance Intervals on Unseen Camera Traps", "desc": "Calibrated distance estimation in camera-trap photos." },
+        { "name": "ThermoCount", "desc": "Thermal ungulate detection and counting in forests." },
+        { "name": "Muskrat Hut Orthomosaics", "desc": "Orthoimage analysis for aquatic habitat structures." }
       ],
       "mediaList": [
         { "name": "KFVS12", "url": "https://www.kfvs12.com/2026/10/22/siu-students-search-better-ways-track-illinois-deer-populations/" },
