@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
           </div>
           
           {/* Navigation Links */}
-          <div className="flex flex-wrap gap-6">
+          <div className="flex flex-wrap items-center gap-6">
             <Link href="/projects" className="text-gray-600 hover:text-gray-900 text-sm">
               Projects
             </Link>
@@ -39,6 +40,15 @@ const Footer = () => {
             <Link href="/join" className="text-gray-600 hover:text-gray-900 text-sm">
               Join
             </Link>
+            <a
+              href="https://www.linkedin.com/company/base-lab-siu"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="BASE Lab on LinkedIn"
+              className="text-gray-600 hover:text-[#0A66C2]"
+            >
+              <FaLinkedin className="h-5 w-5" />
+            </a>
           </div>
         </div>
       </div>

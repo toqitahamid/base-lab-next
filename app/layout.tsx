@@ -136,7 +136,8 @@ export default function RootLayout({
               "logo": "https://base-lab.siu.edu/images/logo/base-lab-logo-v5@4x.png",
               "sameAs": [
                 "https://www.cs.siu.edu",
-                "https://www.siu.edu"
+                "https://www.siu.edu",
+                "https://www.linkedin.com/company/base-lab-siu"
               ],
               "address": {
                 "@type": "PostalAddress",
