@@ -1,5 +1,40 @@
 [
   {
+    "year": 2027,
+    "items": [
+      {
+        "title": "Auditing Weapon Segmentation and Prompted Detection on Real CCTV at a Stated Alarm Rate: A Deployment-Oriented Evaluation",
+        "authors": ["Khaled R. Ahmed", "Taminul Islam", "Abdellah Lakhssassi", "Toqi Tahamid Sarker"],
+        "publisher": "Real-World Surveillance (RWS) Workshop at the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+        "doi": "",
+        "url": "",
+        "citationKey": "ahmed2027auditing",
+        "type": "conference",
+        "status": "Accepted (Oral)"
+      },
+      {
+        "title": "EfficientMTNet: An Ultra-Lightweight Multi-Task Network for Joint Brain Tumor Classification and Segmentation",
+        "authors": ["Taminul Islam", "Prapti Roy", "Joseph Kalinzi", "Khaled R. Ahmed"],
+        "publisher": "CVPath-Vision4Neuro Workshop at the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+        "doi": "",
+        "url": "",
+        "citationKey": "islam2027efficientmtnet",
+        "type": "conference",
+        "status": "Accepted"
+      },
+      {
+        "title": "Stable Scores, Unstable Decisions: Object-Level Predictive Multiplicity in Clinical Microscopy and Computational Pathology",
+        "authors": ["Malek Rababa", "Nisrein Rababa", "Khaled R. Ahmed"],
+        "publisher": "CVPath-Vision4Neuro Workshop at the IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)",
+        "doi": "",
+        "url": "",
+        "citationKey": "rababa2027stable",
+        "type": "conference",
+        "status": "Accepted"
+      }
+    ]
+  },
+  {
     "year": 2026,
     "items": [
       {
